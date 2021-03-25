@@ -4,78 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- initial setup with abc class abstraction&#10;- dynamic creation of models">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ml-starter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/minikube-linux-amd64" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/sample-models/custom-onnx/onnx.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/sample-models/flower-recognizer/input.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/sample-models/flower-recognizer/sample_input_uri.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/sample-models/flower-recognizer/sample_onnx.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/sample-models/flower-recognizer/sample_uri.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/sample-models/flower-recognizer/tensorflow.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/docker/setup.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/GPT2ONNXModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/16a2f78023c8dc511294f0c97b5e10fde3ef9889ad6d11ffaa2a00714e73926e.cf2d0ecb83b6df91b3dbb53f1d1e4c311578bfd3aa0e04934215a49bf9898df0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/16a2f78023c8dc511294f0c97b5e10fde3ef9889ad6d11ffaa2a00714e73926e.cf2d0ecb83b6df91b3dbb53f1d1e4c311578bfd3aa0e04934215a49bf9898df0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/16a2f78023c8dc511294f0c97b5e10fde3ef9889ad6d11ffaa2a00714e73926e.cf2d0ecb83b6df91b3dbb53f1d1e4c311578bfd3aa0e04934215a49bf9898df0.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/684fe667923972fb57f6b4dcb61a3c92763ad89882f3da5da9866baf14f2d60f.c7ed1f96aac49e745788faa77ba0a26a392643a50bb388b9c04ff469e555241f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/684fe667923972fb57f6b4dcb61a3c92763ad89882f3da5da9866baf14f2d60f.c7ed1f96aac49e745788faa77ba0a26a392643a50bb388b9c04ff469e555241f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/684fe667923972fb57f6b4dcb61a3c92763ad89882f3da5da9866baf14f2d60f.c7ed1f96aac49e745788faa77ba0a26a392643a50bb388b9c04ff469e555241f.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/752929ace039baa8ef70fe21cdf9ab9445773d20e733cf693d667982e210837e.323c769945a351daa25546176f8208b3004b6f563438a7603e7932bae9025925" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/752929ace039baa8ef70fe21cdf9ab9445773d20e733cf693d667982e210837e.323c769945a351daa25546176f8208b3004b6f563438a7603e7932bae9025925.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/752929ace039baa8ef70fe21cdf9ab9445773d20e733cf693d667982e210837e.323c769945a351daa25546176f8208b3004b6f563438a7603e7932bae9025925.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/c0c761a63004025aeadd530c4c27b860ec4ecbe8a00531233de21d865a402598.5d12962c5ee615a4c803841266e9c3be9a691a924f72d395d3a6c6c81157788b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/c0c761a63004025aeadd530c4c27b860ec4ecbe8a00531233de21d865a402598.5d12962c5ee615a4c803841266e9c3be9a691a924f72d395d3a6c6c81157788b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/c0c761a63004025aeadd530c4c27b860ec4ecbe8a00531233de21d865a402598.5d12962c5ee615a4c803841266e9c3be9a691a924f72d395d3a6c6c81157788b.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/fc674cd6907b4c9e933cb42d67662436b89fa9540a1f40d7c919d0109289ad01.7d2e0efa5ca20cef4fb199382111e9d3ad96fd77b849e1d4bed13a66e1336f51" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/fc674cd6907b4c9e933cb42d67662436b89fa9540a1f40d7c919d0109289ad01.7d2e0efa5ca20cef4fb199382111e9d3ad96fd77b849e1d4bed13a66e1336f51.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/cache_models/fc674cd6907b4c9e933cb42d67662436b89fa9540a1f40d7c919d0109289ad01.7d2e0efa5ca20cef4fb199382111e9d3ad96fd77b849e1d4bed13a66e1336f51.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/convert_to_onnx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/efficientnet/Weimaraner_wb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/efficientnet/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/efficientnet/efficientnet.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/efficientnet/grizzly.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/efficientnet/kitten.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/efficientnet/labels_map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/gpt2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/gpt2_2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/iris-flower/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/iris-flower/iris_flower.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/iris-flower/saveIrisModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/synset.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/tester.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/unused/custom_regression.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/unused/custom_regression_fuel_predictor/saved_model.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/unused/custom_regression_fuel_predictor/variables/variables.data-00000-of-00001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/unused/custom_regression_fuel_predictor/variables/variables.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/unused/gpt2sample.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/unused/iris_flower_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/pythontest/unused/roberta.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/archiv/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/abstract_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/interface_demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/model_creation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/test_input_method.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/core.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/helpers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/context.py" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/tests/context.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_advanced.py" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/tests/test_advanced.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_basic.py" beforeDir="false" afterPath="$PROJECT_DIR$/archiv/tests/test_basic.py" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- adds demo of usage">
+      <change afterPath="$PROJECT_DIR$/docker/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,10 +70,11 @@
       <recent name="$PROJECT_DIR$/docker/sample-models/flower-recognizer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sample-models" />
+      <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/archiv" />
       <recent name="$PROJECT_DIR$/pythontest/unused" />
       <recent name="$PROJECT_DIR$/pythontest/efficientnet" />
-      <recent name="$PROJECT_DIR$/pythontest/iris-flower" />
     </key>
   </component>
   <component name="RunManager" selected="Python.interface_demo">
@@ -196,28 +127,6 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/abstract_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="gpt2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pythontest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pythontest/gpt2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -294,13 +203,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="docker/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="" />
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker/Dockerfile" />
         <item itemvalue="Python.interface_demo" />
         <item itemvalue="Python.model_creation" />
         <item itemvalue="Python.abstract_model" />
         <item itemvalue="Python.iris_flower" />
-        <item itemvalue="Python.gpt2" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +250,7 @@
       <workItem from="1616420388748" duration="854000" />
       <workItem from="1616533554100" duration="4868000" />
       <workItem from="1616654961025" duration="581000" />
-      <workItem from="1616667597677" duration="16275000" />
+      <workItem from="1616667597677" duration="16579000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -343,7 +266,49 @@
       <option name="project" value="LOCAL" />
       <updated>1616687986695</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- clean up">
+      <created>1616688201152</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688201152</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- clean up">
+      <created>1616688216768</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688216768</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- implements abstract model class">
+      <created>1616688233735</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688233735</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- implements methods to create a dynamic representation of an abstract model">
+      <created>1616688256057</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688256057</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- adds demo of usage">
+      <created>1616688268491</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688268491</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- adds demo of usage">
+      <created>1616688412320</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688412320</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -390,7 +355,11 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="- iris model to test" />
     <MESSAGE value="- initial setup with abc class abstraction&#10;- dynamic creation of models" />
-    <option name="LAST_COMMIT_MESSAGE" value="- initial setup with abc class abstraction&#10;- dynamic creation of models" />
+    <MESSAGE value="- clean up" />
+    <MESSAGE value="- implements abstract model class" />
+    <MESSAGE value="- implements methods to create a dynamic representation of an abstract model" />
+    <MESSAGE value="- adds demo of usage" />
+    <option name="LAST_COMMIT_MESSAGE" value="- adds demo of usage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -413,7 +382,7 @@
     <SUITE FILE_PATH="coverage/ml_starter$saveIrisModel.coverage" NAME="saveIrisModel Coverage Results" MODIFIED="1616269847969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
     <SUITE FILE_PATH="coverage/ml_starter$model_factory.coverage" NAME="model_factory Coverage Results" MODIFIED="1616685244709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/ml_starter$gpt2sample.coverage" NAME="gpt2sample Coverage Results" MODIFIED="1616081538820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest/unused" />
-    <SUITE FILE_PATH="coverage/ml_starter$quicktest.coverage" NAME="quicktest Coverage Results" MODIFIED="1616685672311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/ml_starter$quicktest.coverage" NAME="interface_demo Coverage Results" MODIFIED="1616688421185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/ml_starter$abstract_model.coverage" NAME="abstract_model Coverage Results" MODIFIED="1616680719385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/ml_starter$custom_regression.coverage" NAME="custom_regression Coverage Results" MODIFIED="1616065180707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
     <SUITE FILE_PATH="coverage/ml_starter$GPT2ONNXModel.coverage" NAME="GPT2ONNXModel Coverage Results" MODIFIED="1616271323009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />

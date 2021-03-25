@@ -1,0 +1,17 @@
+onnxruntime~=1.7.0
+numpy~=1.19.5
+torch~=1.8.0
+simpletransformers~=0.60.9
+transformers~=4.4.2
+onnx~=1.8.1
+matplotlib~=3.3.4
+pandas~=1.2.3
+seaborn~=0.11.1
+tensorflow~=2.4.1
+keras2onnx~=1.7.0
+scikit-learn~=0.24.1
+skl2onnx~=1.8.0
+opencv-python~=4.5.1.48
+coloredlogs~=15.0
+packaging~=20.9
+setuptools~=45.2.0
