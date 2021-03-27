@@ -94,5 +94,5 @@ ENV/
 *.onnx
 *.pickle
 /archiv/
-implements methods to create a dynamic representation of an abstract model
 /sample-models/
+/external-folder/
