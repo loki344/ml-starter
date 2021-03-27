@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- exclude archiv&#10;- add dependencies in requirements.txt">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- adds basic demo with docker">
+      <change afterPath="$PROJECT_DIR$/app/interface_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model_creation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/interface_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/test_input_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/test_input_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/abstract_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/interface_demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model_creation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/test_input_method.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,14 +84,14 @@
       <recent name="$PROJECT_DIR$/docker/sample-models/flower-recognizer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/external-folder" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/docker" />
       <recent name="$PROJECT_DIR$/model" />
       <recent name="$PROJECT_DIR$/sample-models" />
-      <recent name="$PROJECT_DIR$/archiv" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.interface_demo">
+  <component name="RunManager" selected="Python.interface_demo (1)">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,20 +114,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="abstract_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="interface_demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ml-starter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/abstract_model.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/interface_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,42 +155,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="iris_flower" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ml-starter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pythontest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pythontest/iris-flower/iris_flower.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="model_creation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/model_creation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -202,6 +180,18 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="ml-starter:latest" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="--env MODEL_PATH=TESTMODELPATH" />
+        </settings>
+      </deployment>
+      <method v="2" />
     </configuration>
     <configuration name="docker/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
@@ -219,8 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.interface_demo" />
+        <item itemvalue="Python.interface_demo (1)" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Docker.docker/Dockerfile" />
+        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Python.interface_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -250,6 +243,7 @@
       <workItem from="1616667597677" duration="17208000" />
       <workItem from="1616689202037" duration="1437000" />
       <workItem from="1616690833282" duration="17000" />
+      <workItem from="1616837777380" duration="18043000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -321,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616688679074</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="- adds basic demo with docker">
+      <created>1616692221974</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616692221974</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,29 +375,32 @@
     <MESSAGE value="- adds demo of usage" />
     <MESSAGE value="- add Dockerfile&#10;- remove boilerplate file from template" />
     <MESSAGE value="- exclude archiv&#10;- add dependencies in requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="- exclude archiv&#10;- add dependencies in requirements.txt" />
+    <MESSAGE value="- adds basic demo with docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="- adds basic demo with docker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/model/model_creation.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="26" />
+          <url>file://$PROJECT_DIR$/app/main.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_starter$gpt2.coverage" NAME="gpt2 Coverage Results" MODIFIED="1616420653762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
+    <SUITE FILE_PATH="coverage/ml_starter$main.coverage" NAME="main Coverage Results" MODIFIED="1616866916644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/ml_starter$saveIrisModel.coverage" NAME="saveIrisModel Coverage Results" MODIFIED="1616269847969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
     <SUITE FILE_PATH="coverage/ml_starter$model_factory.coverage" NAME="model_factory Coverage Results" MODIFIED="1616685244709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/ml_starter$gpt2sample.coverage" NAME="gpt2sample Coverage Results" MODIFIED="1616081538820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest/unused" />
     <SUITE FILE_PATH="coverage/ml_starter$quicktest.coverage" NAME="interface_demo Coverage Results" MODIFIED="1616688421185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/ml_starter$pytest_in_test_input_method_py.coverage" NAME="pytest in test_input_method.py Coverage Results" MODIFIED="1616840875258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/ml_starter$abstract_model.coverage" NAME="abstract_model Coverage Results" MODIFIED="1616680719385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/ml_starter$custom_regression.coverage" NAME="custom_regression Coverage Results" MODIFIED="1616065180707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
     <SUITE FILE_PATH="coverage/ml_starter$GPT2ONNXModel.coverage" NAME="GPT2ONNXModel Coverage Results" MODIFIED="1616271323009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
-    <SUITE FILE_PATH="coverage/ml_starter$interface_demo.coverage" NAME="interface_demo Coverage Results" MODIFIED="1616692081299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/ml_starter$interface_demo.coverage" NAME="interface_demo Coverage Results" MODIFIED="1616843227158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
     <SUITE FILE_PATH="coverage/ml_starter$tester.coverage" NAME="tester Coverage Results" MODIFIED="1616278597008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
     <SUITE FILE_PATH="coverage/ml_starter$efficientnet.coverage" NAME="efficientnet Coverage Results" MODIFIED="1616420479130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest/efficientnet" />
     <SUITE FILE_PATH="coverage/ml_starter$gpt2_2.coverage" NAME="gpt2_2 Coverage Results" MODIFIED="1616075040629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
