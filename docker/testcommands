@@ -1,0 +1,1 @@
+./run.sh  -m iris.onnx -s iris.py -d /home/robert/Repositories/ml-starter/external-folder
