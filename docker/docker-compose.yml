@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  ml-starter-backend:
+    build: ./ml-starter-backend
+    image: ml-starter-backend
+    container_name: ml-starter-backend
+    ports:
+      - '80:80'
+    volumes:
+      - ${DIRECTORY_PATH}:/mounted_directory
+    environment:
+      MODEL_FILE_NAME: '${MODEL_FILE_NAME}'
+      SOURCE_CODE_FILE: '${SOURCE_CODE_FILE}'
+

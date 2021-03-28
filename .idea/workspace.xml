@@ -4,21 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- adds basic demo with docker">
-      <change afterPath="$PROJECT_DIR$/app/interface_demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/model_creation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- adds fastapi&#10;- cleanup">
+      <change afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/ml-starter-backend/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/ml-starter-backend/app/abstract_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/ml-starter-backend/app/interface_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/ml-starter-backend/app/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/ml-starter-backend/app/model_creation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/ml-starter-backend/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/docker/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/abstract_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/interface_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model_creation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/test_input_method.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/ml-starter-backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/abstract_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/interface_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/docker/.env" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/model" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -84,14 +87,14 @@
       <recent name="$PROJECT_DIR$/docker/sample-models/flower-recognizer" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker" />
+      <recent name="$PROJECT_DIR$/docker/ml-starter-backend" />
       <recent name="$PROJECT_DIR$/external-folder" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/docker" />
       <recent name="$PROJECT_DIR$/model" />
-      <recent name="$PROJECT_DIR$/sample-models" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.interface_demo (1)">
+  <component name="RunManager" selected="Docker.docker: Compose Deployment">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -133,32 +136,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="interface_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ml-starter" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/interface_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -193,6 +177,14 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -202,18 +194,18 @@
           <option name="containerName" value="" />
           <option name="entrypoint" value="" />
           <option name="commandLineOptions" value="" />
-          <option name="sourceFilePath" value="Dockerfile" />
+          <option name="sourceFilePath" value="docker/ml-starter-backend/Dockerfile" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker: Compose Deployment" />
         <item itemvalue="Python.interface_demo (1)" />
         <item itemvalue="Python.main" />
         <item itemvalue="Docker.docker/Dockerfile" />
         <item itemvalue="Docker.Docker Image" />
-        <item itemvalue="Python.interface_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +235,9 @@
       <workItem from="1616667597677" duration="17208000" />
       <workItem from="1616689202037" duration="1437000" />
       <workItem from="1616690833282" duration="17000" />
-      <workItem from="1616837777380" duration="18043000" />
+      <workItem from="1616837777380" duration="18358000" />
+      <workItem from="1616882562062" duration="1883000" />
+      <workItem from="1616920791389" duration="5206000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -322,11 +316,42 @@
       <option name="project" value="LOCAL" />
       <updated>1616692221974</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- adds Dockerfile">
+      <created>1616868392933</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868392933</updated>
+    </task>
+    <task id="LOCAL-00013" summary="- adds run script for docker">
+      <created>1616868400817</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868400817</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- adds methods for dynamic model creation">
+      <created>1616868426090</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868426090</updated>
+    </task>
+    <task id="LOCAL-00015" summary="- adds methods for dynamic model creation">
+      <created>1616868429035</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868429035</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -376,18 +401,11 @@
     <MESSAGE value="- add Dockerfile&#10;- remove boilerplate file from template" />
     <MESSAGE value="- exclude archiv&#10;- add dependencies in requirements.txt" />
     <MESSAGE value="- adds basic demo with docker" />
-    <option name="LAST_COMMIT_MESSAGE" value="- adds basic demo with docker" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/main.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="- adds Dockerfile" />
+    <MESSAGE value="- adds run script for docker" />
+    <MESSAGE value="- adds methods for dynamic model creation" />
+    <MESSAGE value="- adds fastapi&#10;- cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="- adds fastapi&#10;- cleanup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_starter$gpt2.coverage" NAME="gpt2 Coverage Results" MODIFIED="1616420653762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
