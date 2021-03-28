@@ -4,12 +4,19 @@ import subprocess
 import sys
 
 
-def extract_function(function_name: str, pre_post_processing_source_file: str):
-    #TODO extract all methods
-    return compile_source_code(pre_post_processing_source_file)[function_name]
+def extract_functions(source_code_file: str):
+    source_code = compile_source_code(source_code_file)
+
+    functions = dict()
+    for key, value in source_code.items():
+        if callable(value):
+            functions[key] = value
+
+    return functions
 
 
 def install_dependencies(source_code_file_path: str):
+    #TODO Handle with ast instead of string parsing
     source_code_text = read_file(source_code_file_path)
     source_code_lines = source_code_text.split("\n")
     packages = []
@@ -41,16 +48,10 @@ def read_file(file_path: str):
     return text
 
 
-def create_model(onnx_file_path: str, pre_post_processing_source_file: str):
-    install_dependencies(pre_post_processing_source_file)
+def create_model(onnx_file_path: str, source_code_file: str):
+    install_dependencies(source_code_file)
 
-    pre_process = extract_function("pre_process", pre_post_processing_source_file)
-    post_process = extract_function("post_process", pre_post_processing_source_file)
-
-    dynamic_model = type("DynamicModel", (AbstractModel,), {
-        "pre_process": pre_process,
-        "post_process": post_process
-    })
+    dynamic_model = type("DynamicModel", (AbstractModel,), extract_functions(source_code_file))
 
     return dynamic_model(onnx_file_path)
 
