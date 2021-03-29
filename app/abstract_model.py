@@ -3,9 +3,11 @@ import onnxruntime as runtime
 
 
 class AbstractModel(ABC):
-
-    def __init__(self, onnx_file_path: str) -> "AbstractModel":
+    #TODO what is the type of outputnames
+    def __init__(self, onnx_file_path: str, onnx_output_names=[]):
         self.onnx_file_path = onnx_file_path
+        self.onnx_output_names = onnx_output_names
+
 
     @staticmethod
     @abstractmethod
@@ -25,6 +27,6 @@ class AbstractModel(ABC):
         input_data = self.pre_process(input_data)
 
         #TODO make first parameter configurable, and adapt second parameter to GPT-Problem
-        output = inference_session.run([], {input_name: input_data})
+        output = inference_session.run(self.onnx_output_names, {input_name: input_data})
 
         return self.post_process(output)
