@@ -7,7 +7,9 @@ app = FastAPI()
 
 #TODO, take whole path from env var
 #model = create_model('../mounted_directory/' + os.getenv('MODEL_FILE_NAME'))
-model = create_model('./iris.onnx')
+#model = create_model('../external-folder/iris-example/iris.onnx')
+#TODO how can we read the additional argument dynamically??
+model = create_model('/home/robert/Repositories/ml-starter-backend/app/efficientnet-lite4-11.onnx', ["Softmax:0"])
 
 
 @app.on_event("startup")
