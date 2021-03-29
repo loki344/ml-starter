@@ -6,7 +6,6 @@ class AbstractModel(ABC):
 
     def __init__(self, onnx_file_path: str) -> "AbstractModel":
         self.onnx_file_path = onnx_file_path
-        self.inference_session = runtime.InferenceSession(onnx_file_path)
 
     @staticmethod
     @abstractmethod
@@ -20,12 +19,12 @@ class AbstractModel(ABC):
         pass
 
     def predict(self, input_data):
-        input_name = self.inference_session.get_inputs()[0].name
+        inference_session = runtime.InferenceSession(self.onnx_file_path)
+
+        input_name = inference_session.get_inputs()[0].name
         input_data = self.pre_process(input_data)
 
         #TODO make first parameter configurable, and adapt second parameter to GPT-Problem
-        output = self.inference_session.run([], {input_name: input_data})
+        output = inference_session.run([], {input_name: input_data})
 
         return self.post_process(output)
-
-

@@ -6,7 +6,8 @@ from model_creation import create_model
 app = FastAPI()
 
 #TODO, take whole path from env var
-model = create_model('../mounted_directory/' + os.getenv('MODEL_FILE_NAME'), '../mounted_directory/' + os.getenv('SOURCE_CODE_FILE'))
+#model = create_model('../mounted_directory/' + os.getenv('MODEL_FILE_NAME'))
+model = create_model('./iris.onnx')
 
 
 @app.on_event("startup")
