@@ -1,15 +1,19 @@
 from fastapi import FastAPI, Request
-import os
+import json
 
 from model_creation import create_model
 
 app = FastAPI()
 
-#TODO, take whole path from env var
-#model = create_model('../mounted_directory/' + os.getenv('MODEL_FILE_NAME'))
-#model = create_model('../external-folder/iris-example/iris.onnx')
-#TODO how can we read the additional argument dynamically??
-model = create_model('/home/robert/Repositories/ml-starter-backend/app/efficientnet-lite4-11.onnx', ["Softmax:0"])
+#TODO ERROR HANDLING WHEN FILE IS NOT THERE
+config_map = 'configMap.json'
+config = json.load(open(config_map))
+model_output_names = []
+if 'model_output_names' in config:
+    model_output_names = config['model_output_names']
+
+default_model_name = 'custom_model.onnx'
+model = create_model(default_model_name, model_output_names)
 
 
 @app.on_event("startup")

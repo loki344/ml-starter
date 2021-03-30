@@ -1,5 +1,4 @@
 onnxruntime~=1.7.0
-
 uvicorn~=0.11.7
 fastapi~=0.58.1
 numpy~=1.19.5
