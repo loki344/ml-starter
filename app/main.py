@@ -3,7 +3,21 @@ import json
 
 from model_creation import create_model
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 #TODO ERROR HANDLING WHEN FILE IS NOT THERE
 config_map = 'configMap.json'
@@ -30,7 +44,7 @@ async def ping():
 async def predict(request: Request):
 
     input_json = await request.json()
-    input_data = input_json['input_data']
+    input_data = input_json['inputData']
 
     prediction = model.predict(input_data)
 
