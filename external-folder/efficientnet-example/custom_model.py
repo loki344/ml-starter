@@ -42,7 +42,7 @@ class CustomModel(AbstractModel):
         img /= [128.0, 128.0, 128.0]
         return img
 
-    def pre_process(self, input_data):
+    def pre_process(self, input_data, input_metadata):
 
         decoded_data = base64.b64decode(input_data)
         np_data = np.fromstring(decoded_data, np.uint8)
@@ -51,7 +51,7 @@ class CustomModel(AbstractModel):
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = self.pre_process_edgetpu(img, (224, 224, 3))
 
-        return np.expand_dims(img, axis=0)
+        return {input_metadata[0].name: np.expand_dims(img, axis=0)}
 
     def post_process(self, model_output):
         model_output = model_output[0]

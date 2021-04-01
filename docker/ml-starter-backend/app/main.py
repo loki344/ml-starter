@@ -14,7 +14,7 @@ model_output_names = []
 if 'model_output_names' in config:
     model_output_names = config['model_output_names']
 
-#model = create_model('/external-folder/iris-example/custom_model.onnx', model_output_names)
+#model = create_model('/external-folder/iris-example/custom_model.py.onnx', model_output_names)
 model = create_model('./efficientnet-lite4-11.onnx', model_output_names)
 
 

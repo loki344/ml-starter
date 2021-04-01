@@ -10,11 +10,10 @@ class AbstractModel(ABC):
 
         self.onnx_file_path = onnx_file_path
         self.model_output_names = model_output_names
+        self.inference_session = runtime.InferenceSession(self.onnx_file_path)
 
-
-    @staticmethod
     @abstractmethod
-    def pre_process(input_data):
+    def pre_process(self, input_data, input_metadata):
         pass
 
     @staticmethod
@@ -24,11 +23,8 @@ class AbstractModel(ABC):
         pass
 
     def predict(self, input_data):
-        inference_session = runtime.InferenceSession(self.onnx_file_path)
 
-        input_name = inference_session.get_inputs()[0].name
-        input_data = self.pre_process(input_data)
-
-        output = inference_session.run(self.model_output_names, {input_name: input_data})
+        input_data = self.pre_process(input_data, self.inference_session.get_inputs())
+        output = self.inference_session.run(self.model_output_names, input_data)
 
         return self.post_process(output)

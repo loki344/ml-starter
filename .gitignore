@@ -95,5 +95,4 @@ ENV/
 *.pickle
 /archiv/
 /sample-models/
-/external-folder/
 
