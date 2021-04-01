@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust">
-      <change afterPath="$PROJECT_DIR$/external-folder/gpt2-example/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/abstract_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker/ml-starter-backend/app/interface_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/docker/ml-starter-backend/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/efficientnet-example/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/interface_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/iris-example/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/iris-example/interface_demo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +85,10 @@
       <recent name="$PROJECT_DIR$/archiv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
-      <recent name="$PROJECT_DIR$/external-folder/efficientnet-example" />
       <recent name="$PROJECT_DIR$/external-folder/iris-example" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/external-folder/efficientnet-example" />
+      <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -307,7 +299,7 @@
       <workItem from="1617027998437" duration="7410000" />
       <workItem from="1617055018131" duration="6817000" />
       <workItem from="1617223441411" duration="2563000" />
-      <workItem from="1617267823972" duration="1840000" />
+      <workItem from="1617267823972" duration="2152000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -548,7 +540,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/interface_demo.py</url>
+          <url>file://$PROJECT_DIR$/external-folder/iris-example/interface_demo.py</url>
           <line>3</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
