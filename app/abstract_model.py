@@ -25,6 +25,8 @@ class AbstractModel(ABC):
     def predict(self, input_data):
 
         input_data = self.pre_process(input_data, self.inference_session.get_inputs())
+
+        print(input_data)
         output = self.inference_session.run(self.model_output_names, input_data)
 
         return self.post_process(output)

@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust">
-      <change beforePath="$PROJECT_DIR$/app/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/iris-example/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/iris-example/interface_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/interface_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/abstract_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/gpt2-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/gpt2-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,14 +88,14 @@
       <recent name="$PROJECT_DIR$/archiv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/external-folder/iris-example" />
       <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/external-folder/iris-example" />
       <recent name="$PROJECT_DIR$/external-folder/efficientnet-example" />
       <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.gpt2">
+  <component name="RunManager" selected="Python tests.pytest in interface_demo.py">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter-backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,28 +110,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="custom_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter-backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external-folder/efficientnet-example/custom_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -256,13 +237,30 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="pytest in interface_demo.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter-backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/app/interface_demo.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in interface_demo.py" />
         <item itemvalue="Python.gpt2" />
         <item itemvalue="Docker.ml-starter-backend/Dockerfile" />
         <item itemvalue="Python.interface_demo" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.custom_model" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +297,8 @@
       <workItem from="1617027998437" duration="7410000" />
       <workItem from="1617055018131" duration="6817000" />
       <workItem from="1617223441411" duration="2563000" />
-      <workItem from="1617267823972" duration="2152000" />
+      <workItem from="1617267823972" duration="2648000" />
+      <workItem from="1617275956964" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>

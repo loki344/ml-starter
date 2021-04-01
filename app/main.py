@@ -48,7 +48,7 @@ async def predict(request: Request):
 
     prediction = model.predict(input_data)
 
-    response = {'prediction': prediction}
+    response = {'prediction': str(prediction)}
 
     return response
 
