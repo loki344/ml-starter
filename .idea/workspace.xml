@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust">
-      <change afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/abstract_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/labels_map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -306,7 +297,7 @@
       <workItem from="1617267823972" duration="2648000" />
       <workItem from="1617275956964" duration="5864000" />
       <workItem from="1617283167181" duration="1215000" />
-      <workItem from="1617350216559" duration="416000" />
+      <workItem from="1617350216559" duration="2675000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
