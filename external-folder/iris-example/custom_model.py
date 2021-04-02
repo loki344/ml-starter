@@ -1,5 +1,5 @@
 import numpy as np
-from app.abstract_model import AbstractModel
+from abstract_model import AbstractModel
 
 
 # TODO CONVENTION: FILE NAME AND STRUCTURE: HAS TO BE IN FOLDER CUSTOM_FILES, what about imports?
