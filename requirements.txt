@@ -7,3 +7,6 @@ matplotlib~=3.3.4
 pydantic~=1.5.1
 
 opencv-python~=4.5.1.48
+
+onnx~=1.8.1
+

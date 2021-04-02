@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust">
-      <change afterPath="$PROJECT_DIR$/app/interface_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/abstract_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/gpt2-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/gpt2-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/labels_map.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +95,13 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/external-folder/iris-example" />
-      <recent name="$PROJECT_DIR$/external-folder/efficientnet-example" />
       <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
+      <recent name="$PROJECT_DIR$/external-folder/efficientnet-example" />
+      <recent name="$PROJECT_DIR$/external-folder/iris-example" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in interface_demo.py">
+  <component name="RunManager" selected="Docker.ml-starter-backend/Dockerfile">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter-backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -250,15 +256,15 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/app/interface_demo.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/external-folder/gpt2-example/interface_demo.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.ml-starter-backend/Dockerfile" />
         <item itemvalue="Python tests.pytest in interface_demo.py" />
         <item itemvalue="Python.gpt2" />
-        <item itemvalue="Docker.ml-starter-backend/Dockerfile" />
         <item itemvalue="Python.interface_demo" />
         <item itemvalue="Python.main" />
       </list>
@@ -298,7 +304,9 @@
       <workItem from="1617055018131" duration="6817000" />
       <workItem from="1617223441411" duration="2563000" />
       <workItem from="1617267823972" duration="2648000" />
-      <workItem from="1617275956964" duration="311000" />
+      <workItem from="1617275956964" duration="5864000" />
+      <workItem from="1617283167181" duration="1215000" />
+      <workItem from="1617350216559" duration="416000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
