@@ -1,3 +1,9 @@
 {
-  "model_output_names": ["Softmax:0"]
+  "model_output_names": ["Softmax:0"],
+  "input": [{
+    "name": "Base64 encoded image",
+    "description": "A string representing an image.",
+    "type": "str"
+  }]
+
 }

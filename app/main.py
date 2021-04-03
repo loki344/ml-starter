@@ -2,6 +2,8 @@ from fastapi import FastAPI, Request
 import json
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+
 from model_creation import create_model
 from persistence_service import PersistenceService
 
@@ -25,7 +27,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
+#TODO move this code in initialization, define variables as class variables or so
 config_map = Path('./custom_model/configMap.json')
 if config_map.is_file():
 
@@ -33,13 +35,21 @@ if config_map.is_file():
     if 'model_output_names' in config:
         model_output_names = config['model_output_names']
 
+    if'input' in config:
+        input_fields = config['input']
+
+
 default_model_name = './custom_model/custom_model.onnx'
 model = create_model(default_model_name, model_output_names)
 
 
 @app.on_event("startup")
 async def startup_event():
+
     persistence_service.initialize()
+    for input_field in input_fields:
+        persistence_service.save_input_field(input_field)
+        print(input_field)
     pass
 
 @app.on_event("shutdown")
@@ -54,6 +64,9 @@ async def shutdown_event():
     pass
 
 
+class PredictionRequest(BaseModel):
+    inputData: input_fields[0]['type']
+
 
 @app.get("/ping")
 async def ping():
@@ -66,19 +79,26 @@ async def get_predictions():
     return {"predictions:": persistence_service.get_all_predictions()}
 
 
-@app.post("/predictions")
-async def predict(request: Request):
+#TODO make this parameter configurable
+@app.post("/predictions",
+          summary="Create a new prediction",
+          description="Returns a prediction for the delivered inputData in the requestBody")
+async def predict(request: PredictionRequest):
 
-    input_json = await request.json()
-    input_data = input_json['inputData']
-
-    prediction = model.predict(input_data)
+    prediction = model.predict(request.inputData)
 
     response = {'prediction': str(prediction)}
 
-    persistence_service.save_prediction(input_data, prediction)
+    persistence_service.save_prediction(request, prediction)
 
     return response
+
+
+@app.get("/input-fields", summary="Get information about the input-fields",
+         description="Returns detailed information about the configured input-fields")
+async def get_input_fields():
+
+    return input_fields
 
 
 

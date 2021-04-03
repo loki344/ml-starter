@@ -13,12 +13,25 @@ class PersistenceService:
 
         cur.execute('''CREATE TABLE IF NOT EXISTS predictions
                        (id integer primary key,input_data text, prediction text )''')
+        cur.execute('''CREATE TABLE IF NOT EXISTS input_fields
+                        (id integer primary key, field_name text, description text, field_type text )''')
         con.commit()
         con.close()
         pass
 
     def get_db_connection(self):
         return sqlite3.connect(self.db_file_name)
+
+    def save_input_field(self, input_field):
+        con = self.get_db_connection()
+        cur = con.cursor()
+
+        print(input_field)
+        sql = '''INSERT INTO input_fields (field_name, description, field_type) VALUES (?, ?, ?)'''
+        row = (str(input_field['name']), str(input_field['description']), str(input_field['type']))
+        cur.execute(sql, row)
+        con.commit()
+        con.close()
 
     def save_prediction(self, input_data, prediction):
         con = self.get_db_connection()
@@ -40,3 +53,14 @@ class PersistenceService:
 
         con.close()
         return predictions
+
+    def get_input_fields(self):
+        con = self.get_db_connection()
+        cur = con.cursor()
+
+        input_fields = []
+        for row in cur.execute("SELECT * FROM input_fields"):
+            input_fields.append(row)
+
+        con.close()
+        return input_fields

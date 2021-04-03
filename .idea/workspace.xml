@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- adds endpoint config which will be used later">
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/ml-starter-backend.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/persistence_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/persistence_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,12 +68,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/docker/.env&#10;/home/robert/Repositories/ml-starter/external-folder/iris.py&#10;/home/robert/Repositories/ml-starter-backend/archiv/pythontest/gpt2.py" />
@@ -145,6 +150,9 @@
       <module name="ml-starter-backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -292,7 +300,8 @@
       <workItem from="1617275956964" duration="5864000" />
       <workItem from="1617283167181" duration="1215000" />
       <workItem from="1617350216559" duration="3377000" />
-      <workItem from="1617436423596" duration="10160000" />
+      <workItem from="1617436423596" duration="13312000" />
+      <workItem from="1617453946292" duration="893000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -553,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617447960864</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script">
+      <created>1617450000954</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1617450000954</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +621,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- exclude archiv&#10;- add dependencies in requirements.txt" />
     <MESSAGE value="- adds basic demo with docker" />
     <MESSAGE value="- adds Dockerfile" />
     <MESSAGE value="- adds run script for docker" />
@@ -630,7 +645,8 @@
     <MESSAGE value="- changes path" />
     <MESSAGE value="- adds file helper to find files even in docker etc" />
     <MESSAGE value="- adds endpoint config which will be used later" />
-    <option name="LAST_COMMIT_MESSAGE" value="- adds endpoint config which will be used later" />
+    <MESSAGE value="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script" />
+    <option name="LAST_COMMIT_MESSAGE" value="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
