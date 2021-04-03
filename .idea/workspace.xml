@@ -4,39 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust">
-      <change afterPath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/endpoint_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/file_helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ml-starter-backend.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/persistence_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ml-starter-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ml-starter-backend.iml" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- adds endpoint config which will be used later">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/labels_map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/model_creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/abstract_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/configMap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/custom_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/interface_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/kitten.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/labels_map.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/app/model_creation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/ml-starter-backend/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/run.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/testcommands" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/gpt2-example/configMap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/configMap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/heroku commands" beforeDir="false" afterPath="$PROJECT_DIR$/heroku commands" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heroku.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +96,7 @@
       <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Docker.Docker Image">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter-backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -161,28 +133,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/archiv/pythontest/gpt2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="interface_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter-backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -258,6 +208,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="ml-starter-backend:latest" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="ml-starter-backend/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -285,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Docker Image" />
         <item itemvalue="Docker.ml-starter-backend/Dockerfile" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python tests.pytest in interface_demo.py" />
         <item itemvalue="Python.gpt2" />
-        <item itemvalue="Python.interface_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -330,7 +292,7 @@
       <workItem from="1617275956964" duration="5864000" />
       <workItem from="1617283167181" duration="1215000" />
       <workItem from="1617350216559" duration="3377000" />
-      <workItem from="1617436423596" duration="7934000" />
+      <workItem from="1617436423596" duration="10160000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -493,7 +455,105 @@
       <option name="project" value="LOCAL" />
       <updated>1617062575357</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="- install custom dependencies in Dockerfile">
+      <created>1617447743847</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447743847</updated>
+    </task>
+    <task id="LOCAL-00025" summary="- updated heroku commands">
+      <created>1617447754633</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447754633</updated>
+    </task>
+    <task id="LOCAL-00026" summary="- moved custom model things to own folder">
+      <created>1617447785352</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447785352</updated>
+    </task>
+    <task id="LOCAL-00027" summary="- moved custom model things to own folder">
+      <created>1617447789991</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447789991</updated>
+    </task>
+    <task id="LOCAL-00028" summary="- clean up">
+      <created>1617447807174</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447807174</updated>
+    </task>
+    <task id="LOCAL-00029" summary="- clean up">
+      <created>1617447810011</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447810011</updated>
+    </task>
+    <task id="LOCAL-00030" summary="- update requirements.txt">
+      <created>1617447819734</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447819734</updated>
+    </task>
+    <task id="LOCAL-00031" summary="- extracted persistence logic to service class">
+      <created>1617447835351</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447835351</updated>
+    </task>
+    <task id="LOCAL-00032" summary="- install dependencies via custom requirements file">
+      <created>1617447874170</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447874170</updated>
+    </task>
+    <task id="LOCAL-00033" summary="- db and iml file">
+      <created>1617447883847</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447883847</updated>
+    </task>
+    <task id="LOCAL-00034" summary="- added some description and infos&#10;- uses persistence service&#10;- uses files from custom_model folder">
+      <created>1617447917487</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447917487</updated>
+    </task>
+    <task id="LOCAL-00035" summary="- changes path">
+      <created>1617447933706</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447933706</updated>
+    </task>
+    <task id="LOCAL-00036" summary="- adds file helper to find files even in docker etc">
+      <created>1617447950708</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447950708</updated>
+    </task>
+    <task id="LOCAL-00037" summary="- adds endpoint config which will be used later">
+      <created>1617447960864</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447960864</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -545,13 +605,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- iris model to test" />
-    <MESSAGE value="- initial setup with abc class abstraction&#10;- dynamic creation of models" />
-    <MESSAGE value="- clean up" />
-    <MESSAGE value="- implements abstract model class" />
-    <MESSAGE value="- implements methods to create a dynamic representation of an abstract model" />
-    <MESSAGE value="- adds demo of usage" />
-    <MESSAGE value="- add Dockerfile&#10;- remove boilerplate file from template" />
     <MESSAGE value="- exclude archiv&#10;- add dependencies in requirements.txt" />
     <MESSAGE value="- adds basic demo with docker" />
     <MESSAGE value="- adds Dockerfile" />
@@ -565,7 +618,19 @@
     <MESSAGE value="- enable onnx output names parameter" />
     <MESSAGE value="- prepare efficientnet&#10;still have to solve the additional argument in the main" />
     <MESSAGE value="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust" />
-    <option name="LAST_COMMIT_MESSAGE" value="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust" />
+    <MESSAGE value="- install custom dependencies in Dockerfile" />
+    <MESSAGE value="- updated heroku commands" />
+    <MESSAGE value="- moved custom model things to own folder" />
+    <MESSAGE value="- clean up" />
+    <MESSAGE value="- update requirements.txt" />
+    <MESSAGE value="- extracted persistence logic to service class" />
+    <MESSAGE value="- install dependencies via custom requirements file" />
+    <MESSAGE value="- db and iml file" />
+    <MESSAGE value="- added some description and infos&#10;- uses persistence service&#10;- uses files from custom_model folder" />
+    <MESSAGE value="- changes path" />
+    <MESSAGE value="- adds file helper to find files even in docker etc" />
+    <MESSAGE value="- adds endpoint config which will be used later" />
+    <option name="LAST_COMMIT_MESSAGE" value="- adds endpoint config which will be used later" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
