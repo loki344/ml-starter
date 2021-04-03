@@ -11,5 +11,6 @@ RUN apt-get install ffmpeg libsm6 libxext6  -y
 #end
 
 RUN pip3 install -r requirements.txt
+RUN pip3 install -r ./custom_model/custom_requirements.txt
 
 CMD uvicorn main:app --host 0.0.0.0 --port $PORT
