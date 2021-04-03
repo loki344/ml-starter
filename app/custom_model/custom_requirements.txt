@@ -1,0 +1,5 @@
+opencv-python~=4.5.1.48
+torch~=1.8.0
+transformers~=4.4.2
+tensorflow~=2.4.1
+numpy~=1.19.5

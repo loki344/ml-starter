@@ -1,13 +1,15 @@
 import numpy as np
 import cv2
 import json
-from abstract_model import AbstractModel
 import base64
+
+from abstract_model import AbstractModel
+from file_helper import get_file
 
 
 class CustomModel(AbstractModel):
 
-    labels = json.load(open("labels_map.txt", "r"))
+    labels = json.load(open(get_file("labels_map.txt"), "r"))
 
     @staticmethod
     def center_crop(img, out_height, out_width):
