@@ -1,13 +1,17 @@
 from fastapi import FastAPI, Request
 import json
-import sqlite3
-import uuid
-
-from model_creation import create_model
-
+from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
+from model_creation import create_model
+from persistence_service import PersistenceService
 
-app = FastAPI()
+app = FastAPI(
+    title="ML-starter REST API",
+    description="This backend provides endpoints to interact with the loaded ONNX model.",
+    version="1.0.0"
+)
+
+persistence_service = PersistenceService()
 
 origins = [
     "http://localhost:3000"
@@ -21,36 +25,32 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-#TODO ERROR HANDLING WHEN FILE IS NOT THERE
-config_map = 'configMap.json'
-config = json.load(open(config_map))
-model_output_names = []
-if 'model_output_names' in config:
-    model_output_names = config['model_output_names']
 
-default_model_name = 'custom_model.onnx'
+config_map = Path('./custom_model/configMap.json')
+if config_map.is_file():
+
+    config = json.load(open(config_map))
+    if 'model_output_names' in config:
+        model_output_names = config['model_output_names']
+
+default_model_name = './custom_model/custom_model.onnx'
 model = create_model(default_model_name, model_output_names)
 
 
 @app.on_event("startup")
 async def startup_event():
-    con = sqlite3.connect('ml-starter-backend.db')
-    cur = con.cursor()
-    # Create table
-    cur.execute('''CREATE TABLE predictions
-                   (request text, prediction text )''')
-    con.commit()
-    con.close()
+    persistence_service.initialize()
     pass
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    con = sqlite3.connect('ml-starter-backend.db')
-    cur = con.cursor()
-    cur.execute('''DROP TABLE predictions
-                   ''')
-    con.commit()
-    con.close()
+    #Is not needed atm
+  #  con = sqlite3.connect('ml-starter-backend.db')
+ #   cur = con.cursor()
+  #  cur.execute('''DROP TABLE predictions
+   #                ''')
+   # con.commit()
+  #  con.close()
     pass
 
 
@@ -62,15 +62,8 @@ async def ping():
 
 @app.get("/predictions")
 async def get_predictions():
-    con = sqlite3.connect('ml-starter-backend.db')
-    cur = con.cursor()
 
-    predictions = []
-    for row in cur.execute("SELECT * FROM predictions"):
-        predictions.append(row)
-
-    con.close()
-    return {"predictions:": predictions}
+    return {"predictions:": persistence_service.get_all_predictions()}
 
 
 @app.post("/predictions")
@@ -83,13 +76,7 @@ async def predict(request: Request):
 
     response = {'prediction': str(prediction)}
 
-    con = sqlite3.connect('ml-starter-backend.db')
-    cur = con.cursor()
-    sql = '''INSERT INTO predictions VALUES (?, ?)'''
-    row = (str(input_data), str(response))
-    cur.execute(sql, row)
-    con.commit()
-    con.close()
+    persistence_service.save_prediction(input_data, prediction)
 
     return response
 
