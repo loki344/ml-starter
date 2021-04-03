@@ -1,7 +1,7 @@
 from model_creation import create_model
 import json
 
-config = json.load(open('../../app/configMap.json'))
+config = json.load(open('../../app/custom_model/configMap.json'))
 model_output_names = []
 if 'model_output_names' in config:
     model_output_names = config['model_output_names']
