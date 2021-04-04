@@ -65,5 +65,5 @@ class CustomModel(AbstractModel):
                 'className': self.labels[str(r)],
                 'probability': str(model_output[0][r])
             })
-        print(response)
+
         return response

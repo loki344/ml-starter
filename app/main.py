@@ -35,9 +35,11 @@ if config_map.is_file():
     if 'model_output_names' in config:
         model_output_names = config['model_output_names']
 
-    if'input' in config:
+    if 'input' in config:
         input_fields = config['input']
 
+    if 'applicationName' in config:
+        application_name = config['applicationName']
 
 default_model_name = './custom_model/custom_model.onnx'
 model = create_model(default_model_name, model_output_names)
@@ -87,18 +89,18 @@ async def predict(request: PredictionRequest):
 
     prediction = model.predict(request.inputData)
 
-    response = {'prediction': str(prediction)}
+    response = {'prediction': prediction}
 
     persistence_service.save_prediction(request, prediction)
 
     return response
 
 
-@app.get("/input-fields", summary="Get information about the input-fields",
-         description="Returns detailed information about the configured input-fields")
-async def get_input_fields():
+@app.get("/configs", summary="Get configuration",
+         description="Returns application related properties")
+async def get_configuration():
 
-    return input_fields
+    return {'applicationName': application_name, 'inputFields': input_fields}
 
 
 

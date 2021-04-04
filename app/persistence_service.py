@@ -14,7 +14,7 @@ class PersistenceService:
         cur.execute('''CREATE TABLE IF NOT EXISTS predictions
                        (id integer primary key,input_data text, prediction text )''')
         cur.execute('''CREATE TABLE IF NOT EXISTS input_fields
-                        (id integer primary key, field_name text, description text, field_type text )''')
+                        (id integer primary key, field_name text, label text, field_type text )''')
         con.commit()
         con.close()
         pass
@@ -27,8 +27,8 @@ class PersistenceService:
         cur = con.cursor()
 
         print(input_field)
-        sql = '''INSERT INTO input_fields (field_name, description, field_type) VALUES (?, ?, ?)'''
-        row = (str(input_field['name']), str(input_field['description']), str(input_field['type']))
+        sql = '''INSERT INTO input_fields (field_name, label, field_type) VALUES (?, ?, ?)'''
+        row = (str(input_field['name']), str(input_field['label']), str(input_field['type']))
         cur.execute(sql, row)
         con.commit()
         con.close()

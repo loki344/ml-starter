@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- made first try to provide input fields to the frontend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/ml-starter-backend.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/persistence_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/persistence_service.py" afterDir="false" />
@@ -301,7 +300,8 @@
       <workItem from="1617283167181" duration="1215000" />
       <workItem from="1617350216559" duration="3377000" />
       <workItem from="1617436423596" duration="13312000" />
-      <workItem from="1617453946292" duration="893000" />
+      <workItem from="1617453946292" duration="2734000" />
+      <workItem from="1617544087049" duration="4233000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -569,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617450000954</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="- made first try to provide input fields to the frontend">
+      <created>1617455139334</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1617455139334</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,7 +628,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- adds basic demo with docker" />
     <MESSAGE value="- adds Dockerfile" />
     <MESSAGE value="- adds run script for docker" />
     <MESSAGE value="- adds methods for dynamic model creation" />
@@ -646,7 +652,8 @@
     <MESSAGE value="- adds file helper to find files even in docker etc" />
     <MESSAGE value="- adds endpoint config which will be used later" />
     <MESSAGE value="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script" />
-    <option name="LAST_COMMIT_MESSAGE" value="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script" />
+    <MESSAGE value="- made first try to provide input fields to the frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="- made first try to provide input fields to the frontend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

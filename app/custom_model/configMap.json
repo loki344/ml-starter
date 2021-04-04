@@ -1,9 +1,11 @@
 {
   "model_output_names": ["Softmax:0"],
+  "applicationName": "My demo-application with EfficientNet",
   "input": [{
     "name": "Base64 encoded image",
-    "description": "A string representing an image.",
+    "label": "Please enter the base64 encoded image as a string.",
     "type": "str"
-  }]
+  }
+  ]
 
 }
