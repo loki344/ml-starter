@@ -2,7 +2,7 @@ export const mapFieldType = (fieldType) =>{
 
     switch (fieldType){
         case 'str':
-            return 'text'
+            return 'input'
         default:
             return ''
 
