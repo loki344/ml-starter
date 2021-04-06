@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- made first try to provide input fields to the frontend">
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it">
+      <change afterPath="$PROJECT_DIR$/external-folder/gpt2-example/configMap.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/ml-starter-backend.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/persistence_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/persistence_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/gpt2-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/gpt2-example/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heroku commands" beforeDir="false" afterPath="$PROJECT_DIR$/heroku commands" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,17 +90,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
+      <recent name="$PROJECT_DIR$/app/custom_model" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/custom_files" />
       <recent name="$PROJECT_DIR$/model" />
-      <recent name="$PROJECT_DIR$/archiv" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/archiv/docker" />
-      <recent name="$PROJECT_DIR$/archiv" />
       <recent name="$PROJECT_DIR$/app/custom_model" />
-      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/external-folder/efficientnet-example" />
+      <recent name="$PROJECT_DIR$/external-folder/iris-example" />
       <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
+      <recent name="$PROJECT_DIR$/archiv/docker" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.Docker Image">
@@ -254,8 +257,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Docker Image" />
         <item itemvalue="Docker.ml-starter-backend/Dockerfile" />
+        <item itemvalue="Docker.Docker Image" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python tests.pytest in interface_demo.py" />
         <item itemvalue="Python.gpt2" />
@@ -302,6 +305,8 @@
       <workItem from="1617436423596" duration="13312000" />
       <workItem from="1617453946292" duration="2734000" />
       <workItem from="1617544087049" duration="4233000" />
+      <workItem from="1617607640752" duration="15771000" />
+      <workItem from="1617725656270" duration="10359000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -576,7 +581,21 @@
       <option name="project" value="LOCAL" />
       <updated>1617455139334</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="- allow CORS from everywhere">
+      <created>1617699467933</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1617699467933</updated>
+    </task>
+    <task id="LOCAL-00041" summary="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it">
+      <created>1617699547491</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1617699547491</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,8 +647,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- adds Dockerfile" />
-    <MESSAGE value="- adds run script for docker" />
     <MESSAGE value="- adds methods for dynamic model creation" />
     <MESSAGE value="- adds fastapi&#10;- cleanup" />
     <MESSAGE value="- enabled docker-compose&#10;- redesigned core functions" />
@@ -653,7 +670,9 @@
     <MESSAGE value="- adds endpoint config which will be used later" />
     <MESSAGE value="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script" />
     <MESSAGE value="- made first try to provide input fields to the frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="- made first try to provide input fields to the frontend" />
+    <MESSAGE value="- allow CORS from everywhere" />
+    <MESSAGE value="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it" />
+    <option name="LAST_COMMIT_MESSAGE" value="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

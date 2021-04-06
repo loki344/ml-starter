@@ -1,3 +1,3 @@
-docker tag ml-starter-backend registry.heroku.com/quiet-plains-78348/web
-docker push registry.heroku.com/quiet-plains-78348/web
-heroku container:release web --app quiet-plains-78348
+docker tag ml-starter-backend registry.heroku.com/still-ravine-02127/web
+docker push registry.heroku.com/still-ravine-02127/web
+heroku container:release web --app still-ravine-02127

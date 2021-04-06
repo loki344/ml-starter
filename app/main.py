@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 import json
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from fastapi.responses import JSONResponse
 
 from model_creation import create_model
 from persistence_service import PersistenceService
@@ -26,7 +26,7 @@ app.add_middleware(
 )
 
 #TODO move this code in initialization, define variables as class variables or so
-config_map = Path('../external-folder/efficientnet-example/configMap.json')
+config_map = Path('./custom_model/configMap.json')
 model_output_names = None
 
 if config_map.is_file():
@@ -89,12 +89,11 @@ async def predict(request: Request):
     input_data = input_json['inputData']
 
     prediction = model.predict(input_data)
-
-    response = {'prediction': prediction}
+    response = {"prediction": prediction}
 
     persistence_service.save_prediction(request, prediction)
 
-    return response
+    return JSONResponse(content=response)
 
 
 @app.get("/configs", summary="Get configuration",

@@ -1,0 +1,13 @@
+{
+  "applicationName": "My demo-application with GPT-2",
+  "input": [
+    {
+    "id": "inputText",
+    "name": "text",
+    "label": "Please enter some text",
+    "type": "str"
+    }
+  ],
+  "requestObject": {"inputData": "inputText"}
+
+}

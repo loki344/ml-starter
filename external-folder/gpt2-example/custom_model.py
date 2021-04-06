@@ -1,8 +1,8 @@
-from abstract_model import AbstractModel
-import torch
-from transformers import GPT2Model, GPT2LMHeadModel, GPT2Tokenizer
-
 import numpy as np
+import torch
+from transformers import GPT2Tokenizer
+
+from abstract_model import AbstractModel
 
 
 class CustomModel(AbstractModel):
@@ -29,7 +29,7 @@ class CustomModel(AbstractModel):
         predictions = torch.tensor(outputs_flatten)
         print(('modelOutput:' + str(predictions)))
 
-        return predictions
+        return str(predictions)
 
 
 
