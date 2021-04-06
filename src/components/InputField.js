@@ -15,21 +15,19 @@ export const InputField = ({inputField}) => {
 
     const {id, type, label} = inputField
     const dispatch = useDispatch();
-    const prediction =  useSelector(state => state.prediction);
-    const {inputData} = prediction
 
     let htmlTag = (<p>InputField not recognized</p>)
 
     switch (type){
 
         case 'file':
-            htmlTag = (<input type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></input>)
+            htmlTag = (<Form.File type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></Form.File>)
             break
         case 'float':
-            htmlTag = (<input type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))}></input>)
+            htmlTag = (<Form.Control type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))}></Form.Control>)
             break
         case 'str':
-            htmlTag = (<input type="text" step="any" onChange={(event) => dispatch(addData(id, '"'+event.target.value+'"'))}></input>)
+            htmlTag = (<Form.Control type="text" step="any" onChange={(event) => dispatch(addData(id, '"'+event.target.value+'"'))}></Form.Control>)
             break
         default:
             return ''
@@ -37,10 +35,10 @@ export const InputField = ({inputField}) => {
 
 
 
-    return (<Form.Label>
-        {label}
+    return (<Form.Group>
+        <Form.Label>{label}</Form.Label>
         {htmlTag}
-    </Form.Label>)
+    </Form.Group>)
 
 
 
