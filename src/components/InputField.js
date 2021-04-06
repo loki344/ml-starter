@@ -26,7 +26,10 @@ export const InputField = ({inputField}) => {
             htmlTag = (<input type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></input>)
             break
         case 'float':
-            htmlTag = (<input type="number" step="any" onChange={(event) => dispatch(addData(id, event.target.value))}></input>)
+            htmlTag = (<input type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))}></input>)
+            break
+        case 'str':
+            htmlTag = (<input type="text" step="any" onChange={(event) => dispatch(addData(id, '"'+event.target.value+'"'))}></input>)
             break
         default:
             return ''

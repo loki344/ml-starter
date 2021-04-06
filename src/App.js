@@ -38,11 +38,10 @@ const App = () => {
         let requestBody = '{"inputData":'+requestData+'}'
         requestBody = requestBody.replace('/','\/')
 
-        console.log(requestBody)
         requestBody = JSON.parse(requestBody)
-        console.log(requestBody)
         const {data} = await axios.post('http://localhost:8000/predictions', requestBody)
-        setPrediction(data.prediction)
+        console.log(typeof data.prediction)
+        setPrediction( typeof data.prediction === 'object' ? data.prediction : [data.prediction] )
     }
 
 
