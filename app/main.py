@@ -27,6 +27,8 @@ app.add_middleware(
 
 #TODO move this code in initialization, define variables as class variables or so
 config_map = Path('../external-folder/efficientnet-example/configMap.json')
+model_output_names = None
+
 if config_map.is_file():
 
     config = json.load(open(config_map))
@@ -52,7 +54,6 @@ async def startup_event():
     persistence_service.initialize()
     for input_field in input_fields:
         persistence_service.save_input_field(input_field)
-        print(input_field)
     pass
 
 @app.on_event("shutdown")
@@ -65,10 +66,6 @@ async def shutdown_event():
    # con.commit()
   #  con.close()
     pass
-
-#TODO make this from the input fields or it is always a string?
-class PredictionRequest(BaseModel):
-    inputData: str
 
 
 @app.get("/ping")
@@ -86,8 +83,12 @@ async def get_predictions():
 @app.post("/predictions",
           summary="Create a new prediction",
           description="Returns a prediction for the delivered inputData in the requestBody")
-async def predict(request: PredictionRequest):
-    prediction = model.predict(request.inputData)
+async def predict(request: Request):
+
+    input_json = await request.json()
+    input_data = input_json['inputData']
+
+    prediction = model.predict(input_data)
 
     response = {'prediction': prediction}
 

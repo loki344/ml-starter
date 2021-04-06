@@ -2,7 +2,6 @@ import numpy as np
 from abstract_model import AbstractModel
 
 
-# TODO CONVENTION: FILE NAME AND STRUCTURE: HAS TO BE IN FOLDER CUSTOM_FILES, what about imports?
 class CustomModel(AbstractModel):
 
     def pre_process(self, input_data, input_metadata):
