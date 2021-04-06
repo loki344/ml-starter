@@ -16,14 +16,17 @@ export const InputField = ({inputField}) => {
     const {id, type, label} = inputField
     const dispatch = useDispatch();
     const prediction =  useSelector(state => state.prediction);
-
     const {inputData} = prediction
+
     let htmlTag = (<p>InputField not recognized</p>)
 
     switch (type){
 
         case 'file':
             htmlTag = (<input type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></input>)
+            break
+        case 'float':
+            htmlTag = (<input type="number" step="any" onChange={(event) => dispatch(addData(id, event.target.value))}></input>)
             break
         default:
             return ''

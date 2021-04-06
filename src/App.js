@@ -19,7 +19,6 @@ const App = () => {
     const {inputData} = useSelector(state => state.prediction)
 
 
-
     useEffect(() => {
         dispatch(getConfiguration())
     }, [dispatch])
@@ -28,12 +27,21 @@ const App = () => {
     const [prediction, setPrediction] = useState([])
 
 
-    const submitHandler = async (e) => {
+    const clickHandler = async (e) => {
         e.preventDefault()
-        let requestBody = {'inputData': inputData[requestObject.inputData]}
-        console.log(requestBody)
-        const {data} = await axios.post('http://localhost:8000/predictions', requestBody)
 
+        let requestData = String(requestObject.inputData)
+        console.log(inputData)
+        for (let inputField of inputFields){
+            console.log(inputField.id)
+            console.log(inputData[inputField.id])
+            requestData = requestData.replace(inputField.id, inputData[inputField.id])
+        }
+        let requestBody = '{"inputData": '+requestData+'}'
+        requestBody = JSON.parse(requestBody)
+
+        const {data} = await axios.post('http://localhost:8000/predictions', requestBody)
+        console.log(data);
         setPrediction(data.prediction)
     }
 
@@ -41,21 +49,21 @@ const App = () => {
     return (
         <div className="App">
             <h1>{applicationName}</h1>
-            <Form onSubmit={submitHandler}>
+            <Form>
             {inputFields.map((inputField) => (
-                <InputField key={inputField.name} inputField={inputField}>
+                <InputField key={inputField.label} inputField={inputField}>
                 </InputField>
             ))}
             <br/>
             <br/>
-            <Button type="submit">Start prediction</Button>
+            <Button onClick={clickHandler} type="submit">Start prediction</Button>
             </Form>
             <div>
                 <h3>Your prediction:</h3>
                 {
                     prediction.map((pred) => (
                         <div>
-                        <p>{pred.className}: {pred.probability}</p>
+                        <p>{pred}</p>
                         </div>
                     ))
                 }
