@@ -15,9 +15,7 @@ app = FastAPI(
 
 persistence_service = PersistenceService()
 
-origins = [
-    "http://localhost:3000"
-]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
@@ -40,6 +38,9 @@ if config_map.is_file():
 
     if 'applicationName' in config:
         application_name = config['applicationName']
+
+    if 'requestObject' in config:
+        request_object = config['requestObject']
 
 default_model_name = './custom_model/custom_model.onnx'
 model = create_model(default_model_name, model_output_names)
@@ -65,9 +66,9 @@ async def shutdown_event():
   #  con.close()
     pass
 
-
+#TODO make this from the input fields or it is always a string?
 class PredictionRequest(BaseModel):
-    inputData: input_fields[0]['type']
+    inputData: str
 
 
 @app.get("/ping")
@@ -86,7 +87,6 @@ async def get_predictions():
           summary="Create a new prediction",
           description="Returns a prediction for the delivered inputData in the requestBody")
 async def predict(request: PredictionRequest):
-
     prediction = model.predict(request.inputData)
 
     response = {'prediction': prediction}
@@ -100,7 +100,7 @@ async def predict(request: PredictionRequest):
          description="Returns application related properties")
 async def get_configuration():
 
-    return {'applicationName': application_name, 'inputFields': input_fields}
+    return {'applicationName': application_name, 'inputFields': input_fields, "requestObject": request_object}
 
 
 
