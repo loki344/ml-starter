@@ -31,17 +31,17 @@ const App = () => {
         e.preventDefault()
 
         let requestData = String(requestObject.inputData)
-        console.log(inputData)
         for (let inputField of inputFields){
-            console.log(inputField.id)
-            console.log(inputData[inputField.id])
             requestData = requestData.replace(inputField.id, inputData[inputField.id])
         }
-        let requestBody = '{"inputData": '+requestData+'}'
-        requestBody = JSON.parse(requestBody)
 
+        let requestBody = '{"inputData":'+requestData+'}'
+        requestBody = requestBody.replace('/','\/')
+
+        console.log(requestBody)
+        requestBody = JSON.parse(requestBody)
+        console.log(requestBody)
         const {data} = await axios.post('http://localhost:8000/predictions', requestBody)
-        console.log(data);
         setPrediction(data.prediction)
     }
 
@@ -62,10 +62,15 @@ const App = () => {
                 <h3>Your prediction:</h3>
                 {
                     prediction.map((pred) => (
-                        <div>
-                        <p>{pred}</p>
-                        </div>
-                    ))
+                        typeof pred === 'object' && pred !== null ?
+                    Object.keys(pred).map(key =>
+                            <div>
+                                <p>{key}: {pred[key]}</p>
+                            </div>)
+                            :
+                                    <p>{pred}</p>
+                            )
+                    )
                 }
             </div>
             </div>);
