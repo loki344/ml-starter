@@ -1,6 +1,6 @@
 import {GET_CONFIGURATION} from "../constants/configurationConstants";
 
-const initialState = {'applicationName': '', 'inputFields': []}
+const initialState = {'applicationName': '', 'inputFields': [], 'requestObject': {}}
 
 export const configurationReducer = (state = initialState, action) => {
 
