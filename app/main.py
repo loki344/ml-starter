@@ -26,7 +26,7 @@ app.add_middleware(
 )
 
 #TODO move this code in initialization, define variables as class variables or so
-config_map = Path('./custom_model/configMap.json')
+config_map = Path('../external-folder/efficientnet-example/configMap.json')
 if config_map.is_file():
 
     config = json.load(open(config_map))

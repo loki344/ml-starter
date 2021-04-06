@@ -1,6 +1,3 @@
-numpy~=1.19.5
-
-
 
 #DO NOT DELETE THIS DEPENDENCY
 opencv-python--headless
