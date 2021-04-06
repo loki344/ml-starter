@@ -1,23 +1,41 @@
 import {Form, FormLabel} from "react-bootstrap";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {addData} from "../actions/predictionActions";
 
-export const InputField = (props) => {
-    const {inputField} = props;
+export const InputField = ({inputField}) => {
 
+    const toBase64 = file => new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = error => reject(error);
+    });
+
+
+    const {id, type, label} = inputField
+    const dispatch = useDispatch();
+    const prediction =  useSelector(state => state.prediction);
+
+    const {inputData} = prediction
     let htmlTag = (<p>InputField not recognized</p>)
-    console.log(inputField.inputField)
-    switch (inputField.type){
+
+    switch (type){
 
         case 'file':
-            htmlTag = (<Form.File as='file'></Form.File>)
+            htmlTag = (<input type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></input>)
             break
         default:
             return ''
     }
 
+
+
     return (<Form.Label>
-        {inputField.label}
+        {label}
         {htmlTag}
     </Form.Label>)
+
+
 
 }
