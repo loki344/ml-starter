@@ -5,24 +5,41 @@ import {useSelector} from "react-redux";
 export const PredictionView = () => {
 
     const predictionObject = useSelector(state => state.prediction)
-    const {prediction} =  predictionObject
+    const {prediction, inputData} =  predictionObject
+
+    const configuration = useSelector(state => state.configuration)
+    const {inputFields} =  configuration
+    inputFields.map(inputField => console.log(inputField))
 
     return(
 
         <div>
-            <h3>Your prediction:</h3>
+            <h2 className="PredictionTitle">Prediction:</h2>
+            <br/>
             {
                 prediction.map((pred) => (
                         typeof pred === 'object' && pred !== null ?
                             Object.keys(pred).map(key =>
-                                <div>
-                                    <p>{key}: {pred[key]}</p>
-                                </div>)
+
+                                    <div className="PredictionItem">{key}: {pred[key]}</div>
+                                )
                             :
-                            <p>{pred}</p>
+                            <div className="PredictionItem">{pred}</div>
                     )
                 )
             }
+            <br/>
+            <br/>
+            <h2 className="PredictionTitle">Your input:</h2>
+            <br/>
+
+            {inputFields.map((inputField) => (
+
+                <p className="PredictionItem">{inputField.label}: {inputData[inputField.id]}</p>
+            ))}
+
+            
+
         </div>
     )
 

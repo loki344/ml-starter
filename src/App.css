@@ -67,3 +67,15 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+
+.PredictionTitle{
+  color: white;
+  font-family: "DejaVu Sans", sans-serif;
+}
+
+.PredictionItem{
+  color: white;
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 1.8rem;
+}
