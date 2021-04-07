@@ -11,13 +11,9 @@ import Header from "./components/layout/Header";
 import {InputDataView} from "./components/InputDataView";
 import {PredictionView} from "./components/PredictionView";
 import './App.css'
-import {useSelector} from "react-redux";
 
 const App = () => {
     LogRocket.init('bc26dt/ml-starter-frontend');
-
-    const configuration = useSelector(state => state.configuration)
-    const {applicationName} = configuration
 
 
     return (
@@ -26,7 +22,6 @@ const App = () => {
             <Header/>
         </div>
         <div className="AppBody">
-        <h1 className="ApplicationName">{applicationName}</h1>
         <Switch>
             <Route path="/prediction">
                 <PredictionView />

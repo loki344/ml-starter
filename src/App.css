@@ -1,21 +1,69 @@
-.AppBody{
-  height: 100vh;
+html, body {
+  height: 100%;
   background-color: #5F6366;
+}
+
+.AppBody{
+  height: 100%;
+  text-align: center;
+  padding-bottom: 10%;
+  padding-top: 3%;
 }
 
 .ApplicationName{
   color: #ffffff;
-  font-family: 'Helvetica',
-  sans-serif; font-size: 54px;
-  font-weight: 300;
-  line-height: 58px;
-  margin: 0 0 58px;
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 3rem;
+  margin: 0 0 5rem;
+  padding-top: 3%;
 }
 
 .InputDataView{
-
+  margin:0 auto;
+  max-width: 50vw
 }
 
 .InputDataForm{
+  text-align: left;
+  align-items: center;
+}
 
+.InputField{
+  color: white;
+  font-family: "DejaVu Sans", sans-serif;
+  background: none;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 10px;
+  display: block;
+  border-color: #99CED3;
+  width: 100%;
+}
+
+.InputLabel{
+  color: white;
+  font-family: "DejaVu Sans", sans-serif;
+}
+
+.InputGroup{
+  margin-bottom: 30px;
+}
+
+.InputField:focus {
+  outline: none;
+  border: 2px solid #99CED3;
+  margin: -1px;
+}
+
+
+/* No controls for number input Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* No controls for number input Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
