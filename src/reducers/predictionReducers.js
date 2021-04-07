@@ -1,8 +1,8 @@
-import {ADD_DATA, CHECK_DATA, POST_PREDICTION} from "../constants/predictionConstants";
+import {ADD_DATA, POST_PREDICTION} from "../constants/predictionConstants";
 
 
 
-const initialState = {"inputData":{}, "prediction":[], "predictButtonState": 'notReady'}
+const initialState = {"inputData":{}, "prediction":[], "id":''}
 
 
 export const predictionReducer = (state = initialState, action) => {
@@ -12,7 +12,9 @@ export const predictionReducer = (state = initialState, action) => {
             state.inputData[action.payload.id] = action.payload.value
             return {...state, "inputData":{...state.inputData, [action.payload.id]:action.payload.value}}
         case POST_PREDICTION:
-            state.prediction = action.payload
+            console.log(action.payload)
+            state.prediction = action.payload.prediction
+            state.id = action.payload.id
             return state
         default:
             return state

@@ -1,5 +1,5 @@
 import {InputField} from "./InputField";
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getConfiguration} from "../actions/configurationActions";
 import { useHistory } from "react-router-dom";

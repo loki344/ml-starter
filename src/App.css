@@ -23,6 +23,11 @@ html, body {
   max-width: 50vw
 }
 
+.PredictionView{
+  margin:0 auto;
+  max-width: 50vw
+}
+
 .InputDataForm{
   text-align: left;
   align-items: center;
@@ -78,4 +83,20 @@ input[type=number] {
   color: white;
   font-family: "DejaVu Sans", sans-serif;
   font-size: 1.8rem;
+}
+
+.RatingForm{
+  align-items: center;
+}
+
+.RadioGroup{
+  display: grid;
+}
+
+.RadioButton{
+
+}
+
+.RadioItemWrapper{
+
 }
