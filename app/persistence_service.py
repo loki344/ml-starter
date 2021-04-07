@@ -12,7 +12,7 @@ class PersistenceService:
         cur = con.cursor()
 
         cur.execute('''CREATE TABLE IF NOT EXISTS predictions
-                       (id integer primary key,input_data text, prediction text )''')
+                       (id integer primary key,input_data text, prediction text, rating text)''')
         cur.execute('''CREATE TABLE IF NOT EXISTS input_fields
                         (id integer primary key, field_name text, label text, field_type text )''')
         con.commit()
@@ -26,7 +26,7 @@ class PersistenceService:
         con = self.get_db_connection()
         cur = con.cursor()
 
-        print(input_field)
+
         sql = '''INSERT INTO input_fields (field_name, label, field_type) VALUES (?, ?, ?)'''
         row = (str(input_field['name']), str(input_field['label']), str(input_field['type']))
         cur.execute(sql, row)
@@ -40,8 +40,11 @@ class PersistenceService:
         sql = '''INSERT INTO predictions (input_data, prediction) VALUES (?, ?)'''
         row = (str(input_data), str(prediction))
         cur.execute(sql, row)
+
+        lastRowId = cur.lastrowid
         con.commit()
         con.close()
+        return lastRowId
 
     def get_all_predictions(self):
         con = self.get_db_connection()
@@ -64,3 +67,13 @@ class PersistenceService:
 
         con.close()
         return input_fields
+
+    def save_rating(self, id, rating):
+        con = self.get_db_connection()
+        cur = con.cursor()
+
+        sql = '''UPDATE predictions SET rating = ? WHERE id = ?'''
+        row = (str(rating), str(id))
+        cur.execute(sql, row)
+        con.commit()
+        con.close()

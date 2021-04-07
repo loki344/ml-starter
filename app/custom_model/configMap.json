@@ -4,43 +4,43 @@
     {
     "id": "input1",
     "name": "flower",
-    "label": "input1",
+    "label": "Flower 1, Sepal length",
     "type": "float"
     },    {
     "id": "input2",
     "name": "flower",
-    "label": "input2",
+    "label": "Flower 1, Sepal width",
     "type": "float"
     },    {
     "id": "input3",
     "name": "flower",
-    "label": "input3",
+    "label": "Flower 1, Petal length",
     "type": "float"
     },    {
     "id": "input4",
     "name": "flower",
-    "label": "input4",
+    "label": "Flower 1, Petal width",
     "type": "float"
     },
     {
     "id": "input5",
     "name": "flower",
-    "label": "input5",
+    "label": "Flower 2, Sepal length",
     "type": "float"
     },    {
     "id": "input6",
     "name": "flower",
-    "label": "input6",
+    "label": "Flower 2, Sepal width",
     "type": "float"
     },    {
     "id": "input7",
     "name": "flower",
-    "label": "input7",
+    "label": "Flower 2, Petal length",
     "type": "float"
     },    {
     "id": "input8",
     "name": "flower",
-    "label": "input8",
+    "label": "Flower 2, Petal width",
     "type": "float"
     }
   ],

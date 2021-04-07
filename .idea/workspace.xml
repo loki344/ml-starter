@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it">
-      <change afterPath="$PROJECT_DIR$/external-folder/gpt2-example/configMap.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/ml-starter-backend.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/gpt2-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/external-folder/gpt2-example/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/external-folder/iris-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heroku commands" beforeDir="false" afterPath="$PROJECT_DIR$/heroku commands" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/persistence_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/persistence_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +302,8 @@
       <workItem from="1617453946292" duration="2734000" />
       <workItem from="1617544087049" duration="4233000" />
       <workItem from="1617607640752" duration="15771000" />
-      <workItem from="1617725656270" duration="10359000" />
+      <workItem from="1617725656270" duration="10962000" />
+      <workItem from="1617793183867" duration="4442000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>

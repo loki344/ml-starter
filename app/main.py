@@ -89,11 +89,18 @@ async def predict(request: Request):
     input_data = input_json['inputData']
 
     prediction = model.predict(input_data)
-    response = {"prediction": prediction}
 
-    persistence_service.save_prediction(request, prediction)
+    row_id = persistence_service.save_prediction(request, prediction)
+    response = {"id": row_id, "prediction": prediction}
 
     return JSONResponse(content=response)
+
+@app.patch("/predictions")
+async def save_rating(request: Request):
+    input_json = await request.json()
+    prediction_id = input_json['id']
+    rating = input_json['rating']
+    persistence_service.save_rating(prediction_id, rating)
 
 
 @app.get("/configs", summary="Get configuration",
