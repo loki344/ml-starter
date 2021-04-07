@@ -1,4 +1,4 @@
-import {ADD_DATA, POST_PREDICTION} from "../constants/predictionConstants";
+import {ADD_DATA, CHECK_DATA, POST_PREDICTION} from "../constants/predictionConstants";
 import axios from "axios";
 
 export const addData = (id, value) => async (dispatch) =>{

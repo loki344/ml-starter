@@ -1,16 +1,25 @@
 import React, { Component } from 'react'
 import {Link} from "react-router-dom"
+import {useSelector} from "react-redux";
 
- class Header extends Component {
-    render() {
+export const Header = () => {
+
+    const configuration = useSelector(state => state.configuration)
+     const {applicationName} = configuration
+
+
         return (
-                    <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
-                        This could be a header... we'll see if it's needed
-
-                    </nav>
+            <nav className="navbar navbar-expand navbar-dark bg-dark">
+                <a className="navbar-brand" href="#">{applicationName}</a>
+                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div className="navbar-nav">
+                        <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
+                    </div>
+                </div>
+            </nav>
 
         )
-    }
+
 }
 
 export default Header;

@@ -1,7 +1,8 @@
 import {Form, FormLabel} from "react-bootstrap";
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {addData} from "../actions/predictionActions";
+
 
 export const InputField = ({inputField}) => {
 
@@ -24,10 +25,10 @@ export const InputField = ({inputField}) => {
             htmlTag = (<Form.File type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></Form.File>)
             break
         case 'float':
-            htmlTag = (<Form.Control type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))}></Form.Control>)
+            htmlTag = (<input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))} required></input>)
             break
         case 'str':
-            htmlTag = (<Form.Control type="text" step="any" onChange={(event) => dispatch(addData(id, '"'+event.target.value+'"'))}></Form.Control>)
+            htmlTag = (<input className="InputField" type="text" onChange={(event) => dispatch(addData(id, '"'+event.target.value+'"'))} required></input>)
             break
         default:
             return ''
@@ -35,8 +36,8 @@ export const InputField = ({inputField}) => {
 
 
 
-    return (<Form.Group>
-        <Form.Label>{label}</Form.Label>
+    return (<Form.Group className="InputGroup">
+        <Form.Label className="InputLabel">{label}</Form.Label>
         {htmlTag}
     </Form.Group>)
 

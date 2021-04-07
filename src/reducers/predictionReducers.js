@@ -1,8 +1,8 @@
-import {ADD_DATA, POST_PREDICTION} from "../constants/predictionConstants";
+import {ADD_DATA, CHECK_DATA, POST_PREDICTION} from "../constants/predictionConstants";
 
 
 
-const initialState = {"inputData":{}, "prediction":[]}
+const initialState = {"inputData":{}, "prediction":[], "predictButtonState": 'notReady'}
 
 
 export const predictionReducer = (state = initialState, action) => {

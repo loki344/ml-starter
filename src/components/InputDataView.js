@@ -1,10 +1,10 @@
-import {Button, Form} from "react-bootstrap";
 import {InputField} from "./InputField";
 import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getConfiguration} from "../actions/configurationActions";
 import { useHistory } from "react-router-dom";
 import {postPrediction} from "../actions/predictionActions";
+import '../CustomButton.scss'
 
 export const InputDataView = () => {
 
@@ -27,6 +27,13 @@ export const InputDataView = () => {
     const clickHandler = async (e) => {
         e.preventDefault()
 
+        for (let inputField of inputFields){
+            if (inputData[inputField.id] === undefined){
+                alert('Please fill out all fields')
+                return
+            }
+        }
+
         let requestData = String(requestObject.inputData)
         for (let inputField of inputFields){
             requestData = requestData.replace(inputField.id, inputData[inputField.id])
@@ -45,15 +52,19 @@ export const InputDataView = () => {
     return (
         <div className="InputDataView">
 
-    <Form className="InputDataForm" >
-        {inputFields.map((inputField) => (
-            <InputField key={inputField.label} inputField={inputField}>
-            </InputField>
-        ))}
+        <form className="InputDataForm" >
+            {inputFields.map((inputField) => (
+                <InputField key={inputField.label} inputField={inputField}>
+                </InputField>
+            ))}
         <br/>
-        <br/>
-        <Button onClick={clickHandler} type="submit">Start prediction</Button>
-    </Form>
+            <button className="button" onClick={clickHandler} type="submit">
+                Start prediction
+                <div className="button__horizontal"/>
+                <div className="button__vertical"/>
+            </button>
+
+    </form>
         </div>
     )
 
