@@ -1,4 +1,4 @@
-import {ADD_DATA, CHECK_DATA, POST_PREDICTION} from "../constants/predictionConstants";
+import {ADD_DATA, POST_PREDICTION} from "../constants/predictionConstants";
 import axios from "axios";
 
 export const addData = (id, value) => async (dispatch) =>{
@@ -18,6 +18,7 @@ export const patchRating = (id, rating) => async (dispatch) =>{
 
     let requestBody = {"id": id, "rating": rating}
 
-    await axios.patch('http://localhost:8000/ratings', requestBody)
+    await axios.patch('http://localhost:8000/predictions', requestBody)
 
+    // TODO patch something to trigger next run?
 }

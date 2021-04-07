@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {patchRating} from "../actions/predictionActions";
 
 
 export const PredictionView = () => {
@@ -9,12 +10,15 @@ export const PredictionView = () => {
 
     const configuration = useSelector(state => state.configuration)
     const {inputFields} =  configuration
+    
+    const [rating, setRating] = useState('')
 
     const dispatch = useDispatch();
+    
+    const handleSubmit = (event) =>{
+        event.preventDefault()
 
-    const handleInput = (event) =>{
-
-        dispatch()
+        dispatch(patchRating(id,rating ))
 
     }
 
@@ -47,32 +51,32 @@ export const PredictionView = () => {
             <br/>
             <br/>
 
-            <form className="RatingForm">
+            <form className="RatingForm" onSubmit={handleSubmit}>
                 <h3 className="PredictionTitle">Please rate the prediction</h3>
 
                 <div className="RadioGroup">
                     <span className="RadioItemWrapper">
-                        <input name="rating" type="radio" value="1" onInput={handleInput} className="RadioButton"/>
+                        <input name="rating" type="radio" value="1" onInput={(event) => setRating(event.target.value)} className="RadioButton"/>
                         <label>1 - Poor</label>
                     </span>
 
                     <span className="RadioItemWrapper">
-                        <input name="rating"  type="radio" value="2" onInput={handleInput} className="RadioButton"/>
+                        <input name="rating"  type="radio" value="2" onInput={(event) => setRating(event.target.value)}  className="RadioButton"/>
                         <label>2 - Acceptable</label>
                     </span>
 
                     <span className="RadioItemWrapper">
-                        <input name="rating"  type="radio" value="3" onInput={handleInput} className="RadioButton"/>
+                        <input name="rating"  type="radio" value="3" onInput={(event) => setRating(event.target.value)}  className="RadioButton"/>
                         <label>3 - Good</label>
                     </span>
 
                     <span className="RadioItemWrapper">
-                        <input name="rating"  type="radio" value="4" onInput={handleInput} className="RadioButton"/>
+                        <input name="rating"  type="radio" value="4" onInput={(event) => setRating(event.target.value)}  className="RadioButton"/>
                         <label>4 - Very Good</label>
                     </span>
 
                     <span className="RadioItemWrapper">
-                        <input name="rating"  type="radio" value="5" onInput={handleInput} className="RadioButton"/>
+                        <input name="rating"  type="radio" value="5" onInput={(event) => setRating(event.target.value)}  className="RadioButton"/>
                         <label>5 - Excellent</label>
                     </span>
 
