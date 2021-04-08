@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/../ml-starter-backend/.idea/ml-starter-backend.iml" filepath="$PROJECT_DIR$/../ml-starter-backend/.idea/ml-starter-backend.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/ml-starter-frontend.iml" filepath="$PROJECT_DIR$/.idea/ml-starter-frontend.iml" />
+>>>>>>> ml-starter-frontend/master
     </modules>
   </component>
 </project>
