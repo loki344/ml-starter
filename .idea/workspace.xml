@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/ml-starter-backend.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/persistence_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/persistence_service.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="aac7d4f5-6d18-46fe-865e-b3d2d228d17a" />
+  </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="minikube" />
+    <option name="namespace" value="default" />
+  </component>
+  <component name="ProjectId" id="1p7nJLdZDiqNo41puskts2kJ7xR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/docker/.env&#10;/home/robert/Repositories/ml-starter/external-folder/iris.py&#10;/home/robert/Repositories/ml-starter-backend/archiv/pythontest/gpt2.py" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/external-folder/gpt2-example" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
+      <recent name="$PROJECT_DIR$/app/custom_model" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/custom_files" />
+      <recent name="$PROJECT_DIR$/model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/custom_model" />
+      <recent name="$PROJECT_DIR$/external-folder/efficientnet-example" />
+      <recent name="$PROJECT_DIR$/external-folder/iris-example" />
+      <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
+      <recent name="$PROJECT_DIR$/archiv/docker" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.Docker Image">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="ml-starter-backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gpt2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter-backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/archiv/pythontest" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/archiv/pythontest/gpt2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="interface_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter-backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="interface_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter-backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external-folder/iris-example/interface_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter-backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MlStarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ml-starter" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ch.mlstarter.mlstarter.MlStarterApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
+      <deployment type="docker-image">
+        <settings>
+          <option name="imageTag" value="ml-starter-backend:latest" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="ml-starter-backend/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest in interface_demo.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter-backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/external-folder/gpt2-example/interface_demo.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.ml-starter-backend/Dockerfile" />
+        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python tests.pytest in interface_demo.py" />
+        <item itemvalue="Python.gpt2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="" />
+      <created>1614542928169</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614542928169</updated>
+      <workItem from="1614542930216" duration="458000" />
+      <workItem from="1614859546644" duration="533000" />
+      <workItem from="1615332242943" duration="463000" />
+      <workItem from="1615726744025" duration="608000" />
+      <workItem from="1615727388230" duration="10937000" />
+      <workItem from="1615843305137" duration="6007000" />
+      <workItem from="1615926115438" duration="6481000" />
+      <workItem from="1616018203353" duration="1854000" />
+      <workItem from="1616061179795" duration="1368000" />
+      <workItem from="1616074381395" duration="8199000" />
+      <workItem from="1616269603809" duration="9123000" />
+      <workItem from="1616279061103" duration="1765000" />
+      <workItem from="1616420388748" duration="854000" />
+      <workItem from="1616533554100" duration="4868000" />
+      <workItem from="1616654961025" duration="581000" />
+      <workItem from="1616667597677" duration="17208000" />
+      <workItem from="1616689202037" duration="1437000" />
+      <workItem from="1616690833282" duration="17000" />
+      <workItem from="1616837777380" duration="18358000" />
+      <workItem from="1616882562062" duration="1883000" />
+      <workItem from="1616920791389" duration="13361000" />
+      <workItem from="1616948834621" duration="1814000" />
+      <workItem from="1617027998437" duration="7410000" />
+      <workItem from="1617055018131" duration="6817000" />
+      <workItem from="1617223441411" duration="2563000" />
+      <workItem from="1617267823972" duration="2648000" />
+      <workItem from="1617275956964" duration="5864000" />
+      <workItem from="1617283167181" duration="1215000" />
+      <workItem from="1617350216559" duration="3377000" />
+      <workItem from="1617436423596" duration="13312000" />
+      <workItem from="1617453946292" duration="2734000" />
+      <workItem from="1617544087049" duration="4233000" />
+      <workItem from="1617607640752" duration="15771000" />
+      <workItem from="1617725656270" duration="10962000" />
+      <workItem from="1617793183867" duration="4442000" />
+    </task>
+    <task id="LOCAL-00001" summary="- iris model to test">
+      <created>1615926196955</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615926196955</updated>
+    </task>
+    <task id="LOCAL-00002" summary="- initial setup with abc class abstraction&#10;- dynamic creation of models">
+      <created>1616687986695</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616687986695</updated>
+    </task>
+    <task id="LOCAL-00003" summary="- clean up">
+      <created>1616688201152</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688201152</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- clean up">
+      <created>1616688216768</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688216768</updated>
+    </task>
+    <task id="LOCAL-00005" summary="- implements abstract model class">
+      <created>1616688233735</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688233735</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- implements methods to create a dynamic representation of an abstract model">
+      <created>1616688256057</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688256057</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- adds demo of usage">
+      <created>1616688268491</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688268491</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- adds demo of usage">
+      <created>1616688412320</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688412320</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- add Dockerfile&#10;- remove boilerplate file from template">
+      <created>1616688633476</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688633476</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- exclude archiv&#10;- add dependencies in requirements.txt">
+      <created>1616688679074</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616688679074</updated>
+    </task>
+    <task id="LOCAL-00011" summary="- adds basic demo with docker">
+      <created>1616692221974</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1616692221974</updated>
+    </task>
+    <task id="LOCAL-00012" summary="- adds Dockerfile">
+      <created>1616868392933</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868392933</updated>
+    </task>
+    <task id="LOCAL-00013" summary="- adds run script for docker">
+      <created>1616868400817</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868400817</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- adds methods for dynamic model creation">
+      <created>1616868426090</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868426090</updated>
+    </task>
+    <task id="LOCAL-00015" summary="- adds methods for dynamic model creation">
+      <created>1616868429035</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868429035</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- enabled docker-compose&#10;- redesigned core functions">
+      <created>1616933206765</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1616933206765</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- implements all functions in copied file">
+      <created>1616941143769</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1616941143769</updated>
+    </task>
+    <task id="LOCAL-00018" summary="- renaming&#10;- big change in processing of the method, from now on it is more of a convention ofer configuration approach where i expect a file named custom_model.py with a class CustomModel implemented. This saves a lot of extra code. Additionally, the packages should be mentioned in the requirements.txt in order to be available during runtime">
+      <created>1617053380526</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1617053380526</updated>
+    </task>
+    <task id="LOCAL-00019" summary="- gitignore etc">
+      <created>1617057170116</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617057170116</updated>
+    </task>
+    <task id="LOCAL-00020" summary="- enable onnx output names parameter">
+      <created>1617057188722</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1617057188722</updated>
+    </task>
+    <task id="LOCAL-00021" summary="- enable onnx output names parameter">
+      <created>1617057198903</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1617057198903</updated>
+    </task>
+    <task id="LOCAL-00022" summary="- prepare efficientnet&#10;still have to solve the additional argument in the main">
+      <created>1617057313880</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1617057313880</updated>
+    </task>
+    <task id="LOCAL-00023" summary="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust">
+      <created>1617062575357</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1617062575357</updated>
+    </task>
+    <task id="LOCAL-00024" summary="- install custom dependencies in Dockerfile">
+      <created>1617447743847</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447743847</updated>
+    </task>
+    <task id="LOCAL-00025" summary="- updated heroku commands">
+      <created>1617447754633</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447754633</updated>
+    </task>
+    <task id="LOCAL-00026" summary="- moved custom model things to own folder">
+      <created>1617447785352</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447785352</updated>
+    </task>
+    <task id="LOCAL-00027" summary="- moved custom model things to own folder">
+      <created>1617447789991</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447789991</updated>
+    </task>
+    <task id="LOCAL-00028" summary="- clean up">
+      <created>1617447807174</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447807174</updated>
+    </task>
+    <task id="LOCAL-00029" summary="- clean up">
+      <created>1617447810011</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447810011</updated>
+    </task>
+    <task id="LOCAL-00030" summary="- update requirements.txt">
+      <created>1617447819734</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447819734</updated>
+    </task>
+    <task id="LOCAL-00031" summary="- extracted persistence logic to service class">
+      <created>1617447835351</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447835351</updated>
+    </task>
+    <task id="LOCAL-00032" summary="- install dependencies via custom requirements file">
+      <created>1617447874170</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447874170</updated>
+    </task>
+    <task id="LOCAL-00033" summary="- db and iml file">
+      <created>1617447883847</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447883847</updated>
+    </task>
+    <task id="LOCAL-00034" summary="- added some description and infos&#10;- uses persistence service&#10;- uses files from custom_model folder">
+      <created>1617447917487</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447917487</updated>
+    </task>
+    <task id="LOCAL-00035" summary="- changes path">
+      <created>1617447933706</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447933706</updated>
+    </task>
+    <task id="LOCAL-00036" summary="- adds file helper to find files even in docker etc">
+      <created>1617447950708</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447950708</updated>
+    </task>
+    <task id="LOCAL-00037" summary="- adds endpoint config which will be used later">
+      <created>1617447960864</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1617447960864</updated>
+    </task>
+    <task id="LOCAL-00038" summary="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script">
+      <created>1617450000954</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1617450000954</updated>
+    </task>
+    <task id="LOCAL-00039" summary="- made first try to provide input fields to the frontend">
+      <created>1617455139334</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1617455139334</updated>
+    </task>
+    <task id="LOCAL-00040" summary="- allow CORS from everywhere">
+      <created>1617699467933</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1617699467933</updated>
+    </task>
+    <task id="LOCAL-00041" summary="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it">
+      <created>1617699547491</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1617699547491</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/home/robert/Repositories/ml-starter/pythontest" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/docker/kfserving" />
+    </ignored-roots>
+    <MESSAGE value="- adds methods for dynamic model creation" />
+    <MESSAGE value="- adds fastapi&#10;- cleanup" />
+    <MESSAGE value="- enabled docker-compose&#10;- redesigned core functions" />
+    <MESSAGE value="- implements all functions in copied file" />
+    <MESSAGE value="- renaming&#10;- big change in processing of the method, from now on it is more of a convention ofer configuration approach where i expect a file named custom_model.py with a class CustomModel implemented. This saves a lot of extra code. Additionally, the packages should be mentioned in the requirements.txt in order to be available during runtime" />
+    <MESSAGE value="- gitignore etc" />
+    <MESSAGE value="- enable onnx output names parameter" />
+    <MESSAGE value="- prepare efficientnet&#10;still have to solve the additional argument in the main" />
+    <MESSAGE value="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust" />
+    <MESSAGE value="- install custom dependencies in Dockerfile" />
+    <MESSAGE value="- updated heroku commands" />
+    <MESSAGE value="- moved custom model things to own folder" />
+    <MESSAGE value="- clean up" />
+    <MESSAGE value="- update requirements.txt" />
+    <MESSAGE value="- extracted persistence logic to service class" />
+    <MESSAGE value="- install dependencies via custom requirements file" />
+    <MESSAGE value="- db and iml file" />
+    <MESSAGE value="- added some description and infos&#10;- uses persistence service&#10;- uses files from custom_model folder" />
+    <MESSAGE value="- changes path" />
+    <MESSAGE value="- adds file helper to find files even in docker etc" />
+    <MESSAGE value="- adds endpoint config which will be used later" />
+    <MESSAGE value="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script" />
+    <MESSAGE value="- made first try to provide input fields to the frontend" />
+    <MESSAGE value="- allow CORS from everywhere" />
+    <MESSAGE value="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it" />
+    <option name="LAST_COMMIT_MESSAGE" value="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/external-folder/iris-example/interface_demo.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ml_starter$gpt2.coverage" NAME="gpt2 Coverage Results" MODIFIED="1616420653762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
+    <SUITE FILE_PATH="coverage/ml_starter$main.coverage" NAME="main Coverage Results" MODIFIED="1616866916644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/ml_starter_backend$interface_demo.coverage" NAME="interface_demo Coverage Results" MODIFIED="1617055938385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/ml_starter$saveIrisModel.coverage" NAME="saveIrisModel Coverage Results" MODIFIED="1616269847969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
+    <SUITE FILE_PATH="coverage/ml_starter$model_factory.coverage" NAME="model_factory Coverage Results" MODIFIED="1616685244709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/ml_starter$gpt2sample.coverage" NAME="gpt2sample Coverage Results" MODIFIED="1616081538820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest/unused" />
+    <SUITE FILE_PATH="coverage/ml_starter$quicktest.coverage" NAME="interface_demo Coverage Results" MODIFIED="1616688421185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/ml_starter_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1617444336578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/ml_starter$pytest_in_test_input_method_py.coverage" NAME="pytest in test_input_method.py Coverage Results" MODIFIED="1616840875258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/ml_starter$abstract_model.coverage" NAME="abstract_model Coverage Results" MODIFIED="1616680719385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/ml_starter$custom_regression.coverage" NAME="custom_regression Coverage Results" MODIFIED="1616065180707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
+    <SUITE FILE_PATH="coverage/ml_starter$GPT2ONNXModel.coverage" NAME="GPT2ONNXModel Coverage Results" MODIFIED="1616271323009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
+    <SUITE FILE_PATH="coverage/ml_starter$interface_demo.coverage" NAME="interface_demo Coverage Results" MODIFIED="1616843227158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/ml_starter$tester.coverage" NAME="tester Coverage Results" MODIFIED="1616278597008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
+    <SUITE FILE_PATH="coverage/ml_starter$interface_demo__1_.coverage" NAME="interface_demo (1) Coverage Results" MODIFIED="1616939855290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/ml_starter$efficientnet.coverage" NAME="efficientnet Coverage Results" MODIFIED="1616420479130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest/efficientnet" />
+    <SUITE FILE_PATH="coverage/ml_starter$gpt2_2.coverage" NAME="gpt2_2 Coverage Results" MODIFIED="1616075040629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
+    <SUITE FILE_PATH="coverage/ml_starter_backend$custom_model.coverage" NAME="custom_model Coverage Results" MODIFIED="1617055026836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
+    <SUITE FILE_PATH="coverage/ml_starter$language_detection.coverage" NAME="language_detection Coverage Results" MODIFIED="1616070415597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/ml_starter$iris_flower.coverage" NAME="iris_flower Coverage Results" MODIFIED="1616541125394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
+  </component>
+  <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
+    <option name="sizePresets">
+      <list>
+        <SizePreset>
+          <option name="caption" value="Phone" />
+          <option name="height" value="568" />
+          <option name="width" value="320" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Tablet" />
+          <option name="height" value="1024" />
+          <option name="width" value="768" />
+        </SizePreset>
+        <SizePreset>
+          <option name="caption" value="Desktop" />
+          <option name="height" value="900" />
+          <option name="width" value="1440" />
+        </SizePreset>
+      </list>
+    </option>
+  </component>
+</project>

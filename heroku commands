@@ -1,0 +1,3 @@
+docker tag ml-starter-backend registry.heroku.com/still-ravine-02127/web
+docker push registry.heroku.com/still-ravine-02127/web
+heroku container:release web --app still-ravine-02127

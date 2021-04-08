@@ -1,0 +1,8 @@
+numpy~=1.19.5
+torch~=1.8.0
+transformers~=4.4.2
+
+#DO NOT DELETE THIS DEPENDENCY
+opencv-python--headless
+#DO NOT DELETE THIS DEPENDENCY
+
