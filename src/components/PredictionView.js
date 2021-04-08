@@ -29,13 +29,15 @@ export const PredictionView = () => {
             <br/>
             {
                 prediction.map((pred) => (
+
                         typeof pred === 'object' && pred !== null ?
                             Object.keys(pred).map(key =>
 
                                     <div className="PredictionItem">{key}: {pred[key]}</div>
                                 )
                             :
-                            <div className="PredictionItem">{pred}</div>
+                        <div className="PredictionItem">{pred}</div>
+
                     )
                 )
             }

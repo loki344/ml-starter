@@ -28,6 +28,11 @@ html, body {
   max-width: 50vw
 }
 
+.AboutView{
+  margin:0 auto;
+  max-width: 50vw
+}
+
 .InputDataForm{
   text-align: left;
   align-items: center;
@@ -95,6 +100,10 @@ input[type=number] {
 
 .RadioButton{
 
+}
+
+.PredictionGroup{
+  margin-bottom: 10rem;
 }
 
 .RadioItemWrapper{

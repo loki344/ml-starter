@@ -2,6 +2,7 @@ import {Form, FormLabel} from "react-bootstrap";
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {addData} from "../actions/predictionActions";
+import '../CustomFileUpload.scss'
 
 
 export const InputField = ({inputField}) => {
@@ -22,7 +23,7 @@ export const InputField = ({inputField}) => {
     switch (type){
 
         case 'file':
-            htmlTag = (<Form.File type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></Form.File>)
+            htmlTag = (<input type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></input>)
             break
         case 'float':
             htmlTag = (<input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))} required></input>)
@@ -36,10 +37,10 @@ export const InputField = ({inputField}) => {
 
 
 
-    return (<Form.Group className="InputGroup">
-        <Form.Label className="InputLabel">{label}</Form.Label>
+    return (<div className="InputGroup">
+        <label className="InputLabel">{label}</label>
         {htmlTag}
-    </Form.Group>)
+    </div>)
 
 
 

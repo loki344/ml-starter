@@ -10,6 +10,7 @@ import {
 import Header from "./components/layout/Header";
 import {InputDataView} from "./components/InputDataView";
 import {PredictionView} from "./components/PredictionView";
+import {AboutView} from "./components/AboutView"
 import './App.css'
 
 const App = () => {
@@ -25,6 +26,9 @@ const App = () => {
         <Switch>
             <Route path="/prediction">
                 <PredictionView />
+            </Route>
+            <Route path="/about">
+                <AboutView />
             </Route>
             <Route path="/">
                 <InputDataView />

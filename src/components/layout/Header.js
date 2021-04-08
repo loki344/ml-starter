@@ -10,10 +10,10 @@ export const Header = () => {
 
         return (
             <nav className="navbar navbar-expand navbar-dark bg-dark">
-                <a className="navbar-brand" href="#">{applicationName}</a>
+                <Link className="navbar-brand" to="/">{applicationName}</Link>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
+                <Link className="nav-item nav-link active" to="/about">About</Link>
                     </div>
                 </div>
             </nav>
