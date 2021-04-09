@@ -1,17 +1,17 @@
 html, body {
   height: 100%;
-  background-color: #5F6366;
+  background-color: white;
 }
 
 .AppBody{
   height: 100%;
   text-align: center;
   padding-bottom: 10%;
-  padding-top: 3%;
+  padding-top: 2%;
 }
 
 .ApplicationName{
-  color: #ffffff;
+  color: black;
   font-family: "DejaVu Sans", sans-serif;
   font-size: 3rem;
   margin: 0 0 5rem;
@@ -39,19 +39,19 @@ html, body {
 }
 
 .InputField{
-  color: white;
+  color: black;
   font-family: "DejaVu Sans", sans-serif;
   background: none;
   border-radius: 10px;
   border: 1px solid;
   padding: 10px;
   display: block;
-  border-color: #99CED3;
+  border-color: #4D6D9A;
   width: 100%;
 }
 
 .InputLabel{
-  color: white;
+  color: black;
   font-family: "DejaVu Sans", sans-serif;
 }
 
@@ -61,7 +61,7 @@ html, body {
 
 .InputField:focus {
   outline: none;
-  border: 2px solid #99CED3;
+  border: 2px solid #4D6D9A;
   margin: -1px;
 }
 
@@ -80,12 +80,12 @@ input[type=number] {
 
 
 .PredictionTitle{
-  color: white;
+  color: black;
   font-family: "DejaVu Sans", sans-serif;
 }
 
 .PredictionItem{
-  color: white;
+  color: black;
   font-family: "DejaVu Sans", sans-serif;
   font-size: 1.8rem;
 }
