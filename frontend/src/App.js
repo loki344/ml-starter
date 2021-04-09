@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
     BrowserRouter as Router,
@@ -11,8 +11,16 @@ import {PredictionView} from "./components/PredictionView";
 import {AboutView} from "./components/AboutView"
 import './App.css'
 import {ThankYouView} from "./components/ThankYouView";
+import {useDispatch} from "react-redux";
+import {getConfiguration} from "./actions/configurationActions";
 
 const App = () => {
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getConfiguration())
+    }, [dispatch])
 
     return (
         <Router>

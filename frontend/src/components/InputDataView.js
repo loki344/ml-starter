@@ -10,16 +10,13 @@ export const InputDataView = () => {
 
 
     const dispatch = useDispatch();
-
     const configuration = useSelector(state => state.configuration)
     const {inputFields, requestObject} = configuration
 
     const {inputData} = useSelector(state => state.prediction)
 
 
-    useEffect(() => {
-        dispatch(getConfiguration())
-    }, [dispatch])
+
 
     let history = useHistory();
 
