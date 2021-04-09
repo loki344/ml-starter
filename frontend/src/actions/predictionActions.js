@@ -1,8 +1,12 @@
-import {ADD_DATA, POST_PREDICTION, RATE_PREDICTION} from "../constants/predictionConstants";
+import {ADD_DATA, POST_PREDICTION, RATE_PREDICTION, RESET_INPUT_DATA} from "../constants/predictionConstants";
 import axios from "axios";
 
 export const addData = (id, value) => async (dispatch) =>{
     dispatch({type: ADD_DATA, payload: {"id": id, "value": value} })
+}
+
+export const resetInputData = () => async (dispatch) =>{
+    dispatch({type: RESET_INPUT_DATA, payload: {}})
 }
 
 export const postPrediction = (requestBody) => async (dispatch) => {
