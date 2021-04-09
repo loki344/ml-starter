@@ -1,2 +1,3 @@
 export const ADD_DATA = 'ADD_DATA'
 export const POST_PREDICTION = 'POST_PREDICTION'
+export const RATE_PREDICTION = 'RATE_PREDICTION'
