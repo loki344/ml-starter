@@ -1,4 +1,4 @@
-import {ADD_DATA, POST_PREDICTION, RATE_PREDICTION} from "../constants/predictionConstants";
+import {ADD_DATA, POST_PREDICTION, RATE_PREDICTION, RESET_INPUT_DATA} from "../constants/predictionConstants";
 
 
 
@@ -12,14 +12,15 @@ export const predictionReducer = (state = initialState, action) => {
             state.inputData[action.payload.id] = action.payload.value
             return {...state, "inputData":{...state.inputData, [action.payload.id]:action.payload.value}}
         case POST_PREDICTION:
-            console.log(action.payload)
-            state.prediction = action.payload.prediction
-            state.id = action.payload.id
-            return state
+
+            return {...state, prediction: action.payload.prediction, id: action.payload.id}
         case RATE_PREDICTION:
 
-            state = {"inputData":{}, "prediction":[], "id":''}
             return state
+        case RESET_INPUT_DATA:
+
+            return {...state, inputData: action.payload}
+
         default:
             return state
 }
