@@ -3,15 +3,16 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getConfiguration} from "../actions/configurationActions";
 import { useHistory } from "react-router-dom";
-import {postPrediction} from "../actions/predictionActions";
+import {postPrediction, resetInputData} from "../actions/predictionActions";
 import '../CustomButton.css'
+import {RESET_INPUT_DATA} from "../constants/predictionConstants";
 
 export const InputDataView = () => {
 
 
     const dispatch = useDispatch();
     const configuration = useSelector(state => state.configuration)
-    const {inputFields, requestObject} = configuration
+    const {inputFields, requestObject, description} = configuration
 
     const {inputData} = useSelector(state => state.prediction)
 
@@ -20,12 +21,18 @@ export const InputDataView = () => {
 
     let history = useHistory();
 
+    useEffect(() => {
+        dispatch(resetInputData())
+    }, [dispatch])
+
 
     const clickHandler = async (e) => {
         e.preventDefault()
 
+        console.log(inputData)
+
         for (let inputField of inputFields){
-            if (inputData[inputField.id] === undefined){
+            if (inputData[inputField.id] === undefined || inputData === undefined){
                 alert('Please fill out all fields')
                 return
             }
@@ -48,6 +55,11 @@ export const InputDataView = () => {
 
     return (
         <div className="InputDataView">
+
+        <h3 className="PredictionTitle">{description}</h3>
+
+            <br/>
+            <br/>
 
         <form className="InputDataForm" >
             {inputFields.map((inputField) => (
