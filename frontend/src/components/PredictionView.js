@@ -9,7 +9,7 @@ export const PredictionView = () => {
     let history = useHistory();
 
     const predictionObject = useSelector(state => state.prediction)
-    const {prediction, inputData, id} =  predictionObject
+    const {prediction, previousInputData, id} =  predictionObject
 
     const configuration = useSelector(state => state.configuration)
     const {inputFields} =  configuration
@@ -51,7 +51,7 @@ export const PredictionView = () => {
             <br/>
             {inputFields.map((inputField) => (
 
-                <p className="PredictionItem">{inputField.label}: {inputData[inputField.id]}</p>
+                <p className="PredictionItem">{inputField.label}: {previousInputData[inputField.id]}</p>
             ))}
 
             <br/>

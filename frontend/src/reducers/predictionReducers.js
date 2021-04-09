@@ -2,7 +2,7 @@ import {ADD_DATA, POST_PREDICTION, RATE_PREDICTION, RESET_INPUT_DATA} from "../c
 
 
 
-const initialState = {"inputData":{}, "prediction":[], "id":''}
+const initialState = {"inputData":{}, "previousInputData": {}, "prediction":[], "id":''}
 
 
 export const predictionReducer = (state = initialState, action) => {
@@ -13,7 +13,7 @@ export const predictionReducer = (state = initialState, action) => {
             return {...state, "inputData":{...state.inputData, [action.payload.id]:action.payload.value}}
         case POST_PREDICTION:
 
-            return {...state, prediction: action.payload.prediction, id: action.payload.id}
+            return {...state, prediction: action.payload.prediction, id: action.payload.id, previousInputData: state.inputData}
         case RATE_PREDICTION:
 
             return state
