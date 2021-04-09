@@ -80,7 +80,8 @@ async def get_predictions():
 #TODO make this parameter configurable
 @app.post("/api/predictions",
           summary="Create a new prediction",
-          description="Returns a prediction for the delivered inputData in the requestBody")
+          description="Returns a prediction for the delivered inputData in the requestBody",
+          status_code=201)
 async def predict(request: Request):
     input_json = await request.json()
     input_data = input_json['inputData']
@@ -92,11 +93,13 @@ async def predict(request: Request):
     db.session.commit()
     db.session.refresh(prediction_entity)
 
-    return prediction_entity
+    response = {"id": prediction_entity.id, "input_data": prediction_entity.input_data, "prediction": prediction}
+
+    return response
 
 
 @app.patch("/api/predictions", summary="Patch a prediction",
-           description="Allows to patch the rating of a prediction")
+           description="Allows to patch the rating of a prediction",)
 async def patch_rating(prediction: schemas.PredictionPatch):
 
     existing_prediction = db.session.query(models.Prediction).get(prediction.id)
@@ -105,7 +108,6 @@ async def patch_rating(prediction: schemas.PredictionPatch):
     db.session.refresh(existing_prediction)
 
     return existing_prediction
-
 
 
 @app.get("/api/configs", summary="Get configuration",
