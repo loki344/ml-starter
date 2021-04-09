@@ -1,8 +1,6 @@
-import {Form, FormLabel} from "react-bootstrap";
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {addData} from "../actions/predictionActions";
-import '../CustomFileUpload.scss'
 
 
 export const InputField = ({inputField}) => {
@@ -23,13 +21,13 @@ export const InputField = ({inputField}) => {
     switch (type){
 
         case 'file':
-            htmlTag = (<input type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} ></input>)
+            htmlTag = (<input type="file" onChange={ async (event) =>  dispatch(addData(id, await toBase64(event.target.files[0])))} />)
             break
         case 'float':
-            htmlTag = (<input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))} required></input>)
+            htmlTag = (<input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))} required/>)
             break
         case 'str':
-            htmlTag = (<input className="InputField" type="text" onChange={(event) => dispatch(addData(id, '"'+event.target.value+'"'))} required></input>)
+            htmlTag = (<input className="InputField" type="text" onChange={(event) => dispatch(addData(id, '"'+event.target.value+'"'))} required/>)
             break
         default:
             return ''
