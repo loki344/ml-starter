@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+import uvicorn
 
 from model_creation import create_model
 from persistence_service import PersistenceService
@@ -68,19 +69,19 @@ async def shutdown_event():
     pass
 
 
-@app.get("/ping")
+@app.get("/api/ping")
 async def ping():
     return {"status": "alive"}
 
 
-@app.get("/predictions")
+@app.get("/api/predictions")
 async def get_predictions():
 
     return {"predictions:": persistence_service.get_all_predictions()}
 
 
 #TODO make this parameter configurable
-@app.post("/predictions",
+@app.post("/api/predictions",
           summary="Create a new prediction",
           description="Returns a prediction for the delivered inputData in the requestBody")
 async def predict(request: Request):
@@ -103,12 +104,9 @@ async def save_rating(request: Request):
     persistence_service.save_rating(prediction_id, rating)
 
 
-@app.get("/configs", summary="Get configuration",
+@app.get("/api/configs", summary="Get configuration",
          description="Returns application related properties")
 async def get_configuration():
 
     return {'applicationName': application_name, 'inputFields': input_fields, "requestObject": request_object}
-
-
-
 
