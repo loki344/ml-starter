@@ -1,9 +1,12 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {patchRating} from "../actions/predictionActions";
+import {useHistory} from "react-router-dom";
 
 
 export const PredictionView = () => {
+
+    let history = useHistory();
 
     const predictionObject = useSelector(state => state.prediction)
     const {prediction, inputData, id} =  predictionObject
@@ -20,6 +23,7 @@ export const PredictionView = () => {
 
         dispatch(patchRating(id,rating ))
 
+        history.push('/thanks')
     }
 
     return(
