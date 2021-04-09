@@ -31,26 +31,36 @@ export const PredictionView = () => {
 
         history.push('/thanks')
     }
-
+    //TODO make not objects work also
     return(
 
         <div className="PredictionView">
             <h2 className="PredictionTitle">Prediction:</h2>
             <br/>
-            {
-                prediction.map((pred) => (
 
-                        typeof pred === 'object' && pred !== null ?
-                            Object.keys(pred).map(key =>
 
-                                    <div className="PredictionItem">{key}: {pred[key]}</div>
-                                )
-                            :
-                        <div className="PredictionItem">{pred}</div>
+                <div style={{display: 'inline-grid', gridTemplateColumns: '20% auto', columnGap:'3rem'}}>
+                    {
+                        prediction.map((pred) => (
 
-                    )
-                )
-            }
+                                typeof pred === 'object' && pred !== null ?
+                                    Object.keys(pred).map(key =>
+
+                                        <>
+                                           <div className="PredictionItem" style={{textAlign: "left", justifyContent:'center', display: 'flex', alignItems: 'center'}}>{key}:</div>
+                                            <div className="PredictionItem" style={{textAlign: "left", justifyContent:'center', display: 'flex', alignItems: 'center'}}>{pred[key]}</div>
+                                        </>
+                                    )
+                                    :
+                                    <div className="PredictionItem">{pred}</div>
+
+                            )
+                        )
+                    }
+                </div>
+
+
+            <br/>
             <br/>
             <br/>
             <h2 className="PredictionTitle">Your input:</h2>
@@ -59,7 +69,7 @@ export const PredictionView = () => {
 
                 inputField.type === 'file' ?
 
-                <img src={`data:image/png;base64,${previousInputData[inputField.id]}`} style={{maxWidth: '50%', height: 'auto'}}  alt=""/>
+                <img src={`data:image/png;base64,${previousInputData[inputField.id]}`} style={{maxWidth: '50%', height: 'auto', border: 'solid black 1px', padding:'10px'}}  alt=""/>
                 :
                 <div>
                     <p className="PredictionItem">{inputField.label}: {previousInputData[inputField.id]}</p>

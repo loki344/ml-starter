@@ -82,6 +82,7 @@ input[type=number] {
 .PredictionTitle{
   color: black;
   font-family: "DejaVu Sans", sans-serif;
+  text-transform: uppercase;
 }
 
 .PredictionItem{
