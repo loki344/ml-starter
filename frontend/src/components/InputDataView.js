@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getConfiguration} from "../actions/configurationActions";
 import { useHistory } from "react-router-dom";
 import {postPrediction} from "../actions/predictionActions";
-import '../CustomButton.scss'
+import '../CustomButton.css'
 
 export const InputDataView = () => {
 
