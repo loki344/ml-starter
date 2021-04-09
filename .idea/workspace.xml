@@ -4,45 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it">
-      <change afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- cleanup">
       <change afterPath="$PROJECT_DIR$/backend/app/classes_yourpackage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/configMap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/custom_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/CustomButton.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/ThankYouView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/serviceWorker.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile.worker" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/labels_map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/ml-starter-backend.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/iris-example/configMap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/iris-example/custom_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/heroku commands" beforeDir="false" afterPath="$PROJECT_DIR$/backend/heroku commands" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile.web" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/CustomButton.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/CustomFileUpload.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/actions/configurationActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/configurationActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/predictionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/predictionConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,49 +238,7 @@
       <workItem from="1617879465729" duration="1108000" />
       <workItem from="1617886208522" duration="4571000" />
       <workItem from="1617955294395" duration="1419000" />
-      <workItem from="1617957466669" duration="13440000" />
-    </task>
-    <task id="LOCAL-00001" summary="- iris model to test">
-      <created>1615926196955</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1615926196955</updated>
-    </task>
-    <task id="LOCAL-00002" summary="- initial setup with abc class abstraction&#10;- dynamic creation of models">
-      <created>1616687986695</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1616687986695</updated>
-    </task>
-    <task id="LOCAL-00003" summary="- clean up">
-      <created>1616688201152</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1616688201152</updated>
-    </task>
-    <task id="LOCAL-00004" summary="- clean up">
-      <created>1616688216768</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1616688216768</updated>
-    </task>
-    <task id="LOCAL-00005" summary="- implements abstract model class">
-      <created>1616688233735</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1616688233735</updated>
-    </task>
-    <task id="LOCAL-00006" summary="- implements methods to create a dynamic representation of an abstract model">
-      <created>1616688256057</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1616688256057</updated>
+      <workItem from="1617957466669" duration="13811000" />
     </task>
     <task id="LOCAL-00007" summary="- adds demo of usage">
       <created>1616688268491</created>
@@ -560,7 +485,105 @@
       <option name="project" value="LOCAL" />
       <updated>1617699547491</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="- removed sass">
+      <created>1617981676264</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981676264</updated>
+    </task>
+    <task id="LOCAL-00043" summary="- removed sass">
+      <created>1617981683496</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981683496</updated>
+    </task>
+    <task id="LOCAL-00044" summary="- cleanup">
+      <created>1617981715999</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981715999</updated>
+    </task>
+    <task id="LOCAL-00045" summary="- cleanup">
+      <created>1617981719200</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981719200</updated>
+    </task>
+    <task id="LOCAL-00046" summary="- cleanup">
+      <created>1617981731740</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981731740</updated>
+    </task>
+    <task id="LOCAL-00047" summary="- implements ThankYouView.js&#10;- removes logrocket">
+      <created>1617981754719</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981754719</updated>
+    </task>
+    <task id="LOCAL-00048" summary="- adds db files">
+      <created>1617981773561</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981773561</updated>
+    </task>
+    <task id="LOCAL-00049" summary="-changes dockerfiles for heroku">
+      <created>1617981787465</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981787465</updated>
+    </task>
+    <task id="LOCAL-00050" summary="- updates commands">
+      <created>1617981797882</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981797883</updated>
+    </task>
+    <task id="LOCAL-00051" summary="- adds serviceWorker.js for prod mode later">
+      <created>1617981810285</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981810285</updated>
+    </task>
+    <task id="LOCAL-00052" summary="- implements push to next view">
+      <created>1617981828357</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981828357</updated>
+    </task>
+    <task id="LOCAL-00053" summary="- implements RatePrediction">
+      <created>1617981844093</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981844093</updated>
+    </task>
+    <task id="LOCAL-00054" summary="- adds /api to path">
+      <created>1617981866748</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981866748</updated>
+    </task>
+    <task id="LOCAL-00055" summary="- cleanup">
+      <created>1617981874047</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981874047</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -612,16 +635,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- adds methods for dynamic model creation" />
-    <MESSAGE value="- adds fastapi&#10;- cleanup" />
-    <MESSAGE value="- enabled docker-compose&#10;- redesigned core functions" />
-    <MESSAGE value="- implements all functions in copied file" />
-    <MESSAGE value="- renaming&#10;- big change in processing of the method, from now on it is more of a convention ofer configuration approach where i expect a file named custom_model.py with a class CustomModel implemented. This saves a lot of extra code. Additionally, the packages should be mentioned in the requirements.txt in order to be available during runtime" />
-    <MESSAGE value="- gitignore etc" />
-    <MESSAGE value="- enable onnx output names parameter" />
-    <MESSAGE value="- prepare efficientnet&#10;still have to solve the additional argument in the main" />
-    <MESSAGE value="- refines configMap.json solution&#10;- enables efficientnet in Dockerfile (custom import was necessary)&#10;- makes loading of model file more robust" />
-    <MESSAGE value="- install custom dependencies in Dockerfile" />
     <MESSAGE value="- updated heroku commands" />
     <MESSAGE value="- moved custom model things to own folder" />
     <MESSAGE value="- clean up" />
@@ -637,7 +650,17 @@
     <MESSAGE value="- made first try to provide input fields to the frontend" />
     <MESSAGE value="- allow CORS from everywhere" />
     <MESSAGE value="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it" />
-    <option name="LAST_COMMIT_MESSAGE" value="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it" />
+    <MESSAGE value="- removed sass" />
+    <MESSAGE value="- implements ThankYouView.js&#10;- removes logrocket" />
+    <MESSAGE value="- adds db files" />
+    <MESSAGE value="-changes dockerfiles for heroku" />
+    <MESSAGE value="- updates commands" />
+    <MESSAGE value="- adds serviceWorker.js for prod mode later" />
+    <MESSAGE value="- implements push to next view" />
+    <MESSAGE value="- implements RatePrediction" />
+    <MESSAGE value="- adds /api to path" />
+    <MESSAGE value="- cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="- cleanup" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
