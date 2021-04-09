@@ -1,11 +1,9 @@
 import {InputField} from "./InputField";
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getConfiguration} from "../actions/configurationActions";
 import { useHistory } from "react-router-dom";
 import {postPrediction, resetInputData} from "../actions/predictionActions";
 import '../CustomButton.css'
-import {RESET_INPUT_DATA} from "../constants/predictionConstants";
 
 export const InputDataView = () => {
 
@@ -29,8 +27,6 @@ export const InputDataView = () => {
     const clickHandler = async (e) => {
         e.preventDefault()
 
-        console.log(inputData)
-
         for (let inputField of inputFields){
             if (inputData[inputField.id] === undefined || inputData === undefined){
                 alert('Please fill out all fields')
@@ -41,10 +37,11 @@ export const InputDataView = () => {
         let requestData = String(requestObject.inputData)
         for (let inputField of inputFields){
             requestData = requestData.replace(inputField.id, inputData[inputField.id])
+            if (inputField.type === 'file'){
+                requestData = '"' + requestData + '"'
+            }
         }
-
         let requestBody = '{"inputData":'+requestData+'}'
-        requestBody = requestBody.replace('/','\/')
         requestBody = JSON.parse(requestBody)
 
         //TODO why do i need await here?
