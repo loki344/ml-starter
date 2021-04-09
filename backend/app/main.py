@@ -100,7 +100,7 @@ async def predict(request: Request):
 
     return JSONResponse(content=response)
 
-@app.patch("/predictions")
+@app.patch("/api/predictions")
 async def save_rating(request: Request):
     input_json = await request.json()
     prediction_id = input_json['id']
