@@ -21,6 +21,11 @@ export const PredictionView = () => {
     const handleSubmit = (event) =>{
         event.preventDefault()
 
+        if (rating === ''){
+            alert('Please choose a radiobutton')
+            return
+        }
+
         dispatch(patchRating(id,rating ))
 
         history.push('/thanks')
