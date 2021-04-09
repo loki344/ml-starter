@@ -1,12 +1,16 @@
 from fastapi import FastAPI, Request
+from typing import List
 import json
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
-import uvicorn
-
+import models
+import schemas
 from model_creation import create_model
-from persistence_service import PersistenceService
+from database import engine, SQLALCHEMY_DATABASE_URL
+from fastapi_sqlalchemy import db
+from fastapi_sqlalchemy import DBSessionMiddleware
+
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="ML-starter REST API",
@@ -14,17 +18,17 @@ app = FastAPI(
     version="1.0.0"
 )
 
-persistence_service = PersistenceService()
-
-origins = ["*"]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=True,
 )
+
+app.add_middleware(DBSessionMiddleware,
+                    db_url=SQLALCHEMY_DATABASE_URL)
+
 
 #TODO move this code in initialization, define variables as class variables or so
 config_map = Path('./custom_model/configMap.json')
@@ -55,21 +59,10 @@ model = create_model(default_model_name, model_output_names)
 
 @app.on_event("startup")
 async def startup_event():
-
-    persistence_service.initialize()
-    for input_field in input_fields:
-        persistence_service.save_input_field(input_field)
     pass
 
 @app.on_event("shutdown")
 async def shutdown_event():
-    #Is not needed atm
-  #  con = sqlite3.connect('ml-starter-backend.db')
- #   cur = con.cursor()
-  #  cur.execute('''DROP TABLE predictions
-   #                ''')
-   # con.commit()
-  #  con.close()
     pass
 
 
@@ -81,7 +74,7 @@ async def ping():
 @app.get("/api/predictions")
 async def get_predictions():
 
-    return {"predictions:": persistence_service.get_all_predictions()}
+    return db.session.query(models.Prediction).all()
 
 
 #TODO make this parameter configurable
@@ -89,28 +82,35 @@ async def get_predictions():
           summary="Create a new prediction",
           description="Returns a prediction for the delivered inputData in the requestBody")
 async def predict(request: Request):
-
     input_json = await request.json()
     input_data = input_json['inputData']
 
     prediction = model.predict(input_data)
 
-    row_id = persistence_service.save_prediction(request, prediction)
-    response = {"id": row_id, "prediction": prediction}
+    prediction_entity = models.Prediction(input_data=str(input_data), prediction=str(prediction))
+    db.session.add(prediction_entity)
+    db.session.commit()
+    db.session.refresh(prediction_entity)
 
-    return JSONResponse(content=response)
+    return prediction_entity
 
-@app.patch("/api/predictions")
-async def save_rating(request: Request):
-    input_json = await request.json()
-    prediction_id = input_json['id']
-    rating = input_json['rating']
-    persistence_service.save_rating(prediction_id, rating)
+
+@app.patch("/api/predictions", summary="Patch a prediction",
+           description="Allows to patch the rating of a prediction")
+async def patch_rating(prediction: schemas.PredictionPatch):
+
+    existing_prediction = db.session.query(models.Prediction).get(prediction.id)
+    existing_prediction.rating = prediction.rating
+    db.session.commit()
+    db.session.refresh(existing_prediction)
+
+    return existing_prediction
+
 
 
 @app.get("/api/configs", summary="Get configuration",
          description="Returns application related properties")
 async def get_configuration():
 
-    return {'applicationName': application_name,'description': description, 'inputFields': input_fields, "requestObject": request_object}
+    return {'applicationName': application_name, 'description': description, 'inputFields': input_fields, "requestObject": request_object}
 

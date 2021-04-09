@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- cleanup">
-      <change afterPath="$PROJECT_DIR$/backend/app/classes_yourpackage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/setupProxy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/configurationActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/configurationActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- adds simple alert for empty rating">
+      <change afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/schemas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/ml-starter-backend.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/persistence_service.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +28,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -95,11 +100,11 @@
       <recent name="$PROJECT_DIR$/backend/external-folder/gpt2-example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/app" />
       <recent name="$PROJECT_DIR$/frontend" />
       <recent name="$PROJECT_DIR$/frontend/nginx" />
       <recent name="$PROJECT_DIR$/backend/app/custom_model" />
       <recent name="$PROJECT_DIR$/backend/external-folder/efficientnet-example" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
@@ -238,105 +243,7 @@
       <workItem from="1617879465729" duration="1108000" />
       <workItem from="1617886208522" duration="4571000" />
       <workItem from="1617955294395" duration="1419000" />
-      <workItem from="1617957466669" duration="13811000" />
-    </task>
-    <task id="LOCAL-00007" summary="- adds demo of usage">
-      <created>1616688268491</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1616688268491</updated>
-    </task>
-    <task id="LOCAL-00008" summary="- adds demo of usage">
-      <created>1616688412320</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1616688412320</updated>
-    </task>
-    <task id="LOCAL-00009" summary="- add Dockerfile&#10;- remove boilerplate file from template">
-      <created>1616688633476</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1616688633476</updated>
-    </task>
-    <task id="LOCAL-00010" summary="- exclude archiv&#10;- add dependencies in requirements.txt">
-      <created>1616688679074</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1616688679074</updated>
-    </task>
-    <task id="LOCAL-00011" summary="- adds basic demo with docker">
-      <created>1616692221974</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1616692221974</updated>
-    </task>
-    <task id="LOCAL-00012" summary="- adds Dockerfile">
-      <created>1616868392933</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1616868392933</updated>
-    </task>
-    <task id="LOCAL-00013" summary="- adds run script for docker">
-      <created>1616868400817</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1616868400817</updated>
-    </task>
-    <task id="LOCAL-00014" summary="- adds methods for dynamic model creation">
-      <created>1616868426090</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1616868426090</updated>
-    </task>
-    <task id="LOCAL-00015" summary="- adds methods for dynamic model creation">
-      <created>1616868429035</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1616868429035</updated>
-    </task>
-    <task id="LOCAL-00016" summary="- enabled docker-compose&#10;- redesigned core functions">
-      <created>1616933206765</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1616933206765</updated>
-    </task>
-    <task id="LOCAL-00017" summary="- implements all functions in copied file">
-      <created>1616941143769</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1616941143769</updated>
-    </task>
-    <task id="LOCAL-00018" summary="- renaming&#10;- big change in processing of the method, from now on it is more of a convention ofer configuration approach where i expect a file named custom_model.py with a class CustomModel implemented. This saves a lot of extra code. Additionally, the packages should be mentioned in the requirements.txt in order to be available during runtime">
-      <created>1617053380526</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1617053380526</updated>
-    </task>
-    <task id="LOCAL-00019" summary="- gitignore etc">
-      <created>1617057170116</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1617057170116</updated>
-    </task>
-    <task id="LOCAL-00020" summary="- enable onnx output names parameter">
-      <created>1617057188722</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1617057188722</updated>
+      <workItem from="1617957466669" duration="19361000" />
     </task>
     <task id="LOCAL-00021" summary="- enable onnx output names parameter">
       <created>1617057198903</created>
@@ -583,7 +490,105 @@
       <option name="project" value="LOCAL" />
       <updated>1617981874047</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="- cleanup">
+      <created>1617981907565</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981907565</updated>
+    </task>
+    <task id="LOCAL-00057" summary="- basic proxy for heroku and docker-compose">
+      <created>1617981920943</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981920943</updated>
+    </task>
+    <task id="LOCAL-00058" summary="- changes sass to css">
+      <created>1617981932492</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981932492</updated>
+    </task>
+    <task id="LOCAL-00059" summary="- updates uri">
+      <created>1617981949237</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981949237</updated>
+    </task>
+    <task id="LOCAL-00060" summary="- cleanup">
+      <created>1617981958020</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981958020</updated>
+    </task>
+    <task id="LOCAL-00061" summary="- basic uml diagram">
+      <created>1617981973692</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1617981973692</updated>
+    </task>
+    <task id="LOCAL-00062" summary="- only call config api once">
+      <created>1617982751081</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1617982751081</updated>
+    </task>
+    <task id="LOCAL-00063" summary="- adds description to config">
+      <created>1617984653041</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1617984653041</updated>
+    </task>
+    <task id="LOCAL-00064" summary="- fixes reducer and adds reset input_data">
+      <created>1617984670804</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1617984670804</updated>
+    </task>
+    <task id="LOCAL-00065" summary="- fixes reducer and adds reset input_data">
+      <created>1617984675966</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1617984675966</updated>
+    </task>
+    <task id="LOCAL-00066" summary="- fixes reducer and adds reset input_data">
+      <created>1617984683697</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1617984683697</updated>
+    </task>
+    <task id="LOCAL-00067" summary="- saves inputdata in intermediate variable in the state to display it.">
+      <created>1617985632010</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1617985632010</updated>
+    </task>
+    <task id="LOCAL-00068" summary="- fixes path for patch">
+      <created>1617985641182</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1617985641182</updated>
+    </task>
+    <task id="LOCAL-00069" summary="- adds simple alert for empty rating">
+      <created>1617985752679</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1617985752679</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -635,16 +640,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- updated heroku commands" />
-    <MESSAGE value="- moved custom model things to own folder" />
-    <MESSAGE value="- clean up" />
-    <MESSAGE value="- update requirements.txt" />
-    <MESSAGE value="- extracted persistence logic to service class" />
-    <MESSAGE value="- install dependencies via custom requirements file" />
-    <MESSAGE value="- db and iml file" />
-    <MESSAGE value="- added some description and infos&#10;- uses persistence service&#10;- uses files from custom_model folder" />
-    <MESSAGE value="- changes path" />
-    <MESSAGE value="- adds file helper to find files even in docker etc" />
     <MESSAGE value="- adds endpoint config which will be used later" />
     <MESSAGE value="- opencv headless added, solves issue in docker with opencv&#10;- made a simple switch to install dependencies in docker via dockerfile and locally via python script" />
     <MESSAGE value="- made first try to provide input fields to the frontend" />
@@ -659,8 +654,18 @@
     <MESSAGE value="- implements push to next view" />
     <MESSAGE value="- implements RatePrediction" />
     <MESSAGE value="- adds /api to path" />
+    <MESSAGE value="- basic proxy for heroku and docker-compose" />
+    <MESSAGE value="- changes sass to css" />
+    <MESSAGE value="- updates uri" />
     <MESSAGE value="- cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="- cleanup" />
+    <MESSAGE value="- basic uml diagram" />
+    <MESSAGE value="- only call config api once" />
+    <MESSAGE value="- adds description to config" />
+    <MESSAGE value="- fixes reducer and adds reset input_data" />
+    <MESSAGE value="- saves inputdata in intermediate variable in the state to display it." />
+    <MESSAGE value="- fixes path for patch" />
+    <MESSAGE value="- adds simple alert for empty rating" />
+    <option name="LAST_COMMIT_MESSAGE" value="- adds simple alert for empty rating" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
