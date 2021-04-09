@@ -5,11 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it">
+      <change afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/classes_yourpackage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/configMap.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/custom_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/CustomButton.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ThankYouView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/setupProxy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom_model/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/app/ml-starter-backend.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/persistence_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/persistence_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile.worker" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/labels_map.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/ml-starter-backend.db" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/ml-starter-backend.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/iris-example/configMap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/iris-example/custom_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/heroku commands" beforeDir="false" afterPath="$PROJECT_DIR$/backend/heroku commands" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile.web" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/CustomButton.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/CustomFileUpload.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/configurationActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/configurationActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/predictionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/predictionConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +57,7 @@
       <list>
         <option value="Class" />
         <option value="Python Script" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -78,28 +112,30 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/docker/.env&#10;/home/robert/Repositories/ml-starter/external-folder/iris.py&#10;/home/robert/Repositories/ml-starter-backend/archiv/pythontest/gpt2.py" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/external-folder/gpt2-example" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
-      <recent name="$PROJECT_DIR$/app/custom_model" />
-      <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/app/custom_files" />
-      <recent name="$PROJECT_DIR$/model" />
+      <recent name="$PROJECT_DIR$/backend" />
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/backend/app/custom_model" />
+      <recent name="$PROJECT_DIR$/backend/external-folder/iris-example" />
+      <recent name="$PROJECT_DIR$/backend/external-folder/gpt2-example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/custom_model" />
-      <recent name="$PROJECT_DIR$/external-folder/efficientnet-example" />
-      <recent name="$PROJECT_DIR$/external-folder/iris-example" />
-      <recent name="$PROJECT_DIR$/external-folder/gpt2-example" />
-      <recent name="$PROJECT_DIR$/archiv/docker" />
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$/frontend/nginx" />
+      <recent name="$PROJECT_DIR$/backend/app/custom_model" />
+      <recent name="$PROJECT_DIR$/backend/external-folder/efficientnet-example" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Docker Image">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter-backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -122,91 +158,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gpt2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter-backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/archiv/pythontest" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/archiv/pythontest/gpt2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="interface_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter-backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external-folder/efficientnet-example/interface_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="interface_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter-backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/external-folder/iris-example/interface_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter-backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="MlStarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ml-starter" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ch.mlstarter.mlstarter.MlStarterApplication" />
@@ -214,50 +165,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
-      <deployment type="docker-image">
-        <settings>
-          <option name="imageTag" value="ml-starter-backend:latest" />
-          <option name="command" value="" />
-          <option name="containerName" value="" />
-          <option name="entrypoint" value="" />
-          <option name="commandLineOptions" value="" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="ml-starter-backend/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+    <configuration name="backend/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="sourceFilePath" value="Dockerfile" />
+          <option name="sourceFilePath" value="backend/Dockerfile.worker" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="pytest in interface_demo.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter-backend" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/external-folder/gpt2-example/interface_demo.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.ml-starter-backend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="ml-starter-backend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.ml-starter-frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="ml-starter-frontend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="frontend/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="frontend/Dockerfile.web" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.ml-starter-backend/Dockerfile" />
-        <item itemvalue="Docker.Docker Image" />
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python tests.pytest in interface_demo.py" />
-        <item itemvalue="Python.gpt2" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.ml-starter-backend: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.ml-starter-frontend: Compose Deployment" />
+        <item itemvalue="Docker.frontend/Dockerfile" />
+        <item itemvalue="Docker.backend/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -304,6 +268,10 @@
       <workItem from="1617607640752" duration="15771000" />
       <workItem from="1617725656270" duration="10962000" />
       <workItem from="1617793183867" duration="4442000" />
+      <workItem from="1617879465729" duration="1108000" />
+      <workItem from="1617886208522" duration="4571000" />
+      <workItem from="1617955294395" duration="1419000" />
+      <workItem from="1617957466669" duration="13440000" />
     </task>
     <task id="LOCAL-00001" summary="- iris model to test">
       <created>1615926196955</created>
@@ -670,39 +638,6 @@
     <MESSAGE value="- allow CORS from everywhere" />
     <MESSAGE value="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it" />
     <option name="LAST_COMMIT_MESSAGE" value="- finishes efficentnet config, moves it to external folder&#10;- moves iris model to app folder to implement it" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/external-folder/iris-example/interface_demo.py</url>
-          <line>3</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ml_starter$gpt2.coverage" NAME="gpt2 Coverage Results" MODIFIED="1616420653762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
-    <SUITE FILE_PATH="coverage/ml_starter$main.coverage" NAME="main Coverage Results" MODIFIED="1616866916644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/ml_starter_backend$interface_demo.coverage" NAME="interface_demo Coverage Results" MODIFIED="1617055938385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/ml_starter$saveIrisModel.coverage" NAME="saveIrisModel Coverage Results" MODIFIED="1616269847969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
-    <SUITE FILE_PATH="coverage/ml_starter$model_factory.coverage" NAME="model_factory Coverage Results" MODIFIED="1616685244709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/ml_starter$gpt2sample.coverage" NAME="gpt2sample Coverage Results" MODIFIED="1616081538820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest/unused" />
-    <SUITE FILE_PATH="coverage/ml_starter$quicktest.coverage" NAME="interface_demo Coverage Results" MODIFIED="1616688421185" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/ml_starter_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1617444336578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/ml_starter$pytest_in_test_input_method_py.coverage" NAME="pytest in test_input_method.py Coverage Results" MODIFIED="1616840875258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/ml_starter$abstract_model.coverage" NAME="abstract_model Coverage Results" MODIFIED="1616680719385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/ml_starter$custom_regression.coverage" NAME="custom_regression Coverage Results" MODIFIED="1616065180707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
-    <SUITE FILE_PATH="coverage/ml_starter$GPT2ONNXModel.coverage" NAME="GPT2ONNXModel Coverage Results" MODIFIED="1616271323009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
-    <SUITE FILE_PATH="coverage/ml_starter$interface_demo.coverage" NAME="interface_demo Coverage Results" MODIFIED="1616843227158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
-    <SUITE FILE_PATH="coverage/ml_starter$tester.coverage" NAME="tester Coverage Results" MODIFIED="1616278597008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
-    <SUITE FILE_PATH="coverage/ml_starter$interface_demo__1_.coverage" NAME="interface_demo (1) Coverage Results" MODIFIED="1616939855290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/ml_starter$efficientnet.coverage" NAME="efficientnet Coverage Results" MODIFIED="1616420479130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest/efficientnet" />
-    <SUITE FILE_PATH="coverage/ml_starter$gpt2_2.coverage" NAME="gpt2_2 Coverage Results" MODIFIED="1616075040629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
-    <SUITE FILE_PATH="coverage/ml_starter_backend$custom_model.coverage" NAME="custom_model Coverage Results" MODIFIED="1617055026836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/ml_starter$language_detection.coverage" NAME="language_detection Coverage Results" MODIFIED="1616070415597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
-    <SUITE FILE_PATH="coverage/ml_starter$iris_flower.coverage" NAME="iris_flower Coverage Results" MODIFIED="1616541125394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pythontest" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
