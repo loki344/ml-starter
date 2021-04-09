@@ -29,6 +29,7 @@ app.add_middleware(
 #TODO move this code in initialization, define variables as class variables or so
 config_map = Path('./custom_model/configMap.json')
 model_output_names = None
+description = "Please provide the data in the input fields below and start the prediction."
 
 if config_map.is_file():
 
@@ -41,6 +42,9 @@ if config_map.is_file():
 
     if 'applicationName' in config:
         application_name = config['applicationName']
+
+    if 'description' in config:
+        description = config['description']
 
     if 'requestObject' in config:
         request_object = config['requestObject']
@@ -108,5 +112,5 @@ async def save_rating(request: Request):
          description="Returns application related properties")
 async def get_configuration():
 
-    return {'applicationName': application_name, 'inputFields': input_fields, "requestObject": request_object}
+    return {'applicationName': application_name,'description': description, 'inputFields': input_fields, "requestObject": request_object}
 
