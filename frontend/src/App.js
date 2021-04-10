@@ -9,7 +9,7 @@ import Header from "./components/layout/Header";
 import {InputDataView} from "./components/InputDataView";
 import {PredictionView} from "./components/PredictionView";
 import {AboutView} from "./components/AboutView"
-import './App.css'
+import './styles/App.css'
 import {ThankYouView} from "./components/ThankYouView";
 import {useDispatch} from "react-redux";
 import {getConfiguration} from "./actions/configurationActions";

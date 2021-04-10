@@ -3,7 +3,7 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import { useHistory } from "react-router-dom";
 import {postPrediction, resetInputData} from "../actions/predictionActions";
-import '../CustomButton.css'
+import '../styles/CustomButton.css'
 
 export const InputDataView = () => {
 
@@ -63,6 +63,10 @@ export const InputDataView = () => {
                 <InputField key={inputField.label} inputField={inputField}>
                 </InputField>
             ))}
+
+
+
+
         <br/>
             <button className="button" onClick={clickHandler} type="submit">
                 Start prediction

@@ -38,46 +38,6 @@ html, body {
   align-items: center;
 }
 
-.InputField{
-  color: black;
-  font-family: "DejaVu Sans", sans-serif;
-  background: none;
-  border-radius: 10px;
-  border: 1px solid;
-  padding: 10px;
-  display: block;
-  border-color: #4D6D9A;
-  width: 100%;
-}
-
-.InputLabel{
-  color: black;
-  font-family: "DejaVu Sans", sans-serif;
-}
-
-.InputGroup{
-  margin-bottom: 30px;
-}
-
-.InputField:focus {
-  outline: none;
-  border: 2px solid #4D6D9A;
-  margin: -1px;
-}
-
-
-/* No controls for number input Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* No controls for number input Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 
 .PredictionTitle{
   color: black;

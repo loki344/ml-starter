@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {patchRating} from "../actions/predictionActions";
 import {useHistory} from "react-router-dom";
-import '../CustomRadioButton.css'
+import '../styles/CustomRadioButton.css'
 
 
 export const PredictionView = () => {
