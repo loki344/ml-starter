@@ -8,6 +8,8 @@ html, body {
   text-align: center;
   padding-bottom: 10%;
   padding-top: 2%;
+  margin:0 auto;
+  max-width: 70vw
 }
 
 .ApplicationName{
@@ -18,20 +20,6 @@ html, body {
   padding-top: 3%;
 }
 
-.InputDataView{
-  margin:0 auto;
-  max-width: 50vw
-}
-
-.PredictionView{
-  margin:0 auto;
-  max-width: 50vw
-}
-
-.AboutView{
-  margin:0 auto;
-  max-width: 50vw
-}
 
 .InputDataForm{
   text-align: left;
@@ -48,7 +36,7 @@ html, body {
 .PredictionItem{
   color: black;
   font-family: "DejaVu Sans", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.8em;
 }
 
 .RatingForm{
@@ -59,14 +47,7 @@ html, body {
   display: grid;
 }
 
-.RadioButton{
-
-}
-
 .PredictionGroup{
   margin-bottom: 10rem;
 }
 
-.RadioItemWrapper{
-
-}
