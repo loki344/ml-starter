@@ -92,12 +92,6 @@ ENV/
 
 # Model files
 *.onnx
-*.pickle
-/archiv/
-/sample-models/
-
-/docker/
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
@@ -122,7 +116,7 @@ yarn-debug.log*
 yarn-error.log*
 
 
-
+*.db
 .idea/
 .vscode/
 node_modules/
