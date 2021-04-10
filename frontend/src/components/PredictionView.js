@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {patchRating} from "../actions/predictionActions";
 import {useHistory} from "react-router-dom";
 import '../styles/CustomRadioButton.css'
-
+import {PredictionItem} from "./PredictionItem";
 
 export const PredictionView = () => {
 
@@ -34,48 +34,46 @@ export const PredictionView = () => {
     //TODO make not objects work also
     return(
 
-        <div className="PredictionView">
-            <h2 className="PredictionTitle">Prediction:</h2>
+        <div>
+            <h2 className="PredictionTitle">Prediction</h2>
             <br/>
 
 
                 <div style={{display: 'inline-grid', gridTemplateColumns: '20% auto', columnGap:'3rem'}}>
                     {
                         prediction.map((pred) => (
-
-                                typeof pred === 'object' && pred !== null ?
-                                    Object.keys(pred).map(key =>
-
-                                        <>
-                                           <div className="PredictionItem" style={{textAlign: "left", justifyContent:'center', display: 'flex', alignItems: 'center'}}>{key}:</div>
-                                            <div className="PredictionItem" style={{textAlign: "left", justifyContent:'center', display: 'flex', alignItems: 'center'}}>{pred[key]}</div>
-                                        </>
-                                    )
-                                    :
-                                    <div className="PredictionItem">{pred}</div>
-
+                        <>
+                            <PredictionItem predictionObject={pred}></PredictionItem>
+                            <div style={{gridColumnStart: '1', gridColumnEnd: -1, height:'2rem', width:'100%'}}/>
+                        </>
                             )
                         )
                     }
+
                 </div>
 
-
             <br/>
             <br/>
             <br/>
-            <h2 className="PredictionTitle">Your input:</h2>
-            <br/>
-            {inputFields.map((inputField) => (
+            <div style={{margin:'0 auto', width:'60%'}}>
+                <h2 className="PredictionTitle">Your input</h2>
+                <br/>
+                {inputFields.map((inputField) => (
 
-                inputField.type === 'file' ?
+                    inputField.type === 'file' ?
 
-                <img src={`data:image/png;base64,${previousInputData[inputField.id]}`} style={{maxWidth: '50%', height: 'auto', border: 'solid black 1px', padding:'10px'}}  alt=""/>
-                :
-                <div>
-                    <p className="PredictionItem">{inputField.label}: {previousInputData[inputField.id]}</p>
-                </div>
+                        <img src={`data:image/png;base64,${previousInputData[inputField.id]}`} style={{maxWidth: '100%', height: 'auto', border: 'solid black 1px', padding:'10px'}}  alt=""/>
+                        :
+                        <div style={{display:'grid', gridTemplateColumns:'50% auto'}}>
+                            <div className="PredictionItem" style={{textAlign:'left'}}>{inputField.label}:</div>
+                            <div className="PredictionItem" style={{textAlign:'left', alignItems:"left"}}>{previousInputData[inputField.id]}</div>
+                        </div>
 
-            ))}
+                ))}
+
+
+            </div>
+
 
             <br/>
             <br/>

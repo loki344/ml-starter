@@ -34,13 +34,13 @@ export const InputDataView = () => {
             }
         }
 
-        let requestData = String(requestObject.inputData)
+        let requestData = JSON.stringify(requestObject.inputData)
+
         for (let inputField of inputFields){
-            requestData = requestData.replace(inputField.id, inputData[inputField.id])
-            if (inputField.type === 'file'){
-                requestData = '"' + requestData + '"'
-            }
+            let inputFieldToReplace = inputField.type === 'float' ? '"'+inputField.id+'"' : inputField.id
+            requestData = requestData.replace(inputFieldToReplace, inputData[inputField.id])
         }
+
         let requestBody = '{"inputData":'+requestData+'}'
         requestBody = JSON.parse(requestBody)
 
@@ -51,7 +51,7 @@ export const InputDataView = () => {
 
 
     return (
-        <div className="InputDataView">
+        <div>
 
         <h3 className="PredictionTitle">{description}</h3>
 
@@ -64,9 +64,8 @@ export const InputDataView = () => {
                 </InputField>
             ))}
 
-
-
-
+        <br/>
+        <br/>
         <br/>
             <button className="button" onClick={clickHandler} type="submit">
                 Start prediction

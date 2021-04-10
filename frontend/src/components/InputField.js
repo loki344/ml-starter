@@ -31,23 +31,35 @@ export const InputField = ({inputField}) => {
 
         case 'file':
             htmlTag = (
-                <>
+                <div style={{textAlign:'center'}}>
+                    <label className="InputLabel">{label}</label>
                     <input onChange={ async (event) => {
                         dispatch(addData(id, await toBase64(event.target.files[0])))
                         setFileName(event.target.files[0] !== undefined ? event.target.files[0].name.substring(0,30) : 'No file chosen')
                     }} type="file" id="actual-btn" hidden/>
                     <br/>
-                    <label className="FileLabel" htmlFor="actual-btn">Choose File</label>
+                    <label  className="FileLabel" htmlFor="actual-btn">Choose File</label>
                     <br/>
                     <br/>
-                    <span id="file-chosen">{fileName}</span>
-                </>)
+
+                    <span id="file-chosen" >{fileName}</span>
+                </div>)
             break
         case 'float':
-            htmlTag = (<input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))} required/>)
+            htmlTag = (
+                <div style={{marginBottom:'1.5rem'}}>
+                <label className="InputLabel">{label}</label>
+                <input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))}/>
+                </div>
+            )
             break
         case 'str':
-            htmlTag = (<input className="InputField" type="text" onChange={(event) => dispatch(addData(id, '"'+event.target.value+'"'))} required/>)
+            htmlTag = (
+                <div style={{marginBottom:'1.5rem'}}>
+                <label className="InputLabel">{label}</label>
+                <input className="InputField" type="text" onChange={(event) => dispatch(addData(id, event.target.value))}/>
+                </div>
+            )
             break
         default:
             return ''
@@ -55,10 +67,7 @@ export const InputField = ({inputField}) => {
 
 
 
-    return (<div className="InputGroup">
-        <label className="InputLabel">{label}</label>
-        {htmlTag}
-    </div>)
+    return (<>{htmlTag}</>)
 
 
 
