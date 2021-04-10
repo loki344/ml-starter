@@ -1,12 +1,12 @@
 from fastapi import FastAPI, Request
-from typing import List
 import json
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
-import models
-import schemas
+
+from backend.app.file_helper import get_file
+from persistence import models, schemas
 from model_creation import create_model
-from database import engine, SQLALCHEMY_DATABASE_URL
+from persistence.database import engine, SQLALCHEMY_DATABASE_URL
 from fastapi_sqlalchemy import db
 from fastapi_sqlalchemy import DBSessionMiddleware
 
@@ -31,7 +31,7 @@ app.add_middleware(DBSessionMiddleware,
 
 
 #TODO move this code in initialization, define variables as class variables or so
-config_map = Path('./custom_model/configMap.json')
+config_map = get_file('configMap.json')
 model_output_names = None
 description = "Please provide the data in the input fields below and start the prediction."
 
@@ -60,6 +60,7 @@ model = create_model(default_model_name, model_output_names)
 @app.on_event("startup")
 async def startup_event():
     pass
+
 
 @app.on_event("shutdown")
 async def shutdown_event():
@@ -99,7 +100,7 @@ async def predict(request: Request):
 
 
 @app.patch("/api/predictions", summary="Patch a prediction",
-           description="Allows to patch the rating of a prediction",)
+           description="Allows to patch the rating of a prediction")
 async def patch_rating(prediction: schemas.PredictionPatch):
 
     existing_prediction = db.session.query(models.Prediction).get(prediction.id)
@@ -114,5 +115,8 @@ async def patch_rating(prediction: schemas.PredictionPatch):
          description="Returns application related properties")
 async def get_configuration():
 
-    return {'applicationName': application_name, 'description': description, 'inputFields': input_fields, "requestObject": request_object}
+    return {'applicationName': application_name,
+            'description': description,
+            'inputFields': input_fields,
+            "requestObject": request_object}
 
