@@ -1,9 +1,8 @@
 from fastapi import FastAPI, Request
 import json
-from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.file_helper import get_file
+from file_helper import get_file
 from persistence import models, schemas
 from model_creation import create_model
 from persistence.database import engine, SQLALCHEMY_DATABASE_URL

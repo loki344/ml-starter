@@ -4,35 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- clean up&#10;- adds style for file input">
-      <change afterPath="$PROJECT_DIR$/backend/app/persistence/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/persistence/ml-starter-backend.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/external-folder/iris-example/configMap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/external-folder/iris-example/custom_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/PredictionItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2f791ba2-ba0c-420b-b08e-6181bbe4cdcc.xml" beforeDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- changed package structure and did some cleanup&#10;- added dependency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/classes_yourpackage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/persistence/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/file_helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/file_helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/ml-starter-backend.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/persistence/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/schemas.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/persistence/schemas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/configMap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/custom_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/interface_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/labels_map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AboutView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AboutView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/InputFields.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/InputFields.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile.web" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile.web" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/setupProxy.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/setupProxy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,55 +242,6 @@
       <workItem from="1617955294395" duration="1419000" />
       <workItem from="1617957466669" duration="19973000" />
       <workItem from="1618041314277" duration="10462000" />
-    </task>
-    <task id="LOCAL-00029" summary="- clean up">
-      <created>1617447810011</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1617447810011</updated>
-    </task>
-    <task id="LOCAL-00030" summary="- update requirements.txt">
-      <created>1617447819734</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1617447819734</updated>
-    </task>
-    <task id="LOCAL-00031" summary="- extracted persistence logic to service class">
-      <created>1617447835351</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1617447835351</updated>
-    </task>
-    <task id="LOCAL-00032" summary="- install dependencies via custom requirements file">
-      <created>1617447874170</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1617447874170</updated>
-    </task>
-    <task id="LOCAL-00033" summary="- db and iml file">
-      <created>1617447883847</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1617447883847</updated>
-    </task>
-    <task id="LOCAL-00034" summary="- added some description and infos&#10;- uses persistence service&#10;- uses files from custom_model folder">
-      <created>1617447917487</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1617447917487</updated>
-    </task>
-    <task id="LOCAL-00035" summary="- changes path">
-      <created>1617447933706</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1617447933706</updated>
     </task>
     <task id="LOCAL-00036" summary="- adds file helper to find files even in docker etc">
       <created>1617447950708</created>
@@ -609,7 +537,56 @@
       <option name="project" value="LOCAL" />
       <updated>1618044071367</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="- cleanup">
+      <created>1618059051154</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1618059051154</updated>
+    </task>
+    <task id="LOCAL-00079" summary="- cleanup">
+      <created>1618059054493</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1618059054493</updated>
+    </task>
+    <task id="LOCAL-00080" summary="- cleanup">
+      <created>1618059091469</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1618059091469</updated>
+    </task>
+    <task id="LOCAL-00081" summary="- cleanup">
+      <created>1618059098481</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1618059098481</updated>
+    </task>
+    <task id="LOCAL-00082" summary="- imrpoved handling of inputs and the prediction for objects">
+      <created>1618059133967</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1618059133967</updated>
+    </task>
+    <task id="LOCAL-00083" summary="- changed proxy to service name">
+      <created>1618059162727</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1618059162727</updated>
+    </task>
+    <task id="LOCAL-00084" summary="- changed package structure and did some cleanup&#10;- added dependency">
+      <created>1618059182517</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1618059182518</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,9 +638,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- adds db files" />
-    <MESSAGE value="-changes dockerfiles for heroku" />
-    <MESSAGE value="- updates commands" />
     <MESSAGE value="- adds serviceWorker.js for prod mode later" />
     <MESSAGE value="- implements push to next view" />
     <MESSAGE value="- implements RatePrediction" />
@@ -671,7 +645,6 @@
     <MESSAGE value="- basic proxy for heroku and docker-compose" />
     <MESSAGE value="- changes sass to css" />
     <MESSAGE value="- updates uri" />
-    <MESSAGE value="- cleanup" />
     <MESSAGE value="- basic uml diagram" />
     <MESSAGE value="- only call config api once" />
     <MESSAGE value="- adds description to config" />
@@ -686,7 +659,11 @@
     <MESSAGE value="- clean up, improved file handling" />
     <MESSAGE value="- clean up, improved file handling&#10;- adds new radio buttons" />
     <MESSAGE value="- clean up&#10;- adds style for file input" />
-    <option name="LAST_COMMIT_MESSAGE" value="- clean up&#10;- adds style for file input" />
+    <MESSAGE value="- cleanup" />
+    <MESSAGE value="- imrpoved handling of inputs and the prediction for objects" />
+    <MESSAGE value="- changed proxy to service name" />
+    <MESSAGE value="- changed package structure and did some cleanup&#10;- added dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="- changed package structure and did some cleanup&#10;- added dependency" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
