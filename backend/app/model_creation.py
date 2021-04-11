@@ -1,12 +1,14 @@
 import os
 import subprocess
 import sys
+
+from abstract_model import AbstractModel
 from custom_model.custom_model import CustomModel
 from file_helper import get_file
 
 
 #TODO define type of outputnames
-def create_model(onnx_file_path: str, model_output_names=[]):
+def create_model(onnx_file_path: str, model_output_names=[]) -> AbstractModel:
 
     install_dependencies()
     return CustomModel(onnx_file_path, model_output_names)
