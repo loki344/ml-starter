@@ -10,7 +10,7 @@ export const InputDataView = () => {
     const dispatch = useDispatch();
     const configuration = useSelector(state => state.configuration)
     const {description} = configuration
-    const {inputData} = useSelector(state => state.prediction)
+
 
 
     useEffect(() => {
@@ -24,7 +24,7 @@ export const InputDataView = () => {
 
             <br/>
             <br/>
-            <InputDataForm inputData={inputData}/>
+            <InputDataForm mode={'input'}/>
         </div>
     )
 

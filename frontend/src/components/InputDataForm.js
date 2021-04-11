@@ -11,8 +11,9 @@ export const InputDataForm = (props) => {
 
     const configuration = useSelector(state => state.configuration)
     const {inputFields, requestObject} = configuration
-    console.log(inputFields)
-    const {inputData} = props.inputData
+    const {inputData} = useSelector(state => state.prediction)
+
+    const mode = props.mode
 
     let history = useHistory();
 
@@ -49,9 +50,7 @@ export const InputDataForm = (props) => {
                 <InputField key={inputField.label} inputField={inputField}>
                 </InputField>
             ))}
-            <br/>
-            <br/>
-            <br/>
+
             <button className="button" onClick={clickHandler} type="submit">
                 Start prediction
                 <div className="button__horizontal"/>

@@ -1,5 +1,7 @@
 .button {
   margin: 0 auto;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
   --offset: 10px;
   --border-size: 2px;
   display: block;

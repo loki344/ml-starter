@@ -4,6 +4,7 @@ import {patchRating} from "../actions/predictionActions";
 import {useHistory} from "react-router-dom";
 import '../styles/CustomRadioButton.css'
 import {PredictionItem} from "./PredictionItem";
+import {NextPredictionButton} from "./NextPredictionButton";
 
 export const PredictionView = () => {
 
@@ -60,7 +61,7 @@ export const PredictionView = () => {
                 <br/>
                 {inputFields.map((inputField) => (
 
-                    inputField.type === 'file' ?
+                    inputField.type === 'image' ?
 
                         <img src={`data:image/png;base64,${previousInputData[inputField.id]}`} style={{maxWidth: '100%', height: 'auto', border: 'solid black 1px', padding:'10px'}}  alt=""/>
                         :
@@ -71,39 +72,34 @@ export const PredictionView = () => {
 
                 ))}
 
-
             </div>
 
 
-            <br/>
-            <br/>
-            <br/>
+            <NextPredictionButton/>
 
             <form className="RatingForm" onSubmit={handleSubmit}>
                 <h3 className="PredictionTitle">Please rate the prediction</h3>
                 <br/>
                 <div className="radio-toolbar">
 
-                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="poor" name="radioFruit" value="poor"/>
+                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="poor" name="rating"
+                           value="poor"/>
                     <label htmlFor="poor">Poor</label>
 
-                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="acceptable" name="radioFruit" value="acceptable"/>
+                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="acceptable" name="rating" value="acceptable"/>
                     <label htmlFor="acceptable">Acceptable</label>
 
-                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="good" name="radioFruit" value="good"/>
+                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="good" name="rating" value="good"/>
                     <label htmlFor="good">Good</label>
 
-                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="verygood" name="radioFruit" value="verygood"/>
+                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="verygood" name="rating" value="verygood"/>
                     <label htmlFor="verygood">Very good</label>
 
-                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="excellent" name="radioFruit" value="excellent"/>
+                    <input onChange={(event) => setRating(event.target.value)} type="radio" id="excellent" name="rating" value="excellent"/>
                     <label htmlFor="excellent">Excellent</label>
 
                 </div>
 
-                <br/>
-                <br/>
-                <br/>
                 <button className="button" type="submit">
                     Submit
                     <div className="button__horizontal"/>
