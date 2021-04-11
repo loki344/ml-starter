@@ -9,6 +9,7 @@ class PredictionBase(BaseModel):
 
 
 class Prediction(PredictionBase):
+
     id: int
     rating: Optional = str
 
@@ -21,7 +22,7 @@ class PredictionCreate(PredictionBase):
 
 
 class PredictionPatch(BaseModel):
-    id: int
+    id: str
     rating: str
 
 
