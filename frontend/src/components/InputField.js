@@ -36,7 +36,7 @@ export const InputField = ({inputField}) => {
     let htmlTag = (<p>InputField not recognized</p>)
     switch (type){
 
-        case 'file':
+        case 'image':
             htmlTag = (
                 <div style={{textAlign:'center'}}>
                     <label className="InputLabel">{label}</label>
