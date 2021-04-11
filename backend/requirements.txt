@@ -5,3 +5,5 @@ onnx~=1.8.1
 opencv-python--headless
 sqlalchemy~=1.4.7
 fastapi_sqlalchemy~=0.2.1
+pymongo~=3.11.3
+dnspython~=2.1.0
