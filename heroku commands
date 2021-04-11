@@ -1,4 +1,4 @@
-docker tag ml-starter_ml-starter-backend registry.heroku.com/desolate-fortress-59930/worker
+docker tag ml-starter-backend registry.heroku.com/desolate-fortress-59930/web
 docker tag ml-starter_ml-starter-frontend registry.heroku.com/desolate-fortress-59930/web
 docker push registry.heroku.com/desolate-fortress-59930/worker
 docker push registry.heroku.com/desolate-fortress-59930/web
