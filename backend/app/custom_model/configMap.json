@@ -10,6 +10,14 @@
     }
 
   ],
-  "requestObject": {"inputData": "fileInput"}
+  "requestObject": {"inputData": "fileInput"},
+  "dbName": "ml-starter",
+  "dbUser": "backendservice",
+  "dbCredentials": "rLVr9TGitsggCYx",
+  "clusterName": "Cluster0"
+
 
 }
+
+
+
