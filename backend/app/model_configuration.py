@@ -67,8 +67,6 @@ class ModelConfiguration:
         print("Found " + str(len(self.input_fields)) + " input_fields to validate")
         for input_field in self.input_fields:
 
-
-
             print("validating.. " + str(input_field))
 
             if not self.request_object.__str__().__contains__(input_field['id']):
@@ -78,6 +76,8 @@ class ModelConfiguration:
                 raise ConfigurationException(input_field['id'], "The inputfield with the key " + input_field['id'] +
                                              " has an unsupported field type: " + input_field['type'] +
                                              ". Should be one of: " + str(self.supported_field_types))
+
+        print("expected input ")
 
         print("finished input_field validation")
 
