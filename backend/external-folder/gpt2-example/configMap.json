@@ -1,5 +1,6 @@
 {
   "applicationName": "My demo-application with GPT-2",
+  "description": "This GPT-2 model will generate some text based on the input below. Try it out!",
   "input": [
     {
     "id": "inputText",

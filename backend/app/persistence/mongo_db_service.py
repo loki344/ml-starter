@@ -18,6 +18,15 @@ class MongoDbService(PersistenceService):
 
         connection_string = "mongodb+srv://"+db_user+":"+db_credentials+"@"+cluster_name+".pnzdz.mongodb.net/"+db_name+"?retryWrites=true&w=majority"
         self.client = pymongo.MongoClient(connection_string)
+        super().__init__()
+
+    def health_check(self):
+        print("Verifiying connection to the MongoDB with dbName: " + self.db_name + " ,dbUser: " + self.db_user +
+              ", clusterName: " + self.clusterName)
+        print(self.client.server_info())
+        print("Connection test successful")
+        print("-------------------------------------------------------------------------------------------------------")
+        pass
 
     def save_prediction(self, input_data: str, prediction: str):
 

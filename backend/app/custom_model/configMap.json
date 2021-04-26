@@ -1,23 +1,44 @@
 {
-  "model_output_names": ["Softmax:0"],
-  "applicationName": "My demo-application with EfficientNet",
+  "applicationName": "My demo-application with the basic Iris-Model",
+  "description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of two flowers and start the prediction!",
   "input": [
     {
-    "id": "imageInput",
-    "name": "Base64 encoded image",
-    "label": "Please upload an image file",
-    "type": "image"
+    "id": "input1",
+    "label": "Flower 1, Sepal length",
+    "type": "number"
+    },
+    {
+    "id": "input2",
+    "label": "Flower 1, Sepal width",
+    "type": "number"
+    },    {
+    "id": "input3",
+    "label": "Flower 1, Petal length",
+    "type": "number"
+    },    {
+    "id": "input4",
+    "label": "Flower 1, Petal width",
+    "type": "number"
+    },
+    {
+    "id": "input5",
+    "label": "Flower 2, Sepal length",
+    "type": "number"
+    },    {
+    "id": "input6",
+    "label": "Flower 2, Sepal width",
+    "type": "number"
+    },    {
+    "id": "input7",
+    "label": "Flower 2, Petal length",
+    "type": "number"
+    },    {
+    "id": "input8",
+    "label": "Flower 2, Petal width",
+    "type": "number"
     }
-
   ],
-  "requestObject": {"inputData": "imageInput"},
-  "dbName": "ml-starter",
-  "dbUser": "backendservice",
-  "dbCredentials": "rLVr9TGitsggCYx",
-  "clusterName": "Cluster0"
+  "requestObject": {"inputData": [["input1", "input2", "input3", "input4"],["input5", "input6", "input7", "input8"]]}
 
 
 }
-
-
-

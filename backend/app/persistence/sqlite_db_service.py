@@ -11,6 +11,16 @@ class InMemoryDbService(PersistenceService):
         models.Base.metadata.create_all(bind=engine)
         app.add_middleware(DBSessionMiddleware,
                            db_url=SQLALCHEMY_DATABASE_URL)
+        super().__init__()
+
+    def health_check(self):
+        print("Verifiying connection to the SQLite InMemory database")
+        with db():
+            print(db.session.is_active)
+        print("Connection test successful")
+        print("-------------------------------------------------------------------------------------------------------")
+
+        pass
 
     def save_prediction(self, input_data: str, prediction: str):
 
