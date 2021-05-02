@@ -8,11 +8,6 @@
     "type": "str"
     }
   ],
-  "requestObject": {"inputData": "inputText"},
-
-  "dbName": "ml-starter",
-  "dbUser": "backendservice",
-  "dbCredentials": "rLVr9TGitsggCYx",
-  "clusterName": "Cluster0"
+  "requestObject": {"inputData": "inputText"}
 
 }
