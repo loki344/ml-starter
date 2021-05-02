@@ -172,7 +172,27 @@ The file configMap.json contains the configuration which is mainly used by the f
 | applicationName (optional) | This name is displayed in the header of the web application. | String | My demoapplication | My ML-starter demo application |
 | description (optional) | Short text to introduce your model to the user. This text is displayed above the input fields. | String | This model recognizes classes in a given image | Please provide the data in the input fields below and start the prediction. |
 | input | Array containing an element for each expected input. The frontend creates one inputfield for the user for each element. An element has 3 attributes id (str), label (str), type (str). The id is used to link input fields to the requestObject. The label is the text which is displayed above the field. The type is one of "number", "str", or "image" and is used to display the field accordingly. | Array[Object] | [  {   "id": "textInput",    "label": "Enter text for prediction",     "type": "str"  } ] | - |
-| requestObject | Object defining the shape of the expected input data of the backend. Use the id's of the input fields as placeholder for the input values. | Object | {"inputData": "inputText"} | - |
+| requestObject | Object defining the shape of the expected input data of the backend. Use the id's of the input fields as placeholder for the input values. | Object | { "inputData": "inputText" } <br/><br/>  { "inputData": { "firstName": "firstNameId", "lastName": "lastNameId" } }  | - |
+
+Please check the <a href="/backend/examples">examples</a> for some sample configurations.
+
+## Database configuration
+In case you have set up a free MongoDB instance in the section <a href="#persistence">Persistence</a> there are some additional configurations available:
+
+### dbName
+You can find the name of your database on www.cloud.mongodb.com in the upper left corner.
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/dbName.png">
+
+### clusterName
+You can find the name of your cluster on www.cloud.mongodb.com in the section "Clusters".
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/clusterName.png">
+
+### dbUser
+Username for the configured database. Make sure the user has sufficient reading and writing rights for the database. You can find the username on www.cloud.mongodb.com in the section "Database Access".
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/dbUser.png">
+
+### dbCredentials
+The credentials for the configured user. You can find them on www.cloud.mongodb.com in the section "Database Access" -> Edit
 
 
 # Persistence
