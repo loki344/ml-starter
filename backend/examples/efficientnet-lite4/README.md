@@ -3,6 +3,7 @@
 The ONNX model included in this example is the pretrained version available on https://github.com/onnx/models/tree/master/vision/classification/efficientnet-lite4.
 
 ## Instructions
+
 To run this example locally
 ```commandline
 git clone https://github.com/loki344/ml-starter.git
@@ -18,17 +19,20 @@ To deploy it on www.heroku.com
 
 
 ## Result
+
 <img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/result-efficientnet-1.png"/>
 <br/>
 <img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/result-efficientnet2.png"/>
 
 
-##Model input
+## Model input
+
 An image file to be classified. The frontend expects the user to upload an image. Internally the REST-API expects a string representing the base64 encoded content of the image. <br/>
 Example: <br/>
 <img style="width: 50%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/gorilla.jpg"/>
 
-##Configuration
+## Configuration
+
 The applicationName and the description are interchangeable, whereas the configuration of the input and the requestObject should match the above definition of the input data.
 ```json
 {
@@ -48,8 +52,8 @@ The applicationName and the description are interchangeable, whereas the configu
 ```
 
 
+### Preprocessing
 
-###Preprocessing
 The preprocess method has to decode the image data from the input string. Afterwards the same processing as used in the training of the model should be applied. Lastly, the data is wrapped in a dictionary using the expected input keys from the input metadata.
 
 ```python
@@ -65,7 +69,8 @@ def pre_process(self, input_data, input_metadata):
     return {input_metadata[0].name: np.expand_dims(img, axis=0)}
 ```
 
-##Model output
+## Model output
+
 Output of model is an inference score with array shape float32[1,1000]. The output references the labels_map.txt file which maps an index to a label to classify the type of image.
 
 Example:
@@ -75,7 +80,8 @@ Example:
 
 ```
 
-###Postprocessing
+### Postprocessing
+
 The postprocessing builds a response containing the classname, and the probability for classes with a probability greater than 1%. The response is used in the frontend. Therefore, the classnames must be capitalized.
 
 ```python
@@ -96,7 +102,8 @@ def post_process(self, model_output):
     return response
 ```
 
-##Helper methods
+## Helper methods
+
 ```python
 
 

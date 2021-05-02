@@ -3,6 +3,7 @@
 The ONNX model included in this example is a simple decision tree built with Scikitlearn.
 
 ## Instructions
+
 To run this example locally
 ```commandline
 git clone https://github.com/loki344/ml-starter.git
@@ -17,11 +18,13 @@ To deploy it on www.heroku.com
 ```
 
 ## Result
+
 <img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris/result_iris.png"/>
 <img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris/result_iris.png"/>
 
 
-##Model input
+## Model input
+
 An array containing two arrays which represent the measurements of a flower. <br/>
 ```json
 [ [ Measurements flower 1 ], [ Measurements flower 2 ] ]
@@ -36,7 +39,8 @@ Example:
 ```
 
 
-###Configuration
+### Configuration
+
 The applicationName and the description are interchangeable, whereas the configuration of the input and the requestObject should match the above definition of the input data.
 
 ```json
@@ -88,7 +92,8 @@ The applicationName and the description are interchangeable, whereas the configu
 ```
 
 
-###Preprocessing
+### Preprocessing
+
 The preprocessing method transforms the array to a numpy array and wraps the input data in a dictionary with the expected input name from the metadata object.
 
 ```python
@@ -99,7 +104,8 @@ def pre_process(self, input_data, input_metadata):
 
 
 
-##Model output
+## Model output
+
 The raw output of the model is a list containing two numbers which represent the two predictions for the input.
 
 Example:
@@ -107,7 +113,8 @@ Example:
 [1 0]
 ```
 
-###Postprocessing
+### Postprocessing
+
 The postprocessing maps the class number of the prediction to the according label.
 
 ```python

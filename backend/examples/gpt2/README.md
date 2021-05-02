@@ -3,6 +3,7 @@
 The ONNX model included in this example is the pretrained version available on https://github.com/onnx/models/tree/master/text/machine_comprehension/gpt-2.
 
 ## Instructions
+
 To run this example locally
 ```commandline
 git clone https://github.com/loki344/ml-starter.git
@@ -17,6 +18,7 @@ To deploy it on www.heroku.com
 ```
 
 ## Result
+
 <img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/gpt2/result-gpt2-1.png"/>
 <br/>
 <img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/gpt2/result-gpt2-2.png"/>
@@ -25,14 +27,16 @@ To deploy it on www.heroku.com
 
 
 
-##Model input
+## Model input
+
 A string to be used as a base for gpt2 to generate text. <br/>
 Example: 
 ```json
 "This is a test input to show"
 ```
 
-##Configuration
+## Configuration
+
 The applicationName and the description are interchangeable, whereas the configuration of the input and the requestObject should match the above definition of the input data.
 
 ```json
@@ -51,7 +55,8 @@ The applicationName and the description are interchangeable, whereas the configu
 }
 ```
 
-###Preprocessing
+### Preprocessing
+
 The preprocessing method uses the tokenizer to transform the input string to a tensor which is interpretable by the GPT-2 model. It wraps it in a dictionary and uses the list of input names from the input_metadata of the ONNX inferenceSession.
 
 ```python
@@ -68,7 +73,8 @@ def pre_process(self, input_data, input_metadata):
     return ort_inputs
 ```
 
-##Model output
+## Model output
+
 The raw output of the model is a tensor, which represents the predictet tokens. #TODO explain the method as soon as it does not return tensors anymore.
 
 Example:
@@ -76,7 +82,8 @@ Example:
 tensor([ -35.8891, -35.2050, -39.1337, ..., -103.8397, -107.2803, -99.9341])
 ```
 
-###Postprocessing
+### Postprocessing
+
 The postprocessing processes the tensor and transforms the token with the highest probability to a string.
 
 ```python
@@ -88,7 +95,8 @@ def post_process(self, model_output):
     return str(predictions)
 ```
 
-##Helper methods
+## Helper methods
+
 ```python
 
 def flatten(inputs):
