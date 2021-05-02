@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- minor things">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/NextPredictionButton.js" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="cleanup">
+      <change afterPath="$PROJECT_DIR$/backend/app/integration_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputDataForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ThankYouView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ThankYouView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/CustomButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/CustomButton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/abstract_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/model_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model_configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model_creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/interface_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/external-folder/gpt2-example/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +29,8 @@
       <list>
         <option value="Class" />
         <option value="CSS File" />
-        <option value="Python Script" />
         <option value="JavaScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -86,9 +89,16 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -100,13 +110,13 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/app/custom_model" />
-      <recent name="$PROJECT_DIR$/backend/external-folder/iris-example" />
       <recent name="$PROJECT_DIR$/backend/external-folder/efficientnet-example" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/backend/app/persistence" />
+      <recent name="$PROJECT_DIR$/backend/external-folder/iris-example" />
+      <recent name="$PROJECT_DIR$/backend/external-folder/gpt2-example" />
+      <recent name="$PROJECT_DIR$/backend/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Dockerfile">
+  <component name="RunManager" selected="Python.main">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter-backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -129,37 +139,78 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="integration_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/integration_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sqlite_db_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ml-starter" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app/persistence" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/persistence/sqlite_db_service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="MlStarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ml-starter" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ch.mlstarter.mlstarter.MlStarterApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Docker Image" type="docker-deploy" factoryName="docker-image" temporary="true" server-name="Docker">
-      <deployment type="docker-image">
-        <settings>
-          <option name="imageTag" value="ml-starter_ml-starter-backend:latest" />
-          <option name="containerName" value="" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml.ml-starter-backend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
@@ -189,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.Docker Image" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.sqlite_db_service" />
+        <item itemvalue="Python.integration_test" />
         <item itemvalue="Docker.docker-compose.yml.ml-starter-frontend: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.ml-starter-backend: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -246,13 +297,15 @@
       <workItem from="1617957466669" duration="19973000" />
       <workItem from="1618041314277" duration="10462000" />
       <workItem from="1618084025605" duration="12339000" />
-    </task>
-    <task id="LOCAL-00047" summary="- implements ThankYouView.js&#10;- removes logrocket">
-      <created>1617981754719</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981754719</updated>
+      <workItem from="1618226091982" duration="1982000" />
+      <workItem from="1618489800262" duration="665000" />
+      <workItem from="1618493029755" duration="2459000" />
+      <workItem from="1618757778094" duration="5664000" />
+      <workItem from="1618853136396" duration="657000" />
+      <workItem from="1618957117674" duration="221000" />
+      <workItem from="1619092713923" duration="6146000" />
+      <workItem from="1619340367921" duration="8135000" />
+      <workItem from="1619466820388" duration="8533000" />
     </task>
     <task id="LOCAL-00048" summary="- adds db files">
       <created>1617981773561</created>
@@ -590,7 +643,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618130740180</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="- extracted NextPredictionButton.js in component to reuse it in the PredictionView.js&#10;- improved margin of the button and removed linebreaks in html">
+      <created>1618131406725</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1618131406725</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +702,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- basic uml diagram" />
     <MESSAGE value="- only call config api once" />
     <MESSAGE value="- adds description to config" />
     <MESSAGE value="- fixes reducer and adds reset input_data" />
@@ -667,7 +726,22 @@
     <MESSAGE value="cleanup" />
     <MESSAGE value="- adds component for InputDataForm.js to view it twice, once read only, implementation missing" />
     <MESSAGE value="- minor things" />
-    <option name="LAST_COMMIT_MESSAGE" value="- minor things" />
+    <MESSAGE value="- extracted NextPredictionButton.js in component to reuse it in the PredictionView.js&#10;- improved margin of the button and removed linebreaks in html" />
+    <option name="LAST_COMMIT_MESSAGE" value="- extracted NextPredictionButton.js in component to reuse it in the PredictionView.js&#10;- improved margin of the button and removed linebreaks in html" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/app/custom_model/custom_model.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ml_starter_backend$configuration_check.coverage" NAME="integration_test Coverage Results" MODIFIED="1619471857458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
