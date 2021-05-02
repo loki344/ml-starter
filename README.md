@@ -13,8 +13,8 @@
 <p align="center">
     | <a href="#getting-started">Getting Started</a> | 
    <a href="/backend/examples">Examples</a> |     
-   <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> | 
-   <a href="#configuration">Configuration</a> | 
+   <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> | <br/>
+   | <a href="#configuration">Configuration</a> | 
    <a href="#persistence">Persistence</a> | 
    <a href="#deployment">Deployment</a> | 
    <a href="#how-does-it-work">How does it work?</a> |
