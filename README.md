@@ -174,7 +174,8 @@ The file configMap.json contains the configuration which is mainly used by the f
 | input | Array containing an element for each expected input. The frontend creates one inputfield for the user for each element. An element has 3 attributes id (str), label (str), type (str). The id is used to link input fields to the requestObject. The label is the text which is displayed above the field. The type is one of "number", "str", or "image" and is used to display the field accordingly. | Array[Object] | [  {   "id": "textInput",    "label": "Enter text for prediction",     "type": "str"  } ] | - |
 | requestObject | Object defining the shape of the expected input data of the backend. Use the id's of the input fields as placeholder for the input values. | Object | { "inputData": "inputText" } <br/><br/>  { "inputData": { "firstName": "firstNameId", "lastName": "lastNameId" } }  | - |
 
-Please check the <a href="/backend/examples">examples</a> for some sample configurations.
+Please check the <a href="/backend/examples">examples</a> for some sample configurations. <br/>
+💡 Note: The input type "image" is internally represented by a base64 encoded string representing the image content. Learn more about it in the <a href="#preprocessing-and-postprocessing">Preprocessing and postprocessing</a> section.
 
 ## Database configuration
 In case you have set up a free MongoDB instance in the section <a href="#persistence">Persistence</a> there are some additional configurations available:
