@@ -162,8 +162,6 @@ Tired of building web-applications for your machine learning models to enable us
 
 ---
 
-# Preprocessing and postprocessing
-
 # Configuration
 The file configMap.json contains the configuration which is mainly used by the frontend. The following list defines all available configuration keys. The names of the keys cannot be changed.
 
@@ -174,10 +172,10 @@ The file configMap.json contains the configuration which is mainly used by the f
 | input | Array containing an element for each expected input. The frontend creates one inputfield for the user for each element. An element has 3 attributes id (str), label (str), type (str). The id is used to link input fields to the requestObject. The label is the text which is displayed above the field. The type is one of "number", "str", or "image" and is used to display the field accordingly. | Array[Object] | [  {   "id": "textInput",    "label": "Enter text for prediction",     "type": "str"  } ] | - |
 | requestObject | Object defining the shape of the expected input data of the backend. Use the id's of the input fields as placeholder for the input values. | Object | { "inputData": "inputText" } <br/><br/>  { "inputData": { "firstName": "firstNameId", "lastName": "lastNameId" } }  | - |
 
-Please check the <a href="/backend/examples">examples</a> for some sample configurations. <br/>
+Please check the <a href="/backend/examples">examples</a> for some sample configurations. <br/><br/>
 💡 Note: The input type "image" is internally represented by a base64 encoded string representing the image content. Learn more about it in the <a href="#preprocessing-and-postprocessing">Preprocessing and postprocessing</a> section.
 
-## Database configuration
+## Optional database configuration
 In case you have set up a free MongoDB instance in the section <a href="#persistence">Persistence</a> there are some additional configurations available:
 
 ### dbName
@@ -193,12 +191,77 @@ Username for the configured database. Make sure the user has sufficient reading 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/dbUser.png">
 
 ### dbCredentials
-The credentials for the configured user. You can find them on www.cloud.mongodb.com in the section "Database Access" -> Edit
+The credentials for the configured user. You can find them on www.cloud.mongodb.com in the section "Database Access" 🡒 Edit
 
+# Preprocessing and postprocessing
+
+ML-Starter provides an SPI to let you control the dataflow from and to the model. In order to implement your custom preprocessing and postprocessing you have to extend the class AbstractModel in the file "custom_model.py" and place it in the folder "ml-starter / backend / app / custom_model".
+
+```python
+from abstract_model import AbstractModel
+
+
+class CustomModel(AbstractModel):
+
+    def pre_process(self, input_data, input_metadata):
+
+        #Your implementation
+
+        return None
+
+    def post_process(self, model_output):
+        
+        #Your implementation
+
+        return None
+
+```
+
+This is an overview of the dataflow of a user request: <br/>
+Input data ⟶ Request object ⟶ pre_process() ⟶ inferenceSession.run() ⟶ post_process() ⟶ Response
+
+💡 <a href="https://www.onnxruntime.ai/python/modules/onnxruntime/capi/onnxruntime_inference_collection.html#InferenceSession">Learn more about the ONNX InferenceSession</a>
+
+## Preprocessing
+
+The input data is passed to the method pre_process as parameter input_data in the form of the configured requestObject. The metadata about the expected input provided by the onnx session is passed to the pre_process method as the input_metadata parameter. They correspond to the call to onnxruntime.InferenceSession({model-path}).get_inputs(). The return value of the pre_process method is passed directly to the onnx InferenceSession and therefore must be a dictionary in the format {"input_name": input_data}.
+
+## Postprocessing
+
+The post_process method receives as parameter the model_output, which corresponds to the direct output of the call to onnxruntime.InferenceSession({onnx-model-path}).run({model_output_names}, {pre_processed_input_data}). The return value of the post_process method is used as a response for the REST interface without further processing. Therefore, numerical values should be rounded accordingly and any field names should be capitalized. 
+
+## Custom methods, files and requirements
+
+During pre- and postprocessing you can access other methods, classes or files (labels etc.) of your own. Just copy them into  the folder "ml-starter / backend / app / custom_model". If your implementation needs any external libraries, you must add them in the file "custom_requirements.txt" in the folder "ml-starter / backend / app / custom_model".
+
+## Access files
+In order to access files during the processing you must 1) provide them according to the above instructions (Custom methods, files and requirements) and 2) access them via the helper method get_file() from the file_helper.py. This ensures a safe access even in a containerized environment.
+```python
+from abstract_model import AbstractModel
+from file_helper import get_file
+
+
+class CustomModel(AbstractModel):
+
+    labels = json.load(open(get_file("labels_map.txt"), "r"))
+
+    #rest of the code omitted..
+```
 
 # Persistence
+Without further configuration, the user requests as well as the corresponding response of their model are persisted in a SQLite in-memory database. For operation on Heroku, it cannot be ensured that the data is persisted for a longer period of time. For persistent data storage, we recommend creating a no-SQL database at www.cloud.mongodb.com. You can specify the access data to the database afterwards in the 💡 <a href="#configuration">Configuration</a>. 
+
 
 # Deployment
 
+TBD
+
+## Local deployment
+
+
+## Deploy to Heroku
+
+
 # How does it work?
 
+TBD
