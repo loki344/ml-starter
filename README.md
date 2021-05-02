@@ -84,12 +84,12 @@ Tired of building web-applications for your machine learning models to enable us
    numpy~=1.19.5
    ```
    
-7) Define the configuration in the file "ml-starter / backend / app / custom_model / <strong>configMap.json</strong>". See <a href="#configuration">Configuration</a> for instructions. The most important parts are the inputFields and the requestObject. For the Iris model it looks like this:<br/><br/>
+7) Define the configuration in the file "ml-starter / backend / app / custom_model / <strong>configMap.json</strong>". See <a href="#configuration">Configuration</a> for instructions. The most important parts are the inputFields and the requestObject. For the Iris model it looks like this:<br/>
    
    <details><summary>Show configMap.json</summary>
    <p>
    
-   ```python
+   ```json
    {
      "applicationName": "My demo-application with the basic Iris-Model",
      "description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of two flowers and start the prediction!",
