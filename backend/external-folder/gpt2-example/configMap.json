@@ -4,11 +4,15 @@
   "input": [
     {
     "id": "inputText",
-    "name": "text",
-    "label": "Please enter some text",
+    "label": "Please enter some text and GPT-2 will continue",
     "type": "str"
     }
   ],
-  "requestObject": {"inputData": "inputText"}
+  "requestObject": {"inputData": "inputText"},
+
+  "dbName": "ml-starter",
+  "dbUser": "backendservice",
+  "dbCredentials": "rLVr9TGitsggCYx",
+  "clusterName": "Cluster0"
 
 }
