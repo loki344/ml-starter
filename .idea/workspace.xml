@@ -4,17 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="cleanup">
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- doc">
       <change afterPath="$PROJECT_DIR$/backend/app/integration_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/efficientnet/configMap.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/efficientnet/custom_requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification/configMap.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification/custom_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification/custom_requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/abstract_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/abstract_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/model_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/model_creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model_creation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/interface_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/interface_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/external-folder/gpt2-example/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/configMap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/interface_demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/kitten.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet/labels_map.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/configMap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/custom_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/interface_demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/iris-example/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/external-folder/iris-example/interface_demo.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +89,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -85,7 +102,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/docker/.env&#10;/home/robert/Repositories/ml-starter/external-folder/iris.py&#10;/home/robert/Repositories/ml-starter-backend/archiv/pythontest/gpt2.py" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/examples/efficientnet" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -102,18 +119,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/frontend" />
-      <recent name="$PROJECT_DIR$/backend/app/custom_model" />
-      <recent name="$PROJECT_DIR$/backend/external-folder/iris-example" />
-      <recent name="$PROJECT_DIR$/backend/external-folder/gpt2-example" />
+      <recent name="$PROJECT_DIR$/backend/examples/efficientnet" />
+      <recent name="$PROJECT_DIR$/backend/examples/gpt2" />
+      <recent name="$PROJECT_DIR$/backend/examples/iris-classification" />
+      <recent name="$PROJECT_DIR$/backend/examples/efficientnet-example" />
+      <recent name="$PROJECT_DIR$/docs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/app/custom_model" />
-      <recent name="$PROJECT_DIR$/backend/external-folder/efficientnet-example" />
+      <recent name="$PROJECT_DIR$/backend/examples/iris-classification" />
+      <recent name="$PROJECT_DIR$/backend/examples/gpt2" />
+      <recent name="$PROJECT_DIR$/backend/examples/efficientnet" />
       <recent name="$PROJECT_DIR$/backend/external-folder/iris-example" />
-      <recent name="$PROJECT_DIR$/backend/external-folder/gpt2-example" />
-      <recent name="$PROJECT_DIR$/backend/app" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -306,97 +323,7 @@
       <workItem from="1619092713923" duration="6146000" />
       <workItem from="1619340367921" duration="8135000" />
       <workItem from="1619466820388" duration="8533000" />
-    </task>
-    <task id="LOCAL-00048" summary="- adds db files">
-      <created>1617981773561</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981773561</updated>
-    </task>
-    <task id="LOCAL-00049" summary="-changes dockerfiles for heroku">
-      <created>1617981787465</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981787465</updated>
-    </task>
-    <task id="LOCAL-00050" summary="- updates commands">
-      <created>1617981797882</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981797883</updated>
-    </task>
-    <task id="LOCAL-00051" summary="- adds serviceWorker.js for prod mode later">
-      <created>1617981810285</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981810285</updated>
-    </task>
-    <task id="LOCAL-00052" summary="- implements push to next view">
-      <created>1617981828357</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981828357</updated>
-    </task>
-    <task id="LOCAL-00053" summary="- implements RatePrediction">
-      <created>1617981844093</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981844093</updated>
-    </task>
-    <task id="LOCAL-00054" summary="- adds /api to path">
-      <created>1617981866748</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981866748</updated>
-    </task>
-    <task id="LOCAL-00055" summary="- cleanup">
-      <created>1617981874047</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981874047</updated>
-    </task>
-    <task id="LOCAL-00056" summary="- cleanup">
-      <created>1617981907565</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981907565</updated>
-    </task>
-    <task id="LOCAL-00057" summary="- basic proxy for heroku and docker-compose">
-      <created>1617981920943</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981920943</updated>
-    </task>
-    <task id="LOCAL-00058" summary="- changes sass to css">
-      <created>1617981932492</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981932492</updated>
-    </task>
-    <task id="LOCAL-00059" summary="- updates uri">
-      <created>1617981949237</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981949237</updated>
-    </task>
-    <task id="LOCAL-00060" summary="- cleanup">
-      <created>1617981958020</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981958020</updated>
+      <workItem from="1619953394467" duration="14396000" />
     </task>
     <task id="LOCAL-00061" summary="- basic uml diagram">
       <created>1617981973692</created>
@@ -650,7 +577,98 @@
       <option name="project" value="LOCAL" />
       <updated>1618131406725</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="- no differentiation between float and number">
+      <created>1619953731806</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1619953731807</updated>
+    </task>
+    <task id="LOCAL-00098" summary="- adds some logging">
+      <created>1619953745896</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1619953745897</updated>
+    </task>
+    <task id="LOCAL-00099" summary="- adds some logging">
+      <created>1619953752616</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1619953752616</updated>
+    </task>
+    <task id="LOCAL-00100" summary="- adds some logging">
+      <created>1619953808526</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1619953808526</updated>
+    </task>
+    <task id="LOCAL-00101" summary="- adds db and labeltext">
+      <created>1619953825373</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1619953825373</updated>
+    </task>
+    <task id="LOCAL-00102" summary="- intellij changes">
+      <created>1619953839809</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1619953839809</updated>
+    </task>
+    <task id="LOCAL-00103" summary="- doc">
+      <created>1619958429088</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1619958429088</updated>
+    </task>
+    <task id="LOCAL-00104" summary="- doc">
+      <created>1619958869775</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1619958869775</updated>
+    </task>
+    <task id="LOCAL-00105" summary="- doc">
+      <created>1619958872684</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1619958872685</updated>
+    </task>
+    <task id="LOCAL-00106" summary="- doc">
+      <created>1619959732646</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1619959732646</updated>
+    </task>
+    <task id="LOCAL-00107" summary="- doc">
+      <created>1619968072219</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1619968072219</updated>
+    </task>
+    <task id="LOCAL-00108" summary="- doc">
+      <created>1619968185910</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1619968185910</updated>
+    </task>
+    <task id="LOCAL-00109" summary="- doc">
+      <created>1619968239913</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1619968239913</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -702,11 +720,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- only call config api once" />
-    <MESSAGE value="- adds description to config" />
-    <MESSAGE value="- fixes reducer and adds reset input_data" />
-    <MESSAGE value="- saves inputdata in intermediate variable in the state to display it." />
-    <MESSAGE value="- fixes path for patch" />
     <MESSAGE value="- adds simple alert for empty rating" />
     <MESSAGE value="- redesigned persitence logic" />
     <MESSAGE value="- adds status code, changes post response, otherwise it would be a string" />
@@ -727,18 +740,12 @@
     <MESSAGE value="- adds component for InputDataForm.js to view it twice, once read only, implementation missing" />
     <MESSAGE value="- minor things" />
     <MESSAGE value="- extracted NextPredictionButton.js in component to reuse it in the PredictionView.js&#10;- improved margin of the button and removed linebreaks in html" />
-    <option name="LAST_COMMIT_MESSAGE" value="- extracted NextPredictionButton.js in component to reuse it in the PredictionView.js&#10;- improved margin of the button and removed linebreaks in html" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/backend/app/custom_model/custom_model.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="- no differentiation between float and number" />
+    <MESSAGE value="- adds some logging" />
+    <MESSAGE value="- adds db and labeltext" />
+    <MESSAGE value="- intellij changes" />
+    <MESSAGE value="- doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="- doc" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_starter_backend$configuration_check.coverage" NAME="integration_test Coverage Results" MODIFIED="1619471857458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
