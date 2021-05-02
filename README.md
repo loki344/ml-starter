@@ -167,11 +167,12 @@ Tired of building web-applications for your machine learning models to enable us
 # Configuration
 The file configMap.json contains the configuration which is mainly used by the frontend. The following list defines all available configuration keys. The names of the keys cannot be changed.
 
-| Key           | Description  |Type     | Example|
-| ------------- |-------------|:------- |------------|
-|applicationName|This name is displayed in the header of the web application.|String|My demoapplication|
-|description|Short text to introduce your model to the user. This text is displayed above the input fields.|String|This model recognizes classes in a given image|
-|input|Array containing an element for each expected input. The frontend creates one inputfield for the user for each element. An element has 3 attributes id (str), label (str), type (str). The id is used to link input fields to the requestObject. The label is the text which is displayed above the field. The type is one of "number", "str", or "image" and is used to display the field accordingly.|Object||
+| **Key** | **Description** | **Type** | **Example** | **Default** |
+|---|---|---|---|---|
+| applicationName (optional) | This name is displayed in the header of the web application. | String | My demoapplication | My ML-starter demo application |
+| description (optional) | Short text to introduce your model to the user. This text is displayed above the input fields. | String | This model recognizes classes in a given image | Please provide the data in the input fields below and start the prediction. |
+| input | Array containing an element for each expected input. The frontend creates one inputfield for the user for each element. An element has 3 attributes id (str), label (str), type (str). The id is used to link input fields to the requestObject. The label is the text which is displayed above the field. The type is one of "number", "str", or "image" and is used to display the field accordingly. | Array[Object] | [  {   "id": "textInput",    "label": "Enter text for prediction",     "type": "str"  } ] | - |
+| requestObject | Object defining the shape of the expected input data of the backend. Use the id's of the input fields as placeholder for the input values. | Object | {"inputData": "inputText"} | - |
 
 
 # Persistence
