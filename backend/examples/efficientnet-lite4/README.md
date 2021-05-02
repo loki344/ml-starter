@@ -74,7 +74,7 @@ def pre_process(self, input_data, input_metadata):
 Output of model is an inference score with array shape float32[1,1000]. The output references the labels_map.txt file which maps an index to a label to classify the type of image.
 
 Example:
-```json
+```text
 [[2.13733227e-08 6.26663876e-08 5.44992176e-08 1.99169605e-08
   2.24667804e-08 3.61451136e-08 4.48802862e-09 4.56697258e-09 ...]]
 
