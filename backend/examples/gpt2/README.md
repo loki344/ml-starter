@@ -17,8 +17,9 @@ To deploy it on www.heroku.com
 ```
 
 ## Result
-<img style="width: 100%" src=""/>
-<img style="width: 100%" src=""/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/gpt2/result-gpt2-1.png"/>
+<br/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/gpt2/result-gpt2-2.png"/>
 
 
 
@@ -29,6 +30,25 @@ A string to be used as a base for gpt2 to generate text. <br/>
 Example: 
 ```json
 "This is a test input to show"
+```
+
+##Configuration
+The applicationName and the description are interchangeable, whereas the configuration of the input and the requestObject should match the above definition of the input data.
+
+```json
+{
+  "applicationName": "My demo-application with GPT-2",
+  "description": "This GPT-2 model will generate some text based on the input below. Try it out!",
+  "input": [
+    {
+    "id": "inputText",
+    "label": "Please enter some text and GPT-2 will continue",
+    "type": "str"
+    }
+  ],
+  "requestObject": {"inputData": "inputText"}
+
+}
 ```
 
 ###Preprocessing
