@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- cleanup and doc">
-      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/README.md" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- doc">
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.onnx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/labels_map.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/gpt2/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/gpt2/result-gpt2-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/gpt2/result-gpt2-2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/model_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/gpt2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/gpt2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -310,14 +309,7 @@
       <workItem from="1619092713923" duration="6146000" />
       <workItem from="1619340367921" duration="8135000" />
       <workItem from="1619466820388" duration="8533000" />
-      <workItem from="1619953394467" duration="18227000" />
-    </task>
-    <task id="LOCAL-00064" summary="- fixes reducer and adds reset input_data">
-      <created>1617984670804</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1617984670804</updated>
+      <workItem from="1619953394467" duration="19076000" />
     </task>
     <task id="LOCAL-00065" summary="- fixes reducer and adds reset input_data">
       <created>1617984675966</created>
@@ -655,7 +647,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619978417651</updated>
     </task>
-    <option name="localTasksCounter" value="113" />
+    <task id="LOCAL-00113" summary="- doc">
+      <created>1619981763228</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1619981763228</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -729,10 +728,10 @@
     <MESSAGE value="- adds some logging" />
     <MESSAGE value="- adds db and labeltext" />
     <MESSAGE value="- intellij changes" />
-    <MESSAGE value="- doc" />
     <MESSAGE value="- cleanup" />
     <MESSAGE value="- cleanup and doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="- cleanup and doc" />
+    <MESSAGE value="- doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="- doc" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_starter_backend$configuration_check.coverage" NAME="integration_test Coverage Results" MODIFIED="1619471857458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />

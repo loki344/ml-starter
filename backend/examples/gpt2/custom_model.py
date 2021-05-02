@@ -20,15 +20,11 @@ class CustomModel(AbstractModel):
 
         return ort_inputs
 
-
-    @staticmethod
-    def post_process(model_output):
+    def post_process(self, model_output):
         outputs_flatten = model_output[0].flatten()
         outputs_flatten = outputs_flatten.flatten()
 
         predictions = torch.tensor(outputs_flatten)
-        print(('modelOutput:' + str(predictions)))
-
         return str(predictions)
 
 

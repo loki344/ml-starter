@@ -1,13 +1,13 @@
-# Example with the Iris classification model
+# Example with the GPT-2
 
-The ONNX model included in this example is a simple decision tree built with Scikitlearn.
+The ONNX model included in this example is the pretrained version available on https://github.com/onnx/models/tree/master/text/machine_comprehension/gpt-2.
 
 ## Instructions
 To run this example locally
 ```commandline
 git clone https://github.com/loki344/ml-starter.git
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
-cp -a ./backend/examples/iris-classification/. ./backend/app/custom_model
+cp -a ./backend/examples/gpt2/. ./backend/app/custom_model
 docker run #WIP
 ```
 
@@ -17,6 +17,8 @@ To deploy it on www.heroku.com
 ```
 
 ## Result
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris/result_iris.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris/result_iris.png"/>
 
 
 
