@@ -4,32 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- doc">
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- cleanup">
       <change afterPath="$PROJECT_DIR$/backend/app/integration_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/efficientnet/configMap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/efficientnet/custom_requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification/configMap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification/custom_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification/custom_requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/model_configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model_configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/configMap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/interface_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/kitten.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/efficientnet-example/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet/labels_map.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/configMap.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/custom_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/gpt2-example/interface_demo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/iris-example/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/external-folder/iris-example/interface_demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/custom_requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet/labels_map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/labels_map.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,9 +112,9 @@
       <recent name="$PROJECT_DIR$/docs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/examples/gpt2" />
       <recent name="$PROJECT_DIR$/backend/app/custom_model" />
       <recent name="$PROJECT_DIR$/backend/examples/iris-classification" />
-      <recent name="$PROJECT_DIR$/backend/examples/gpt2" />
       <recent name="$PROJECT_DIR$/backend/examples/efficientnet" />
       <recent name="$PROJECT_DIR$/backend/external-folder/iris-example" />
     </key>
@@ -323,21 +309,7 @@
       <workItem from="1619092713923" duration="6146000" />
       <workItem from="1619340367921" duration="8135000" />
       <workItem from="1619466820388" duration="8533000" />
-      <workItem from="1619953394467" duration="14396000" />
-    </task>
-    <task id="LOCAL-00061" summary="- basic uml diagram">
-      <created>1617981973692</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1617981973692</updated>
-    </task>
-    <task id="LOCAL-00062" summary="- only call config api once">
-      <created>1617982751081</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1617982751081</updated>
+      <workItem from="1619953394467" duration="15113000" />
     </task>
     <task id="LOCAL-00063" summary="- adds description to config">
       <created>1617984653041</created>
@@ -668,7 +640,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619968239913</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="- cleanup">
+      <created>1619977764892</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1619977764892</updated>
+    </task>
+    <task id="LOCAL-00111" summary="- cleanup">
+      <created>1619977777878</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1619977777878</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -728,7 +714,6 @@
     <MESSAGE value="- clean up, improved file handling" />
     <MESSAGE value="- clean up, improved file handling&#10;- adds new radio buttons" />
     <MESSAGE value="- clean up&#10;- adds style for file input" />
-    <MESSAGE value="- cleanup" />
     <MESSAGE value="- imrpoved handling of inputs and the prediction for objects" />
     <MESSAGE value="- changed proxy to service name" />
     <MESSAGE value="- changed package structure and did some cleanup&#10;- added dependency" />
@@ -745,7 +730,8 @@
     <MESSAGE value="- adds db and labeltext" />
     <MESSAGE value="- intellij changes" />
     <MESSAGE value="- doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="- doc" />
+    <MESSAGE value="- cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="- cleanup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_starter_backend$configuration_check.coverage" NAME="integration_test Coverage Results" MODIFIED="1619471857458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />

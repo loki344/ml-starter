@@ -152,8 +152,6 @@ Tired of building web-applications for your machine learning models to enable us
 
 9) Access the frontend on http://localhost, and the backend on http://localhost:8800/docs
 
-# Examples
-
 # Preprocessing and postprocessing
 
 
