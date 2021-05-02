@@ -17,7 +17,7 @@ Tired of building web-applications for your machine learning models to enable us
 <sup>Alpha Version: Only suggested for experimental usage.</sup>
 
 
-<img style="width: 100%" src=""/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/combined_efficientnet.png"/>
 
 
 
