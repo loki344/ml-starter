@@ -26,6 +26,7 @@ app.add_middleware(
 configuration = ModelConfiguration()
 
 default_model_name = './custom_model/custom_model.onnx'
+
 model = create_model(default_model_name, configuration.model_output_names)
 
 print("-------------------------------------------------------------------------------------------------------")
@@ -77,8 +78,8 @@ async def patch_rating(prediction: schemas.PredictionPatch):
          description="Returns application related properties")
 async def get_configuration():
 
-    return {'applicationName': application_name,
-            'description': description,
-            'inputFields': input_fields,
-            "requestObject": request_object}
+    return {'applicationName': configuration.application_name,
+            'description': configuration.description,
+            'inputFields': configuration.input_fields,
+            "requestObject": configuration.request_object}
 
