@@ -49,10 +49,10 @@ Tired of building web-applications for your machine learning models to enable us
 
 ### Instructions
 
-1) Train your model with a ML-Framework which supports the serialization in the ONNX format. See https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download most state-of-the-art models already pretrained.
+1) Train your model with a ML-Framework which supports the serialization in the ONNX format. See https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download most of the state-of-the-art ML-models already pretrained.
 2) Clone the ml-starter repository
 3) Save your trained model in the folder "ml-starter / backend / app / custom_model" with the file name <strong>"custom_model.onnx"</strong>
-4) Implement the pre- and postprocessing method to handle the dataflow of the user requests and the prediction. Use the file "ml-starter / backend / app / custom_model / <strong>custom_model.py</strong>".</br> A simple pre- and postprocessing function for the famous iris-classification model looks like this:
+4) Implement the pre- and postprocessing method to specify the data processing of the user requests and the prediction. Use the file "ml-starter / backend / app / custom_model / <strong>custom_model.py</strong>".</br> A simple pre- and postprocessing function for the famous iris-classification model looks like this:
    
     ```python
     #custom_model.py    
@@ -73,10 +73,10 @@ Tired of building web-applications for your machine learning models to enable us
             predicted_labels = list(map(lambda prediction: labels[prediction], model_output[0]))
             return predicted_labels
     ```
-    See <a href="#pre-and-post-processing">Pre- and postprocessing</a> for instructions.
+    See <a href="#pre-and-post-processing">Pre- and postprocessing</a> for further instructions.
 
 
-5) If needed copy custom methods and classes into the directory "ml-starter / backend / app / custom_model"
+5) If needed, copy custom methods, files and classes into the directory "ml-starter / backend / app / custom_model" (Optional)
 6) Add your dependencies for your implementation in the file "ml-starter / backend / app / custom_model / <strong>custom_requirements.txt</strong>" just as you would do in the usual requirements.txt file.<br/> For the Iris model it looks like this:
    ```text
    #custom_requirements.txt
@@ -144,7 +144,7 @@ Tired of building web-applications for your machine learning models to enable us
    docker run
    ```
    💡 To deploy your application to a hosting provider see <a href="#deployment">Deployment</a> for instructions.
-
+   
 
 9) Access the frontend on http://localhost, and the backend on http://localhost:8800/docs
 
