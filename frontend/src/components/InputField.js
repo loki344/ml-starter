@@ -60,19 +60,21 @@ export const InputField = ({inputField}) => {
                     <span id="file-chosen" style={{color: textColor}} >{fileName}</span>
                 </div>)
             break
-        case 'float':
+        case 'number':
             htmlTag = (
                 <div style={{marginBottom:'1.5rem'}}>
-                <label className="InputLabel">{label}</label>
-                <input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))}/>
+                    <label className="InputLabel">{label}</label>
+                    <input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))}/>
                 </div>
+
             )
             break
+
         case 'str':
             htmlTag = (
                 <div style={{marginBottom:'1.5rem'}}>
-                <label className="InputLabel">{label}</label>
-                <input className="InputField" type="text" onChange={(event) => dispatch(addData(id, event.target.value))}/>
+                    <label className="InputLabel">{label}</label>
+                    <input className="InputField" type="text" onChange={(event) => dispatch(addData(id, event.target.value))}/>
                 </div>
             )
             break
