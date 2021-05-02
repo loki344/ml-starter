@@ -9,7 +9,7 @@
 <p align="center">
     | <a href="#getting-started">Getting Started</a> | 
    <a href="#examples">Examples</a> |     
-   <a href="#pre-and-postprocessing">Pre- and postprocessing</a> | 
+   <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> | 
    <a href="#configuration">Configuration</a> | 
    <a href="#deployment">Deployment</a> | 
    <a href="#how-does-it-work">How does it work?</a> |
@@ -150,7 +150,7 @@ Tired of building web-applications for your machine learning models to enable us
 
 # Examples
 
-# Pre- and postprocessing
+# Preprocessing and postprocessing
 
 
 # Configuration
