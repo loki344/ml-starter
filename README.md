@@ -15,6 +15,7 @@
    <a href="/backend/examples">Examples</a> |     
    <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> | 
    <a href="#configuration">Configuration</a> | 
+   <a href="#persistence">Persistence</a> | 
    <a href="#deployment">Deployment</a> | 
    <a href="#how-does-it-work">How does it work?</a> |
 </p>
@@ -152,10 +153,28 @@ Tired of building web-applications for your machine learning models to enable us
 
 9) Access the frontend on http://localhost, and the backend on http://localhost:8800/docs
 
+---
+
+<p align="center">
+     👉&nbsp; Try out and explore some examples <a href="/backend/examples">here</a>  
+
+</p>
+
+---
+
 # Preprocessing and postprocessing
 
-
 # Configuration
+The file configMap.json contains the configuration which is mainly used by the frontend. The following list defines all available configuration keys. The names of the keys cannot be changed.
+
+| Key           | Description  |Type     | Example|
+| ------------- |-------------|:------- |------------|
+|applicationName|This name is displayed in the header of the web application.|String|My demoapplication|
+|description|Short text to introduce your model to the user. This text is displayed above the input fields.|String|This model recognizes classes in a given image|
+|input|Array containing an element for each expected input. The frontend creates one inputfield for the user for each element. An element has 3 attributes id (str), label (str), type (str). The id is used to link input fields to the requestObject. The label is the text which is displayed above the field. The type is one of "number", "str", or "image" and is used to display the field accordingly.|Object||
+
+
+# Persistence
 
 # Deployment
 
