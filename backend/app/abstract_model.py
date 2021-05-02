@@ -12,6 +12,14 @@ class AbstractModel(ABC):
         self.model_output_names = model_output_names
         self.inference_session = runtime.InferenceSession(self.onnx_file_path)
 
+        print("Model has " + str(len(self.inference_session.get_inputs())) + " inputs defined.")
+        for input in self.inference_session.get_inputs():
+            print("Inputname: " + str(input.name) + ", shape: " + str(input.shape) + ", type: " + str(input.type))
+
+        print("Model has " + str(len(self.inference_session.get_outputs())) + " outputs defined.")
+        for output in self.inference_session.get_outputs():
+            print("Outputname: " + str(output.name) + ", shape: " + str(output.shape) + ", type: " + str(output.type))
+
     @abstractmethod
     def pre_process(self, input_data, input_metadata):
         pass
