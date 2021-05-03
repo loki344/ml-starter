@@ -286,7 +286,7 @@ The main functionality of ML-Starter is provided by the Python backend. The REST
 
 The UML sequence diagram shows the message flow of the application:
 
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/rest-endpoints.png">
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/sequence_diagram.png">
 
 
 
