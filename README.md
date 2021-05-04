@@ -146,7 +146,8 @@ Tired of building web-applications for your machine learning models to enable us
 
 8) To start the Application locally execute the following command in the terminal in the directory ml-starter/
    ```commandline
-   docker run
+   docker build -t ml-starter .
+   docker run -d -p 80:3000 -p 8800:8800 ml-starter
    ```
    💡 To deploy your application to a hosting provider see <a href="#deployment">Deployment</a> for instructions.
    
@@ -271,7 +272,8 @@ The integration with docker allows you to run your ML-Starter easily on your loc
 ## Local deployment
 Open a terminal in the directory "ml-starter /"
 ```commandline
-docker run #WIP
+docker build -t ml-starter .
+docker run -d -p 80:3000 -p 8800:8800 ml-starter
 ```
 
 Access your browser on localhost:#TBD

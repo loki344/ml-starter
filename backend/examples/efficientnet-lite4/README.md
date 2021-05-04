@@ -9,7 +9,8 @@ To run this example locally
 git clone https://github.com/loki344/ml-starter.git
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
 cp -a ./backend/examples/efficientnet-lite4/. ./backend/app/custom_model
-docker run #WIP
+docker build -t ml-starter-efficientnet-example .
+docker run -d -p 80:3000 -p 8800:8800 ml-starter-efficientnet-example
 ```
 
 To deploy it on www.heroku.com
