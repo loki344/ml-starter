@@ -20,7 +20,7 @@ docker run -dp 80:3000 ml-starter
 
 heroku create
 docker build -t ml-starter .
-docker tag ml-starter registry.heroku.com/thawing-crag-62671/web
-docker push registry.heroku.com/thawing-crag-62671/web
-heroku container:release web --app thawing-crag-62671
-heroku open thawing-crag-62671
+docker tag ml-starter registry.heroku.com/{yourApplicationName}/web
+docker push registry.heroku.com/{yourApplicationName}/web
+heroku container:release web --app {yourApplicationName}
+heroku open {yourApplicationName}

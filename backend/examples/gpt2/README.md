@@ -4,7 +4,8 @@ The ONNX model included in this example is the pretrained version available on h
 
 ## Instructions
 
-To run this example locally
+### Local deployment
+
 ```commandline
 git clone https://github.com/loki344/ml-starter.git
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
@@ -13,9 +14,23 @@ docker build -t ml-starter-gpt2-example .
 docker run -d -p 80:3000 -p 8800:8800 ml-starter-gpt2-example
 ```
 
-To deploy it on www.heroku.com
+### Deployment to Heroku
+
 ```commandline
-#TBD
+heroku create
+#COPY the your application name and replace it in the commands below
+```
+
+```commandline
+git clone https://github.com/loki344/ml-starter.git
+find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
+cp -a ./backend/examples/gpt2/. ./backend/app/custom_model
+docker build -t ml-starter-gpt2-example .
+
+docker tag ml-starter-gpt2-example registry.heroku.com/{yourApplicationName}/web
+docker push registry.heroku.com/{yourApplicationName}/web
+heroku container:release web --app {yourApplicationName}
+heroku open {yourApplicationName}
 ```
 
 ## Result

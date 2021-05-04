@@ -2,7 +2,7 @@
 
 The ONNX model included in this example is a simple decision tree built with Scikitlearn.
 
-## Instructions
+### Local deployment
 
 To run this example locally
 ```commandline
@@ -13,10 +13,25 @@ docker build -t ml-starter-iris-example .
 docker run -d -p 80:3000 -p 8800:8800 ml-starter-iris-example
 ```
 
-To deploy it on www.heroku.com
+### Deployment to Heroku
+
 ```commandline
-#TBD
+heroku create
+#COPY the your application name and replace it in the commands below
 ```
+
+```commandline
+git clone https://github.com/loki344/ml-starter.git
+find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
+cp -a ./backend/examples/iris-classification/. ./backend/app/custom_model
+docker build -t ml-starter-classification-example .
+
+docker tag ml-starter-classification-example registry.heroku.com/{yourApplicationName}/web
+docker push registry.heroku.com/{yourApplicationName}/web
+heroku container:release web --app {yourApplicationName}
+heroku open {yourApplicationName}
+```
+
 
 ## Result
 
