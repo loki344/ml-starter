@@ -9,3 +9,18 @@ mit docker compose
 heroku container:push --recursive --app desolate-fortress-59930
 heroku container:release worker --app desolate-fortress-59930
 heroku container:release web --app desolate-fortress-59930
+
+
+
+
+----------------------new version
+
+docker build -t ml-starter .
+docker run -dp 80:3000 ml-starter
+
+heroku create
+docker build -t ml-starter .
+docker tag ml-starter registry.heroku.com/thawing-crag-62671/web
+docker push registry.heroku.com/thawing-crag-62671/web
+heroku container:release web --app thawing-crag-62671
+heroku open thawing-crag-62671
