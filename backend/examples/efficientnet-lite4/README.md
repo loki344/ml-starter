@@ -16,6 +16,10 @@ docker run -d -p 80:3000 -p 8800:8800 ml-starter-efficientnet-example
 
 ### Deployment to Heroku
 
+In order to deploy your application to heroku you'll need a heroku account and the CLI from heroku.
+
+https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
 ```commandline
 heroku create
 #COPY the your application name and replace it in the commands below

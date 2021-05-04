@@ -54,8 +54,11 @@ Tired of building web-applications for your machine learning models to enable us
 
 ## Instructions
 
-1) Train your model with a ML-Framework which supports the serialization in the ONNX format. See https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download most of the state-of-the-art ML-models already pretrained.
+1) Train your model with an ML-Framework which supports the serialization in the ONNX format. See https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download most of the state-of-the-art ML-models already pretrained.
 2) Clone the ml-starter repository
+   ```git
+   git clone https://github.com/loki344/ml-starter.git
+   ```
 3) Save your trained model in the folder "ml-starter / backend / app / custom_model" with the file name <strong>"custom_model.onnx"</strong>
 4) Implement the pre- and postprocessing method to specify the data processing of the user requests and the prediction. Use the file "ml-starter / backend / app / custom_model / <strong>custom_model.py</strong>".</br> A simple pre- and postprocessing function for the famous iris-classification model looks like this:
    
@@ -279,7 +282,23 @@ docker run -d -p 80:3000 -p 8800:8800 ml-starter
 Access your browser on localhost:#TBD
 
 ## Deploy to Heroku
-TBD
+In order to deploy your application to heroku you'll need a heroku account and the CLI from heroku.
+
+https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
+```commandline
+heroku create
+#COPY the your application name and replace it in the commands below
+```
+
+```commandline
+docker build -t ml-starter-efficientnet-example .
+
+docker tag ml-starter registry.heroku.com/{yourApplicationName}/web
+docker push registry.heroku.com/{yourApplicationName}/web
+heroku container:release web --app {yourApplicationName}
+heroku open {yourApplicationName}
+```
 
 # How does it work?
 The main functionality of ML-Starter is provided by the Python backend. The REST-API is implemented with FastAPI and provides the following endpoints: 
