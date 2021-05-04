@@ -1,1 +1,4 @@
-./backend./external-folder/*
+**/node_modules
+**/examples
+**/docs
+**.git

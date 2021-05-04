@@ -1,30 +1,32 @@
-FROM nikolaik/python-nodejs:latest
-
-WORKDIR /backend/app
-COPY backend/app .
-COPY backend/requirements.txt ./requirements.txt
-
-ENV IS_IN_DOCKER=true
-
-RUN pip3 install -r requirements.txt
-RUN pip3 install -r ./custom_model/custom_requirements.txt
-
-# set working directory
-WORKDIR /frontend/app
-
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH frontend/app/node_modules/.bin:$PATH
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
+RUN pip install --upgrade pip
 ENV IS_IN_DOCKER true
 
-# install app dependencies
+WORKDIR /ml-starter
+COPY ./startBackend.sh ./startBackend.sh
+COPY ./startFrontend.sh ./startFrontend.sh
+COPY ./startup.sh ./startup.sh
+
+RUN chmod a+x ./startBackend.sh
+RUN chmod a+x ./startFrontend.sh
+RUN chmod a+x ./startup.sh
+
+WORKDIR /ml-starter/backend
+ENV PYTHONPATH "${PYTHONPATH}:/app"
+
+RUN apt update
+RUN apt -y install nodejs npm
+COPY ./backend ./
+RUN pip install -r requirements.txt
+
+WORKDIR /ml-starter/frontend
+
 COPY ./frontend/package.json ./
 COPY ./frontend/package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
 
-# add app
 COPY ./frontend ./
-# start app
+RUN npm install
 
-CMD ["npm", "start"]
-CMD uvicorn main:app --host 0.0.0.0 --port 8800
+WORKDIR /ml-starter
+CMD ./startup.sh
+
