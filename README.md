@@ -305,8 +305,9 @@ ML-Starter has two main components:
 1) Python backend with FastAPI which provides the REST-API.
 2) React frontend
 
-The following diagram shows the architecture of ML-Starter.
+The following UML component diagram shows the architecture of ML-Starter.
 
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/architecture.png">
 
 The main functionality of ML-Starter is provided by the Python backend. The REST-API is implemented with FastAPI and provides the following endpoints: 
 
