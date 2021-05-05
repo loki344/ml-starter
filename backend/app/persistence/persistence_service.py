@@ -19,7 +19,7 @@ class PersistenceService(ABC):
         pass
 
     @abstractmethod
-    def save_rating(self, prediction_id, rating: str) -> Prediction:
+    def save_rating(self, prediction_id: str, rating: str) -> Prediction:
         pass
 
     @abstractmethod
