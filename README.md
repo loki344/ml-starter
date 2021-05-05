@@ -301,6 +301,13 @@ heroku open {yourApplicationName}
 ```
 
 # How does it work?
+ML-Starter has two main components:
+1) Python backend with FastAPI which provides the REST-API.
+2) React frontend
+
+The following diagram shows the architecture of ML-Starter.
+
+
 The main functionality of ML-Starter is provided by the Python backend. The REST-API is implemented with FastAPI and provides the following endpoints: 
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/rest-endpoints.png">
