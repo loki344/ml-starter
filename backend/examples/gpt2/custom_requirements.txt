@@ -1,0 +1,6 @@
+torch~=1.8.1save_rating
+transformers~=4.5.1
+numpy~=1.19.5
+
+
+
