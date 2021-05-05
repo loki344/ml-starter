@@ -19,6 +19,9 @@ RUN apt -y install nodejs npm
 COPY ./backend ./
 RUN pip install -r requirements.txt
 
+WORKDIR /ml-starter/backend/app/custom_model
+RUN pip install -r custom_requirements.txt
+
 WORKDIR /ml-starter/frontend
 
 COPY ./frontend/package.json ./
