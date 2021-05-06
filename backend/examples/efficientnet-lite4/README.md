@@ -13,6 +13,7 @@ cp -a ./backend/examples/efficientnet-lite4/. ./backend/app/custom_model
 docker build -t ml-starter-efficientnet-example .
 docker run -d -p 80:3000 -p 8800:8800 ml-starter-efficientnet-example
 ```
+Access your browser on localhost (frontend) or localhost:8800/docs (backend)
 
 ### Deployment to Heroku
 

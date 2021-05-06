@@ -13,6 +13,7 @@ cp -a ./backend/examples/gpt2/. ./backend/app/custom_model
 docker build -t ml-starter-gpt2-example .
 docker run -d -p 80:3000 -p 8800:8800 ml-starter-gpt2-example
 ```
+Access your browser on localhost (frontend) or localhost:8800/docs (backend)
 
 ### Deployment to Heroku
 

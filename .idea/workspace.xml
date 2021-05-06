@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- adds documentation in code&#10;- code formatting">
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- changes variable name&#10;- updates pyreverse files">
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/README.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.onnx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/classdiagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/packages.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/docker_operation.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/gpt2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/gpt2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,21 +309,7 @@
       <workItem from="1620070929403" duration="5705000" />
       <workItem from="1620153734831" duration="10757000" />
       <workItem from="1620244468124" duration="11549000" />
-      <workItem from="1620290872732" duration="11487000" />
-    </task>
-    <task id="LOCAL-00094" summary="- adds component for InputDataForm.js to view it twice, once read only, implementation missing">
-      <created>1618130726781</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1618130726781</updated>
-    </task>
-    <task id="LOCAL-00095" summary="- minor things">
-      <created>1618130740180</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1618130740180</updated>
+      <workItem from="1620290872732" duration="13882000" />
     </task>
     <task id="LOCAL-00096" summary="- extracted NextPredictionButton.js in component to reuse it in the PredictionView.js&#10;- improved margin of the button and removed linebreaks in html">
       <created>1618131406725</created>
@@ -650,7 +640,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620308761390</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="- adds pyreverse generated resources">
+      <created>1620309096697</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1620309096697</updated>
+    </task>
+    <task id="LOCAL-00144" summary="- changes variable name&#10;- updates pyreverse files">
+      <created>1620309233420</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1620309233421</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -702,8 +706,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- changed package structure and did some cleanup&#10;- added dependency" />
-    <MESSAGE value="- improves persistence API and adds mongoDB as possibility" />
     <MESSAGE value="adds mongo db dependencies" />
     <MESSAGE value="fixes imports" />
     <MESSAGE value="changes name" />
@@ -727,7 +729,9 @@
     <MESSAGE value="- renaming and reordering" />
     <MESSAGE value="- adds documentation in code" />
     <MESSAGE value="- adds documentation in code&#10;- code formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="- adds documentation in code&#10;- code formatting" />
+    <MESSAGE value="- adds pyreverse generated resources" />
+    <MESSAGE value="- changes variable name&#10;- updates pyreverse files" />
+    <option name="LAST_COMMIT_MESSAGE" value="- changes variable name&#10;- updates pyreverse files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_starter_backend$configuration_check.coverage" NAME="integration_test Coverage Results" MODIFIED="1619471857458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
