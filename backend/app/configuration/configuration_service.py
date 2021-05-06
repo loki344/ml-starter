@@ -1,10 +1,10 @@
 import json
 
-from exception.configuration_exception import ConfigurationException
-from file_helper import get_file
+from util.file_helper import get_file
+from configuration_exception import ConfigurationException
 
 
-class ModelConfiguration:
+class ConfigurationService:
 
     def __init__(self):
         self.config_map = get_file('configMap.json')
@@ -77,7 +77,8 @@ class ModelConfiguration:
                                              " has an unsupported field type: " + input_field['type'] +
                                              ". Should be one of: " + str(self.supported_field_types))
 
-        print("expected input ")
+        #TODO print a prototype of the requestobject
+        print("")
 
         print("finished input_field validation")
 

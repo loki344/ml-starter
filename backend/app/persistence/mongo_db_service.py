@@ -5,7 +5,7 @@ import pymongo
 from bson import ObjectId
 from pymongo import ReturnDocument
 
-from .persistence_service import PersistenceService
+from persistence_service import PersistenceService
 
 
 class MongoDbService(PersistenceService):

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from .schemas import Prediction
+from schemas import Prediction
 
 
 class PersistenceService(ABC):

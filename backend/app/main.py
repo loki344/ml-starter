@@ -1,11 +1,11 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
-from model_configuration import ModelConfiguration
+from backend.app.configuration.configuration_service import ConfigurationService
 from persistence.mongo_db_service import MongoDbService
 from persistence.sqlite_db_service import InMemoryDbService
 from persistence import schemas
-from model_creation import create_model
+from backend.app.model.model_creation import create_model
 
 print("Starting server...")
 app = FastAPI(
@@ -22,7 +22,7 @@ app.add_middleware(
     allow_credentials=True,
 )
 
-configuration = ModelConfiguration()
+configuration = ConfigurationService()
 
 default_model_name = './custom_model/custom_model.onnx'
 
