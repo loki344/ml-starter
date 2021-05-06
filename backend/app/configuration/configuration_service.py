@@ -3,9 +3,14 @@ import json
 from file_helper import get_file
 from configuration.configuration_exception import ConfigurationException
 
+
 class ConfigurationService:
+    """Service to provide the key value pairs of the configMap.json"""
 
     def __init__(self):
+        """Initializes values and loads the configuration from the configMap.json.
+        Also validates the configuration."""
+
         self.config_map = get_file('configMap.json')
         self.model_output_names = None
         self.db_name = ''
@@ -21,7 +26,8 @@ class ConfigurationService:
         self.read_config()
         self.validate()
 
-    def read_config(self):
+    def read_config(self) -> None:
+        """Reads the available config-keys from the configMap.json"""
 
         if self.config_map.is_file():
             print("-------------------------------------------------------------------------------------------------------")
@@ -54,8 +60,12 @@ class ConfigurationService:
             if 'clusterName' in config:
                 self.cluster_name = config['clusterName']
 
+    def validate(self) -> None:
+        """Validates the configuration. More precisely checks if all field types of the inputFields
+         are supported and all of them are used in the requestObject
 
-    def validate(self):
+         :return: None
+         """
 
         print("-------------------------------------------------------------------------------------------------------")
         print("Validating config file...")

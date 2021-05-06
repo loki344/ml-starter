@@ -4,13 +4,16 @@ class Error(Exception):
 
 
 class ConfigurationException(Error):
-    """Exception raised for errors in the configuration.
+    """Exception raised for errors in the configuration."""
 
-    Attributes:
-        key -- configuration key which is affected
-        message -- explanation of the error
-    """
+    def __init__(self, key: str, message: str):
+        """
+        Initializes a ConfigurationException
 
-    def __init__(self, key, message):
+        :param key: configuration key which is affected
+        :type key: str
+        :param message: explanation of the error
+        :type message: str
+        """
         self.key = key
         self.message = message

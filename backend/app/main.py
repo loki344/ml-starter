@@ -1,11 +1,19 @@
+from typing import List
+
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 from configuration.configuration_service import ConfigurationService
+from persistence.schemas import Prediction, PredictionPatch
 from persistence.mongo_db_service import MongoDbService
 from persistence.sqlite_db_service import InMemoryDbService
-from persistence import schemas
 from model.model_creation import create_model
+
+
+"""
+This is the entrypoint for the FastAPI application.
+start it with: uvicorn main:app --host localhost --port 8800 --reload
+"""
 
 print("Starting server...")
 app = FastAPI(
@@ -23,9 +31,7 @@ app.add_middleware(
 )
 
 configuration = ConfigurationService()
-
 default_model_name = './custom_model/custom_model.onnx'
-
 model = create_model(default_model_name, configuration.model_output_names)
 
 print("-------------------------------------------------------------------------------------------------------")
@@ -38,14 +44,13 @@ else:
     persistence_service = InMemoryDbService(app)
 
 
-
 @app.get("/api/ping")
 async def ping():
     return {"status": "alive"}
 
 
-@app.get("/api/predictions")
-async def get_predictions():
+@app.get("/api/predictions", response_model=List[Prediction])
+async def get_predictions() -> List[Prediction]:
 
     return persistence_service.get_predictions()
 
@@ -54,28 +59,27 @@ async def get_predictions():
 @app.post("/api/predictions",
           summary="Create a new prediction",
           description="Returns a prediction for the delivered inputData in the requestBody",
-          status_code=201)
-async def predict(request: Request):
+          status_code=201,
+          response_model=Prediction)
+async def predict(request: Request) -> Prediction:
     input_json = await request.json()
     input_data = input_json['inputData']
 
     prediction = model.predict(input_data)
 
-    prediction_entity = persistence_service.save_prediction(str(input_data), str(prediction))
-    response = {"id": str(prediction_entity.id), "input_data": prediction_entity.input_data, "prediction": prediction}
-
-    return response
+    return persistence_service.save_prediction(str(input_data), str(prediction))
 
 
 @app.patch("/api/predictions", summary="Patch a prediction",
-           description="Allows to patch the rating of a prediction")
-async def patch_rating(prediction: schemas.PredictionPatch):
+           description="Allows to patch the rating of a prediction",
+           response_model=Prediction)
+async def patch_rating(prediction: PredictionPatch) -> Prediction:
     return persistence_service.save_rating(prediction.id, prediction.rating)
 
 
 @app.get("/api/configs", summary="Get configuration",
          description="Returns application related properties")
-async def get_configuration():
+async def get_configuration() -> dict:
 
     return {'applicationName': configuration.application_name,
             'description': configuration.description,

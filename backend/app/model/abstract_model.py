@@ -1,10 +1,24 @@
 from abc import ABC, abstractmethod
+from typing import List
+
 import onnxruntime as runtime
+from onnxruntime import NodeArg
 
 
 class AbstractModel(ABC):
+    """Abstract class to define the functionality which is needed to integrate the model with the FastAPI"""
+
     #TODO what is the type of outputnames
-    def __init__(self, onnx_file_path: str, model_output_names=None):
+    def __init__(self, onnx_file_path: str, model_output_names=str):
+        """
+        Initializes an AbstractModel with the path to the model and the model_output_names
+
+        :param onnx_file_path: path where to .onnx file is available
+        :type onnx_file_path: str
+        :param model_output_names: this param is used for the onnx InferenceSession, example value: [Softmax:0]
+        :type model_output_names: str
+        """
+
         if model_output_names is None:
             model_output_names = []
 
@@ -21,15 +35,51 @@ class AbstractModel(ABC):
             print("Outputname: " + str(output.name) + ", shape: " + str(output.shape) + ", type: " + str(output.type))
 
     @abstractmethod
-    def pre_process(self, input_data, input_metadata):
+    def pre_process(self, input_data: object, input_metadata: List[NodeArg]) -> dict:
+        """
+        Pre processes the input of the REST-API. The input_data has the shape of the defined config 'requestObject'.
+        The return value of this object is used to run the prediction in the onnx InferenceSession.
+        Therefore the return value MUST correspond to the expected inputValue of your onnx model.
+        Usually it is a dictionary of {'inputKeys': 'inputValue'}
+        To access the expected inputNames of the onnx model, you can access the input_metadata.
+        example: input_metadata[0].name
+
+        :param input_data: inputs from the REST-API in the shape of the defined requestObject
+        :type input_data: object
+        :param input_metadata: the input metadata provided by the InferenceSession.get_inputs() method
+        :type input_metadata: List[NodeArg]
+
+        :return dict representing the prepared data for the onnx InferenceSession
+        """
+
         pass
 
     @staticmethod
     @abstractmethod
-    def post_process(model_output):
+    def post_process(model_output: object) -> object:
+        """
+        Post processes the output of the method InferenceSession.run(). The return value of this method is used to
+        display the prediction in the frontend. Consider using capitalized fieldNames and rounded numbers.
+        The shape of the output is dependent of your model in use.
+
+        :param model_output: Prediction output of InferenceSession.run() method.
+        :type model_output: object
+
+        :return: object representing the formatted prediction for the REST-API
+        """
+
         pass
 
-    def predict(self, input_data):
+    def predict(self, input_data: object) -> object:
+        """
+        This method is used by the FastAPI to provide the prediction. It is responsible for the dataflow
+        between the pre_process -> InferenceSession.run() -> post_process().
+
+        :param input_data: inputData in the shape of the configured requestObject.
+        :type input_data: object
+
+        :return: object representing the formatted prediction for the REST-API
+        """
 
         input_data = self.pre_process(input_data, self.inference_session.get_inputs())
 
