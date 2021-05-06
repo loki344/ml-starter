@@ -30,5 +30,3 @@ class PredictionPatch(BaseModel):
     """Prediction which is used to update the rating in a prediction"""
     id: str
     rating: str
-
-

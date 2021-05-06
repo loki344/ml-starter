@@ -2,12 +2,11 @@ import os
 import subprocess
 import sys
 
-from model.abstract_model import AbstractModel
 from custom_model.custom_model import CustomModel
 from file_helper import get_file
+from model.abstract_model import AbstractModel
 
 
-#TODO define type of outputnames
 def create_model(onnx_file_path: str, model_output_names: str = "") -> AbstractModel:
     """
     Creates a CustomModel object for with the given path and model_output_names. Takes care of the custom dependencies
@@ -15,6 +14,7 @@ def create_model(onnx_file_path: str, model_output_names: str = "") -> AbstractM
 
     :param onnx_file_path: path where to .onnx file is available
     :type onnx_file_path: str
+
     :param model_output_names: this param is used for the onnx InferenceSession, example value: [Softmax:0]
     :type model_output_names: str
 
@@ -40,5 +40,3 @@ def install_dependencies() -> None:
 
         path_to_custom_requirements = get_file('custom_requirements.txt')
         subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", path_to_custom_requirements])
-
-

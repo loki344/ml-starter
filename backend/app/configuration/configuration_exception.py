@@ -12,6 +12,7 @@ class ConfigurationException(Error):
 
         :param key: configuration key which is affected
         :type key: str
+
         :param message: explanation of the error
         :type message: str
         """

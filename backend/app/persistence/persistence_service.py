@@ -5,9 +5,8 @@ from persistence.schemas import Prediction
 
 
 class PersistenceService(ABC):
-    """
-    This is the abstract class for any persistence service which would like to provide it's services to the REST-API
-    """
+    """This is the abstract class for any persistence service which
+     would like to provide it's services to the REST-API"""
 
     def __init__(self):
         """Executes a health-check on creation to ensure the functionality"""
@@ -32,9 +31,12 @@ class PersistenceService(ABC):
         Ensure to set the "created" field and the id in the returned object.
 
         :param input_data: a string representation of the input
-        :type: str
+        :type input_data: str
+
         :param prediction: a string representation fo the prediction
-        :type: Prediction
+
+        :type prediction: Prediction
+
         :return: prediction
         """
         pass
@@ -45,9 +47,11 @@ class PersistenceService(ABC):
         Updates the Prediction object with the given id and adds the rating.
 
         :param prediction_id: of the prediction to update
-        :type: str
+        :type prediction_id: str
+
         :param rating: string representation of the rating
-        :type: str
+        :type rating: str
+
         :return: Prediction
         """
         pass

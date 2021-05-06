@@ -3,11 +3,14 @@ from pathlib import Path
 
 
 def get_file(path_to_file: str) -> Path:
-    """ Use this method to access files in the custom_model directory this ensures the functionality on every
+    """ Use this method to access files in the custom_model directory - this ensures the functionality on every
     computer and also in docker.
+
     Example: file lies in /custom_model/my_labels.json --> json.load(open(get_file("labels_map.txt"), "r"))
 
     :param path_to_file: relative to the custom_model directory
+    :type path_to_file: str
+
     :return: path to the file
     """
 

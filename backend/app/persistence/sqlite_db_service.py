@@ -17,8 +17,9 @@ class InMemoryDbService(PersistenceService):
     def __init__(self, app: FastAPI):
         """
         Initializes the datasource for the ven FastAPI application
+
         :param app: FastAPI application where this service is used
-        :type: FastAPI
+        :type app: FastAPI
         """
 
         models.Base.metadata.create_all(bind=engine)
@@ -36,8 +37,8 @@ class InMemoryDbService(PersistenceService):
         pass
 
     def save_prediction(self, input_data: str, prediction: str) -> Prediction:
-
-        prediction_entity = models.Prediction(input_data=str(input_data), prediction=str(prediction), created=datetime.datetime.now())
+        prediction_entity = models.Prediction(input_data=str(input_data), prediction=str(prediction),
+                                              created=datetime.datetime.now())
         db.session.add(prediction_entity)
         db.session.commit()
         db.session.refresh(prediction_entity)

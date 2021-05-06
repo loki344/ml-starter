@@ -4,16 +4,13 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 from configuration.configuration_service import ConfigurationService
-from persistence.schemas import Prediction, PredictionPatch
-from persistence.mongo_db_service import MongoDbService
-from persistence.sqlite_db_service import InMemoryDbService
 from model.model_creation import create_model
+from persistence.mongo_db_service import MongoDbService
+from persistence.schemas import Prediction, PredictionPatch
+from persistence.sqlite_db_service import InMemoryDbService
 
-
-"""
-This is the entrypoint for the FastAPI application.
-start it with: uvicorn main:app --host localhost --port 8800 --reload
-"""
+"""This is the entrypoint for the FastAPI application.
+    start it with: uvicorn main:app --host localhost --port 8800 --reload"""
 
 print("Starting server...")
 app = FastAPI(
@@ -38,7 +35,8 @@ print("-------------------------------------------------------------------------
 print("Configuring persistence service")
 if configuration.db_name != '' and configuration.db_credentials != '' and configuration.db_user != '' and configuration.cluster_name != '':
     print('Initializing MongoDbService..')
-    persistence_service = MongoDbService(configuration.cluster_name, configuration.db_name, configuration.db_user, configuration.db_credentials)
+    persistence_service = MongoDbService(configuration.cluster_name, configuration.db_name, configuration.db_user,
+                                         configuration.db_credentials)
 else:
     print('Initializing InMemoryDb..')
     persistence_service = InMemoryDbService(app)
@@ -51,11 +49,10 @@ async def ping():
 
 @app.get("/api/predictions", response_model=List[Prediction])
 async def get_predictions() -> List[Prediction]:
-
     return persistence_service.get_predictions()
 
 
-#TODO make this parameter configurable
+# TODO make this parameter configurable
 @app.post("/api/predictions",
           summary="Create a new prediction",
           description="Returns a prediction for the delivered inputData in the requestBody",
@@ -80,9 +77,7 @@ async def patch_rating(prediction: PredictionPatch) -> Prediction:
 @app.get("/api/configs", summary="Get configuration",
          description="Returns application related properties")
 async def get_configuration() -> dict:
-
     return {'applicationName': configuration.application_name,
             'description': configuration.description,
             'inputFields': configuration.input_fields,
             "requestObject": configuration.request_object}
-

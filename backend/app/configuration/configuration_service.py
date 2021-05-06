@@ -1,7 +1,7 @@
 import json
 
-from file_helper import get_file
 from configuration.configuration_exception import ConfigurationException
+from file_helper import get_file
 
 
 class ConfigurationService:
@@ -30,7 +30,8 @@ class ConfigurationService:
         """Reads the available config-keys from the configMap.json"""
 
         if self.config_map.is_file():
-            print("-------------------------------------------------------------------------------------------------------")
+            print(
+                "-------------------------------------------------------------------------------------------------------")
             print("Loading config file...")
             config = json.load(open(self.config_map))
             if 'modelOutputNames' in config:
@@ -79,15 +80,15 @@ class ConfigurationService:
             print("validating.. " + str(input_field))
 
             if not self.request_object.__str__().__contains__(input_field['id']):
-                raise ConfigurationException(input_field['id'], "The inputfield with the key " + input_field['id'] + " is defined in the input_fields but never used in the requestObject")
+                raise ConfigurationException(input_field['id'], "The inputfield with the key " + input_field[
+                    'id'] + " is defined in the input_fields but never used in the requestObject")
 
             if self.supported_field_types.get(input_field['type'], -1) == -1:
                 raise ConfigurationException(input_field['id'], "The inputfield with the key " + input_field['id'] +
                                              " has an unsupported field type: " + input_field['type'] +
                                              ". Should be one of: " + str(self.supported_field_types))
 
-        #TODO print a prototype of the requestobject
+        # TODO print a prototype of the requestobject
         print("")
 
         print("finished input_field validation")
-

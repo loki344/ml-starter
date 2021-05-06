@@ -6,31 +6,29 @@ import pymongo
 from bson import ObjectId
 from pymongo import ReturnDocument
 
-from persistence.schemas import Prediction
 from persistence.persistence_service import PersistenceService
+from persistence.schemas import Prediction
 
 
 class MongoDbService(PersistenceService):
-    """
-    This class handles the connection to a MongoDB on https://www.mongodb.com/. Currently no other
-    hosting provider has been tested.
-    """
+    """This class handles the connection to a MongoDB on https://www.mongodb.com/. Currently no other
+    hosting provider has been tested."""
 
     def __init__(self, cluster_name: str, db_name: str, db_user: str, db_credentials: str):
         """
         Initializes the service with the necessary parameters.
 
         :param cluster_name: name of the cluster on https://www.mongodb.com/
-        :type: str
+        :type cluster_name: str
 
         :param db_name: name of the database
-        :type: str
+        :type db_name: str
 
         :param db_user: name of the configured user
-        :type: str
+        :type db_user: str
 
         :param db_credentials: for the db_user
-        :type: str
+        :type db_credentials: str
         """
 
         self.clusterName = cluster_name
@@ -38,7 +36,7 @@ class MongoDbService(PersistenceService):
         self.db_user = db_user
         self.db_credentials = db_credentials
 
-        connection_string = "mongodb+srv://"+db_user+":"+db_credentials+"@"+cluster_name+".pnzdz.mongodb.net/"+db_name+"?retryWrites=true&w=majority"
+        connection_string = "mongodb+srv://" + db_user + ":" + db_credentials + "@" + cluster_name + ".pnzdz.mongodb.net/" + db_name + "?retryWrites=true&w=majority"
         self.client = pymongo.MongoClient(connection_string)
         super().__init__()
 
@@ -51,7 +49,6 @@ class MongoDbService(PersistenceService):
         pass
 
     def save_prediction(self, input_data: str, prediction: str) -> Prediction:
-
         db = self.client[self.db_name]
         created_time = datetime.datetime.now()
         prediction_entity = {'input_data': input_data, 'created': created_time, 'prediction': prediction}
@@ -61,15 +58,15 @@ class MongoDbService(PersistenceService):
         return namedtuple("Prediction", prediction_entity.keys())(*prediction_entity.values())
 
     def save_rating(self, prediction_id: str, rating: str) -> Prediction:
-
         db = self.client[self.db_name]
         prediction_entity = db.predictions.find_one_and_update(
-            {"_id" : ObjectId(prediction_id)},
+            {"_id": ObjectId(prediction_id)},
             {"$set":
-                {"rating": rating}
-            }, return_document=ReturnDocument.AFTER)
+                 {"rating": rating}
+             }, return_document=ReturnDocument.AFTER)
 
-        prediction = {"id": str(prediction_entity['_id']), "created": prediction_entity['created'], "input_data": prediction_entity['input_data'],
+        prediction = {"id": str(prediction_entity['_id']), "created": prediction_entity['created'],
+                      "input_data": prediction_entity['input_data'],
                       "prediction": prediction_entity['prediction'], "rating": prediction_entity['rating']}
 
         return namedtuple("Prediction", prediction.keys())(*prediction.values())
@@ -78,8 +75,10 @@ class MongoDbService(PersistenceService):
         db = self.client[self.db_name]
         predictions = []
         for prediction in db.predictions.find({}):
-            prediction_object = {"id": str(prediction['_id']), "input_data": prediction['input_data'], "created": prediction['created'],
-                      "prediction": prediction['prediction'], "rating": prediction['rating'] if 'rating' in prediction else None}
+            prediction_object = {"id": str(prediction['_id']), "input_data": prediction['input_data'],
+                                 "created": prediction['created'],
+                                 "prediction": prediction['prediction'],
+                                 "rating": prediction['rating'] if 'rating' in prediction else None}
 
             predictions.append(namedtuple("Prediction", prediction_object.keys())(*prediction_object.values()))
 

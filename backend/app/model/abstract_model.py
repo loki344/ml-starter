@@ -8,13 +8,13 @@ from onnxruntime import NodeArg
 class AbstractModel(ABC):
     """Abstract class to define the functionality which is needed to integrate the model with the FastAPI"""
 
-    #TODO what is the type of outputnames
     def __init__(self, onnx_file_path: str, model_output_names=str):
         """
         Initializes an AbstractModel with the path to the model and the model_output_names
 
         :param onnx_file_path: path where to .onnx file is available
         :type onnx_file_path: str
+
         :param model_output_names: this param is used for the onnx InferenceSession, example value: [Softmax:0]
         :type model_output_names: str
         """
@@ -46,6 +46,7 @@ class AbstractModel(ABC):
 
         :param input_data: inputs from the REST-API in the shape of the defined requestObject
         :type input_data: object
+
         :param input_metadata: the input metadata provided by the InferenceSession.get_inputs() method
         :type input_metadata: List[NodeArg]
 
