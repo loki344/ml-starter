@@ -1,11 +1,11 @@
-import json
+import datetime
 from collections import namedtuple
 
 import pymongo
 from bson import ObjectId
 from pymongo import ReturnDocument
 
-from persistence_service import PersistenceService
+from persistence.persistence_service import PersistenceService
 
 
 class MongoDbService(PersistenceService):
@@ -31,9 +31,10 @@ class MongoDbService(PersistenceService):
     def save_prediction(self, input_data: str, prediction: str):
 
         db = self.client[self.db_name]
-        prediction_entity = {'input_data': input_data, 'prediction': prediction}
+        created_time = datetime.datetime.now()
+        prediction_entity = {'input_data': input_data, 'created': created_time, 'prediction': prediction}
         new_id = str(db.predictions.insert_one(prediction_entity).inserted_id)
-        prediction_entity = {"id": new_id, "input_data": input_data, "prediction": prediction}
+        prediction_entity = {"id": new_id, "input_data": input_data, 'created': created_time, "prediction": prediction}
 
         return namedtuple("Prediction", prediction_entity.keys())(*prediction_entity.values())
 
@@ -56,7 +57,7 @@ class MongoDbService(PersistenceService):
         predictions = []
         for prediction in db.predictions.find({}):
             print(type(prediction))
-            predictions.append({"id": str(prediction['_id']), "input_data": prediction['input_data'],
+            predictions.append({"id": str(prediction['_id']), "input_data": prediction['input_data'], "created": prediction['created'],
                       "prediction": prediction['prediction'], "rating": prediction['rating'] if 'rating' in prediction else ''})
 
         return predictions

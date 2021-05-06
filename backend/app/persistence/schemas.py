@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Optional
 
 from pydantic import BaseModel
@@ -5,6 +6,7 @@ from pydantic import BaseModel
 
 class PredictionBase(BaseModel):
     input_data: str
+    created: datetime
     prediction: str
 
 

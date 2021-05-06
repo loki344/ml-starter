@@ -1,8 +1,10 @@
+import datetime
+
 from fastapi_sqlalchemy import DBSessionMiddleware, db
 
-from . import models
-from .database import engine, SQLALCHEMY_DATABASE_URL
-from .persistence_service import PersistenceService
+from persistence import models
+from persistence.database import engine, SQLALCHEMY_DATABASE_URL
+from persistence.persistence_service import PersistenceService
 
 
 class InMemoryDbService(PersistenceService):
@@ -24,7 +26,7 @@ class InMemoryDbService(PersistenceService):
 
     def save_prediction(self, input_data: str, prediction: str):
 
-        prediction_entity = models.Prediction(input_data=str(input_data), prediction=str(prediction))
+        prediction_entity = models.Prediction(input_data=str(input_data), prediction=str(prediction), created=datetime.datetime.now())
         db.session.add(prediction_entity)
         db.session.commit()
         db.session.refresh(prediction_entity)
