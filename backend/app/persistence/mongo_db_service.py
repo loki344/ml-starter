@@ -31,7 +31,7 @@ class MongoDbService(PersistenceService):
         :type db_credentials: str
         """
 
-        self.clusterName = cluster_name
+        self.cluster_name = cluster_name
         self.db_name = db_name
         self.db_user = db_user
         self.db_credentials = db_credentials
@@ -42,7 +42,7 @@ class MongoDbService(PersistenceService):
 
     def health_check(self) -> None:
         print("Verifiying connection to the MongoDB with dbName: " + self.db_name + " ,dbUser: " + self.db_user +
-              ", clusterName: " + self.clusterName)
+              ", clusterName: " + self.cluster_name)
         print(self.client.server_info())
         print("Connection test successful")
         print("-------------------------------------------------------------------------------------------------------")
