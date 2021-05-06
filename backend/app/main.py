@@ -1,11 +1,11 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.configuration.configuration_service import ConfigurationService
+from configuration.configuration_service import ConfigurationService
 from persistence.mongo_db_service import MongoDbService
 from persistence.sqlite_db_service import InMemoryDbService
 from persistence import schemas
-from backend.app.model.model_creation import create_model
+from model.model_creation import create_model
 
 print("Starting server...")
 app = FastAPI(

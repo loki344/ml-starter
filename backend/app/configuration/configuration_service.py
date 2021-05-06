@@ -1,8 +1,7 @@
 import json
 
-from util.file_helper import get_file
-from configuration_exception import ConfigurationException
-
+from file_helper import get_file
+from configuration.configuration_exception import ConfigurationException
 
 class ConfigurationService:
 

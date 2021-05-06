@@ -2,9 +2,9 @@ import os
 import subprocess
 import sys
 
-from backend.app.model.abstract_model import AbstractModel
+from model.abstract_model import AbstractModel
 from custom_model.custom_model import CustomModel
-from util.file_helper import get_file
+from file_helper import get_file
 
 
 #TODO define type of outputnames
