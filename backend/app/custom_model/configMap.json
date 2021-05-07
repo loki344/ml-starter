@@ -1,0 +1,34 @@
+{
+  "applicationName": "My demo-application with the basic Iris-Model",
+  "description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of two flowers and start the prediction!",
+  "input": [
+    {
+      "id": "input1",
+      "label": "Flower 1, Sepal length",
+      "type": "number"
+    },
+    {
+      "id": "input2",
+      "label": "Flower 1, Sepal width",
+      "type": "number"
+    },
+    {
+      "id": "input3",
+      "label": "Flower 1, Petal length",
+      "type": "number"
+    },
+    {
+      "id": "input4",
+      "label": "Flower 1, Petal width",
+      "type": "number"
+    }
+  ],
+  "requestObject": {
+    "inputData": {
+      "sepal_length": "input1",
+      "sepal_width": "input2",
+      "petal_length": "input3",
+      "petal_width": "input4"
+    }
+  }
+}
