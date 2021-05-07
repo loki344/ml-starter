@@ -12,7 +12,6 @@ class ConfigurationService:
         Also validates the configuration."""
 
         self.config_map = get_file('configMap.json')
-        self.model_output_names = None
         self.db_name = ''
         self.db_credentials = ''
         self.db_user = ''
@@ -34,9 +33,6 @@ class ConfigurationService:
                 "-------------------------------------------------------------------------------------------------------")
             print("Loading config file...")
             config = json.load(open(self.config_map))
-            if 'modelOutputNames' in config:
-                self.model_output_names = config['modelOutputNames']
-
             if 'input' in config:
                 self.input_fields = config['input']
 
