@@ -5,9 +5,10 @@ import base64
 
 from abstract_model import AbstractModel
 from file_helper import get_file
+from model.onnx_model import ONNXModel
 
 
-class CustomModel(AbstractModel):
+class CustomModel(ONNXModel):
 
     labels = json.load(open(get_file("labels_map.txt"), "r"))
 

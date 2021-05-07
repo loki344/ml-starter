@@ -4,8 +4,10 @@ from transformers import GPT2Tokenizer
 
 from abstract_model import AbstractModel
 
+from model.onnx_model import ONNXModel
 
-class CustomModel(AbstractModel):
+
+class CustomModel(ONNXModel):
 
     def pre_process(self, input_data, input_metadata):
 
