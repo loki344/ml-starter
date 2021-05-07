@@ -7,13 +7,10 @@ from file_helper import get_file
 from model.abstract_model import AbstractModel
 
 
-def create_model(model_file_path: str) -> AbstractModel:
+def create_model() -> AbstractModel:
     """
-    Creates a CustomModel object for with the given path and model_output_names. Takes care of the custom dependencies
+    Creates a CustomModel object by looking for the model files. Takes care of the custom dependencies
     in case the application is not running in docker.
-
-    :param model_file_path: path where to .onnx file is available
-    :type model_file_path: str
 
     :return AbstractModel class which is used in the FastAPI
     """
@@ -21,8 +18,19 @@ def create_model(model_file_path: str) -> AbstractModel:
     print("-------------------------------------------------------------------------------------------------------")
     print("Loading model...")
 
+    model_path = None
+
+    if get_file("custom_model.onnx").is_file():
+        model_path = "./custom_model/custom_model.onnx"
+    elif get_file("custom_model.xml").is_file():
+        model_path = './custom_model/custom_model.xml'
+    else:
+        raise Exception(
+            "No model found. Check if there is a custom_model.onnx or custom_model.xml "
+            "in the backend/app/custom_model directory")
+
     install_dependencies()
-    return CustomModel(model_file_path)
+    return CustomModel(model_path)
 
 
 def install_dependencies() -> None:
