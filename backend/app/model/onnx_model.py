@@ -1,12 +1,35 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
+from typing import List
+
+import onnxruntime as runtime
+from onnxruntime import NodeArg
+
+from model.abstract_model import AbstractModel
 
 
-#TODO update doc
-class AbstractModel(ABC):
+class ONNXModel(AbstractModel):
     """Abstract class to define the functionality which is needed to integrate the model with the FastAPI"""
 
+    def __init__(self, onnx_file_path: str):
+        """
+        Initializes an AbstractModel with the path to the model and the model_output_names
+
+        :param onnx_file_path: path where to .onnx file is available
+        :type onnx_file_path: str
+        """
+        self.onnx_file_path = onnx_file_path
+        self.inference_session = runtime.InferenceSession(self.onnx_file_path)
+
+        print("Model has " + str(len(self.inference_session.get_inputs())) + " inputs defined.")
+        for input in self.inference_session.get_inputs():
+            print("Inputname: " + str(input.name) + ", shape: " + str(input.shape) + ", type: " + str(input.type))
+
+        print("Model has " + str(len(self.inference_session.get_outputs())) + " outputs defined.")
+        for output in self.inference_session.get_outputs():
+            print("Outputname: " + str(output.name) + ", shape: " + str(output.shape) + ", type: " + str(output.type))
+
     @abstractmethod
-    def pre_process(self, input_data, input_metadata) -> dict:
+    def pre_process(self, input_data: object, input_metadata: List[NodeArg]) -> dict:
         """
         Pre processes the input of the REST-API. The input_data has the shape of the defined config 'requestObject'.
         The return value of this object is used to run the prediction in the onnx InferenceSession.
@@ -21,7 +44,6 @@ class AbstractModel(ABC):
 
         :return dict representing the prepared data for the onnx InferenceSession
         """
-
         pass
 
     @staticmethod
@@ -37,10 +59,8 @@ class AbstractModel(ABC):
 
         :return: object representing the formatted prediction for the REST-API
         """
-
         pass
 
-    @abstractmethod
     def predict(self, input_data: object) -> object:
         """
         This method is used by the FastAPI to provide the prediction. It is responsible for the dataflow
@@ -51,4 +71,9 @@ class AbstractModel(ABC):
 
         :return: object representing the formatted prediction for the REST-API
         """
-        pass
+
+        input_data = self.pre_process(input_data, self.inference_session.get_inputs())
+
+        output = self.inference_session.run(None, input_data)
+
+        return self.post_process(output)
