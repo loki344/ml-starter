@@ -20,9 +20,9 @@ export const postPrediction = (requestBody) => async (dispatch) => {
 
 export const patchRating = (id, rating) => async (dispatch) =>{
 
-    let requestBody = {"id": id, "rating": rating}
+    let requestBody = {"rating": rating}
 
-    await axios.patch('/api/predictions', requestBody)
+    await axios.patch('/api/predictions/'+ id, requestBody)
 
     dispatch({type: RATE_PREDICTION})
 
