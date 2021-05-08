@@ -46,4 +46,4 @@ def install_dependencies() -> None:
             return
 
         path_to_custom_requirements = get_file('custom_requirements.txt')
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", path_to_custom_requirements])
+        subprocess.run([sys.executable, "-m", "pip", "install", "-r", path_to_custom_requirements])
