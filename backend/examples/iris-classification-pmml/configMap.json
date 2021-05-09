@@ -24,11 +24,11 @@
     }
   ],
   "requestObject": {
-    "inputData": {
-      "sepal_length": "input1",
-      "sepal_width": "input2",
-      "petal_length": "input3",
-      "petal_width": "input4"
-    }
+    "inputData": [
+      "input1",
+      "input2",
+      "input3",
+      "input4"
+    ]
   }
 }

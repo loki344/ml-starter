@@ -1,8 +1,11 @@
+from abc import abstractmethod
+
 from pypmml import Model
 
 from model.abstract_model import AbstractModel
 
-#TODO doc
+
+# TODO doc
 class PMMLModel(AbstractModel):
 
     def __init__(self, pmml_file_path: str):
@@ -30,13 +33,16 @@ class PMMLModel(AbstractModel):
         for outputName in self.model.outputNames:
             print("Outputname: " + str(outputName))
 
-    def pre_process(self, input_data, input_metadata) -> dict:
+    @abstractmethod
+    def pre_process(self, input_data, model) -> dict:
 
         return input_data
 
     @staticmethod
+    @abstractmethod
     def post_process(model_output: object) -> object:
         return model_output
 
     def predict(self, input_data: object) -> object:
-        return self.model.predict(input_data)
+        pre_processed_data = self.pre_process(input_data, self.model)
+        return self.post_process(self.model.predict(pre_processed_data))

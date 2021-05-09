@@ -9,8 +9,8 @@ To run this example locally
 git clone https://github.com/loki344/ml-starter.git
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
 cp -a ./backend/examples/iris-classification-onnx/. ./backend/app/custom_model
-docker build -t ml-starter-iris-example .
-docker run -d -p 80:3000 -p 8800:8800 ml-starter-iris-example
+docker build -t ml-starter-iris-onnx-example .
+docker run -d -p 80:3000 -p 8800:8800 ml-starter-iris-onnx-example
 ```
 Access your browser on localhost (frontend) or localhost:8800/docs (backend)
 
@@ -29,9 +29,9 @@ heroku create
 git clone https://github.com/loki344/ml-starter.git
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
 cp -a ./backend/examples/iris-classification-onnx/. ./backend/app/custom_model
-docker build -t ml-starter-classification-example .
+docker build -t ml-starter-iris-onnx-example .
 
-docker tag ml-starter-classification-example registry.heroku.com/{yourApplicationName}/web
+docker tag ml-starter-iris-onnx-example registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
 heroku open {yourApplicationName}

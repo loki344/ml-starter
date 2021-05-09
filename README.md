@@ -81,7 +81,7 @@ Tired of building web-applications for your machine learning models to enable us
             predicted_labels = list(map(lambda prediction: labels[prediction], model_output[0]))
             return predicted_labels
     ```
-    See <a href="#pre-and-post-processing">Pre- and postprocessing</a> for further instructions.
+    See <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> for further instructions.
 
 
 5) If needed, copy custom methods, files and classes into the directory "ml-starter / backend / app / custom_model" (Optional)
@@ -201,9 +201,10 @@ The credentials for the configured user. You can find them on www.cloud.mongodb.
 
 ML-Starter provides an SPI to let you control the dataflow from and to the model. In order to implement your custom preprocessing and postprocessing you have to extend the class AbstractModel in the file "custom_model.py" and place it in the folder "ml-starter / backend / app / custom_model".
 
-```python
-from abstract_model import AbstractModel
+For ONNX:
 
+```python
+from model.onnx_model import ONNXModel
 
 class CustomModel(ONNXModel):
 
@@ -211,24 +212,57 @@ class CustomModel(ONNXModel):
 
         #Your implementation
 
-        return None
+        return prepared_input_data
 
     def post_process(self, model_output):
         
         #Your implementation
 
-        return None
+        return prettified_model_output
+
+```
+
+For PMML:
+
+```python
+from model.pmml_model import PMMLModel
+
+class CustomModel(ONNXModel):
+
+    def pre_process(self, input_data, model):
+
+        #Your implementation
+
+        return prepared_input_data
+
+    def post_process(self, model_output):
+        
+        #Your implementation
+
+        return prettified_model_output
 
 ```
 
 This is an overview of the dataflow of a user request: <br/>
-Input data ⟶ Request object ⟶ pre_process() ⟶ inferenceSession.run() ⟶ post_process() ⟶ Response
+Input data ⟶ Request object ⟶ pre_process() ⟶ model.predict() ⟶ post_process() ⟶ Response
 
 💡 <a href="https://www.onnxruntime.ai/python/modules/onnxruntime/capi/onnxruntime_inference_collection.html#InferenceSession">Learn more about the ONNX InferenceSession</a>
 
+<strong>Pro tip:</strong><br/>
+If you don't know the implementation of your pre- and post processing start a debug session as follows: 
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/debugging.png">
+
+Create a breakpoint in the custom_model.py and make a HTTP POST request with your favorite tool on: http://localhost:8800/api/predictions
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/debuggingdetail.png">
+
+
 ## Preprocessing
 
-The input data is passed to the method pre_process as parameter input_data in the form of the configured requestObject. The metadata about the expected input provided by the onnx session is passed to the pre_process method as the input_metadata parameter. They correspond to the call to onnxruntime.InferenceSession({model-path}).get_inputs(). The return value of the pre_process method is passed directly to the onnx InferenceSession and therefore must be a dictionary in the format {"input_name": input_data}.
+The input data is passed to the method pre_process as parameter input_data in the form of the configured requestObject. If needed convert it to the format your model expects.
+<br/>
+<strong>For ONNX:</strong> The metadata about the expected input provided by the onnx session is passed to the pre_process method as the input_metadata parameter. They correspond to the call to onnxruntime.InferenceSession({model-path}).get_inputs(). The return value of the pre_process method is passed directly to the onnx InferenceSession and therefore must be a dictionary in the format {"input_name": input_data}.
+
+<strong>For PMML:</strong> The second parameter is the loaded model in case you need information about the expected inputs or outputs. 
 
 Images are passed as base64 encoded strings. In order to process them convert the string to an image: 
 ```python
@@ -241,7 +275,13 @@ def pre_process(self, input_data, input_metadata):
 
 ## Postprocessing
 
-The post_process method receives as parameter the model_output, which corresponds to the direct output of the call to onnxruntime.InferenceSession({onnx-model-path}).run({model_output_names}, {pre_processed_input_data}). For most models, you can access the output with model_output[0] and transform it accordingly. The return value of the post_process method is used as a response for the REST interface without further processing. Therefore, numerical values should be rounded accordingly and any field names should be capitalized. 
+<strong>For ONNX: </strong>
+The post_process method receives the model_output as parameter, which corresponds to the direct output of the call to onnxruntime.InferenceSession({onnx-model-path}).run({model_output_names}, {pre_processed_input_data}). For most models, you can access the output with model_output[0] and transform it accordingly.
+
+<strong>For PMML: </strong>
+The post_process method receives the output of the model.predict(pre_processed_data) call. If necessary, transform it.
+
+The return value of the post_process method is used as a response for the REST interface without further processing. Therefore, numerical values should be rounded accordingly and any field names should be capitalized. 
 
 ## Custom methods, files and requirements
 
