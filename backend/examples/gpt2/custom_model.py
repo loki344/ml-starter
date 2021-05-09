@@ -2,8 +2,6 @@ import numpy as np
 import torch
 from transformers import GPT2Tokenizer
 
-from abstract_model import AbstractModel
-
 from model.onnx_model import ONNXModel
 
 
@@ -11,12 +9,11 @@ class CustomModel(ONNXModel):
 
     def pre_process(self, input_data, input_metadata):
 
-        tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+        tokenizer = GPT2Tokenizer.from_pretrained('')
         inputs = torch.tensor(
             [[tokenizer.encode(input_data, add_special_tokens=True)]])
         inputs_flatten = flatten(inputs)
         inputs_flatten = update_flatten_list(inputs_flatten, [])
-
 
         ort_inputs = dict((input_metadata[i].name, to_numpy(input)) for i, input in enumerate(inputs_flatten))
 

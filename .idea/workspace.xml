@@ -13,8 +13,6 @@
       <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/configMap.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/custom_model.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/custom_requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/PredictionForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/StartPredictionButton.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/packages_..png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
@@ -30,24 +28,9 @@
       <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/custom_model.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.onnx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/custom_model.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/custom_requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AboutView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AboutView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputDataForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/MainView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/LoadingView.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/NextPredictionButton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ThankYouView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/predictionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/predictionConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/CustomButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/CustomButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/InputFields.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/InputFields.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,6 +134,9 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.React">
+    <configuration name="React" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter-backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,9 +159,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="React" type="JavascriptDebugType" uri="http://localhost:3000/">
-      <method v="2" />
-    </configuration>
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -196,8 +179,8 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.React" />
       <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="JavaScript Debug.React" />
       <item itemvalue="npm.start" />
     </list>
   </component>
@@ -268,13 +251,6 @@
       <workItem from="1620340754462" duration="3385000" />
       <workItem from="1620415905905" duration="7247000" />
       <workItem from="1620477788611" duration="7638000" />
-    </task>
-    <task id="LOCAL-00104" summary="- doc">
-      <created>1619958869775</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1619958869775</updated>
     </task>
     <task id="LOCAL-00105" summary="- doc">
       <created>1619958872684</created>
@@ -612,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620503587937</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="- major frontend changes">
+      <created>1620594603231</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1620594603231</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +647,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- no differentiation between float and number" />
     <MESSAGE value="- adds some logging" />
     <MESSAGE value="- adds db and labeltext" />
     <MESSAGE value="- intellij changes" />
@@ -689,7 +671,8 @@
     <MESSAGE value="- removed model output names&#10;- made install dependencies more robust&#10;- changed names" />
     <MESSAGE value="- moved files&#10;- moved modelcreation logic to the model_creation.py" />
     <MESSAGE value="- changed rest endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="- changed rest endpoint" />
+    <MESSAGE value="- major frontend changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="- major frontend changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

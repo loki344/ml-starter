@@ -32,7 +32,7 @@ export const PredictionForm = () => {
 
         <div className={showPrediction()}>
 
-            <h2 className="PredictionTitle">Prediction</h2>
+            <h2 className="PredictionTitle">Prediction:</h2>
             <br/>
 
             <div style={{display: 'inline-grid', gridTemplateColumns: '20% auto', columnGap: '3rem'}}>

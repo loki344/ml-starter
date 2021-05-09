@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-    <strong>Let's build fast prototypes for your ONNX Models</strong>
+    <strong>Let's build fast prototypes for your PMML and ONNX Models</strong>
 </p>
 
 
@@ -49,17 +49,17 @@ Tired of building web-applications for your machine learning models to enable us
 ## Prerequisites
 
 - Docker installation (https://docs.docker.com/get-docker/)
-- ONNX model
-- Pre- and postprocessing written in Python
+- ONNX or PMML model
+- Pre- and postprocessing written in Python (Optional for PMML)
 
 ## Instructions
 
-1) Train your model with an ML-Framework which supports the serialization in the ONNX format. See https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download most of the state-of-the-art ML-models already pretrained.
+1) Train your model with an ML-Framework which supports the serialization in the ONNX or PMML format. For ONNX see https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download most of the state-of-the-art ML-models already pretrained.
 2) Clone the ml-starter repository
    ```git
    git clone https://github.com/loki344/ml-starter.git
    ```
-3) Save your trained model in the folder "ml-starter / backend / app / custom_model" with the file name <strong>"custom_model.onnx"</strong>
+3) Save your trained model in the folder "ml-starter / backend / app / custom_model" with the file name <strong>"custom_model.onnx" / "custom_model.xml"</strong>
 4) Implement the pre- and postprocessing method to specify the data processing of the user requests and the prediction. Use the file "ml-starter / backend / app / custom_model / <strong>custom_model.py</strong>".</br> A simple pre- and postprocessing function for the famous iris-classification model looks like this:
    
     ```python
@@ -69,7 +69,7 @@ Tired of building web-applications for your machine learning models to enable us
     from abstract_model import AbstractModel
 
 
-    class CustomModel(AbstractModel):
+    class CustomModel(ONNXModel):
 
         def pre_process(self, input_data, input_metadata):
             input_data = np.array(input_data).astype(np.float32)
@@ -205,7 +205,7 @@ ML-Starter provides an SPI to let you control the dataflow from and to the model
 from abstract_model import AbstractModel
 
 
-class CustomModel(AbstractModel):
+class CustomModel(ONNXModel):
 
     def pre_process(self, input_data, input_metadata):
 

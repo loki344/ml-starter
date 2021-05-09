@@ -3,7 +3,6 @@ import cv2
 import json
 import base64
 
-from abstract_model import AbstractModel
 from file_helper import get_file
 from model.onnx_model import ONNXModel
 
@@ -59,6 +58,8 @@ class CustomModel(ONNXModel):
     def post_process(self, model_output):
         model_output = model_output[0]
         result = reversed(model_output[0].argsort()[-5:])
+
+
         response = []
         for r in result:
             classnames = self.labels[str(r)].split(',')
