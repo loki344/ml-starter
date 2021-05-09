@@ -1,63 +1,54 @@
 import {InputField} from "./InputField";
 import React from "react";
-import {postPrediction} from "../actions/predictionActions";
-import {useDispatch, useSelector} from "react-redux";
-import {useHistory} from "react-router-dom";
+import {useSelector} from "react-redux";
+import {StartPredictionButton} from "./StartPredictionButton";
 
-
-export const InputDataForm = (props) => {
-
-    const dispatch = useDispatch();
+export const InputDataForm = () => {
 
     const configuration = useSelector(state => state.configuration)
-    const {inputFields, requestObject} = configuration
-    const {inputData} = useSelector(state => state.prediction)
+    const prediction = useSelector(state => state.prediction)
+    const {inputFields} = configuration
+    const {showSpinner} = prediction
 
-    const mode = props.mode
 
-    let history = useHistory();
+    function getClassForSpinner() {
+        return showSpinner ? "" : "Hidden"
+    }
 
-    const clickHandler = async (e) => {
-        e.preventDefault()
-
-        for (let inputField of inputFields){
-            if (inputData[inputField.id] === undefined || inputData === undefined){
-                alert('Please fill out all fields')
-                return
-            }
-        }
-
-        let requestData = JSON.stringify(requestObject.inputData)
-
-        for (let inputField of inputFields){
-            let inputFieldToReplace = inputField.type === 'float' ? '"'+inputField.id+'"' : inputField.id
-            requestData = requestData.replace(inputFieldToReplace, inputData[inputField.id])
-        }
-
-        let requestBody = '{"inputData":'+requestData+'}'
-        requestBody = JSON.parse(requestBody)
-
-        //TODO why do i need await here?
-        await dispatch(postPrediction(requestBody))
-        history.push('/prediction')
+    function getClassForInputForm() {
+        return showSpinner ? "Hidden" : "";
     }
 
     return (
 
-        <form className="InputDataForm" >
-            {inputFields.map((inputField) => (
+        <>
+            <div className={getClassForSpinner()}>
+                <div className={"loadingio-spinner-blocks-8ifaqit3nsg"}>
+                    <div className="ldio-1t8hoj7ze7s">
+                        <div style={{left: "38px", top: "38px", animationDelay: "0s"}}/>
+                        <div style={{left: "80px", top: "38px", animationDelay: "0.125s"}}/>
+                        <div style={{left: "122px", top: "38px", animationDelay: "0.25s"}}/>
+                        <div style={{left: "38px", top: "80px", animationDelay: "0.875s"}}/>
+                        <div style={{left: "122px", top: "80px", animationDelay: "0.375s"}}/>
+                        <div style={{left: "38px", top: "122px", animationDelay: "0.75s"}}/>
+                        <div style={{left: "80px", top: "122px", animationDelay: "0.625s"}}/>
+                        <div style={{left: "122px", top: "122px", animationDelay: "0.5s"}}/>
+                    </div>
+                </div>
+                <h3>Generate prediction, lean back..</h3>
+            </div>
 
-                <InputField key={inputField.label} inputField={inputField}>
-                </InputField>
-            ))}
+            <div className={"InputDataForm" + ' ' + getClassForInputForm()}>
+                {inputFields.map((inputField) => (
+                    <InputField key={inputField.label} inputField={inputField}>
+                    </InputField>
+                ))}
+                <StartPredictionButton/>
+            </div>
 
-            <button className="button" onClick={clickHandler} type="submit">
-                Start prediction
-                <div className="button__horizontal"/>
-                <div className="button__vertical"/>
-            </button>
 
-        </form>
+        </>
+
 
     )
 

@@ -4,6 +4,7 @@ export const PredictionItem = (props) => {
 
     const prediction = props.predictionObject
 
+
 return(
     typeof prediction === 'object' && prediction !== null ?
         Object.keys(prediction).map(key =>
@@ -24,7 +25,12 @@ return(
         )
         :
         <div className="PredictionItem"
-             style={{gridColumnStart: '1', gridColumnEnd: -1}}>{prediction}</div>
+             style={{gridColumnStart: '1', gridColumnEnd: -1}}>{
+
+                 typeof prediction === 'boolean' ?
+                     prediction.toString() : prediction
+
+        }</div>
 
 )
 

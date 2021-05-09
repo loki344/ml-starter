@@ -1,53 +1,117 @@
 html, body {
-  height: 100%;
-  background-color: white;
+    background-color: white;
 }
 
-.AppBody{
-  height: 100%;
-  text-align: center;
-  padding-bottom: 10%;
-  padding-top: 2%;
-  margin:0 auto;
-  max-width: 70vw
+.AppBody {
+    height: 100%;
+    text-align: center;
+    padding-bottom: 10%;
+    padding-top: 2%;
+    margin: 0 auto;
+    max-width: 90vw
 }
 
-.ApplicationName{
-  color: black;
-  font-family: "DejaVu Sans", sans-serif;
-  font-size: 3rem;
-  margin: 0 0 5rem;
-  padding-top: 3%;
-}
-
-
-.InputDataForm{
-  text-align: left;
-  align-items: center;
+.ApplicationName {
+    color: black;
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 3rem;
+    margin: 0 0 5rem;
+    padding-top: 3%;
 }
 
 
-.PredictionTitle{
-  color: black;
-  font-family: "DejaVu Sans", sans-serif;
-  text-transform: uppercase;
+.InputDataForm {
+    min-width: 30%;
+    text-align: left;
+    align-items: center;
 }
 
-.PredictionItem{
-  color: black;
-  font-family: "DejaVu Sans", sans-serif;
-  font-size: 1.8em;
+
+.PredictionTitle {
+    color: black;
+    font-family: "DejaVu Sans", sans-serif;
+    text-transform: uppercase;
 }
 
-.RatingForm{
-  align-items: center;
+.PredictionItem {
+    color: black;
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 1.8em;
 }
 
-.RadioGroup{
-  display: grid;
+.RatingForm {
+    align-items: center;
 }
 
-.PredictionGroup{
-  margin-bottom: 10rem;
+.RadioGroup {
+    display: grid;
 }
+
+.PredictionGroup {
+    margin-bottom: 10rem;
+}
+
+.GridSideBySide {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: dense;
+    grid-gap: 5rem;
+}
+
+.GridBigColumns {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 100%;
+}
+
+.Hidden {
+    display: none;
+}
+
+@keyframes ldio-1t8hoj7ze7s {
+    0% {
+        background: #667395
+    }
+    12.5% {
+        background: #667395
+    }
+    12.625% {
+        background: #292664
+    }
+    100% {
+        background: #292664
+    }
+}
+
+.ldio-1t8hoj7ze7s div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #292664;
+    animation: ldio-1t8hoj7ze7s 1s linear infinite;
+}
+
+.loadingio-spinner-blocks-8ifaqit3nsg {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+}
+
+.ldio-1t8hoj7ze7s {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+}
+
+.ldio-1t8hoj7ze7s div {
+    box-sizing: content-box;
+}
+
+
+
 

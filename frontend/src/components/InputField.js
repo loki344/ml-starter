@@ -8,22 +8,27 @@ export const InputField = ({inputField}) => {
 
     const [fileName, setFileName] = useState('No file chosen')
     const [textColor, setTextColor] = useState('black')
-
+    const [fileData, setFileData] = useState ('')
 
     const toBase64 = file => new Promise((resolve, reject) => {
-        console.log(file)
         if (file === undefined){
             resolve('')
         }
         const reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = () => resolve(reader.result.split(',')[1]);
-
+        reader.onload = function(event) {
+            let result = reader.result
+            setFileData(result)
+            resolve(result.split(',')[1])
+        };
         reader.onerror = error => reject(error);
 
     });
 
     const validateFile = file => {
+        if (file === undefined){
+            return false
+        }
         let extensionRegex = new RegExp('(\.jpg|\.jpeg|\.png)$')
         let validation = extensionRegex.exec(file.name)
         return validation !== null
@@ -57,7 +62,10 @@ export const InputField = ({inputField}) => {
                     <br/>
                     <br/>
 
-                    <span id="file-chosen" style={{color: textColor}} >{fileName}</span>
+                    <div id="file-chosen" style={{color: textColor}} >{fileName}</div>
+
+                        <img style={{marginTop: "2rem", width: "30rem", height: "auto"}} src={fileData}/>
+
                 </div>)
             break
         case 'number':
@@ -81,8 +89,6 @@ export const InputField = ({inputField}) => {
         default:
             return ''
     }
-
-
 
     return (<>{htmlTag}</>)
 

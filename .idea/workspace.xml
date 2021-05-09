@@ -4,19 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- changes variable name&#10;- updates pyreverse files">
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- changed to run">
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/docker_operation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/gpt2/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/configMap.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/custom_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/custom_requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/PredictionForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/StartPredictionButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages_..png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/gpt2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/gpt2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_model.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/custom_model.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/gpt2/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/gpt2/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/gpt2/custom_requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/gpt2/custom_requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/configMap.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/custom_model.onnx" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.onnx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/custom_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/custom_requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/AboutView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/AboutView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputDataForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputDataView.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/MainView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/LoadingView.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NextPredictionButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ThankYouView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/predictionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/predictionConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/CustomButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/CustomButton.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/InputFields.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/InputFields.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,20 +137,20 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/app/custom_model" />
+      <recent name="$PROJECT_DIR$/frontend/src/components" />
+      <recent name="$PROJECT_DIR$/backend/app" />
       <recent name="$PROJECT_DIR$/backend/examples/iris-classification" />
       <recent name="$PROJECT_DIR$/backend/examples/gpt2" />
-      <recent name="$PROJECT_DIR$/backend/examples/efficientnet" />
-      <recent name="$PROJECT_DIR$/backend/examples/efficientnet-example" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/images" />
-      <recent name="$PROJECT_DIR$/backend/app" />
-      <recent name="$PROJECT_DIR$/backend/app/configuration" />
-      <recent name="$PROJECT_DIR$/backend/app/util" />
-      <recent name="$PROJECT_DIR$/backend/app/model" />
+      <recent name="$PROJECT_DIR$/backend/app/custom_model" />
+      <recent name="$PROJECT_DIR$/backend/examples/efficientnet-lite4" />
+      <recent name="$PROJECT_DIR$/backend/examples/iris-classification-pmml" />
+      <recent name="$PROJECT_DIR$/backend/examples/gpt2" />
+      <recent name="$PROJECT_DIR$/backend/examples/iris-classification" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="JavaScript Debug.React">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="ml-starter-backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,80 +173,10 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="integration_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/integration_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+    <configuration name="React" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sqlite_db_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ml-starter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/app/persistence" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/app/persistence/sqlite_db_service.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MlStarterApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="ml-starter" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ch.mlstarter.mlstarter.MlStarterApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
           <option name="buildOnly" value="true" />
@@ -224,28 +185,21 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.ml-starter-frontend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="ml-starter-frontend" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Python.sqlite_db_service" />
-        <item itemvalue="Python.integration_test" />
-        <item itemvalue="Docker.docker-compose.yml.ml-starter-frontend: Compose Deployment" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="JavaScript Debug.React" />
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="npm.start" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -309,63 +263,11 @@
       <workItem from="1620070929403" duration="5705000" />
       <workItem from="1620153734831" duration="10757000" />
       <workItem from="1620244468124" duration="11549000" />
-      <workItem from="1620290872732" duration="13882000" />
-    </task>
-    <task id="LOCAL-00096" summary="- extracted NextPredictionButton.js in component to reuse it in the PredictionView.js&#10;- improved margin of the button and removed linebreaks in html">
-      <created>1618131406725</created>
-      <option name="number" value="00096" />
-      <option name="presentableId" value="LOCAL-00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1618131406725</updated>
-    </task>
-    <task id="LOCAL-00097" summary="- no differentiation between float and number">
-      <created>1619953731806</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1619953731807</updated>
-    </task>
-    <task id="LOCAL-00098" summary="- adds some logging">
-      <created>1619953745896</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1619953745897</updated>
-    </task>
-    <task id="LOCAL-00099" summary="- adds some logging">
-      <created>1619953752616</created>
-      <option name="number" value="00099" />
-      <option name="presentableId" value="LOCAL-00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1619953752616</updated>
-    </task>
-    <task id="LOCAL-00100" summary="- adds some logging">
-      <created>1619953808526</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1619953808526</updated>
-    </task>
-    <task id="LOCAL-00101" summary="- adds db and labeltext">
-      <created>1619953825373</created>
-      <option name="number" value="00101" />
-      <option name="presentableId" value="LOCAL-00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1619953825373</updated>
-    </task>
-    <task id="LOCAL-00102" summary="- intellij changes">
-      <created>1619953839809</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1619953839809</updated>
-    </task>
-    <task id="LOCAL-00103" summary="- doc">
-      <created>1619958429088</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1619958429088</updated>
+      <workItem from="1620290872732" duration="15333000" />
+      <workItem from="1620321013895" duration="7250000" />
+      <workItem from="1620340754462" duration="3385000" />
+      <workItem from="1620415905905" duration="7247000" />
+      <workItem from="1620477788611" duration="7638000" />
     </task>
     <task id="LOCAL-00104" summary="- doc">
       <created>1619958869775</created>
@@ -654,7 +556,63 @@
       <option name="project" value="LOCAL" />
       <updated>1620309233421</updated>
     </task>
-    <option name="localTasksCounter" value="145" />
+    <task id="LOCAL-00145" summary="- doc">
+      <created>1620312963056</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1620312963056</updated>
+    </task>
+    <task id="LOCAL-00146" summary="- generified model classes and integratet PMML functionality">
+      <created>1620422094573</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1620422094573</updated>
+    </task>
+    <task id="LOCAL-00147" summary="- removed model_output_names">
+      <created>1620422111898</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1620422111898</updated>
+    </task>
+    <task id="LOCAL-00148" summary="- changed to ONNXModel">
+      <created>1620422194966</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1620422194966</updated>
+    </task>
+    <task id="LOCAL-00149" summary="- implementation of PMML  example">
+      <created>1620422216320</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1620422216320</updated>
+    </task>
+    <task id="LOCAL-00150" summary="- removed model output names&#10;- made install dependencies more robust&#10;- changed names">
+      <created>1620422250423</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1620422250423</updated>
+    </task>
+    <task id="LOCAL-00151" summary="- moved files&#10;- moved modelcreation logic to the model_creation.py">
+      <created>1620422498082</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1620422498082</updated>
+    </task>
+    <task id="LOCAL-00152" summary="- changed rest endpoint">
+      <created>1620503587936</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1620503587937</updated>
+    </task>
+    <option name="localTasksCounter" value="153" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,13 +664,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="adds mongo db dependencies" />
-    <MESSAGE value="fixes imports" />
-    <MESSAGE value="changes name" />
-    <MESSAGE value="cleanup" />
-    <MESSAGE value="- adds component for InputDataForm.js to view it twice, once read only, implementation missing" />
-    <MESSAGE value="- minor things" />
-    <MESSAGE value="- extracted NextPredictionButton.js in component to reuse it in the PredictionView.js&#10;- improved margin of the button and removed linebreaks in html" />
     <MESSAGE value="- no differentiation between float and number" />
     <MESSAGE value="- adds some logging" />
     <MESSAGE value="- adds db and labeltext" />
@@ -725,17 +676,34 @@
     <MESSAGE value="- added requirements" />
     <MESSAGE value="- adds type for prediction_id" />
     <MESSAGE value="- adds installation of custom requirements" />
-    <MESSAGE value="- doc" />
     <MESSAGE value="- renaming and reordering" />
     <MESSAGE value="- adds documentation in code" />
     <MESSAGE value="- adds documentation in code&#10;- code formatting" />
     <MESSAGE value="- adds pyreverse generated resources" />
     <MESSAGE value="- changes variable name&#10;- updates pyreverse files" />
-    <option name="LAST_COMMIT_MESSAGE" value="- changes variable name&#10;- updates pyreverse files" />
+    <MESSAGE value="- doc" />
+    <MESSAGE value="- generified model classes and integratet PMML functionality" />
+    <MESSAGE value="- removed model_output_names" />
+    <MESSAGE value="- changed to ONNXModel" />
+    <MESSAGE value="- implementation of PMML  example" />
+    <MESSAGE value="- removed model output names&#10;- made install dependencies more robust&#10;- changed names" />
+    <MESSAGE value="- moved files&#10;- moved modelcreation logic to the model_creation.py" />
+    <MESSAGE value="- changed rest endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="- changed rest endpoint" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/frontend/src/components/PredictionForm.js</url>
+          <line>16</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ml_starter_backend$configuration_check.coverage" NAME="integration_test Coverage Results" MODIFIED="1619471857458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
-    <SUITE FILE_PATH="coverage/ml_starter_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1620263910686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
+    <SUITE FILE_PATH="coverage/ml_starter_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1620483114160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">

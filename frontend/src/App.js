@@ -6,11 +6,9 @@ import {
     Route,
 } from "react-router-dom";
 import Header from "./components/layout/Header";
-import {InputDataView} from "./components/InputDataView";
-import {PredictionView} from "./components/PredictionView";
+import {MainView} from "./components/MainView";
 import {AboutView} from "./components/AboutView"
 import './styles/App.css'
-import {ThankYouView} from "./components/ThankYouView";
 import {useDispatch} from "react-redux";
 import {getConfiguration} from "./actions/configurationActions";
 
@@ -24,25 +22,19 @@ const App = () => {
 
     return (
         <Router>
-        <div className="App" >
-            <Header/>
-        </div>
-        <div className="AppBody">
-        <Switch>
-            <Route path="/prediction">
-                <PredictionView />
-            </Route>
-            <Route path="/about">
-                <AboutView />
-            </Route>
-            <Route path="/thanks">
-                <ThankYouView />
-            </Route>
-            <Route path="/">
-                <InputDataView />
-            </Route>
-        </Switch>
-        </div>
+            <div className="App">
+                <Header/>
+            </div>
+            <div className="AppBody">
+                <Switch>
+                    <Route path="/about">
+                        <AboutView/>
+                    </Route>
+                    <Route path="/">
+                        <MainView/>
+                    </Route>
+                </Switch>
+            </div>
         </Router>);
 }
 

@@ -2,12 +2,10 @@
 .InputField{
     color: black;
     font-family: "DejaVu Sans", sans-serif;
-    background: none;
     border-radius: 10px;
-    border: 1px solid;
-    padding: 10px;
+    padding: 5px;
     display: block;
-    border-color: #4D6D9A;
+    border: 1px solid #4D6D9A;
     width: 100%;
 }
 
