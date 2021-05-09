@@ -227,7 +227,7 @@ For PMML:
 ```python
 from model.pmml_model import PMMLModel
 
-class CustomModel(ONNXModel):
+class CustomModel(PMMLModel):
 
     def pre_process(self, input_data, model):
 
@@ -290,11 +290,11 @@ During pre- and postprocessing you can access other methods, classes or files (l
 ## Access files
 In order to access files during the processing you must 1) provide them according to the above instructions (Custom methods, files and requirements) and 2) access them via the helper method get_file() from the file_helper.py. This ensures a safe access even in a containerized environment.
 ```python
-from abstract_model import AbstractModel
+from model.onnx_model import ONNXModel
 from file_helper import get_file
 
 
-class CustomModel(AbstractModel):
+class CustomModel(ONNXModel):
 
     labels = json.load(open(get_file("labels_map.txt"), "r"))
 
