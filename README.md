@@ -34,7 +34,7 @@ as https://www.mongodb.com
 ---
 
 <p align="center">
-     Try out some applications running with ML-Starter <a href="#">here (link tbd)</a>.
+     Try out some applications running with ML-Starter <a href="/backend/examples">here</a>.
 </p>
 
 ---
@@ -73,9 +73,9 @@ as https://www.mongodb.com
    postprocessing function for the famous iris-classification model looks like this:
    <details><summary>ONNX-Version</summary>
       <p>
-   
+
    ```python
-       #custom_model.py for the ONNX version  
+       # custom_model.py for the ONNX version  
 
        import numpy as np
        from abstract_model import AbstractModel
@@ -93,15 +93,15 @@ as https://www.mongodb.com
                predicted_labels = list(map(lambda prediction: labels[prediction], model_output[0]))
                return predicted_labels
     ```
-   
+
    </p>
 
    </details>
    <details><summary>PMML-Version</summary>
       <p>
-   
+
       ```python
-         #custom_model.py for the PMML version 
+         # custom_model.py for the PMML version 
 
          from model.pmml_model import PMMLModel
          
@@ -141,7 +141,7 @@ as https://www.mongodb.com
    ```json
    {
      "applicationName": "My demo-application with the basic Iris-Model",
-     "description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of two flowers and start the prediction!",
+     "description": "This is a basic regression model trained with the famous iris-onnx-data set. Please provide the measurement of two flowers and start the prediction!",
      "input": [
        {
        "id": "input1",
@@ -263,15 +263,15 @@ from model.onnx_model import ONNXModel
 
 class CustomModel(ONNXModel):
 
-   def pre_process(self, input_data, input_metadata):
-      # Your implementation
+    def pre_process(self, input_data, input_metadata):
+        # Your implementation
 
-      return prepared_input_data
+        return prepared_input_data
 
-   def post_process(self, model_output):
-      # Your implementation
+    def post_process(self, model_output):
+        # Your implementation
 
-      return prettified_model_output
+        return prettified_model_output
 
 ```
 
@@ -280,17 +280,16 @@ For PMML:
 ```python
 from model.pmml_model import PMMLModel
 
+
 class CustomModel(PMMLModel):
 
     def pre_process(self, input_data, model):
-
-        #Your implementation
+        # Your implementation
 
         return prepared_input_data
 
     def post_process(self, model_output):
-        
-        #Your implementation
+        # Your implementation
 
         return prettified_model_output
 
@@ -327,9 +326,9 @@ Images are passed as base64 encoded strings. In order to process them convert th
 
 ```python
 def pre_process(self, input_data, input_metadata):
-   decoded_data = base64.b64decode(input_data)
-   np_data = np.fromstring(decoded_data, np.uint8)
-   img = cv2.imdecode(np_data, cv2.IMREAD_UNCHANGED)
+    decoded_data = base64.b64decode(input_data)
+    np_data = np.fromstring(decoded_data, np.uint8)
+    img = cv2.imdecode(np_data, cv2.IMREAD_UNCHANGED)
 ```
 
 ## Postprocessing
@@ -344,6 +343,10 @@ The post_process method receives the output of the model.predict(pre_processed_d
 
 The return value of the post_process method is used as a response for the REST interface without further processing.
 Therefore, numerical values should be rounded accordingly and any field names should be capitalized.
+
+Example:
+If you return an object like this {"Classname": "Predicted Class", "Probability": "23%"}, it will be displayed like this:
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/objectPrediction.png">
 
 ## Custom methods, files and requirements
 
@@ -363,9 +366,9 @@ from file_helper import get_file
 
 
 class CustomModel(ONNXModel):
-   labels = json.load(open(get_file("labels_map.txt"), "r"))
+    labels = json.load(open(get_file("labels_map.txt"), "r"))
 
-   #rest of the code omitted..
+    #rest of the code omitted..
 ```
 
 # Persistence
@@ -421,8 +424,14 @@ docker build -t ml-starter-efficientnet-example .
 docker tag ml-starter registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
-heroku open {yourApplicationName}
+heroku open --app  {yourApplicationName}
 ```
+
+# Limitations
+
+- Heroku has a maximum RAM use of 512Mb - large models won't start
+- Nested objects as RequestObject are not supported. This does not work: {"firstName": "inputFieldId", "address": {"
+  street":"streetInputFieldId"}}
 
 # How does it work?
 

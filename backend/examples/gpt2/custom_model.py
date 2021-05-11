@@ -9,7 +9,7 @@ class CustomModel(ONNXModel):
 
     def pre_process(self, input_data, input_metadata):
 
-        tokenizer = GPT2Tokenizer.from_pretrained('')
+        tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
         inputs = torch.tensor(
             [[tokenizer.encode(input_data, add_special_tokens=True)]])
         inputs_flatten = flatten(inputs)

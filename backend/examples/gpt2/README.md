@@ -35,14 +35,14 @@ docker build -t ml-starter-gpt2-example .
 docker tag ml-starter-gpt2-example registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
-heroku open {yourApplicationName}
+heroku open --app  {yourApplicationName}
 ```
 
 ## Result
 
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/gpt2/result-gpt2-1.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/gpt2/gpt-1.png"/>
 <br/>
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/gpt2/result-gpt2-2.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/gpt2/gpt-2.png"/>
 
 
 

@@ -35,21 +35,21 @@ docker build -t ml-starter-efficientnet-example .
 docker tag ml-starter-efficientnet-example registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
-heroku open {yourApplicationName}
+heroku open --app  {yourApplicationName}
 ```
 
 ## Result
 
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/result-efficientnet-1.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/efficientnet-1.png"/>
 <br/>
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/result-efficientnet2.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/efficientnet2.png"/>
 
 
 ## Model input
 
 An image file to be classified. The frontend expects the user to upload an image. Internally the REST-API expects a string representing the base64 encoded content of the image. <br/>
 Example: <br/>
-<img style="width: 50%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/gorilla.jpg"/>
+<img style="width: 50%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/efficientnet/Matterhorn.jpg"/>
 
 ## Configuration
 

@@ -34,14 +34,14 @@ docker build -t ml-starter-iris-onnx-example .
 docker tag ml-starter-iris-onnx-example registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
-heroku open {yourApplicationName}
+heroku open --app  {yourApplicationName}
 ```
 
 
 ## Result
 
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris/result_iris.png"/>
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris/result_iris2.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris-onnx/iris-onnx-1.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris-onnx/iris-onnx-2.png"/>
 
 
 ## Model input
@@ -67,7 +67,7 @@ The applicationName and the description are interchangeable, whereas the configu
 ```json
 {
 "applicationName": "My demo-application with the basic Iris-Model",
-"description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of two flowers and start the prediction!",
+"description": "This is a basic regression model trained with the famous iris-onnx-data set. Please provide the measurement of two flowers and start the prediction!",
 
 "input": [
    {

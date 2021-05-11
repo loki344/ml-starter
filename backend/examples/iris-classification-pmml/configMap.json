@@ -1,6 +1,6 @@
 {
   "applicationName": "My demo-application with the basic Iris-Model",
-  "description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of two flowers and start the prediction!",
+  "description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of a flower and start the prediction!",
   "input": [
     {
       "id": "input1",

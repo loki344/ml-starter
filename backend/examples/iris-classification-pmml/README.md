@@ -37,26 +37,17 @@ docker build -t ml-starter-iris-pmml-example .
 docker tag ml-starter-iris-pmml-example registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
-heroku open {yourApplicationName}
+heroku open --app  {yourApplicationName}
 ```
 
 ## Result
 
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris/result_iris.png"/>
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris/result_iris2.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris-pmml/iris-pmml-1.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris-pmml/iris-pmml-2.png"/>
 
 ## Model input
 
 An array containing an array which represent the measurements of a flower. <br/>
-
-```json
-[
-  Measurements
-  flower
-  1
-]
-```
-
 One measurement contains 4 floats in the following order:
 
 ```json
@@ -82,7 +73,7 @@ requestObject should match the above definition of the input data.
 ```json
 {
   "applicationName": "My demo-application with the basic Iris-Model",
-  "description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of a flower and start the prediction!",
+  "description": "This is a basic regression model trained with the famous iris-onnx-data set. Please provide the measurement of a flower and start the prediction!",
   "input": [
     {
       "id": "input1",
