@@ -4,8 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- clean up and default files">
-      <change beforePath="$PROJECT_DIR$/backend/app/model/pmml_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model/pmml_model.py" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- doc">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hotswap_agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ml-starter-backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ml-starter-frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/other.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/custom_model.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/gpt2/custom_model.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/custom_model.onnx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ml-starter" beforeDir="false" afterPath="$PROJECT_DIR$/ml-starter" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +54,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -250,21 +266,7 @@
       <workItem from="1620340754462" duration="3385000" />
       <workItem from="1620415905905" duration="7247000" />
       <workItem from="1620477788611" duration="7638000" />
-      <workItem from="1620761846592" duration="1427000" />
-    </task>
-    <task id="LOCAL-00111" summary="- cleanup">
-      <created>1619977777878</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1619977777878</updated>
-    </task>
-    <task id="LOCAL-00112" summary="- cleanup and doc">
-      <created>1619978417651</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1619978417651</updated>
+      <workItem from="1620761846592" duration="1891000" />
     </task>
     <task id="LOCAL-00113" summary="- doc">
       <created>1619981763228</created>
@@ -595,7 +597,21 @@
       <option name="project" value="LOCAL" />
       <updated>1620763035208</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="- doc">
+      <created>1620763321189</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1620763321189</updated>
+    </task>
+    <task id="LOCAL-00161" summary="- doc">
+      <created>1620763546684</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1620763546684</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,9 +686,9 @@
     <MESSAGE value="- changed rest endpoint" />
     <MESSAGE value="- major frontend changes" />
     <MESSAGE value="- update classes in exmaples" />
-    <MESSAGE value="- doc" />
     <MESSAGE value="- clean up and default files" />
-    <option name="LAST_COMMIT_MESSAGE" value="- clean up and default files" />
+    <MESSAGE value="- doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="- doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -684,9 +700,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ml_starter_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1620600895004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
   </component>
   <component name="com.vaadin.designer2.intellij.settings.SizePresetsSettingsComponent">
     <option name="sizePresets">
