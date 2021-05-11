@@ -1,7 +1,6 @@
 import {
-    ADD_DATA, CHECK_DATA_COMPLETION,
+    ADD_DATA,
     POST_PREDICTION,
-    RATE_PREDICTION,
     RESET_INPUT_DATA, SET_RATING,
     SHOW_SPINNER
 } from "../constants/predictionConstants";

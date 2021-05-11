@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 import {addData} from "../actions/predictionActions";
 import '../styles/InputFields.css'
+import Notiflix from "notiflix-react";
 
 
 export const InputField = ({inputField}) => {
@@ -9,6 +10,10 @@ export const InputField = ({inputField}) => {
     const [fileName, setFileName] = useState('No file chosen')
     const [textColor, setTextColor] = useState('black')
     const [fileData, setFileData] = useState ('')
+
+    useEffect(() => {
+        Notiflix.Notify.Init({position: "right-bottom",timeout: 5000});
+    }, [Notiflix])
 
     const toBase64 = file => new Promise((resolve, reject) => {
         if (file === undefined){
@@ -47,7 +52,7 @@ export const InputField = ({inputField}) => {
                     <label className="InputLabel">{label}</label>
                     <input onChange={ async (event) => {
                         if (!validateFile(event.target.files[0])){
-                            alert("File format not allowed")
+                            Notiflix.Notify.Failure("File format not allowed")
                             setFileName('Allowed formats: jpg, jpeg, png')
                             setTextColor('red')
                             event.target.value = null
@@ -64,7 +69,7 @@ export const InputField = ({inputField}) => {
 
                     <div id="file-chosen" style={{color: textColor}} >{fileName}</div>
 
-                        <img style={{marginTop: "2rem", width: "30rem", height: "auto"}} src={fileData}/>
+                        <img style={{marginTop: "2rem", width: "auto", maxHeight: "30rem"}} src={fileData}/>
 
                 </div>)
             break

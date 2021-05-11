@@ -7,6 +7,8 @@ export const PredictionItem = (props) => {
 
 return(
     typeof prediction === 'object' && prediction !== null ?
+        <>
+            {
         Object.keys(prediction).map(key =>
             <>
                 <div className="PredictionItem" style={{
@@ -23,6 +25,11 @@ return(
                     marginLeft:'2rem'}}>{prediction[key]}</div>
             </>
         )
+            }
+
+        <div></div><div style={{marginBottom:"1rem"}}></div>
+    </>
+
         :
         <div className="PredictionItem"
              style={{gridColumnStart: '1', gridColumnEnd: -1}}>{

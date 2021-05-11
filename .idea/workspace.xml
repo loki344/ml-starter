@@ -6,40 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- doc">
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.onnx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/custom_model.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/gpt2/custom_model.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/custom_model.onnx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/efficientnet/Matterhorn.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/efficientnet/efficientnet-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/efficientnet/efficientnet-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/gpt2/gpt-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/gpt2/gpt-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/iris-onnx/iris-onnx-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/iris-onnx/iris-onnx-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/iris-pmml/iris-pmml-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/iris-pmml/iris-pmml-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/objectPrediction.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/labels_map.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/examples/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/efficientnet-lite4/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/gpt2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/gpt2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/gpt2/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/gpt2/custom_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/efficientnet/gorilla.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/efficientnet/result-efficientnet-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/efficientnet/result-efficientnet2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/gpt2/result-gpt2-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/gpt2/result-gpt2-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/iris/result_iris.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/images/iris/result_iris2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/heroku commands" beforeDir="false" afterPath="$PROJECT_DIR$/heroku commands" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/predictionActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/InputField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PredictionItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/PredictionItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/StartPredictionButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/StartPredictionButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/predictionReducers.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,10 +192,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="JavaScript Debug.React" />
-      <item itemvalue="npm.start" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Docker.Dockerfile" />
+      <item itemvalue="npm.start" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -284,14 +265,7 @@
       <workItem from="1620340754462" duration="3385000" />
       <workItem from="1620415905905" duration="7247000" />
       <workItem from="1620477788611" duration="7638000" />
-      <workItem from="1620761846592" duration="5490000" />
-    </task>
-    <task id="LOCAL-00113" summary="- doc">
-      <created>1619981763228</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1619981763228</updated>
+      <workItem from="1620761846592" duration="7571000" />
     </task>
     <task id="LOCAL-00114" summary="- doc">
       <created>1619982555663</created>
@@ -629,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620763546684</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="- doc">
+      <created>1620767354422</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1620767354422</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,17 +688,6 @@
     <MESSAGE value="- clean up and default files" />
     <MESSAGE value="- doc" />
     <option name="LAST_COMMIT_MESSAGE" value="- doc" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/frontend/src/components/PredictionForm.js</url>
-          <line>16</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ml_starter_backend$main.coverage" NAME="main Coverage Results" MODIFIED="1620600895004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/app" />
