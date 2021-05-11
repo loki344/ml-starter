@@ -20,7 +20,11 @@
    <a href="#how-does-it-work">How does it work?</a> |
 </p>
 
-Tired of building web-applications for your machine learning models to enable users to interact with it? ML-Starter lets you focus on your model performance rather than writing backend- and frontend-code. ML-Starter is built on FastAPI and React. Its integration with Docker allows you to run your application locally or deploy it to a hosting provider such as https://www.heroku.com. User requests and predictions can be saved in a free online MongoDB such as https://www.mongodb.com
+Tired of building web-applications for your machine learning models to enable users to interact with it? ML-Starter lets
+you focus on your model performance rather than writing backend- and frontend-code. ML-Starter is built on FastAPI and
+React. Its integration with Docker allows you to run your application locally or deploy it to a hosting provider such
+as https://www.heroku.com. User requests and predictions can be saved in a free online MongoDB such
+as https://www.mongodb.com
 
 <sup>Alpha version: Only suggested for experimental usage.</sup>
 
@@ -51,52 +55,89 @@ Tired of building web-applications for your machine learning models to enable us
 - Docker installation (https://docs.docker.com/get-docker/)
 - ONNX or PMML model
 - Pre- and postprocessing written in Python (Optional for PMML)
+- Java 1.8+ (Only for PMML models if you want to debug them locally)
 
 ## Instructions
 
-1) Train your model with an ML-Framework which supports the serialization in the ONNX or PMML format. For ONNX see https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download most of the state-of-the-art ML-models already pretrained.
+1) Train your model with an ML-Framework which supports the serialization in the ONNX or PMML format. For ONNX
+   see https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download
+   most of the state-of-the-art ML-models already pretrained.
 2) Clone the ml-starter repository
    ```git
    git clone https://github.com/loki344/ml-starter.git
    ```
-3) Save your trained model in the folder "ml-starter / backend / app / custom_model" with the file name <strong>"custom_model.onnx" / "custom_model.xml"</strong>
-4) Implement the pre- and postprocessing method to specify the data processing of the user requests and the prediction. Use the file "ml-starter / backend / app / custom_model / <strong>custom_model.py</strong>".</br> A simple pre- and postprocessing function for the famous iris-classification model looks like this:
+3) Save your trained model in the folder "ml-starter / backend / app / custom_model" with the file name <strong>"
+   custom_model.onnx" or "custom_model.xml"</strong>
+4) Implement the pre- and postprocessing method to specify the data processing of the user requests and the prediction.
+   Use the file "ml-starter / backend / app / custom_model / <strong>custom_model.py</strong>".</br> A simple pre- and
+   postprocessing function for the famous iris-classification model looks like this:
+   <details><summary>ONNX-Version</summary>
+      <p>
    
-    ```python
-    #custom_model.py    
-   
-    import numpy as np
-    from abstract_model import AbstractModel
+   ```python
+       #custom_model.py for the ONNX version  
+
+       import numpy as np
+       from abstract_model import AbstractModel
 
 
-    class CustomModel(ONNXModel):
+       class CustomModel(ONNXModel):
 
-        def pre_process(self, input_data, input_metadata):
-            input_data = np.array(input_data).astype(np.float32)
-            return {input_metadata[0].name: input_data}
+           def pre_process(self, input_data, input_metadata):
+               input_data = np.array(input_data).astype(np.float32)
+               return {input_metadata[0].name: input_data}
 
-        def post_process(self, model_output):
-    
-            labels = ['Setosa', 'Versicolor', 'Virginica']
-            predicted_labels = list(map(lambda prediction: labels[prediction], model_output[0]))
-            return predicted_labels
+           def post_process(self, model_output):
+       
+               labels = ['Setosa', 'Versicolor', 'Virginica']
+               predicted_labels = list(map(lambda prediction: labels[prediction], model_output[0]))
+               return predicted_labels
     ```
-    See <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> for further instructions.
+   
+   </p>
 
+   </details>
+   <details><summary>PMML-Version</summary>
+      <p>
+   
+      ```python
+         #custom_model.py for the PMML version 
 
-5) If needed, copy custom methods, files and classes into the directory "ml-starter / backend / app / custom_model" (Optional)
-6) Add your dependencies for your implementation in the file "ml-starter / backend / app / custom_model / <strong>custom_requirements.txt</strong>" just as you would do in the usual requirements.txt file.<br/> For the Iris model it looks like this:
+         from model.pmml_model import PMMLModel
+         
+         
+         class CustomModel(PMMLModel):
+         
+             def pre_process(self, input_data, model) -> dict:
+                 return input_data
+         
+             @staticmethod
+             def post_process(model_output: object) -> object:
+                 return model_output[0]
+         
+      ```
+      </p>
+
+   </details>
+       See <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> for further instructions.</br>
+5) If needed, copy custom methods, files and classes into the directory "ml-starter / backend / app / custom_model" (
+   Optional)
+6) Add your dependencies for your implementation in the file "ml-starter / backend / app / custom_model / <strong>
+   custom_requirements.txt</strong>" just as you would do in the usual requirements.txt file.<br/> For the Iris model it
+   looks like this:
    ```text
    #custom_requirements.txt
    
    numpy~=1.19.5
    ```
-   
-7) Define the configuration in the file "ml-starter / backend / app / custom_model / <strong>configMap.json</strong>". See <a href="#configuration">Configuration</a> for instructions. The most important parts are the inputFields and the requestObject. For the Iris model it looks like this:<br/>
-   
+
+7) Define the configuration in the file "ml-starter / backend / app / custom_model / <strong>configMap.json</strong>".
+   See <a href="#configuration">Configuration</a> for instructions. The most important parts are the inputFields and the
+   requestObject. For the Iris model it looks like this:<br/>
+
    <details><summary>Show configMap.json</summary>
    <p>
-   
+
    ```json
    {
      "applicationName": "My demo-application with the basic Iris-Model",
@@ -153,7 +194,7 @@ Tired of building web-applications for your machine learning models to enable us
    docker run -d -p 80:3000 -p 8800:8800 ml-starter
    ```
    💡 To deploy your application to a hosting provider see <a href="#deployment">Deployment</a> for instructions.
-   
+
 
 9) Access the frontend on http://localhost, and the backend on http://localhost:8800/docs
 
@@ -167,7 +208,9 @@ Tired of building web-applications for your machine learning models to enable us
 ---
 
 # Configuration
-The file configMap.json contains the configuration which is mainly used by the frontend. The following list defines all available configuration keys. The names of the keys cannot be changed.
+
+The file configMap.json contains the configuration which is mainly used by the frontend. The following list defines all
+available configuration keys. The names of the keys cannot be changed.
 
 | **Key** | **Description** | **Type** | **Example** | **Default** |
 |---|---|---|---|---|
@@ -177,48 +220,58 @@ The file configMap.json contains the configuration which is mainly used by the f
 | requestObject | Object defining the shape of the expected input data of the backend. Use the id's of the input fields as placeholder for the input values. | Object | { "inputData": "inputText" } <br/><br/>  { "inputData": { "firstName": "firstNameId", "lastName": "lastNameId" } }  | - |
 
 Please check the <a href="/backend/examples">examples</a> for some sample configurations. <br/><br/>
-💡 Note: The input type "image" is internally represented by a base64 encoded string representing the image content. Learn more about it in the <a href="#preprocessing">Preprocessing</a> section.
+💡 Note: The input type "image" is internally represented by a base64 encoded string representing the image content.
+Learn more about it in the <a href="#preprocessing">Preprocessing</a> section.
 
 ## Optional database configuration
-In case you have set up a free MongoDB instance in the section <a href="#persistence">Persistence</a> there are some additional configurations available:
+
+In case you have set up a free MongoDB instance in the section <a href="#persistence">Persistence</a> there are some
+additional configurations available:
 
 ### dbName
+
 You can find the name of your database on www.cloud.mongodb.com in the upper left corner.
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/dbName.png">
 
 ### clusterName
+
 You can find the name of your cluster on www.cloud.mongodb.com in the section "Clusters".
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/clusterName.png">
 
 ### dbUser
-Username for the configured database. Make sure the user has sufficient reading and writing rights for the database. You can find the username on www.cloud.mongodb.com in the section "Database Access".
+
+Username for the configured database. Make sure the user has sufficient reading and writing rights for the database. You
+can find the username on www.cloud.mongodb.com in the section "Database Access".
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/dbUser.png">
 
 ### dbCredentials
-The credentials for the configured user. You can find them on www.cloud.mongodb.com in the section "Database Access" 🡒 Edit
+
+The credentials for the configured user. You can find them on www.cloud.mongodb.com in the section "Database Access" 🡒
+Edit
 
 # Preprocessing and postprocessing
 
-ML-Starter provides an SPI to let you control the dataflow from and to the model. In order to implement your custom preprocessing and postprocessing you have to extend the class AbstractModel in the file "custom_model.py" and place it in the folder "ml-starter / backend / app / custom_model".
+ML-Starter provides an SPI to let you control the dataflow from and to the model. In order to implement your custom
+preprocessing and postprocessing you have to extend the class AbstractModel in the file "custom_model.py" and place it
+in the folder "ml-starter / backend / app / custom_model".
 
 For ONNX:
 
 ```python
 from model.onnx_model import ONNXModel
 
+
 class CustomModel(ONNXModel):
 
-    def pre_process(self, input_data, input_metadata):
+   def pre_process(self, input_data, input_metadata):
+      # Your implementation
 
-        #Your implementation
+      return prepared_input_data
 
-        return prepared_input_data
+   def post_process(self, model_output):
+      # Your implementation
 
-    def post_process(self, model_output):
-        
-        #Your implementation
-
-        return prettified_model_output
+      return prettified_model_output
 
 ```
 
@@ -246,82 +299,113 @@ class CustomModel(PMMLModel):
 This is an overview of the dataflow of a user request: <br/>
 Input data ⟶ Request object ⟶ pre_process() ⟶ model.predict() ⟶ post_process() ⟶ Response
 
-💡 <a href="https://www.onnxruntime.ai/python/modules/onnxruntime/capi/onnxruntime_inference_collection.html#InferenceSession">Learn more about the ONNX InferenceSession</a>
+💡 <a href="https://www.onnxruntime.ai/python/modules/onnxruntime/capi/onnxruntime_inference_collection.html#InferenceSession">
+Learn more about the ONNX InferenceSession</a>
 
 <strong>Pro tip:</strong><br/>
-If you don't know the implementation of your pre- and post processing start a debug session as follows: 
+If you don't know the implementation of your pre- and post processing start a debug session as follows:
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/debugging.png">
 
-Create a breakpoint in the custom_model.py and make a HTTP POST request with your favorite tool on: http://localhost:8800/api/predictions
+Create a breakpoint in the custom_model.py and make a HTTP POST request with your favorite tool
+on: http://localhost:8800/api/predictions
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/debuggingdetail.png">
-
 
 ## Preprocessing
 
-The input data is passed to the method pre_process as parameter input_data in the form of the configured requestObject. If needed convert it to the format your model expects.
+The input data is passed to the method pre_process as parameter input_data in the form of the configured requestObject.
+If needed convert it to the format your model expects.
 <br/>
-<strong>For ONNX:</strong> The metadata about the expected input provided by the onnx session is passed to the pre_process method as the input_metadata parameter. They correspond to the call to onnxruntime.InferenceSession({model-path}).get_inputs(). The return value of the pre_process method is passed directly to the onnx InferenceSession and therefore must be a dictionary in the format {"input_name": input_data}.
+<strong>For ONNX:</strong> The metadata about the expected input provided by the onnx session is passed to the
+pre_process method as the input_metadata parameter. They correspond to the call to onnxruntime.InferenceSession(
+{model-path}).get_inputs(). The return value of the pre_process method is passed directly to the onnx InferenceSession
+and therefore must be a dictionary in the format {"input_name": input_data}.
 
-<strong>For PMML:</strong> The second parameter is the loaded model in case you need information about the expected inputs or outputs. 
+<strong>For PMML:</strong> The second parameter is the loaded model in case you need information about the expected
+inputs or outputs.
 
-Images are passed as base64 encoded strings. In order to process them convert the string to an image: 
+Images are passed as base64 encoded strings. In order to process them convert the string to an image:
+
 ```python
 def pre_process(self, input_data, input_metadata):
-
-  decoded_data = base64.b64decode(input_data)
-  np_data = np.fromstring(decoded_data, np.uint8)
-  img = cv2.imdecode(np_data, cv2.IMREAD_UNCHANGED)
+   decoded_data = base64.b64decode(input_data)
+   np_data = np.fromstring(decoded_data, np.uint8)
+   img = cv2.imdecode(np_data, cv2.IMREAD_UNCHANGED)
 ```
 
 ## Postprocessing
 
 <strong>For ONNX: </strong>
-The post_process method receives the model_output as parameter, which corresponds to the direct output of the call to onnxruntime.InferenceSession({onnx-model-path}).run({model_output_names}, {pre_processed_input_data}). For most models, you can access the output with model_output[0] and transform it accordingly.
+The post_process method receives the model_output as parameter, which corresponds to the direct output of the call to
+onnxruntime.InferenceSession({onnx-model-path}).run({model_output_names}, {pre_processed_input_data}). For most models,
+you can access the output with model_output[0] and transform it accordingly.
 
 <strong>For PMML: </strong>
 The post_process method receives the output of the model.predict(pre_processed_data) call. If necessary, transform it.
 
-The return value of the post_process method is used as a response for the REST interface without further processing. Therefore, numerical values should be rounded accordingly and any field names should be capitalized. 
+The return value of the post_process method is used as a response for the REST interface without further processing.
+Therefore, numerical values should be rounded accordingly and any field names should be capitalized.
 
 ## Custom methods, files and requirements
 
-During pre- and postprocessing you can access other methods, classes or files (labels etc.) of your own. Just copy them into  the folder "ml-starter / backend / app / custom_model". If your implementation needs any external libraries, you must add them in the file "custom_requirements.txt" in the folder "ml-starter / backend / app / custom_model".
+During pre- and postprocessing you can access other methods, classes or files (labels etc.) of your own. Just copy them
+into the folder "ml-starter / backend / app / custom_model". If your implementation needs any external libraries, you
+must add them in the file "custom_requirements.txt" in the folder "ml-starter / backend / app / custom_model".
 
 ## Access files
-In order to access files during the processing you must 1) provide them according to the above instructions (Custom methods, files and requirements) and 2) access them via the helper method get_file() from the file_helper.py. This ensures a safe access even in a containerized environment.
+
+In order to access files during the processing you must 1) provide them according to the above instructions (Custom
+methods, files and requirements) and 2) access them via the helper method get_file() from the file_helper.py. This
+ensures a safe access even in a containerized environment.
+
 ```python
 from model.onnx_model import ONNXModel
 from file_helper import get_file
 
 
 class CustomModel(ONNXModel):
+   labels = json.load(open(get_file("labels_map.txt"), "r"))
 
-    labels = json.load(open(get_file("labels_map.txt"), "r"))
-
-    #rest of the code omitted..
+   #rest of the code omitted..
 ```
 
 # Persistence
-Without further configuration, the user requests as well as the corresponding response of their model are persisted in a SQLite in-memory database. For operation on Heroku, it cannot be ensured that the data is persisted for a longer period of time. For persistent data storage, we recommend creating a no-SQL database at www.cloud.mongodb.com. You can specify the access data to the database afterwards in the <a href="#configuration">Configuration</a>. 
 
-💡 Setting up a MongoDB allows you to gain insights from the user rating of the prediction and use the userdata to improve your model performance.
+Without further configuration, the user requests as well as the corresponding response of their model are persisted in a
+SQLite in-memory database. For operation on Heroku, it cannot be ensured that the data is persisted for a longer period
+of time. For persistent data storage, we recommend creating a no-SQL database at www.cloud.mongodb.com. You can specify
+the access data to the database afterwards in the <a href="#configuration">Configuration</a>.
 
-
+💡 Setting up a MongoDB allows you to gain insights from the user rating of the prediction and use the userdata to
+improve your model performance.
 
 # Deployment
 
-The integration with docker allows you to run your ML-Starter easily on your local machine or deploy it to a hosting provider. Please make sure, that the running environment provides enough resources (RAM / CPU) to run your model. 
+The integration with docker allows you to run your ML-Starter easily on your local machine or deploy it to a hosting
+provider. Please make sure, that the running environment provides enough resources (RAM / CPU) to run your model.
 
 ## Local deployment
+
 Open a terminal in the directory "ml-starter /"
+
 ```commandline
 docker build -t ml-starter .
 docker run -d -p 80:3000 -p 8800:8800 ml-starter
 ```
 
+Or if you want to start your services seperately (Make sure you have installed all requirements):
+
+```commandline
+#ml-starter/backend/app
+uvicorn main:app --host locahost --port 8800 --reload
+
+#ml-starter/frontend
+npm start
+```
+
 Access your browser on localhost (frontend) or localhost:8800/docs (backend)
 
 ## Deploy to Heroku
+
 In order to deploy your application to heroku you'll need a heroku account and the CLI from heroku.
 
 https://devcenter.heroku.com/articles/heroku-cli#download-and-install
@@ -341,10 +425,12 @@ heroku open {yourApplicationName}
 ```
 
 # How does it work?
+
 This section provides a explanation of the architecture of ML-Starter. The information is intended for contributors or
 interested people.
 
 ML-Starter has two main components:
+
 1) Python backend with FastAPI which provides the REST-API.
 2) React frontend
 
@@ -358,22 +444,22 @@ The UML sequence diagram shows the message and data flow of the application:
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/sequence_diagram.png">
 
-To simplify the deployment, the operation in docker is performed in a single container, containing the FastAPI and
-React application. This is mainly due to the much simpler process to deploy this container on Heroku.
+To simplify the deployment, the operation in docker is performed in a single container, containing the FastAPI and React
+application. This is mainly due to the much simpler process to deploy this container on Heroku.
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/docker_operation.png">
 
-
 ## Backend
 
-The main functionality of ML-Starter is provided by the Python backend. The REST-API is implemented with FastAPI and provides the following endpoints:
+The main functionality of ML-Starter is provided by the Python backend. The REST-API is implemented with FastAPI and
+provides the following endpoints:
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/rest-endpoints.png">
 
-The used classes of the Python application are shown in the below class diagram which is automatically generated by pyreverse.
+The used classes of the Python application are shown in the below class diagram which is automatically generated by
+pyreverse.
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/classdiagram.png">
-
 
 ## Frontend
 

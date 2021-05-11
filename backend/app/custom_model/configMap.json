@@ -1,0 +1,14 @@
+{
+  "applicationName": "Enter your application name",
+  "description": "Give the user a quick impression of the functionality and which information he has to provide",
+  "input": [
+    {
+      "id": "id1",
+      "label": "Text which is displayed above the field",
+      "type": "Pick one: number or str or image"
+    }
+  ],
+  "requestObject": {
+    "inputData": { }
+  }
+}

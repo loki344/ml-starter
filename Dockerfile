@@ -2,6 +2,8 @@ FROM tiangolo/uvicorn-gunicorn-fastapi:python3.7
 RUN pip install --upgrade pip
 ENV IS_IN_DOCKER true
 
+RUN apt update
+RUN apt-get install -y default-jdk
 WORKDIR /ml-starter
 COPY ./startBackend.sh ./startBackend.sh
 COPY ./startFrontend.sh ./startFrontend.sh

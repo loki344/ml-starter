@@ -4,18 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- update classes in exmaples">
-      <change afterPath="$PROJECT_DIR$/docs/images/debugdetail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/images/debugging.png" afterDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- doc">
+      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ml-starter" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/packages_..png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app/model/pmml_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model/pmml_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-onnx/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/configMap.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/configMap.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/custom_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/examples/iris-classification-pmml/custom_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/hotswap_agent.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/ml-starter-backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/ml-starter-frontend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/other.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/backend/examples/efficientnet-lite4/custom_model.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/backend/examples/gpt2/custom_model.onnx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter/backend/examples/iris-classification-onnx/custom_model.onnx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +102,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/docker/.env&#10;/home/robert/Repositories/ml-starter/external-folder/iris.py&#10;/home/robert/Repositories/ml-starter-backend/archiv/pythontest/gpt2.py" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/examples/iris-classification-pmml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/app/custom_model" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -104,8 +119,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend/examples/iris-classification-pmml" />
       <recent name="$PROJECT_DIR$/backend/app/custom_model" />
+      <recent name="$PROJECT_DIR$/backend/examples/iris-classification-pmml" />
       <recent name="$PROJECT_DIR$/frontend/src/components" />
       <recent name="$PROJECT_DIR$/backend/app" />
       <recent name="$PROJECT_DIR$/backend/examples/iris-classification" />
@@ -118,7 +133,7 @@
       <recent name="$PROJECT_DIR$/backend/examples/gpt2" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration name="React" type="JavascriptDebugType" uri="http://localhost:3000/">
       <method v="2" />
     </configuration>
@@ -191,11 +206,6 @@
       <item itemvalue="npm.start" />
       <item itemvalue="Python.main" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -264,34 +274,7 @@
       <workItem from="1620340754462" duration="3385000" />
       <workItem from="1620415905905" duration="7247000" />
       <workItem from="1620477788611" duration="7638000" />
-    </task>
-    <task id="LOCAL-00106" summary="- doc">
-      <created>1619959732646</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1619959732646</updated>
-    </task>
-    <task id="LOCAL-00107" summary="- doc">
-      <created>1619968072219</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1619968072219</updated>
-    </task>
-    <task id="LOCAL-00108" summary="- doc">
-      <created>1619968185910</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1619968185910</updated>
-    </task>
-    <task id="LOCAL-00109" summary="- doc">
-      <created>1619968239913</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1619968239913</updated>
+      <workItem from="1620761846592" duration="1038000" />
     </task>
     <task id="LOCAL-00110" summary="- cleanup">
       <created>1619977764892</created>
@@ -608,7 +591,35 @@
       <option name="project" value="LOCAL" />
       <updated>1620598279622</updated>
     </task>
-    <option name="localTasksCounter" value="155" />
+    <task id="LOCAL-00155" summary="- doc">
+      <created>1620602589637</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1620602589637</updated>
+    </task>
+    <task id="LOCAL-00156" summary="- doc">
+      <created>1620602645447</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1620602645447</updated>
+    </task>
+    <task id="LOCAL-00157" summary="- doc">
+      <created>1620602692610</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1620602692611</updated>
+    </task>
+    <task id="LOCAL-00158" summary="- doc">
+      <created>1620602741361</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1620602741361</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +686,6 @@
     <MESSAGE value="- adds documentation in code&#10;- code formatting" />
     <MESSAGE value="- adds pyreverse generated resources" />
     <MESSAGE value="- changes variable name&#10;- updates pyreverse files" />
-    <MESSAGE value="- doc" />
     <MESSAGE value="- generified model classes and integratet PMML functionality" />
     <MESSAGE value="- removed model_output_names" />
     <MESSAGE value="- changed to ONNXModel" />
@@ -685,7 +695,8 @@
     <MESSAGE value="- changed rest endpoint" />
     <MESSAGE value="- major frontend changes" />
     <MESSAGE value="- update classes in exmaples" />
-    <option name="LAST_COMMIT_MESSAGE" value="- update classes in exmaples" />
+    <MESSAGE value="- doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="- doc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -694,11 +705,6 @@
           <url>file://$PROJECT_DIR$/frontend/src/components/PredictionForm.js</url>
           <line>16</line>
           <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/backend/examples/iris-classification-pmml/custom_model.py</url>
-          <line>7</line>
-          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
