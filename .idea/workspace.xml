@@ -4,33 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- doc">
-      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/configMap.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/app/custom_model/custom_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ml-starter" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages_..png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/hotswap_agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/ml-starter-backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/ml-starter-frontend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/other.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/backend/examples/efficientnet-lite4/custom_model.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/backend/examples/gpt2/custom_model.onnx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ml-starter/backend/examples/iris-classification-onnx/custom_model.onnx" beforeDir="false" />
+    <list default="true" id="ad49b65c-f7af-4c11-969c-9b67cd9c2243" name="Default Changelist" comment="- clean up and default files">
+      <change beforePath="$PROJECT_DIR$/backend/app/model/pmml_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/model/pmml_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ml-starter" beforeDir="false" afterPath="$PROJECT_DIR$/ml-starter" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,14 +250,7 @@
       <workItem from="1620340754462" duration="3385000" />
       <workItem from="1620415905905" duration="7247000" />
       <workItem from="1620477788611" duration="7638000" />
-      <workItem from="1620761846592" duration="1038000" />
-    </task>
-    <task id="LOCAL-00110" summary="- cleanup">
-      <created>1619977764892</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1619977764892</updated>
+      <workItem from="1620761846592" duration="1427000" />
     </task>
     <task id="LOCAL-00111" summary="- cleanup">
       <created>1619977777878</created>
@@ -619,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620602741361</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="- clean up and default files">
+      <created>1620763035207</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1620763035208</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +647,6 @@
       <path value="$PROJECT_DIR$" />
       <path value="$PROJECT_DIR$/docker/kfserving" />
     </ignored-roots>
-    <MESSAGE value="- adds db and labeltext" />
     <MESSAGE value="- intellij changes" />
     <MESSAGE value="- cleanup" />
     <MESSAGE value="- cleanup and doc" />
@@ -696,7 +671,8 @@
     <MESSAGE value="- major frontend changes" />
     <MESSAGE value="- update classes in exmaples" />
     <MESSAGE value="- doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="- doc" />
+    <MESSAGE value="- clean up and default files" />
+    <option name="LAST_COMMIT_MESSAGE" value="- clean up and default files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
