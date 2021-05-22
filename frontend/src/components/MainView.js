@@ -20,18 +20,18 @@ export const MainView = () => {
     }, [dispatch])
 
     const getGridClass = () => {
-        return prediction.length > 0 && !showSpinner? "GridSideBySide" : "GridBigColumns"
+        return prediction.length > 0 && !showSpinner ? "GridSideBySide" : "GridBigColumns"
     }
 
     function isSpinnerVisible() {
-        return showSpinner ? "Hidden": "";
+        return showSpinner ? "Hidden" : "";
     }
 
     return (
 
         <div>
 
-            <h3 className={'PredictionTitle '+isSpinnerVisible()}>{description}</h3>
+            <h3 className={'PredictionTitle ' + isSpinnerVisible()}>{description}</h3>
             <div style={{marginTop: "3rem"}} className={getGridClass()}>
                 <InputDataForm/>
                 <PredictionForm/>

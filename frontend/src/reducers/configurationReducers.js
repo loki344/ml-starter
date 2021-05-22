@@ -4,9 +4,15 @@ const initialState = {'applicationName': '', 'description': '', 'inputFields': [
 
 export const configurationReducer = (state = initialState, action) => {
 
-    switch (action.type){
+    switch (action.type) {
         case GET_CONFIGURATION:
-        return {...state, applicationName: action.payload.applicationName, inputFields: action.payload.inputFields, requestObject: action.payload.requestObject, description: action.payload.description}
+            return {
+                ...state,
+                applicationName: action.payload.applicationName,
+                inputFields: action.payload.inputFields,
+                requestObject: action.payload.requestObject,
+                description: action.payload.description
+            }
 
         default:
             return state

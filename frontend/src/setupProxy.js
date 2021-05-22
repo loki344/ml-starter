@@ -1,6 +1,6 @@
-const { createProxyMiddleware } = require('http-proxy-middleware');
+const {createProxyMiddleware} = require('http-proxy-middleware');
 
-module.exports = function(app) {
+module.exports = function (app) {
 
     let backendURI = 'http://localhost:8800'
 

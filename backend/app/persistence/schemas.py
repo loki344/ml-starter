@@ -8,8 +8,6 @@ from pydantic import BaseModel
 class PredictionBase(BaseModel):
     """Base representation of a prediction"""
     input_data: str
-    created: datetime
-    prediction: str
 
 
 class Prediction(PredictionBase):
@@ -17,6 +15,8 @@ class Prediction(PredictionBase):
 
     id: str
     rating: Optional[str]
+    created: datetime
+    prediction: str
 
     def __repr__(self):
 

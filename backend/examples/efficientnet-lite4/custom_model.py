@@ -59,7 +59,6 @@ class CustomModel(ONNXModel):
         model_output = model_output[0]
         result = reversed(model_output[0].argsort()[-5:])
 
-
         response = []
         for r in result:
             classnames = self.labels[str(r)].split(',')
@@ -70,5 +69,8 @@ class CustomModel(ONNXModel):
                     'Classname': classnames[len(classnames)-1].capitalize(),
                     'Probability': str(probability) + '%'
                 })
-
+            print({
+                        'Classname': classnames[len(classnames)-1].capitalize(),
+                        'Probability': str(probability) + '%'
+                    })
         return response

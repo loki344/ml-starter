@@ -9,19 +9,19 @@ export const InputField = ({inputField}) => {
 
     const [fileName, setFileName] = useState('No file chosen')
     const [textColor, setTextColor] = useState('black')
-    const [fileData, setFileData] = useState ('')
+    const [fileData, setFileData] = useState('')
 
     useEffect(() => {
-        Notiflix.Notify.Init({position: "right-bottom",timeout: 5000});
+        Notiflix.Notify.Init({position: "right-bottom", timeout: 5000});
     }, [Notiflix])
 
     const toBase64 = file => new Promise((resolve, reject) => {
-        if (file === undefined){
+        if (file === undefined) {
             resolve('')
         }
         const reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = function(event) {
+        reader.onload = function (event) {
             let result = reader.result
             setFileData(result)
             resolve(result.split(',')[1])
@@ -31,7 +31,7 @@ export const InputField = ({inputField}) => {
     });
 
     const validateFile = file => {
-        if (file === undefined){
+        if (file === undefined) {
             return false
         }
         let extensionRegex = new RegExp('(\.jpg|\.jpeg|\.png)$')
@@ -44,14 +44,14 @@ export const InputField = ({inputField}) => {
     const dispatch = useDispatch();
 
     let htmlTag = (<p>InputField not recognized</p>)
-    switch (type){
+    switch (type) {
 
         case 'image':
             htmlTag = (
-                <div style={{textAlign:'center'}}>
+                <div style={{textAlign: 'center'}}>
                     <label className="InputLabel">{label}</label>
-                    <input onChange={ async (event) => {
-                        if (!validateFile(event.target.files[0])){
+                    <input onChange={async (event) => {
+                        if (!validateFile(event.target.files[0])) {
                             Notiflix.Notify.Failure("File format not allowed")
                             setFileName('Allowed formats: jpg, jpeg, png')
                             setTextColor('red')
@@ -60,24 +60,25 @@ export const InputField = ({inputField}) => {
                         }
                         setTextColor('black')
                         dispatch(addData(id, await toBase64(event.target.files[0])))
-                        setFileName(event.target.files[0] !== undefined ? event.target.files[0].name.substring(0,30) : 'No file chosen')
+                        setFileName(event.target.files[0] !== undefined ? event.target.files[0].name.substring(0, 30) : 'No file chosen')
                     }} type="file" accept="image/*" id="actual-btn" hidden/>
                     <br/>
                     <label className="FileLabel" htmlFor="actual-btn">Choose File</label>
                     <br/>
                     <br/>
 
-                    <div id="file-chosen" style={{color: textColor}} >{fileName}</div>
+                    <div id="file-chosen" style={{color: textColor}}>{fileName}</div>
 
-                        <img style={{marginTop: "2rem", width: "auto", maxHeight: "30rem"}} src={fileData}/>
+                    <img style={{marginTop: "2rem", width: "auto", maxHeight: "30rem"}} src={fileData}/>
 
                 </div>)
             break
         case 'number':
             htmlTag = (
-                <div style={{marginBottom:'1.5rem'}}>
+                <div style={{marginBottom: '1.5rem'}}>
                     <label className="InputLabel">{label}</label>
-                    <input className="InputField" type="number" step="any"  onChange={(event) => dispatch(addData(id, event.target.value))}/>
+                    <input className="InputField" type="number" step="any"
+                           onChange={(event) => dispatch(addData(id, event.target.value))}/>
                 </div>
 
             )
@@ -85,9 +86,10 @@ export const InputField = ({inputField}) => {
 
         case 'str':
             htmlTag = (
-                <div style={{marginBottom:'1.5rem'}}>
+                <div style={{marginBottom: '1.5rem'}}>
                     <label className="InputLabel">{label}</label>
-                    <input className="InputField" type="text" onChange={(event) => dispatch(addData(id, event.target.value))}/>
+                    <input className="InputField" type="text"
+                           onChange={(event) => dispatch(addData(id, event.target.value))}/>
                 </div>
             )
             break
@@ -96,7 +98,6 @@ export const InputField = ({inputField}) => {
     }
 
     return (<>{htmlTag}</>)
-
 
 
 }

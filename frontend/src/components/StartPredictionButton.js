@@ -5,7 +5,6 @@ import Notiflix from "notiflix-react";
 
 export const StartPredictionButton = () => {
 
-
     const {inputData} = useSelector(state => state.prediction)
     const dispatch = useDispatch();
 
@@ -13,7 +12,7 @@ export const StartPredictionButton = () => {
     const {inputFields, requestObject} = configuration
 
     useEffect(() => {
-        Notiflix.Notify.Init({position: "right-bottom",timeout: 5000});
+        Notiflix.Notify.Init({position: "right-bottom", timeout: 5000});
     }, [Notiflix])
 
     const clickHandler = async (e) => {
@@ -33,15 +32,13 @@ export const StartPredictionButton = () => {
             requestData = requestData.replace(inputFieldToReplace, inputData[inputField.id])
         }
 
-        let requestBody = '{"inputData":' + requestData + '}'
+        let requestBody = '{"input_data":' + requestData + '}'
         requestBody = JSON.parse(requestBody)
 
         await dispatch(postPrediction(requestBody))
     }
 
     return (
-
-
         <button className="button" onClick={clickHandler} type="submit">
             Start prediction
             <div className="button__horizontal"/>

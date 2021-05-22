@@ -1,5 +1,5 @@
 
-.InputField{
+.InputField {
     color: black;
     font-family: "DejaVu Sans", sans-serif;
     border-radius: 10px;
@@ -9,12 +9,12 @@
     width: 100%;
 }
 
-.InputLabel{
+.InputLabel {
     color: black;
     font-family: "DejaVu Sans", sans-serif;
 }
 
-.InputGroup{
+.InputGroup {
     margin-bottom: 30px;
 }
 
@@ -41,7 +41,7 @@ input[type=number] {
 .FileLabel {
     background-color: #4D6D9A;
     color: white;
-    padding:  0.7rem;
+    padding: 0.7rem;
     font-family: "DejaVu Sans", sans-serif;
     border-radius: 0.3rem;
     cursor: pointer;
@@ -49,6 +49,7 @@ input[type=number] {
 }
 
 
-#file-chosen{
+#file-chosen {
     margin-left: 0.3rem;
-    font-family: "DejaVu Sans", sans-serif;}
+    font-family: "DejaVu Sans", sans-serif;
+}

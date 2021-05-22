@@ -1,3 +1,4 @@
+import json
 from typing import List
 
 import uvicorn
@@ -7,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from configuration.configuration_service import ConfigurationService
 from model.model_creation import create_model
 from persistence.mongo_db_service import MongoDbService
-from persistence.schemas import Prediction, PredictionPatch
+from persistence.schemas import Prediction, PredictionPatch, PredictionCreate
 from persistence.sqlite_db_service import InMemoryDbService
 
 """This is the entrypoint for the FastAPI application.
@@ -16,7 +17,7 @@ from persistence.sqlite_db_service import InMemoryDbService
 print("Starting server...")
 app = FastAPI(
     title="ML-starter REST API",
-    description="This backend provides endpoints to interact with the loaded ONNX model.",
+    description="This backend provides endpoints to interact with the loaded model.",
     version="1.0.0"
 )
 
@@ -57,12 +58,14 @@ async def get_predictions() -> List[Prediction]:
           summary="Create a new prediction",
           description="Returns a prediction for the delivered inputData in the requestBody",
           status_code=201)
-async def predict(request: Request):
-    input_json = await request.json()
-    input_data = input_json['inputData']
-
-    prediction = model.predict(input_data)
-    return persistence_service.save_prediction(str(input_data), str(prediction)).__repr__()
+async def predict(request: PredictionCreate, example={
+            "name": "Foo",
+            "description": "A very nice Item",
+            "price": 35.4,
+            "tax": 3.2,
+        }):
+    prediction = model.predict(request.input_data)
+    return persistence_service.save_prediction(str(request.input_data), str(prediction)).__repr__()
 
 
 @app.patch("/api/predictions/{prediction_id}", summary="Patch a prediction",

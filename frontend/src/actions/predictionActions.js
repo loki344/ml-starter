@@ -1,9 +1,4 @@
-import {
-    ADD_DATA,
-    POST_PREDICTION,
-    RESET_INPUT_DATA, SET_RATING,
-    SHOW_SPINNER
-} from "../constants/predictionConstants";
+import {ADD_DATA, POST_PREDICTION, RESET_INPUT_DATA, SET_RATING, SHOW_SPINNER} from "../constants/predictionConstants";
 import axios from "axios";
 
 export const addData = (id, value) => async (dispatch) => {

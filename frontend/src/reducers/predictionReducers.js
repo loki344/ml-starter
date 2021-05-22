@@ -1,13 +1,7 @@
-import {
-    ADD_DATA,
-    POST_PREDICTION,
-    RESET_INPUT_DATA, SET_RATING,
-    SHOW_SPINNER
-} from "../constants/predictionConstants";
+import {ADD_DATA, POST_PREDICTION, RESET_INPUT_DATA, SET_RATING, SHOW_SPINNER} from "../constants/predictionConstants";
 
 
 const initialState = {"inputData": {}, "prediction": [], "id": '', "showSpinner": false, "rating": ""}
-
 
 export const predictionReducer = (state = initialState, action) => {
 

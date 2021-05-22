@@ -14,7 +14,7 @@ export const PredictionForm = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        Notiflix.Notify.Init({position: "right-bottom",timeout: 5000});
+        Notiflix.Notify.Init({position: "right-bottom", timeout: 5000});
     }, [Notiflix])
 
     const INTERVAL_MS = 25000;
@@ -41,19 +41,15 @@ export const PredictionForm = () => {
         return prediction.length > 0 && !showSpinner ? "" : "Hidden";
     }
 
-
     return (
 
         <div className={showPrediction()}>
 
             <h2 className="PredictionTitle">Prediction:</h2>
             <br/>
-
             <div style={{display: 'inline-grid', gridTemplateColumns: '20% auto', columnGap: '3rem'}}>
-
                 {
                     Array.isArray(prediction) ?
-
                         prediction.map((pred) => (
                             <>
                                 <PredictionItem predictionObject={pred}/>
@@ -61,19 +57,12 @@ export const PredictionForm = () => {
                         ))
                         :
                         <PredictionItem predictionObject={prediction}/>
-
                 }
-
             </div>
-            <div>
-            </div>
-
-
             <form className="RatingForm">
                 <h3 className="PredictionTitle">Please rate the prediction</h3>
                 <br/>
                 <div className="radio-toolbar">
-
                     <input onClick={(event) => updateRating(event.target.value)} type="radio" id="poor" name="rating"
                            value="poor" checked={rating === "poor"}/>
                     <label htmlFor="poor">Poor</label>
@@ -93,11 +82,8 @@ export const PredictionForm = () => {
                     <input onClick={(event) => updateRating(event.target.value)} type="radio" id="excellent"
                            name="rating" value="excellent" checked={rating === "excellent"}/>
                     <label htmlFor="excellent">Excellent</label>
-
                 </div>
-
             </form>
         </div>
     )
-
 }
