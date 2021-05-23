@@ -173,6 +173,7 @@ Open your browser and access "localhost".
 Now you can enter the measurements of an iris flower and start the prediction.
 
 The result will be displayed like this:
+<br>
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart2.png">
 
 <br/>
