@@ -9,12 +9,9 @@
 
 
 <p align="center">
-    | <a href="#getting-started">Getting Started</a> | 
-   <a href="/backend/examples">Examples</a> |     
-   <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> | <br/>
-   | <a href="#configuration">Configuration</a> | 
-   <a href="#persistence">Persistence</a> | 
-   <a href="#deployment">Deployment</a> | 
+    | <a href="#quickstart">Quickstart</a> | 
+   <a href="/backend/examples">Examples</a> |    
+   <a href="/backend/examples">Integrate your model</a> |    
    <a href="https://github.com/loki344/ml-starter/tree/master/docs/architecture">Architecture</a> |
 </p>
 
@@ -46,9 +43,11 @@ as https://www.mongodb.com
 - Runs everywhere with Docker
 - Minimal configuration and implementation required
 
+---
 
-<h3 align="center">:star: Get started with the quickstart below or explore the possibilities to integrate your own ONNX or PMML model <a href="">here</a> :star:</h3>
+<h3 align="center">:star: Get started with the quickstart or explore the possibilities to integrate your own model <a href="">here</a> :star:</h3>
 
+---
 
 # Quickstart
 
@@ -171,10 +170,10 @@ Open your browser and access "localhost".
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart1.png">
 
-Now you can enter some numbers, which represent the measurements of an iris flower and start the prediction.
+Now you can enter the measurements of an iris flower and start the prediction.
 
 The result will be displayed like this:
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart2.png">
 
-
-<h3 align="center">Easy - isn't it? :sunglasses: </br>Ml-Starter is also proven to integrate seamlessly with www.heroku.com. Learn more about integrating your model <a href="">here</a>.
+<br/>
+<h3 align="center">Easy - isn't it?</br></h3><h4>Ml-Starter is proven to integrate seamlessly with www.heroku.com. Learn more about integrating your model <a href="">here</a>.</h4>
