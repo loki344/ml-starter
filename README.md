@@ -564,7 +564,7 @@ return (<>{htmlTag}</>)
 
 This results in the view:
 
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/inputfieldsgenerated.png">
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/generatedinputfields.png">
 
 To ensure the desired structure of the model in the backend, the StartPredictionButton.js maps the values of the input
 fields to the configured requestObject. It uses the id of the fields to replace the values.
@@ -589,7 +589,7 @@ So this:
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/requestObjectRaw.png">
 
-Is transformed to this:
+Is filled with the data of the input:
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/requestbody.png">
 
