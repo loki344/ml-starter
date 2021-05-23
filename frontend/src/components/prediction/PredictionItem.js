@@ -9,26 +9,14 @@ export const PredictionItem = (props) => {
             <>
                 {
                     Object.keys(prediction).map(key =>
-                        <>
-                            <div className="PredictionItem" style={{
-                                textAlign: "left",
-                                justifyContent: 'center',
-                                display: 'flex',
-                                alignItems: 'center'
-                            }}>{key}:
-                            </div>
-                            <div className="PredictionItem" style={{
-                                textAlign: "left",
-                                justifyContent: 'left',
-                                display: 'flex',
-                                alignItems: 'center',
-                                marginLeft: '2rem'
-                            }}>{prediction[key]}</div>
-                        </>
+                        <div>
+                            <span className="PredictionItem">{key}: </span>
+                            <span className="PredictionItem">{prediction[key]}</span>
+                        </div>
                     )
                 }
 
-                <div style={{marginBottom: "1rem"}}></div>
+                <div style={{marginBottom: "1rem"}}/>
             </>
             :
             <div className="PredictionItem"

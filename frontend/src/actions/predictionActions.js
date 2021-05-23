@@ -16,7 +16,7 @@ export const postPrediction = (requestBody) => async (dispatch) => {
     const {data} = await axios.post('/api/predictions', requestBody)
     let payload = {
         "id": data.id,
-        "prediction": typeof data.prediction === 'object' || Array ? data.prediction : [data.prediction]
+        "prediction": typeof data.prediction === 'object' || data.prediction instanceof Array ? data.prediction : [data.prediction]
     }
 
     setTimeout(() => {

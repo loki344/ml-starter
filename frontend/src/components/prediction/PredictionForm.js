@@ -47,16 +47,13 @@ export const PredictionForm = () => {
 
             <h2 className="PredictionTitle">Prediction:</h2>
             <br/>
-            <div style={{display: 'inline-grid', gridTemplateColumns: '20% auto', columnGap: '3rem'}}>
+            <div>
                 {
-                    Array.isArray(prediction) ?
-                        prediction.map((pred) => (
-                            <>
-                                <PredictionItem predictionObject={pred}/>
-                            </>
-                        ))
-                        :
-                        <PredictionItem predictionObject={prediction}/>
+                    prediction.map((pred) => (
+                        <>
+                            <PredictionItem predictionObject={pred}/>
+                        </>
+                    ))
                 }
             </div>
             <form className="RatingForm">
