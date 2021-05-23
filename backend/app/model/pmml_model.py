@@ -5,15 +5,13 @@ from pypmml import Model
 from model.abstract_model import AbstractModel
 
 
-# TODO doc
 class PMMLModel(AbstractModel):
 
     def __init__(self, pmml_file_path: str):
         """
         Initializes an AbstractModel with the path to the model and the model_output_names
 
-        :param onnx_file_path: path where to .onnx file is available
-        :type onnx_file_path: str
+        :param pmml_file_path: path where to .onnx file is available
         """
 
         self.pmml_file_path = pmml_file_path
@@ -58,7 +56,7 @@ class PMMLModel(AbstractModel):
         display the prediction in the frontend. Consider using capitalized fieldNames and rounded numbers.
         The shape of the output is dependent of your model in use.
 
-        :param model_output: Prediction output of InferenceSession.run() method.
+        :param model_output: Prediction output of Model.predict() method.
         :type model_output: object
 
         :return: object representing the formatted prediction for the REST-API

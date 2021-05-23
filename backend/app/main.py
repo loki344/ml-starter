@@ -58,12 +58,7 @@ async def get_predictions() -> List[Prediction]:
           summary="Create a new prediction",
           description="Returns a prediction for the delivered inputData in the requestBody",
           status_code=201)
-async def predict(request: PredictionCreate, example={
-            "name": "Foo",
-            "description": "A very nice Item",
-            "price": 35.4,
-            "tax": 3.2,
-        }):
+async def predict(request: PredictionCreate):
     prediction = model.predict(request.input_data)
     return persistence_service.save_prediction(str(request.input_data), str(prediction)).__repr__()
 

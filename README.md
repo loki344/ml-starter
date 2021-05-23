@@ -17,7 +17,7 @@
    | <a href="#configuration">Configuration</a> | 
    <a href="#persistence">Persistence</a> | 
    <a href="#deployment">Deployment</a> | 
-   <a href="#how-does-it-work">How does it work?</a> |
+   <a href="https://github.com/loki344/ml-starter/tree/master/docs/architecture">Architecture</a> |
 </p>
 
 Tired of building web-applications for your machine learning models to enable users to interact with it? ML-Starter lets
@@ -48,162 +48,136 @@ as https://www.mongodb.com
 - Runs everywhere with Docker
 - Minimal configuration and implementation required
 
-# Getting started
 
-## Prerequisites
-
-- Docker installation (https://docs.docker.com/get-docker/)
-- ONNX or PMML model
-- Pre- and postprocessing written in Python (Optional for PMML)
-- Java 1.8+ (Only for PMML models if you want to debug them locally)
-
-## Instructions
-
-1) Train your model with an ML-Framework which supports the serialization in the ONNX or PMML format. For ONNX
-   see https://onnx.ai/supported-tools.html. Alternatively you can browse https://github.com/onnx/models and download
-   most of the state-of-the-art ML-models already pretrained.
-2) Clone the ml-starter repository
-   ```git
-   git clone https://github.com/loki344/ml-starter.git
-   ```
-3) Save your trained model in the folder "ml-starter / backend / app / custom_model" with the file name <strong>"
-   custom_model.onnx" or "custom_model.xml"</strong>
-4) Implement the pre- and postprocessing method to specify the data processing of the user requests and the prediction.
-   Use the file "ml-starter / backend / app / custom_model / <strong>custom_model.py</strong>".</br> A simple pre- and
-   postprocessing function for the famous iris-classification model looks like this:
-   <details><summary>ONNX-Version</summary>
-      <p>
-
-   ```python
-       # custom_model.py for the ONNX version  
-
-       import numpy as np
-       from abstract_model import AbstractModel
+<h3>👉 Get started with the quickstart below or explore the possibilites to integrate your own ONNX or PMML model <a href="">here</a></h3>
 
 
-       class CustomModel(ONNXModel):
+# Quickstart
 
-           def pre_process(self, input_data, input_metadata):
-               input_data = np.array(input_data).astype(np.float32)
-               return {input_metadata[0].name: input_data}
+<strong>What you'll build</strong><br/>
+The "Hello World" of Machine Learning: An Iris classification model which takes in the measurements of a flowers and
+predicts the classes.<br/><br/>
+<strong>What you'll need</strong><br/>
 
-           def post_process(self, model_output):
-       
-               labels = ['Setosa', 'Versicolor', 'Virginica']
-               predicted_labels = list(map(lambda prediction: labels[prediction], model_output[0]))
-               return predicted_labels
-    ```
+1) An IDE such as PyCharm or Visual Studio Code
+2) Docker installation (https://docs.docker.com/get-docker/)
 
-   </p>
+## Step 1: Clone the repository
 
-   </details>
-   <details><summary>PMML-Version</summary>
-      <p>
+Either download the repository or copy the command in the commandline:
 
-      ```python
-         # custom_model.py for the PMML version 
+```commandline
+git clone https://github.com/loki344/ml-starter.git
+```
 
-         from model.pmml_model import PMMLModel
-         
-         
-         class CustomModel(PMMLModel):
-         
-             def pre_process(self, input_data, model) -> dict:
-                 return input_data
-         
-             @staticmethod
-             def post_process(model_output: object) -> object:
-                 return model_output[0]
-         
-      ```
-      </p>
+## Step 2: Copy the model file
 
-   </details>
-       See <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> for further instructions.</br>
-5) If needed, copy custom methods, files and classes into the directory "ml-starter / backend / app / custom_model" (
-   Optional)
-6) Add your dependencies for your implementation in the file "ml-starter / backend / app / custom_model / <strong>
-   custom_requirements.txt</strong>" just as you would do in the usual requirements.txt file.<br/> For the Iris model it
-   looks like this:
-   ```text
-   #custom_requirements.txt
-   
-   numpy~=1.19.5
-   ```
+Locate the <strong>custom_model.xml</strong> in the <strong>
+ml-starter/backend/examples/iris-classification-pmml/</strong> directory. Copy it to the <strong>
+ml-starter/app/custom_model</strong> folder.
 
-7) Define the configuration in the file "ml-starter / backend / app / custom_model / <strong>configMap.json</strong>".
-   See <a href="#configuration">Configuration</a> for instructions. The most important parts are the inputFields and the
-   requestObject. For the Iris model it looks like this:<br/>
+## Step 3: Implement the pre- and postprocessing
 
-   <details><summary>Show configMap.json</summary>
-   <p>
+Open the project in your IDE and locate <strong>the custom_model.py</strong> file in the <strong>
+backend/app/custom_model</strong> folder. Now replace the contents of the file with the code below.
 
-   ```json
-   {
-     "applicationName": "My demo-application with the basic Iris-Model",
-     "description": "This is a basic regression model trained with the famous iris-onnx-data set. Please provide the measurement of two flowers and start the prediction!",
-     "input": [
-       {
-       "id": "input1",
-       "label": "Flower 1, Sepal length",
-       "type": "number"
-       },
-       {
-       "id": "input2",
-       "label": "Flower 1, Sepal width",
-       "type": "number"
-       },    {
-       "id": "input3",
-       "label": "Flower 1, Petal length",
-       "type": "number"
-       },    {
-       "id": "input4",
-       "label": "Flower 1, Petal width",
-       "type": "number"
-       },
-       {
-       "id": "input5",
-       "label": "Flower 2, Sepal length",
-       "type": "number"
-       },    {
-       "id": "input6",
-       "label": "Flower 2, Sepal width",
-       "type": "number"
-       },    {
-       "id": "input7",
-       "label": "Flower 2, Petal length",
-       "type": "number"
-       },    {
-       "id": "input8",
-       "label": "Flower 2, Petal width",
-       "type": "number"
-       }
-     ],
-     "requestObject": {"inputData": [["input1", "input2", "input3", "input4"],["input5", "input6", "input7", "input8"]]}
-   
-   }
-
-   ```
-   </p>
-   </details>
-   <br/>
-
-8) To start the Application locally execute the following command in the terminal in the directory ml-starter/
-   ```commandline
-   docker build -t ml-starter .
-   docker run -d -p 80:3000 -p 8800:8800 ml-starter
-   ```
-   💡 To deploy your application to a hosting provider see <a href="#deployment">Deployment</a> for instructions.
+```python
+import numpy as np
+from model.pmml_model import PMMLModel
 
 
-9) Access the frontend on http://localhost, and the backend on http://localhost:8800/docs
+class CustomModel(PMMLModel):
 
----
+    def pre_process(self, input_data, model) -> dict:
+        return input_data
 
-<p align="center">
-     👉&nbsp; Try out and explore some examples <a href="/backend/examples">here</a>  
+    @staticmethod
+    def post_process(model_output: object) -> object:
+        return model_output[0]
+
+```
+
+## Step 4: Configure the application
+
+Open the <strong>custom_requirements.txt</strong> file from the folder <strong>backend/app/custom_model</strong> and
+copy the required dependency of the pre- and postprocessing from below.
+
+```text
+numpy~=1.19.5
+```
+
+Open the <strong>configMap.json</strong> file from the folder <strong>backend/app/custom_model</strong>. In order to
+define the desired user inputs and the structure of the requestObject you have to replace the content with the text
+below.
+
+<details>
+<summary>configMap.json</summary>
+<p>
+
+```json
+{
+  "applicationName": "My demo-application with the basic Iris-Model",
+  "description": "This is a basic regression model trained with the famous iris-data set. Please provide the measurement of a flower and start the prediction!",
+  "input": [
+    {
+      "id": "input1",
+      "label": "Flower 1, Sepal length",
+      "type": "number"
+    },
+    {
+      "id": "input2",
+      "label": "Flower 1, Sepal width",
+      "type": "number"
+    },
+    {
+      "id": "input3",
+      "label": "Flower 1, Petal length",
+      "type": "number"
+    },
+    {
+      "id": "input4",
+      "label": "Flower 1, Petal width",
+      "type": "number"
+    }
+  ],
+  "requestObject": {
+    "inputData": [
+      "input1",
+      "input2",
+      "input3",
+      "input4"
+    ]
+  }
+}
+```
 
 </p>
+</details>
+
+## Step 5: Launch the application and try it out
+
+Docker makes the launch of the application very easy. Open the command line in the <strong>ml-starter/</strong>
+directory and execute the following code. This will take a while.
+
+```commandline
+docker build -t ml-starter-iris-pmml-example .
+docker run -d -p 80:3000 -p 8800:8800 ml-starter-iris-pmml-example
+```
+If everything worked you should get the container-id as an output in the console:
+```commandline
+#container-id, your output can look differently
+7647e273167e69e6987cbf7c4f2393203af2f940bb058ae9084c4dcefb63571f
+```
+<strong>Let's try it out!</strong><br/>
+Open your browser and access "localhost".
+
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart1.png">
+
+Now you can enter some numbers, which represent the measurements of an iris flower and start the prediction.
+
+The result will be displayed like this!
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart2.png">
+
 
 ---
 
@@ -433,164 +407,3 @@ heroku open --app  {yourApplicationName}
 - Heroku has a maximum RAM use of 512Mb - large models won't start
 - Nested objects as RequestObject are not supported. This does not work: {"firstName": "inputFieldId", "address": {"
   street":"streetInputFieldId"}}
-
-# How does it work?
-
-This section provides a explanation of the architecture of ML-Starter. The information is intended for contributors or
-interested people.
-
-ML-Starter has two main components:
-
-1) Python backend with FastAPI which provides the REST-API.
-2) React frontend
-
-## Overview
-
-The following UML component diagram shows the architecture of ML-Starter.
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/architecture.png">
-
-The UML sequence diagram shows the message and data flow of the application:
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/sequence_diagram.png">
-
-To simplify the deployment, the operation in docker is performed in a single container, containing the FastAPI and React
-application. This is mainly due to the much simpler process to deploy this container on Heroku.
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/docker_operation.png">
-
-## Backend
-
-The main functionality of ML-Starter is provided by the Python backend. The REST-API is implemented with FastAPI and
-provides the following endpoints:
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/rest-endpoints.png">
-
-The used classes of the Python application are shown in the below class diagram which is automatically generated by
-pyreverse.
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/classdiagram.png">
-
-## Frontend
-
-The dependency graph below is generated with dependency-cruiser and gives an overview of the frontend:
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/dependencygraph_frontend.png">
-
-### Inputfields
-
-The functionality for the handling of the input data is in the InputDataForm.js, PredictionForm.js and the
-StartPredictionButton.js.
-
-The InputDataForm.js is responsible to generate the configured input fields that are fetched with the configuration:
-
-```javascript
-   <div className={"InputDataForm" + '' + getClassForInputForm()}>
-    // generates an element for every configured input field
-    {inputFields.map((inputField) => (
-        <InputField key={inputField.label} inputField={inputField}>
-        </InputField>
-    ))}
-    <StartPredictionButton/>
-</div>
-```
-
-The configuration is stored in the redux store:
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/configInputFields.png">
-
-Every InputField element in turn is responsible to adjust to the desired type of the configured input field.
-
-<details><summary>Relevant code of InputField.js</summary>
-   <p>
-
-   ```javascript
-let htmlTag
-switch (type) {
-
-    case 'image':
-        htmlTag = (
-            <div style={{textAlign: 'center'}}>
-                <label className="InputLabel">{label}</label>
-                <input onChange={async (event) => {
-                    if (!validateFile(event.target.files[0])) {
-                        Notiflix.Notify.Failure("File format not allowed")
-                        setFileName('Allowed formats: jpg, jpeg, png')
-                        setTextColor('red')
-                        event.target.value = null
-                        return
-                    }
-                    setTextColor('black')
-                    dispatch(addData(id, await toBase64(event.target.files[0])))
-                    setFileName(event.target.files[0] !== undefined ? event.target.files[0].name.substring(0, 30) : 'No file chosen')
-                }} type="file" accept="image/*" id="actual-btn" hidden/>
-                <br/>
-                <label className="FileLabel" htmlFor="actual-btn">Choose File</label>
-                <br/>
-                <br/>
-                <div id="file-chosen" style={{color: textColor}}>{fileName}</div>
-                <img style={{marginTop: "2rem", width: "auto", maxHeight: "30rem"}} src={fileData}/>
-            </div>)
-        break
-
-    case 'number':
-        htmlTag = (
-            <div style={{marginBottom: '1.5rem'}}>
-                <label className="InputLabel">{label}</label>
-                <input className="InputField" type="number" step="any"
-                       onChange={(event) => dispatch(addData(id, event.target.value))}/>
-            </div>
-
-        )
-        break
-
-    case 'str':
-        htmlTag = (
-            <div style={{marginBottom: '1.5rem'}}>
-                <label className="InputLabel">{label}</label>
-                <input className="InputField" type="text"
-                       onChange={(event) => dispatch(addData(id, event.target.value))}/>
-            </div>
-        )
-        break
-    default:
-        return <p>The configured type of the input field is not supported. Type: {type}</p>
-}
-
-return (<>{htmlTag}</>)
-   ```
-
-   </p>
-   </details>
-
-This results in the view:
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/inputfieldsgenerated.png">
-
-To ensure the desired structure of the model in the backend, the StartPredictionButton.js maps the values of the input
-fields to the configured requestObject. It uses the id of the fields to replace the values.
-
-```javascript
-//... code ommitted
-let requestData = JSON.stringify(requestObject.inputData)
-
-for (let inputField of inputFields) {
-    let inputFieldToReplace = inputField.id
-    requestData = requestData.replace(inputFieldToReplace, inputData[inputField.id])
-}
-
-let requestBody = '{"input_data":' + requestData + '}'
-requestBody = JSON.parse(requestBody)
-
-await dispatch(postPrediction(requestBody))
-//... code ommitted
-```
-
-So this:
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/requestObjectRaw.png">
-
-Is transformed to this:
-
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/requestbody.png">
-
-
