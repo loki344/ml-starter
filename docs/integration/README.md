@@ -4,7 +4,7 @@
 
 This tutorial will guide you through the process of integration your own model with ML-Starter.
 
-##Overview
+#Overview
 
 - <a href="#configuration">Configuration</a>
 - <a href="#preprocesing-and-postprocessing">Preprocessing and Postprocessing</a>
@@ -12,7 +12,7 @@ This tutorial will guide you through the process of integration your own model w
 - <a href="#deployment">Deployment</a>
 - <a href="#limitations">Limitations</a>
 
-## Prerequisites
+# Prerequisites
 
 - Docker installation (https://docs.docker.com/get-docker/)
 - ONNX or PMML model
