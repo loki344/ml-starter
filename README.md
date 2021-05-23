@@ -345,7 +345,8 @@ The return value of the post_process method is used as a response for the REST i
 Therefore, numerical values should be rounded accordingly and any field names should be capitalized.
 
 Example:
-If you return an object like this {"Classname": "Predicted Class", "Probability": "23%"}, it will be displayed like this:
+If you return an object like this {"Classname": "Predicted Class", "Probability": "23%"}, it will be displayed like
+this:
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/objectPrediction.png">
 
 ## Custom methods, files and requirements
@@ -368,7 +369,7 @@ from file_helper import get_file
 class CustomModel(ONNXModel):
     labels = json.load(open(get_file("labels_map.txt"), "r"))
 
-    #rest of the code omitted..
+    # rest of the code omitted..
 ```
 
 # Persistence
@@ -472,8 +473,124 @@ pyreverse.
 
 ## Frontend
 
-TBD
+The dependency graph below is generated with dependency-cruiser and gives an overview of the frontend:
 
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/dependencygraph_frontend.png">
 
+### Inputfields
+
+The functionality for the handling of the input data is in the InputDataForm.js, PredictionForm.js and the
+StartPredictionButton.js.
+
+The InputDataForm.js is responsible to generate the configured input fields that are fetched with the configuration:
+
+```javascript
+   <div className={"InputDataForm" + '' + getClassForInputForm()}>
+    // generates an element for every configured input field
+    {inputFields.map((inputField) => (
+        <InputField key={inputField.label} inputField={inputField}>
+        </InputField>
+    ))}
+    <StartPredictionButton/>
+</div>
+```
+
+The configuration is stored in the redux store:
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/configInputFields.png">
+
+Every InputField element in turn is responsible to adjust to the desired type of the configured input field.
+
+<details><summary>Relevant code of InputField.js</summary>
+   <p>
+
+   ```javascript
+let htmlTag
+switch (type) {
+
+    case 'image':
+        htmlTag = (
+            <div style={{textAlign: 'center'}}>
+                <label className="InputLabel">{label}</label>
+                <input onChange={async (event) => {
+                    if (!validateFile(event.target.files[0])) {
+                        Notiflix.Notify.Failure("File format not allowed")
+                        setFileName('Allowed formats: jpg, jpeg, png')
+                        setTextColor('red')
+                        event.target.value = null
+                        return
+                    }
+                    setTextColor('black')
+                    dispatch(addData(id, await toBase64(event.target.files[0])))
+                    setFileName(event.target.files[0] !== undefined ? event.target.files[0].name.substring(0, 30) : 'No file chosen')
+                }} type="file" accept="image/*" id="actual-btn" hidden/>
+                <br/>
+                <label className="FileLabel" htmlFor="actual-btn">Choose File</label>
+                <br/>
+                <br/>
+                <div id="file-chosen" style={{color: textColor}}>{fileName}</div>
+                <img style={{marginTop: "2rem", width: "auto", maxHeight: "30rem"}} src={fileData}/>
+            </div>)
+        break
+
+    case 'number':
+        htmlTag = (
+            <div style={{marginBottom: '1.5rem'}}>
+                <label className="InputLabel">{label}</label>
+                <input className="InputField" type="number" step="any"
+                       onChange={(event) => dispatch(addData(id, event.target.value))}/>
+            </div>
+
+        )
+        break
+
+    case 'str':
+        htmlTag = (
+            <div style={{marginBottom: '1.5rem'}}>
+                <label className="InputLabel">{label}</label>
+                <input className="InputField" type="text"
+                       onChange={(event) => dispatch(addData(id, event.target.value))}/>
+            </div>
+        )
+        break
+    default:
+        return <p>The configured type of the input field is not supported. Type: {type}</p>
+}
+
+return (<>{htmlTag}</>)
+   ```
+
+   </p>
+   </details>
+
+This results in the view:
+
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/inputfieldsgenerated.png">
+
+To ensure the desired structure of the model in the backend, the StartPredictionButton.js maps the values of the input
+fields to the configured requestObject. It uses the id of the fields to replace the values.
+
+```javascript
+//... code ommitted
+let requestData = JSON.stringify(requestObject.inputData)
+
+for (let inputField of inputFields) {
+    let inputFieldToReplace = inputField.id
+    requestData = requestData.replace(inputFieldToReplace, inputData[inputField.id])
+}
+
+let requestBody = '{"input_data":' + requestData + '}'
+requestBody = JSON.parse(requestBody)
+
+await dispatch(postPrediction(requestBody))
+//... code ommitted
+```
+
+So this:
+
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/requestObjectRaw.png">
+
+Is transformed to this:
+
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/requestbody.png">
 
 
