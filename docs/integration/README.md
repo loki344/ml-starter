@@ -17,7 +17,7 @@ This chapter will guide you through the process to integrate your own model with
 
 - Docker installation (https://docs.docker.com/get-docker/)
 - ONNX or PMML model
-- Pre- and postprocessing written in Python (Optional for PMML)
+- Pre- and postprocessing written in Python
 - Java 1.8+ (Only for PMML models if you want to debug them locally)
 
 # Intro
@@ -79,8 +79,6 @@ Here's an example configuration for an application that expects an image and a n
 
 </p>
 </details>
-    <br>
-
 :mag: Find out more about the configuration possibilites, such as an online Mongo-DB <a href="#configuration">in the
 configuration section</a>
 
@@ -146,8 +144,6 @@ from model.pmml_model import PMMLModel
 
 </p>
 </details>
-<br>
-
 :mag: See <a href="#preprocessing-and-postprocessing">Pre- and postprocessing</a> for further instructions.
 
 </li>
@@ -186,16 +182,56 @@ Access the frontend on <strong>http://localhost</strong>, and the backend on <st
 The file configMap.json contains the configuration which is mainly used by the frontend. The following list defines all
 available configuration keys. The names of the keys cannot be changed.
 
-| **Key** | **Description** | **Type** | **Example** | **Default** |
-|---|---|---|---|---|
-| applicationName (optional) | This name is displayed in the header of the web application. | String | My demoapplication | My ML-starter demo application |
-| description (optional) | Short text to introduce your model to the user. This text is displayed above the input fields. | String | This model recognizes classes in a given image | Please provide the data in the input fields below and start the prediction. |
-| input | Array containing an element for each expected input. The frontend creates one inputfield for the user for each element. An element has 3 attributes id (str), label (str), type (str). The id is used to link input fields to the requestObject. The label is the text which is displayed above the field. The type is one of "number", "str", or "image" and is used to display the field accordingly. | Array[Object] | [  {   "id": "textInput",    "label": "Enter text for prediction",     "type": "str"  } ] | - |
-| requestObject | Object defining the shape of the expected input data of the backend. Use the id's of the input fields as placeholder for the input values. | Object | { "inputData": "inputText" } <br/><br/>  { "inputData": { "firstName": "firstNameId", "lastName": "lastNameId" } }  | - |
+<h3>applicationName</h3>
+<p><strong>optional</strong></p>
+<p><strong>Description:</strong> This name is displayed in the header of the web application.</p>
+<p><strong>Type: </strong>String</p>
+<p><strong>Example: </strong>My demoapplication</p>
+<p><strong>Default value: </strong>My ML-starter demo application</p>
 
-Please check the <a href="/backend/examples">examples</a> for some sample configurations. <br/><br/>
-💡 Note: The input type "image" is internally represented by a base64 encoded string representing the image content.
-Learn more about it in the <a href="#preprocessing">Preprocessing</a> section.
+<h3>description</h3>
+<p><strong>optional</strong></p>
+<p><strong>Description:</strong> Short text to introduce your model to the user.</p>
+<p><strong>Type: </strong>String</p>
+<p><strong>Example: </strong>This model recognizes classes in a given image</p>
+<p><strong>Default value: </strong>Please provide the data in the input fields below and start the prediction.</p>
+
+<h3>inputFields</h3>
+<p><strong>Description:</strong> Array containing an element for each expected input. The frontend creates one inputfield for the user for each element. An element has 3 attributes id (str), label (str), type (str). The id is used to link input fields to the requestObject. The label is the text which is displayed above the field. The type is one of "number", "str", or "image" and is used to display the field accordingly.</p>
+<p><strong>Type: </strong>Array</p>
+<p><strong>Example: </strong></p>
+
+```json
+    "inputFields": 
+    [
+        {
+            "id": "ageFieldId",
+            "type": "number",
+            "label": "Please enter your age"
+        },
+        {
+            "id": "firstNameFieldId",
+            "type": "str",
+            "label": "Please enter your first name"
+        }
+    ]
+```
+
+<h3>requestObject</h3>
+<p><strong>Description:</strong> Object defining the shape of the expected input data of the backend. Use the id's of the input fields as placeholder for the input values.</p>
+<p><strong>Type: </strong>Object</p>
+<p><strong>Example: </strong></p>
+
+```json
+    "inputData": { "firstName": "firstNameFieldId", "age": "ageFieldId" }
+```
+💡 Note: The input type "image" is internally handled as a base64 encoded string representing the image content.
+
+---
+Please check the <a href="/backend/examples">examples</a> for some sample configurations.
+
+---
+
 
 ## Optional database configuration
 
@@ -205,11 +241,13 @@ additional configurations available:
 ### dbName
 
 You can find the name of your database on www.cloud.mongodb.com in the upper left corner.
+
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/dbName.png">
 
 ### clusterName
 
 You can find the name of your cluster on www.cloud.mongodb.com in the section "Clusters".
+
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/clusterName.png">
 
 ### dbUser
@@ -223,11 +261,14 @@ can find the username on www.cloud.mongodb.com in the section "Database Access".
 The credentials for the configured user. You can find them on www.cloud.mongodb.com in the section "Database Access" 🡒
 Edit
 
+
 # Preprocessing and postprocessing
 
-ML-Starter provides an SPI to let you control the dataflow from and to the model. In order to implement your custom
-preprocessing and postprocessing you have to extend the class AbstractModel in the file "custom_model.py" and place it
+ML-Starter provides an SPI to let you handle the datastructure from and to the model. In order to implement your custom
+preprocessing and postprocessing you have to extend the class ONNXModel or PMMLModel according to your underlying model in the file "custom_model.py" and place it
 in the folder "ml-starter / backend / app / custom_model".
+
+If you use an ONNX model, I recommend you to search your model in the <a href="https://github.com/onnx/models">ONNX Model Zoo</a> and look at the implementation example of your model. In most cases, you can just copy the pre- and postprocessing code into the ML-Starter implementation.
 
 For ONNX:
 
@@ -237,15 +278,21 @@ from model.onnx_model import ONNXModel
 
 class CustomModel(ONNXModel):
 
-    def pre_process(self, input_data, input_metadata):
-        # Your implementation
 
-        return prepared_input_data
+   def pre_process(self, input_data, input_metadata):
+   # the input_data has the shape of the configured requestObject
+   # transform the data according to the specification of your ONNX model
+   # ONNX models expect a dictionary of: {input_name: input_value}
+   # To access the first expected input name call: input_metadata[0].name
+   
+   return pre_processed_data
 
-    def post_process(self, model_output):
-        # Your implementation
 
-        return prettified_model_output
+   def post_process(self, model_output):
+   # transform the model_output to a human readable form
+   # for most onnx models, the prediction is stored in model_output[0]
+   
+   return post_processed_data
 
 ```
 
@@ -255,25 +302,32 @@ For PMML:
 from model.pmml_model import PMMLModel
 
 
-class CustomModel(PMMLModel):
+   class CustomModel(PMMLModel):
 
-    def pre_process(self, input_data, model):
-        # Your implementation
 
-        return prepared_input_data
+   def pre_process(self, input_data, model):
+   # the input_data has the shape of the configured requestObject
+   # transform the data according to the specification of your PMML model
+   # access the model variable to gather information about the inputs if needed
+   
+   return pre_processed_data
 
-    def post_process(self, model_output):
-        # Your implementation
 
-        return prettified_model_output
+   def post_process(model_output):
+   # transform the model_output to a human readable form
+   # for most PMML models, the prediction is stored in model_output[0]
+   
+   return model_output[0]
+
 
 ```
 
 This is an overview of the dataflow of a user request: <br/>
 Input data ⟶ Request object ⟶ pre_process() ⟶ model.predict() ⟶ post_process() ⟶ Response
 
-💡 <a href="https://www.onnxruntime.ai/python/modules/onnxruntime/capi/onnxruntime_inference_collection.html#InferenceSession">
-Learn more about the ONNX InferenceSession</a>
+💡 The inference with ONNX models is achieved with the ONNX InferenceSession. <a href="https://www.onnxruntime.ai/python/modules/onnxruntime/capi/onnxruntime_inference_collection.html#InferenceSession">Learn more about it. </a>
+💡 The inference with PMML models is achieved with pypmml. <a href="https://pypi.org/project/pypmml/">Learn more about it. </a>
+
 
 <strong>Pro tip:</strong><br/>
 If you don't know the implementation of your pre- and post processing start a debug session as follows:
@@ -281,7 +335,12 @@ If you don't know the implementation of your pre- and post processing start a de
 
 Create a breakpoint in the custom_model.py and make a HTTP POST request with your favorite tool
 on: http://localhost:8800/api/predictions
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/debuggingdetail.png">
+<br>
+Make sure to format the requestBody as the configured requestObject.
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/examplepostiris.png">
+
+This allows you to learn more about the necessary transformations.
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/debugdetail.png">
 
 ## Preprocessing
 
@@ -313,15 +372,15 @@ onnxruntime.InferenceSession({onnx-model-path}).run({model_output_names}, {pre_p
 you can access the output with model_output[0] and transform it accordingly.
 
 <strong>For PMML: </strong>
-The post_process method receives the output of the model.predict(pre_processed_data) call. If necessary, transform it.
+The post_process method receives the output of the model.predict(pre_processed_data) call. If necessary, transform it. For most models, you can access the output with model_output[0].
 
 The return value of the post_process method is used as a response for the REST interface without further processing.
 Therefore, numerical values should be rounded accordingly and any field names should be capitalized.
 
 Example:
-If you return an object like this {"Classname": "Predicted Class", "Probability": "23%"}, it will be displayed like
+If you return an object like this {"Classname": "{PredictedClass}", "Probability": "{Probability}"}, it will be displayed like
 this:
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/objectPrediction.png">
+<img style="width=10rem" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/objectPrediction.png">
 
 ## Custom methods, files and requirements
 
@@ -404,8 +463,8 @@ heroku open --app  {yourApplicationName}
 
 # Limitations
 
-- Heroku has a maximum RAM use of 512Mb - large models won't start
-- Nested objects as RequestObject are not supported. This does not work: {"firstName": "inputFieldId", "address": {"
-  street":"streetInputFieldId"}}
-
-
+- Heroku has a maximum RAM use of 512Mb - large models won't start in the free version due to memory shortage
+- Nested objects as RequestObject are not supported. This does not work: 
+    ```json
+    {"firstName": "inputFieldId", "address": {"street":"streetInputFieldId"} }
+    ```
