@@ -176,4 +176,4 @@ The result will be displayed like this:
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart2.png">
 
 <br/>
-<h3 align="center">Easy - isn't it?</br></h3><h4>Ml-Starter is proven to integrate seamlessly with www.heroku.com. Learn more about integrating your model <a href="">here</a>.</h4>
+<h3 align="center">Easy - isn't it?</br></h3><h4>ML-Starter is proven to integrate seamlessly with www.heroku.com. Learn more about integrating your model <a href="">here</a>.</h4>
