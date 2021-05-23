@@ -6,8 +6,8 @@ import {
     Route,
 } from "react-router-dom";
 import Header from "./components/layout/Header";
-import {MainView} from "./components/MainView";
-import {AboutView} from "./components/AboutView"
+import {MainView} from "./views/MainView";
+import {AboutView} from "./views/AboutView"
 import './styles/App.css'
 import {useDispatch} from "react-redux";
 import {getConfiguration} from "./actions/configurationActions";

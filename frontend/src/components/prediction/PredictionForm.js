@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {patchRating} from "../actions/predictionActions";
-import '../styles/CustomRadioButton.css'
+import {patchRating} from "../../actions/predictionActions";
+import '../../styles/CustomRadioButton.css'
 import {PredictionItem} from "./PredictionItem";
-import {SET_RATING} from "../constants/predictionConstants";
+import {SET_RATING} from "../../constants/predictionConstants";
 import Notiflix from "notiflix-react";
 
 export const PredictionForm = () => {
@@ -15,7 +15,7 @@ export const PredictionForm = () => {
 
     useEffect(() => {
         Notiflix.Notify.Init({position: "right-bottom", timeout: 5000});
-    }, [Notiflix])
+    })
 
     const INTERVAL_MS = 25000;
 

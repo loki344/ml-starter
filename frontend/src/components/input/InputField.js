@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
-import {addData} from "../actions/predictionActions";
-import '../styles/InputFields.css'
+import {addData} from "../../actions/predictionActions";
+import '../../styles/InputFields.css'
 import Notiflix from "notiflix-react";
 
 
@@ -13,7 +13,7 @@ export const InputField = ({inputField}) => {
 
     useEffect(() => {
         Notiflix.Notify.Init({position: "right-bottom", timeout: 5000});
-    }, [Notiflix])
+    })
 
     const toBase64 = file => new Promise((resolve, reject) => {
         if (file === undefined) {
@@ -43,7 +43,7 @@ export const InputField = ({inputField}) => {
     const {id, type, label} = inputField
     const dispatch = useDispatch();
 
-    let htmlTag = (<p>InputField not recognized</p>)
+    let htmlTag
     switch (type) {
 
         case 'image':
@@ -66,13 +66,11 @@ export const InputField = ({inputField}) => {
                     <label className="FileLabel" htmlFor="actual-btn">Choose File</label>
                     <br/>
                     <br/>
-
                     <div id="file-chosen" style={{color: textColor}}>{fileName}</div>
-
                     <img style={{marginTop: "2rem", width: "auto", maxHeight: "30rem"}} src={fileData}/>
-
                 </div>)
             break
+
         case 'number':
             htmlTag = (
                 <div style={{marginBottom: '1.5rem'}}>
@@ -94,7 +92,7 @@ export const InputField = ({inputField}) => {
             )
             break
         default:
-            return ''
+            return <p>The configured type of the input field is not supported. Type: {type}</p>
     }
 
     return (<>{htmlTag}</>)

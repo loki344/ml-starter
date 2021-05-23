@@ -2,8 +2,8 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {resetInputData} from "../actions/predictionActions";
 import '../styles/CustomButton.css';
-import {InputDataForm} from "./InputDataForm";
-import {PredictionForm} from "./PredictionForm";
+import {InputDataForm} from "../components/input/InputDataForm";
+import {PredictionForm} from "../components/prediction/PredictionForm";
 
 export const MainView = () => {
 

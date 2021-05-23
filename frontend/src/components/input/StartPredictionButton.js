@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {postPrediction} from "../actions/predictionActions";
+import {postPrediction} from "../../actions/predictionActions";
 import {useDispatch, useSelector} from "react-redux";
 import Notiflix from "notiflix-react";
 
@@ -13,7 +13,7 @@ export const StartPredictionButton = () => {
 
     useEffect(() => {
         Notiflix.Notify.Init({position: "right-bottom", timeout: 5000});
-    }, [Notiflix])
+    })
 
     const clickHandler = async (e) => {
         e.preventDefault()
