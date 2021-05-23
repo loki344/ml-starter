@@ -45,7 +45,7 @@ as https://www.mongodb.com
 
 ---
 
-<h3 align="center">:star: Get started with the quickstart or explore the possibilities to integrate your own model <a href="">here</a> :star:</h3>
+<h3 align="center">:star: Get started with the quickstart or explore the possibilities to integrate your own model <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">here</a> :star:</h3>
 
 ---
 
@@ -161,7 +161,7 @@ docker build -t ml-starter-iris-pmml-example .
 docker run -d -p 80:3000 -p 8800:8800 ml-starter-iris-pmml-example
 ```
 If everything worked you should get the container-id as an output in the console:
-```commandline
+```text
 #container-id, your output can look differently
 7647e273167e69e6987cbf7c4f2393203af2f940bb058ae9084c4dcefb63571f
 ```
@@ -176,4 +176,4 @@ The result will be displayed like this:
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart2.png">
 
 <br/>
-<h3 align="center">Easy - isn't it?</br></h3><h4>Ml-Starter is proven to integrate seamlessly with www.heroku.com. Learn more about integrating your model <a href="">here</a>.</h4>
+<h3 align="center">Easy - isn't it?<br></h3><h4>Ml-Starter is proven to integrate seamlessly with www.heroku.com. Learn more about integrating your model <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">here</a>.</h4>

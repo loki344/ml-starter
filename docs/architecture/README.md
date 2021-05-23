@@ -1,4 +1,6 @@
-# Architecture
+<h1 align="center">
+    Architecture
+</h1>
 
 This section provides an explanation of the architecture of ML-Starter. The information is intended for contributors or
 interested people.
