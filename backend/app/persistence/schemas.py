@@ -1,4 +1,5 @@
 import ast
+import typing
 from datetime import datetime
 from typing import Optional
 
@@ -7,7 +8,7 @@ from pydantic import BaseModel
 
 class PredictionBase(BaseModel):
     """Base representation of a prediction"""
-    input_data: str
+    input_data: typing.Any
 
 
 class Prediction(PredictionBase):
@@ -26,9 +27,8 @@ class Prediction(PredictionBase):
             formatted_prediction = self.prediction
 
         return {"id": self.id, "created": self.created,
-                     "input_data": self.input_data, "prediction": formatted_prediction,
-                     "rating": self.rating}
-
+                "input_data": self.input_data, "prediction": formatted_prediction,
+                "rating": self.rating}
 
     class Config:
         orm_mode = True
