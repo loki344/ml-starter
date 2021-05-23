@@ -45,7 +45,7 @@ as https://www.mongodb.com
 
 ---
 
-<h3 align="center">:star: Get started with the quickstart or explore the possibilities to integrate your own model <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">here</a> :star:</h3>
+<h4 align="center">:star: Get started with the quickstart or explore the possibilities to integrate your own model <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">here</a> :star:</h3>
 
 ---
 
