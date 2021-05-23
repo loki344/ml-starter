@@ -67,7 +67,7 @@ export const InputField = ({inputField}) => {
                     <br/>
                     <br/>
                     <div id="file-chosen" style={{color: textColor}}>{fileName}</div>
-                    <img style={{marginTop: "2rem", width: "auto", maxHeight: "30rem"}} src={fileData}/>
+                    <img style={{marginTop: "2rem", width: "auto", maxWidth: "80vw", maxHeight: "30rem"}} src={fileData}/>
                 </div>)
             break
 
