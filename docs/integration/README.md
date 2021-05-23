@@ -2,10 +2,11 @@
     Integrate your own model
 </h1>
 
-This tutorial will guide you through the process of integration your own model with ML-Starter.
+This chapter will guide you through the process to integrate your own model with ML-Starter.
 
-#Overview
+# Overview
 
+- <a href="#step-by-step">Step by step</a>
 - <a href="#configuration">Configuration</a>
 - <a href="#preprocesing-and-postprocessing">Preprocessing and Postprocessing</a>
 - <a href="#persistence">Persistence</a>
@@ -18,6 +19,10 @@ This tutorial will guide you through the process of integration your own model w
 - ONNX or PMML model
 - Pre- and postprocessing written in Python (Optional for PMML)
 - Java 1.8+ (Only for PMML models if you want to debug them locally)
+
+
+# Step by Step
+
 
 # Configuration
 
