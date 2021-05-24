@@ -179,4 +179,4 @@ The result will be displayed like this:
 <br/>
 <h3 align="center">Easy - isn't it?<br></h3><h4 align="center">ML-Starter works seamlessly with www.heroku.com. Learn more about integrating your model <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">here</a>.</h4>
 
-<h4 align="center">If you want to learn more about the core concepts of ML-Starter and its architecture, take a look at the <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">Architecture</a> section</h4>
+<h4 align="center">If you want to learn more about the core concepts of ML-Starter and its architecture, take a look at the <a href="https://github.com/loki344/ml-starter/tree/master/docs/architecture">Architecture</a> section</h4>
