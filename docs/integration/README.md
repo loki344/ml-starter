@@ -2,7 +2,9 @@
     Integrate your own model
 </h1>
 
-This chapter will guide you through the process to integrate your own model with ML-Starter.
+<p align="center">This chapter will guide you through the process to integrate your own model with ML-Starter.</p>
+<p align="center">:exclamation: If you plan to use the REST-API with your custom HTML-Frontend please check the <a href="https://github.com/loki344/ml-starter/tree/master/docs/customization"> Customization</a> section :exclamation:</p>
+
 
 # Overview
 
