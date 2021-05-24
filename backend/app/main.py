@@ -1,9 +1,11 @@
-import json
 from typing import List
 
 import uvicorn
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Request
+from starlette.staticfiles import StaticFiles
+from starlette.templating import Jinja2Templates
 
 from configuration.configuration_service import ConfigurationService
 from model.model_creation import create_model
@@ -32,6 +34,9 @@ app.add_middleware(
 configuration = ConfigurationService()
 model = create_model()
 
+templates = Jinja2Templates(directory="static/templates")
+app.mount("/resources", StaticFiles(directory="static/resources"), name="resources")
+
 print("-------------------------------------------------------------------------------------------------------")
 print("Configuring persistence service")
 if configuration.db_name != '' and configuration.db_credentials != '' and configuration.db_user != '' and configuration.cluster_name != '':
@@ -53,10 +58,9 @@ async def get_predictions() -> List[Prediction]:
     return list(map(lambda prediction: prediction.__repr__(), persistence_service.get_predictions()))
 
 
-# TODO make this parameter configurable
 @app.post("/api/predictions",
           summary="Create a new prediction",
-          description="Returns a prediction for the delivered inputData in the requestBody",
+          description="Returns a prediction for the inputData in the requestBody",
           status_code=201)
 async def predict(request: PredictionCreate):
     prediction = model.predict(request.input_data)
@@ -67,6 +71,18 @@ async def predict(request: PredictionCreate):
            description="Allows to patch the rating of a prediction")
 async def patch_rating(prediction: PredictionPatch, prediction_id):
     return persistence_service.save_rating(prediction_id, prediction.rating).__repr__()
+
+
+@app.get("/", summary="Only for custom frontends - returns the index.html",
+         description="The index.html must be located in the static/templates directory")
+async def get(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+
+@app.get("/{template_name}", summary="Only for custom frontends - returns the template",
+         description="The template must be located in the static/templates directory")
+async def get(request: Request, template_name):
+    return templates.TemplateResponse(template_name + ".html", {"request": request})
 
 
 @app.get("/api/configs", summary="Get configuration",
