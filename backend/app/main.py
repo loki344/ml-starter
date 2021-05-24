@@ -75,13 +75,13 @@ async def patch_rating(prediction: PredictionPatch, prediction_id):
 
 @app.get("/", summary="Only for custom frontends - returns the index.html",
          description="The index.html must be located in the static/templates directory")
-async def get(request: Request):
+async def get_index_template(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.get("/{template_name}", summary="Only for custom frontends - returns the template",
          description="The template must be located in the static/templates directory")
-async def get(request: Request, template_name):
+async def get_template_by_name(request: Request, template_name):
     return templates.TemplateResponse(template_name + ".html", {"request": request})
 
 
