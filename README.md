@@ -11,7 +11,7 @@
 <p align="center">
     | <a href="#quickstart">Quickstart</a> | 
    <a href="/backend/examples">Examples</a> |    
-   <a href="/backend/examples">Integrate your model</a> |    
+   <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">Integrate your model</a> |    
    <a href="https://github.com/loki344/ml-starter/tree/master/docs/architecture">Architecture</a> |
 </p>
 
