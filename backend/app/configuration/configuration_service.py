@@ -65,6 +65,10 @@ class ConfigurationService:
          """
 
         print("-------------------------------------------------------------------------------------------------------")
+        if not self.config_map.is_file():
+            print("No configMap.json found, make sure you provided the templates for a custom frontend")
+            return
+
         print("Validating config file...")
 
         for attribute in self.__dict__:
