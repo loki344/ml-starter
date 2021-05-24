@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {patchRating} from "../../actions/predictionActions";
 import '../../styles/CustomRadioButton.css'
@@ -13,21 +13,30 @@ export const PredictionForm = () => {
 
     const dispatch = useDispatch();
 
+    const [notificationCount, setNotificationCount] = useState(0)
+
     useEffect(() => {
         Notiflix.Notify.Init({position: "right-bottom", timeout: 5000});
     })
 
-    const INTERVAL_MS = 25000;
+    const INTERVAL_MS = 20000;
 
     useEffect(() => {
         const interval = setInterval(() => {
-            if (prediction.length > 0 && !showSpinner) {
-                Notiflix.Notify.Info("Edit the data and make another prediction :)")
+            let notification = "Edit the data and make another prediction :)"
+
+            if (rating === "") {
+                notification = "Please rate the prediction and improve the algorithm"
+            }
+
+            if (prediction.length > 0 && !showSpinner && notificationCount < 2) {
+                Notiflix.Notify.Info(notification)
+                setNotificationCount(notificationCount + 1)
             }
         }, INTERVAL_MS);
 
         return () => clearInterval(interval);
-    }, [prediction, showSpinner])
+    }, [prediction, showSpinner, notificationCount, rating])
 
     function updateRating(input) {
 
