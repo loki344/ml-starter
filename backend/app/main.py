@@ -4,8 +4,8 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Request
-from starlette.staticfiles import StaticFiles
-from starlette.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 
 from configuration.configuration_service import ConfigurationService
 from model.model_creation import create_model
