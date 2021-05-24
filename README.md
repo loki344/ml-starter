@@ -52,8 +52,8 @@ as https://www.mongodb.com
 # Quickstart
 
 <strong>What you'll build</strong><br/>
-The "Hello World" of Machine Learning: An Iris classification model which takes in the measurements of a flowers and
-predicts the classes.<br/><br/>
+The "Hello World" of Machine Learning: An Iris classification model which takes in the measurements of a flower and
+predicts the class.<br/><br/>
 <strong>What you'll need</strong><br/>
 
 1) An IDE such as PyCharm or Visual Studio Code
