@@ -8,9 +8,13 @@ export const Header = () => {
     const {applicationName} = configuration
 
 
+    function refreshPage() {
+        window.location.reload()
+    }
+
     return (
         <nav className="navbar navbar-expand navbar-dark bg-dark">
-            <Link className="navbar-brand" to="/">{applicationName}</Link>
+            <Link className="navbar-brand" onClick={refreshPage}>{applicationName}</Link>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <Link className="nav-item nav-link active" to="/about">About</Link>
