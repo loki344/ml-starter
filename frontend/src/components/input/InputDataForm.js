@@ -35,7 +35,7 @@ export const InputDataForm = () => {
                         <div style={{left: "122px", top: "122px", animationDelay: "0.5s"}}/>
                     </div>
                 </div>
-                <h3>Generate prediction, lean back..</h3>
+                <h3>Generate prediction, please wait..</h3>
             </div>
 
             <div className={"InputDataForm" + ' ' + getClassForInputForm()}>
