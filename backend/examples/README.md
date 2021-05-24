@@ -9,3 +9,7 @@ ONNX:
 
 PMML:
 - <a href="https://github.com/loki344/ml-starter/tree/master/backend/examples/iris-classification-pmml">Iris classification-pmml</a> | <a href="https://floating-earth-75852.herokuapp.com/">Try it on heroku</a>
+
+
+Custom HTML templates:
+- <a href="https://github.com/loki344/ml-starter/tree/master/backend/examples/custom-frontend">Basic example</a>
