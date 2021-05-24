@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Custom HTML</title>
+</head>
+<body>
+
+<h1 style="text-align: center">This is my custom HTML Frontend for the Iris PMML Model</h1>
+<h2 style="text-align: center">Enter the measurements of a flower and start the prediction</h2>
+<a href="someOtherPage">Link to other page</a>
+<form>
+    <div style="margin-top: 2rem">
+        <label>Sepal length</label>
+        <input id="sepal-length" type="number">
+    </div>
+    <div style="margin-top: 2rem">
+        <label>Sepal width</label>
+        <input id="sepal-width" type="number">
+    </div>
+    <div style="margin-top: 2rem">
+        <label>Petal length</label>
+        <input id="petal-length" type="number">
+    </div>
+    <div style="margin-top: 2rem">
+        <label>Petal width</label>
+        <input id="petal-width" type="number">
+    </div>
+
+    <button onclick="function postPrediction(event) {
+        let sepalLength = document.getElementById('sepal-length').value
+        let sepalWidth = document.getElementById('sepal-width').value
+        let petalLength = document.getElementById('petal-length').value
+        let petalWidth = document.getElementById('petal-width').value
+
+        var xhttp = new XMLHttpRequest();
+
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 201) {
+        document.getElementById('predictionContainer').innerHTML = JSON.parse(this.responseText).prediction;
+        }
+        };
+
+        xhttp.open('POST', '/api/predictions')
+        xhttp.send(JSON.stringify({'input_data':[sepalLength, sepalWidth, petalLength, petalWidth]}))
+
+    }
+    postPrediction()" style="margin-top: 2rem" type="button">Start prediction
+    </button>
+
+</form>
+
+<div id="predictionContainer" style="margin-top: 3rem; font-weight: bold">
+
+</div>
+
+</body>
+</html>
