@@ -16,7 +16,6 @@ RUN chmod a+x ./startup.sh
 WORKDIR /ml-starter/backend
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 
-RUN apt update
 RUN apt -y install nodejs npm
 COPY ./backend ./
 RUN pip install -r requirements.txt
