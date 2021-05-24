@@ -12,6 +12,7 @@
     | <a href="#quickstart">Quickstart</a> | 
    <a href="/backend/examples">Examples</a> |    
    <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">Integrate your model</a> |    
+   <a href="https://github.com/loki344/ml-starter/tree/master/docs/customization">Customization</a> |    
    <a href="https://github.com/loki344/ml-starter/tree/master/docs/architecture">Architecture</a> |
 </p>
 
@@ -19,7 +20,7 @@ Tired of building web-applications for your machine learning models to enable us
 you focus on your model performance rather than writing backend- and frontend-code. ML-Starter is built on FastAPI and
 React. Its integration with Docker allows you to run your application locally or deploy it to a hosting provider such
 as https://www.heroku.com. User requests and predictions can be saved in a free online MongoDB such
-as https://www.mongodb.com
+as https://www.mongodb.com.
 
 <sup>Alpha version: Only suggested for experimental usage.</sup>
 
@@ -37,11 +38,12 @@ as https://www.mongodb.com
 # Highlights
 
 - Provides a REST-API for your ONNX model
-- Provides a React frontend for your ONNX model
+- Provides a standard React frontend for your ONNX model
 - Lets you save requests and predictions in an online MongoDB
 - Learn from the feedback of your users
 - Runs everywhere with Docker
 - Minimal configuration and implementation required
+- Integrate your own GUI
 
 ---
 
@@ -175,6 +177,8 @@ Now you can enter the measurements of an iris flower and start the prediction.
 The result will be displayed like this:
 <br>
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart2.png">
+Note: This is the standard frontend - check the <a href="https://github.com/loki344/ml-starter/tree/master/docs/customization">Customization</a> section to integrate your custom html frontend.
+
 
 <br/>
 <h3 align="center">Easy - isn't it?<br></h3><h4 align="center">ML-Starter works seamlessly with www.heroku.com. Learn more about integrating your model <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">here</a>.</h4>
