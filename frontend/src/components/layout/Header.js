@@ -9,12 +9,14 @@ export const Header = () => {
 
 
     function refreshPage() {
-        window.location.reload()
+        if (window.location.pathname === "/") {
+            window.location.reload()
+        }
     }
 
     return (
         <nav className="navbar navbar-expand navbar-dark bg-dark">
-            <Link className="navbar-brand" onClick={refreshPage}>{applicationName}</Link>
+            <Link className="navbar-brand" to="/" onClick={refreshPage}>{applicationName}</Link>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav">
                     <Link className="nav-item nav-link active" to="/about">About</Link>
