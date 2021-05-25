@@ -31,7 +31,7 @@ Finished steps 1-3 and 5-7 from the <a href="https://github.com/loki344/ml-start
     {"id": idOfCreatedPrediction, "rating": userRating }
     
     ```
-   This is an example for the Iris-PMML example from this repository. 
+   This is an example for the Iris-PMML example from this repository.<br>
    index.html
     ```html
     <!DOCTYPE html>
