@@ -82,7 +82,9 @@ async def get_index_template(request: Request):
 @app.get("/{template_name}", summary="Only for custom frontends - returns the template",
          description="The template must be located in the static/templates directory")
 async def get_template_by_name(request: Request, template_name):
-    return templates.TemplateResponse(template_name + ".html", {"request": request})
+
+    if '.' not in template_name:
+        return templates.TemplateResponse(template_name + ".html", {"request": request})
 
 
 @app.get("/api/configs", summary="Get configuration",
