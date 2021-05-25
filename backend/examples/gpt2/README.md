@@ -8,6 +8,7 @@ The ONNX model included in this example is the pretrained version available on h
 
 ```commandline
 git clone https://github.com/loki344/ml-starter.git
+cd ./ml-starter
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
 cp -a ./backend/examples/gpt2/. ./backend/app/custom_model
 docker build -t ml-starter-gpt2-example .
@@ -28,6 +29,7 @@ heroku create
 
 ```commandline
 git clone https://github.com/loki344/ml-starter.git
+cd ./ml-starter
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
 cp -a ./backend/examples/gpt2/. ./backend/app/custom_model
 docker build -t ml-starter-gpt2-example .

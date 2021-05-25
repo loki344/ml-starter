@@ -31,6 +31,7 @@ heroku create
 
 ```commandline
 git clone https://github.com/loki344/ml-starter.git
+cd ./ml-starter
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
 cp -a ./backend/examples/iris-classification-pmml/. ./backend/app/custom_model
 docker build -t ml-starter-iris-pmml-example .
