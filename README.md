@@ -30,7 +30,7 @@ as https://www.mongodb.com.
 ---
 
 <p align="center">
-     Try out some applications running with ML-Starter <a href="/backend/examples">here</a>.
+     Try some applications running with ML-Starter <a href="/backend/examples">here</a>.
 </p>
 
 ---
@@ -153,7 +153,7 @@ below.
 </p>
 </details>
 
-## Step 5: Launch the application and try it out
+## Step 5: Launch the application and try it
 
 Docker makes the launch of the application very easy. Open the command line in the <strong>ml-starter/</strong>
 directory and execute the following code. This will take a while.
@@ -167,7 +167,7 @@ If everything worked you should get the container-id as an output in the console
 #container-id, your output can look differently
 7647e273167e69e6987cbf7c4f2393203af2f940bb058ae9084c4dcefb63571f
 ```
-<strong>Let's try it out!</strong><br/>
+<strong>Let's try it!</strong><br/>
 Open your browser and access "localhost".
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/quickstart1.png">
