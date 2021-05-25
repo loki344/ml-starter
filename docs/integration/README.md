@@ -423,7 +423,7 @@ provider. Please make sure, that the running environment provides enough resourc
 
 ## Local deployment
 
-Open a terminal in the directory "ml-starter /"
+Open a terminal in the directory "ml-starter"
 
 ```commandline
 docker build -t ml-starter .
@@ -432,15 +432,17 @@ docker run -d -p 80:3000 -p 8800:8800 ml-starter
 
 Or if you want to start your services seperately (Make sure you have installed all requirements):
 
+Open a terminal in the directory "ml-starter/backend/app"
 ```commandline
-#ml-starter/backend/app
 uvicorn main:app --host locahost --port 8800 --reload
+```
 
-#ml-starter/frontend
+Open a second terminal in the directory "ml-starter/frontend"
+```commandline
 npm start
 ```
 
-Access your browser on localhost (frontend) or localhost:8800/docs (backend)
+Access your browser on http://localhost (frontend) or http://localhost:8800/docs (backend)
 
 ## Deploy to Heroku
 
@@ -448,10 +450,18 @@ In order to deploy your application to heroku you'll need a heroku account and t
 
 https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
+Open a terminal in the directory "ml-starter
 ```commandline
 heroku create
 #COPY the your application name and replace it in the commands below
 ```
+This will give you an output like:
+
+```commandline
+robert@tux-polaris-15:~/Repositories/ml-starter$ heroku create
+Creating app... done, ⬢ sheltered-tundra-78112
+```
+Now copy the generated application name, in this example it's sheltered-tundra-78112. Replace the {yourApplicationName} in the commands below with the application name.
 
 ```commandline
 docker build -t ml-starter .
@@ -460,6 +470,12 @@ docker tag ml-starter registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
 heroku open --app {yourApplicationName}
+```
+
+With the last command, a browser window should open the app on heroku. Note that it could take a while to start. If it does not start after a while, you chan check the log with the following command:
+
+```commandline
+heroku logs --tail --app {yourApplicationName}
 ```
 
 # Limitations
