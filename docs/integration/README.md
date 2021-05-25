@@ -150,8 +150,7 @@ from model.pmml_model import PMMLModel
 
 </li>
 <li style="margin-top: 10px">
-If needed, copy custom methods, files and classes into the directory "ml-starter / backend / app / custom_model" (
-   Optional)
+If needed, copy custom methods, files and classes into the directory "ml-starter / backend / app / custom_model" (Optional)
 </li>
 <li style="margin-top: 10px">
 Add your dependencies for your implementation in the file "ml-starter / backend / app / custom_model / <strong>
