@@ -4,22 +4,22 @@
   "input": [
     {
       "id": "input1",
-      "label": "Flower 1, Sepal length",
+      "label": "Sepal length",
       "type": "number"
     },
     {
       "id": "input2",
-      "label": "Flower 1, Sepal width",
+      "label": "Sepal width",
       "type": "number"
     },
     {
       "id": "input3",
-      "label": "Flower 1, Petal length",
+      "label": "Petal length",
       "type": "number"
     },
     {
       "id": "input4",
-      "label": "Flower 1, Petal width",
+      "label": "Petal width",
       "type": "number"
     }
   ],
