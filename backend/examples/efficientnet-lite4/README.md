@@ -57,7 +57,7 @@ The applicationName and the description are interchangeable, whereas the configu
 ```json
 {
   "applicationName": "My demo-application with EfficientNet",
-  "description": "This application uses the EfficientNet model to predict classes in a given image. Try it out and upload your image below!",
+  "description": "This application uses the EfficientNet model to predict classes in a given image. Try it and upload your image below!",
 
   "input": [
     {
