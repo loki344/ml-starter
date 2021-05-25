@@ -16,7 +16,7 @@ Finished steps 1-3 and 5-7 from the <a href="https://github.com/loki344/ml-start
 
 # Basic HTML template serving
 
-1) Save your landing page as "index.html" in the folder "ml-starter / backend / app / static / templates". This is an example for the Iris-PMML example from this repository. To create a new prediction make a POST request as shown below. Make sure the requestBody matches the expected input of your model. Requests to the path "/" will be routed to the index.html. Requests to localhost:8800/examplePath will be routed to the template "examplePath.html".
+1) Save your landing page as "index.html" in the folder "ml-starter / backend / app / static / templates". To create a new prediction make a POST request as shown below. Make sure the requestBody matches the expected input of your model. Requests to the path "/" will be routed to the index.html. Requests to localhost:8800/examplePath will be routed to the template "examplePath.html".
 
     ```text
     # Most important endpoints
@@ -31,6 +31,7 @@ Finished steps 1-3 and 5-7 from the <a href="https://github.com/loki344/ml-start
     {"id": idOfCreatedPrediction, "rating": userRating }
     
     ```
+   This is an example for the Iris-PMML example from this repository.<br>
    index.html
     ```html
     <!DOCTYPE html>
