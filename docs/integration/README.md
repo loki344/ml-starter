@@ -455,12 +455,12 @@ heroku create
 ```
 
 ```commandline
-docker build -t ml-starter-efficientnet-example .
+docker build -t ml-starter .
 
 docker tag ml-starter registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
-heroku open --app  {yourApplicationName}
+heroku open --app {yourApplicationName}
 ```
 
 # Limitations
