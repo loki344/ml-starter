@@ -137,6 +137,9 @@ This chapter will guide you through the process to integrate your own GUI with M
     ```
    Access the application on http://localhost:8800<br>
    You can discover the REST-API on http://localhost:8800/docs
+   
+   The template shown in this example looks very basic:
+   <img href="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/examplehtmlapplication.jpg"
 
 # Deployment with Docker
 
