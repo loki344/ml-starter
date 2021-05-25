@@ -149,8 +149,8 @@ This chapter will guide you through the process to integrate your own GUI with M
 
 To start the docker container locally:
 
+Open a terminal in the ml-starter/backend directory
 ```commandline
-# directory: ml-starter/backend
 docker build -t ml-starter-backend .
 docker run -d -p 8800:8800 ml-starter-backend
 ```
@@ -160,12 +160,22 @@ You can explore the REST endpoints on http://localhost:8800/docs <br>
 
 ## Heroku
 
-To deploy the container to www.heroku.com you will need the Heroku CLI tool: https://devcenter.heroku.com/articles/heroku-cli
+In order to deploy your application to heroku you'll need a heroku account and the CLI from heroku.
+
+https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
+Open a terminal in the directory "ml-starter"
 
 ```commandline
 heroku create
-#COPY the your application name and replace it in the commands below
 ```
+This will give you an output like:
+
+```commandline
+robert@tux-polaris-15:~/Repositories/ml-starter$ heroku create
+Creating app... done, ⬢ sheltered-tundra-78112
+```
+Now copy the generated application name, in this example it's sheltered-tundra-78112. Replace the {yourApplicationName} in the commands below with the application name.
 
 ```commandline
 docker build -t ml-starter-backend .
@@ -175,6 +185,13 @@ docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
 heroku open --app {yourApplicationName}
 ```
+
+With the last command, a browser window should open the app on heroku. Note that it could take a while to start. If it does not start after a while, you can check the log with the following command:
+
+```commandline
+heroku logs --tail --app {yourApplicationName}
+```
+
 
 
 # Custom frontend application

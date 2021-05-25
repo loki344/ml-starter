@@ -21,22 +21,35 @@ In order to deploy your application to heroku you'll need a heroku account and t
 
 https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
-```commandline
-heroku create
-#COPY the your application name and replace it in the commands below
-```
+Open a terminal in the directory "ml-starter"
 
 ```commandline
-git clone https://github.com/loki344/ml-starter.git
-cd ./ml-starter
+heroku create
+```
+This will give you an output like:
+
+```commandline
+robert@tux-polaris-15:~/Repositories/ml-starter$ heroku create
+Creating app... done, ⬢ sheltered-tundra-78112
+```
+Now copy the generated application name, in this example it's sheltered-tundra-78112. Replace the {yourApplicationName} in the commands below with the application name.
+
+```commandline
 find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
 cp -a ./backend/examples/iris-classification-onnx/. ./backend/app/custom_model
+
 docker build -t ml-starter-iris-onnx-example .
 
 docker tag ml-starter-iris-onnx-example registry.heroku.com/{yourApplicationName}/web
 docker push registry.heroku.com/{yourApplicationName}/web
 heroku container:release web --app {yourApplicationName}
-heroku open --app  {yourApplicationName}
+heroku open --app {yourApplicationName}
+```
+
+With the last command, a browser window should open the app on heroku. Note that it could take a while to start. If it does not start after a while, you can check the log with the following command:
+
+```commandline
+heroku logs --tail --app {yourApplicationName}
 ```
 
 

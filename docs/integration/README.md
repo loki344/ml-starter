@@ -453,7 +453,6 @@ https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 Open a terminal in the directory "ml-starter
 ```commandline
 heroku create
-#COPY the your application name and replace it in the commands below
 ```
 This will give you an output like:
 
@@ -472,7 +471,7 @@ heroku container:release web --app {yourApplicationName}
 heroku open --app {yourApplicationName}
 ```
 
-With the last command, a browser window should open the app on heroku. Note that it could take a while to start. If it does not start after a while, you chan check the log with the following command:
+With the last command, a browser window should open the app on heroku. Note that it could take a while to start. If it does not start after a while, you can check the log with the following command:
 
 ```commandline
 heroku logs --tail --app {yourApplicationName}
