@@ -7,12 +7,15 @@ This chapter will guide you through the process to integrate your own GUI with M
 # Overview
 
 - <a href="#basic-html-template-serving">Basic HTML template serving</a>
-- <a href="#custom-frontend-application">Custom frontend application</a>
 - <a href="#deployment">Deployment</a>
+- <a href="#custom-frontend-application">Custom frontend application</a>
+
 
 # Prerequisites
 
-Finished steps 1-3 and 5-7 from the <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">Integration</a> chapter in order to provide the prediction REST-endpoints.
+- Finished steps 1-3 and 5-7 from the <a href="https://github.com/loki344/ml-starter/tree/master/docs/integration">Integration</a> chapter in order to provide the prediction REST-endpoints.
+- Docker installed (if you want to deploy it with docker)
+
 
 # Basic HTML template serving
 
@@ -132,7 +135,42 @@ Finished steps 1-3 and 5-7 from the <a href="https://github.com/loki344/ml-start
     # directory: ml-starter/backend/app
    uvicorn main:app --host localhost --port 8800 --reload
     ```
-   Access the application on http://localhost:8800
+   Access the application on http://localhost:8800<br>
+   You can discover the REST-API on http://localhost:8800/docs
+
+# Deployment
+
+## Locally
+
+To start the docker container locally:
+
+```commandline
+# directory: ml-starter/backend
+docker build -t ml-starter-backend .
+docker run -d -p 8800:8800 ml-starter-backend
+```
+Access the application on http://localhost:8800<br>
+You can explore the REST endpoints on http://localhost:8800/docs <br>
+
+
+## Heroku
+
+To deploy the container to www.heroku.com you will need the Heroku CLI tool: https://devcenter.heroku.com/articles/heroku-cli
+
+```commandline
+heroku create
+#COPY the your application name and replace it in the commands below
+```
+
+```commandline
+docker build -t ml-starter-backend .
+
+docker tag ml-starter-backend registry.heroku.com/{yourApplicationName}/web
+docker push registry.heroku.com/{yourApplicationName}/web
+heroku container:release web --app {yourApplicationName}
+heroku open --app {yourApplicationName}
+```
+
 
 # Custom frontend application
 You can also build your own frontend with a framework of your choice and only consume the endpoints of ML-Starter. To create a new prediction, POST a requestBody containing the inputData as your model expects it to /api/predictions as shown below. It is recommended to explore the backend on http:localhost:8800/docs. Start the backend with the following command:
@@ -158,18 +196,4 @@ uvicorn main:app --host localhost --port 8800 --reload
     {"id": idOfCreatedPrediction, "rating": userRating }
  ```
 
-# Deployment
-To start the docker container locally:
-
-```commandline
-docker build -t ml-starter-backend .
-docker run -d -p 80:8800 ml-starter-backend
-```
-
-To deploy the container to www.heroku.com you will need the Heroku CLI tool: https://devcenter.heroku.com/articles/heroku-cli
-
-```commandline
-
-
-```
 
