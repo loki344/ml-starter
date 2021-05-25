@@ -172,7 +172,7 @@ To start the Application locally execute the following command in the terminal i
    docker build -t ml-starter .
    docker run -d -p 80:3000 -p 8800:8800 ml-starter
    ```
-   💡 To deploy your application to a hosting provider see <a href="#deployment">Deployment</a> for instructions.
+   💡 To deploy your application to Heroku see <a href="#deployment">Deployment</a> for instructions.
 </li>
 <li style="margin-top: 10px">
 Access the frontend on <strong>http://localhost</strong>, and the backend on <strong>http://localhost:8800/docs</strong>
