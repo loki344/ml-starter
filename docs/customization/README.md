@@ -7,7 +7,7 @@ This chapter will guide you through the process to integrate your own GUI with M
 # Overview
 
 - <a href="#basic-html-template-serving">Basic HTML template serving</a>
-- <a href="#deployment">Deployment</a>
+- <a href="#deployment-with-docker">Deployment with Docker</a>
 - <a href="#custom-frontend-application">Custom frontend application</a>
 
 
@@ -138,7 +138,7 @@ This chapter will guide you through the process to integrate your own GUI with M
    Access the application on http://localhost:8800<br>
    You can discover the REST-API on http://localhost:8800/docs
 
-# Deployment
+# Deployment with Docker
 
 ## Locally
 
