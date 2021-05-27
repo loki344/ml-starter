@@ -19,7 +19,7 @@ class Prediction(Base):
 
         try:
             formatted_prediction = ast.literal_eval(self.prediction)
-        except ValueError:
+        except:
             formatted_prediction = self.prediction
 
         return {"id": self.id, "created": self.created,
