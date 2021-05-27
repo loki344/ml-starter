@@ -1,6 +1,6 @@
 # Example with the GPT-2
 
-:exclamation: In order to try this example you have to download the GPT2 LM-Head model from https://github.com/onnx/models/tree/master/text/machine_comprehension/gpt-2 and copy it into the directory ml-starter/backend/app/custom_model with the name custom_model.onnx :exclamation:
+:exclamation: In order to try this example you have to download the GPT2 LM-Head model from https://github.com/onnx/models/blob/master/text/machine_comprehension/gpt-2/model/gpt2-lm-head-10.onnx and copy it into the directory <strong>ml-starter/backend/app/custom_model</strong> with the name <strong>custom_model.onnx</strong> :exclamation:
 
 :exclamation: The postprocessing is not working properly yet, instead of a text, the function returns the tensor :exclamation:
 
@@ -17,30 +17,6 @@ docker build -t ml-starter-gpt2-example .
 docker run -d -p 80:3000 -p 8800:8800 ml-starter-gpt2-example
 ```
 Access your browser on localhost (frontend) or localhost:8800/docs (backend)
-
-### Deployment to Heroku
-
-In order to deploy your application to heroku you'll need a heroku account and the CLI from heroku.
-
-https://devcenter.heroku.com/articles/heroku-cli#download-and-install
-
-```commandline
-heroku create
-#COPY the your application name and replace it in the commands below
-```
-
-```commandline
-git clone https://github.com/loki344/ml-starter.git
-cd ./ml-starter
-find ./backend/app/custom_model -type f ! -name '__init__.py' -delete
-cp -a ./backend/examples/gpt2/. ./backend/app/custom_model
-docker build -t ml-starter-gpt2-example .
-
-docker tag ml-starter-gpt2-example registry.heroku.com/{yourApplicationName}/web
-docker push registry.heroku.com/{yourApplicationName}/web
-heroku container:release web --app {yourApplicationName}
-heroku open --app  {yourApplicationName}
-```
 
 ## Result
 
@@ -109,7 +85,7 @@ tensor([ -35.8891, -35.2050, -39.1337, ..., -103.8397, -107.2803, -99.9341])
 
 ### Postprocessing
 
-The postprocessing processes the tensor and transforms the token with the highest probability to a string.
+The postprocessing is WIP at the moment and returns the tensor instead of the text.
 
 ```python
 def post_process(self, model_output):
