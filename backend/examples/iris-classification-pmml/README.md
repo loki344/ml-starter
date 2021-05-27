@@ -28,7 +28,6 @@ Open a terminal in the directory "ml-starter"
 
 ```commandline
 heroku create
-#COPY the your application name and replace it in the commands below
 ```
 This will give you an output like:
 
