@@ -1,6 +1,8 @@
 # Example with the GPT-2
 
-The ONNX model included in this example is the pretrained version available on https://github.com/onnx/models/tree/master/text/machine_comprehension/gpt-2.
+:exclamation: In order to try this example you have to download the GPT2 LM-Head model from https://github.com/onnx/models/tree/master/text/machine_comprehension/gpt-2 and copy it into the directory ml-starter/backend/app/custom_model with the name custom_model.onnx :exclamation:
+
+:exclamation: The postprocessing is not working properly yet, instead of a text, the function returns the tensor :exclamation:
 
 ## Instructions
 
