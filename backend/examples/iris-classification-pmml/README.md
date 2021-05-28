@@ -26,9 +26,17 @@ https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
 Open a terminal in the directory "ml-starter"
 
+If your Heroku CLI is not yet authenticated:
+```commandline
+heroku login
+heroku container:login
+```
+
+Then create a new app with:
 ```commandline
 heroku create
 ```
+
 This will give you an output like:
 
 ```commandline
