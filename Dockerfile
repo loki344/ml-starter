@@ -17,6 +17,7 @@ WORKDIR /ml-starter/backend
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 
 RUN apt -y install nodejs npm
+RUN npm i npm@latest -g
 COPY ./backend ./
 RUN pip install -r requirements.txt
 
