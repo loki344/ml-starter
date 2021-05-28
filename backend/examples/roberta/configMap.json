@@ -1,0 +1,13 @@
+{
+  "applicationName": "My sentiment application with RoBERTa",
+  "description": "This model determines if the sentiment of a text is good or bad. Try it!",
+  "input": [
+    {
+    "id": "textInput",
+    "label": "Enter some text",
+    "type": "str"
+    }
+  ],
+  "requestObject": {"inputData": "textInput"}
+
+}
