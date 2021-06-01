@@ -38,9 +38,11 @@ the step by step guide to provide all necessary information.<br><br>
 </li>
 <li style="margin-top: 10px">
 Download or clone the ml-starter repository
+    
    ```git
    git clone https://github.com/loki344/ml-starter.git
    ```
+    
 </li>
 <li style="margin-top: 10px">
 Save your trained model in the folder "ml-starter / backend / app / custom_model" with the filename <strong>"
