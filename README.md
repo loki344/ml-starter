@@ -37,8 +37,8 @@ as https://www.mongodb.com.
 
 # Highlights
 
-- Provides a REST-API for your ONNX model
-- Provides a standard React frontend for your ONNX model
+- Provides a REST-API for your ONNX or PMML model
+- Provides a standard React frontend for your ONNX or PMML model
 - Lets you save requests and predictions in an online MongoDB
 - Learn from the feedback of your users
 - Runs everywhere with Docker
@@ -78,7 +78,7 @@ ml-starter/app/custom_model</strong> folder.
 ## Step 3: Implement the pre- and postprocessing
 
 Open the project in your IDE and locate the <strong>custom_model.py</strong> file in the <strong>
-backend/app/custom_model</strong> folder. Now replace the contents of the file with the code below. If you want to, you can customize the applicationName or the description.
+backend/app/custom_model</strong> folder. Now replace the contents of the file with the code below.
 
 ```python
 import numpy as np
