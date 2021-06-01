@@ -24,9 +24,11 @@ def create_model() -> AbstractModel:
         model_path = "./custom_model/custom_model.onnx"
     elif get_file("custom_model.xml").is_file():
         model_path = './custom_model/custom_model.xml'
+    elif get_file("custom_model.pmml").is_file():
+        model_path = './custom_model/custom_model.pmml'
     else:
         raise Exception(
-            "No model found. Check if there is a custom_model.onnx or custom_model.xml "
+            "No model found. Check if there is a custom_model.onnx, custom_model.xml or custom_model.pmml "
             "in the backend/app/custom_model directory")
 
     install_dependencies()
