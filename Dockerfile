@@ -13,6 +13,10 @@ RUN chmod a+x ./startBackend.sh
 RUN chmod a+x ./startFrontend.sh
 RUN chmod a+x ./startup.sh
 
+RUN sed -i 's/\r$//' ./startBackend.sh
+RUN sed -i 's/\r$//' ./startFrontend.sh
+RUN sed -i 's/\r$//' ./startup.sh
+
 WORKDIR /ml-starter/backend
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 
