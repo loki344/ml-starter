@@ -37,8 +37,8 @@ as https://www.mongodb.com.
 
 # Highlights
 
-- Provides a REST-API for your ONNX model
-- Provides a standard React frontend for your ONNX model
+- Provides a REST-API for your ONNX or PMML model
+- Provides a standard React frontend for your ONNX or PMML model
 - Lets you save requests and predictions in an online MongoDB
 - Learn from the feedback of your users
 - Runs everywhere with Docker
