@@ -141,7 +141,7 @@ This chapter will guide you through the process to integrate your own GUI with M
    
    The source code is also available <a href="https://github.com/loki344/ml-starter/tree/master/backend/examples/custom-frontend">here</a>
    The template shown in this example looks very basic:
-   <img href="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/examplehtmlapplication.png">
+   <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/examplehtmlapplication.png">
 
 # Deployment with Docker
 
