@@ -64,7 +64,7 @@ The InputDataForm.js is responsible to generate the configured input fields that
 ```
 
 The configuration is stored in the redux store:
-<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/configInputFields.png">
+<img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/configInpuFields.png">
 
 Every InputField element in turn is responsible to adjust to the desired type of the configured input field.
 
