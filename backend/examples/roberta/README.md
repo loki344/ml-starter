@@ -53,7 +53,7 @@ The applicationName and the description are interchangeable, whereas the configu
 
 ### Preprocessing
 
-The preprocessing method is exact the same as is used in the ONNX example from https://github.com/onnx/models/tree/master/text/machine_comprehension/roberta. 
+The preprocessing method is exactly the same as is used in the ONNX example from https://github.com/onnx/models/tree/master/text/machine_comprehension/roberta. 
 
 ```python
 def pre_process(self, input_data, input_metadata):
