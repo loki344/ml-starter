@@ -1,4 +1,4 @@
-# Example with the RoBerta classification model
+# Example with the RoBerta model
 
 
 :exclamation: In order to try this example you have to download the RoBERTa-SequenceClassification from https://github.com/onnx/models/tree/master/text/machine_comprehension/roberta and copy it into the directory <strong>ml-starter/backend/app/custom_model</strong> with the name <strong>custom_model.onnx</strong> :exclamation:
