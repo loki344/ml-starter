@@ -73,7 +73,7 @@ For RoBERTa-SequenceClassification model: Output of this model is a float32 tens
 
 ### Postprocessing
 
-The preprocessing method is exact the same as is used in the ONNX example from https://github.com/onnx/models/tree/master/text/machine_comprehension/roberta. 
+The postprocessing method is exactly the same as is used in the ONNX example from https://github.com/onnx/models/tree/master/text/machine_comprehension/roberta. 
 
 ```python
 def post_process(self, model_output):
