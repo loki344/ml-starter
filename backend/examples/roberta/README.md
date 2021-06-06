@@ -22,8 +22,8 @@ Access your browser on localhost (frontend) or localhost:8800/docs (backend)
 
 ## Result
 
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris-onnx/iris-onnx-1.png"/>
-<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/iris-onnx/iris-onnx-2.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/roberta/roberta-1.png"/>
+<img style="width: 100%" src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/roberta/roberta-2.png"/>
 
 
 ## Model input
