@@ -15,10 +15,13 @@ ML-Starter has two main components:
 The following UML component diagram shows the architecture of ML-Starter.
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/architecture.png">
+Each module represents an exchangable part of ML-Starter. This modular architecture allows an exchange of the front- or backend technologies, as long as the displayed interfaces are implemented. 
 
 The UML sequence diagram shows the message and data flow of the application:
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/sequence_diagram.png">
+At the start of a session, the frontend will load the configuration to display the input-fields accordingly. As you can see, the pre- and postprocessing which is implemented by the user of the framework are called to inference with the model.
+
 
 To simplify the deployment, the operation in docker is performed in a single container, containing the FastAPI and React
 application. This is mainly due to the much simpler process to deploy this container on Heroku.
@@ -36,6 +39,23 @@ The used classes of the Python application are shown in the below class diagram 
 pyreverse.
 
 <img src="https://raw.githubusercontent.com/loki344/ml-starter/master/docs/images/classdiagram.png">
+<strong>AbstractModel</strong><br>
+This parent class ensures the main flow of the inference logic. Child classes must implement a predict, pre_process and post_process method. <br>
+<strong>PMML and ONNX Model</strong><br>
+These parent classes allow users to implement the pre- and postprocessing according to their model-format. The predict method is already implemented and takes care of the right order of the method calls. Child classes must implement a pre_rpocess and post_process method.
+<strong>Configuration service</strong><br>
+This service validates the configuration and provides the configuration keys as fields.
+<strong>PersistenceService</strong><br>
+In order to persist the requests and responses to a datasource, the PersistenceService provides an interface to ensure the necessary functionalities. A child class must provide an implementation for all methods.
+<strong>InMemoryDbService</strong><br>
+Allows to persist predictions in an inMemory SQLite database. The file-based database is placed in the directory ml-starter/backend/app/persistence.
+<strong>MongoDbService</strong><br>
+Provides a connection to the online db service https://www.mongodb.com/ and allows to save predictions. This service expects the configuration keys for the database connection.
+<strong>PredictionBase, PredictionCreate, PredictionPatch, Prediction</strong><br>
+These classes are mainly used to define the requestBody in the REST-API and to create the SQLite tables.
+<strong>Prediction</strong><br>
+This model is used to communicate with the MongoDBService. It defines the structure of the saved documents.
+
 
 
 
